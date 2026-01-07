@@ -59,7 +59,7 @@ Evidence: https://github.com/canonic-machine/canonic
 All governed directories contain three files:
 
 **CANON.md** - Constraints (LLM-generated, token-optimized)
-**DICTIONARY.md** - Terms (LLM-generated, alphabetically ordered)
+**VOCAB.md** - Terms (LLM-generated, alphabetically ordered, temporal)
 **README.md** - Documentation (LLM-generated from sources)
 
 **Critical property:** Humans never edit triad files. They iterate CANONIC.md (the specification). The triad regenerates from that source.
@@ -155,7 +155,7 @@ As of January 7, 2026:
 - Status: Maturing phase
 
 **Constitutional compliance:**
-- Triad violations detected (VOCABULARY.md instead of DICTIONARY.md)
+- Triad violations detected (VOCABULARY.md instead of VOCAB.md, later VOCAB.md instead of DICTIONARY.md)
 - Fixes applied atomically (2 commits: remove, add)
 - Git history preserves compliance journey
 
@@ -163,7 +163,7 @@ As of January 7, 2026:
 ```
 writing/
 ├── CANON.md          # WRITING machine constraints
-├── DICTIONARY.md     # Domain-specific terms (refined, alphabetical)
+├── VOCAB.md          # Domain-specific terms (temporal, alphabetical)
 ├── README.md         # Generated documentation
 ├── user-guide/       # Example: Complete FSM walkthrough
 ├── launch-docs/      # Example: Self-documenting launch
@@ -201,8 +201,9 @@ git log --oneline | head -3
 
 **Verify triad compliance:**
 ```bash
-find . -name "DICTIONARY.md" | wc -l  # Should be > 0
+find . -name "VOCAB.md" | wc -l  # Should be > 0
 find . -name "VOCABULARY.md" | wc -l  # Should be 0
+find . -name "DICTIONARY.md" | wc -l  # Should be 0 (deprecated)
 ```
 
 All data in version control. All metrics computable from git log.
@@ -216,6 +217,8 @@ All data in version control. All metrics computable from git log.
 **January 7, 2026 session:** Constitutional violations detected and recovered through atomic commits.
 
 **Violation:** CANONIC repository contained VOCABULARY.md instead of constitutionally-mandated DICTIONARY.md across all examples.
+
+**Note:** DICTIONARY.md was later replaced by VOCAB.md in a subsequent constitutional reset (see Section 4.6).
 
 **Recovery sequence (6 atomic commits):**
 ```bash
@@ -321,3 +324,49 @@ cd writing && git log --oneline | head -4
 **Significance:** Episodes provide ungoverned input stream that feeds the WRITING machine. Every session IS an episode. The system documents itself as it executes.
 
 **Meta-circular property:** This paper documents episodes while being written through episodic sessions.
+
+### 4.6 Constitutional Evolution: DICTIONARY → VOCAB
+
+**Pattern observed:** Constitutional resets occur when human governance detects drift.
+
+**Trigger:** Governor General reviewing WRITING/DICTIONARY.md noticed terms like "entry state", "exit state", "spine" - book-specific terms, not core WRITING machine vocabulary.
+
+**Insight:** "a VOCAB keeps it temporal"
+
+**Rationale:**
+- VOCAB signals living vocabulary that evolves with the machine
+- DICTIONARY sounds static/permanent (wrong for CANONIC systems)
+- Vocabulary drift detection: WTF terms reveal boundary violations
+- Shorter, cleaner (CANON/VOCAB/README vs CANON/DICTIONARY/README)
+- Machine self-reference (### WRITING) should lead vocabulary
+
+**Decision:** Constitutional reset DICTIONARY.md → VOCAB.md across all repositories.
+
+**Execution sequence:**
+1. Episode 002 captured the decision rationale (episodic memory)
+2. CANONIC/CANONIC.md updated: Mandated VOCAB.md in triad
+3. CANONIC/CANON.md updated: Triad = CANON + VOCAB + README
+4. CANONIC/DICTIONARY.md → VOCAB.md (git mv)
+5. All examples/*/DICTIONARY.md → VOCAB.md (git mv)
+6. Atomic commit: "Canonify VOCAB over DICTIONARY in triad requirement"
+7. WRITING/DICTIONARY.md → VOCAB.md (git mv)
+8. WRITING/VOCAB.md cleaned to core FSM terms only
+9. Atomic commit: "Apply VOCAB constitutional reset to WRITING machine"
+10. PAPER/DICTIONARY.md → VOCAB.md (git mv)
+11. Atomic commit: "Apply VOCAB constitutional reset to PAPER"
+
+**Git signal:**
+```bash
+cd canonic && git log --oneline | head -1
+# 7d0f760 Canonify VOCAB over DICTIONARY in triad requirement
+
+cd writing && git log --oneline | head -1
+# 263dc76 Apply VOCAB constitutional reset to WRITING machine
+
+cd paper && git log --oneline | head -1
+# b996b02 Apply VOCAB constitutional reset to PAPER
+```
+
+**Significance:** Demonstrates constitutional evolution through human governance. Previous session established DICTIONARY as standard. Current session reversed that decision. Git history preserves complete evolution including reversals.
+
+**Key insight:** VOCAB is temporal - vocabularies evolve as machines mature. Static dictionaries accumulate drift. VOCAB signals living governance.
