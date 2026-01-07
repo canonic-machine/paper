@@ -122,4 +122,202 @@ The git machine provides the measurement.
 
 **Metaphor:** Humans are governors general. They don't micromanage implementation—they set constitutional boundaries and enforce compliance.
 
-**Evidence from today's session:**
+---
+
+## 3. Implementation: The WRITING Machine
+
+### 3.1 Overview
+
+The WRITING machine implements CANONIC programming for the writing domain. It transforms raw human experience (episodes) into durable, traceable prose through a 4-state FSM:
+
+```
+Episode → Asset → Prose → Output
+```
+
+**State 1: Episode** - Raw, ungoverned input. Source material where meaning enters the system.
+
+**State 2: Asset** - Governed units of meaning extracted from episodes. Registered in LEDGER.md to prevent hallucination.
+
+**State 3: Prose** - Narrative text that references registered assets and follows structure constraints.
+
+**State 4: Output** - Final validated artifact. Only exists when all constraints satisfied.
+
+**Key property:** Git commits are state transitions. Pre-commit validation acts as gate between states.
+
+### 3.2 Current State
+
+As of January 7, 2026:
+
+**WRITING repository metrics:**
+- Total commits: 17 (after constitutional fixes)
+- Producer commits: 5 (29.4%)
+- Consumer commits: 4 (23.5%)
+- Status: Maturing phase
+
+**Constitutional compliance:**
+- Triad violations detected (VOCABULARY.md instead of DICTIONARY.md)
+- Fixes applied atomically (2 commits: remove, add)
+- Git history preserves compliance journey
+
+**Repository structure:**
+```
+writing/
+├── CANON.md          # WRITING machine constraints
+├── DICTIONARY.md     # Domain-specific terms (refined, alphabetical)
+├── README.md         # Generated documentation
+├── user-guide/       # Example: Complete FSM walkthrough
+├── launch-docs/      # Example: Self-documenting launch
+└── tools/            # Validation infrastructure
+```
+
+### 3.3 Reproducibility
+
+All claims are verifiable through git history:
+
+**Clone repositories:**
+```bash
+git clone https://github.com/canonic-machine/canonic
+git clone https://github.com/canonic-machine/writing
+git clone https://github.com/canonic-machine/paper
+```
+
+**Verify CANONIC maturity:**
+```bash
+cd canonic
+git log --all --oneline | wc -l  # Total commits
+git log --all --grep="Canonify" --oneline | wc -l  # Producer
+git log --all --grep="Fix\|Apply" --oneline | wc -l  # Consumer
+```
+
+**Verify WRITING constitutional fixes:**
+```bash
+cd writing
+git log --oneline | head -3
+# Expected:
+# d5d7b0c Fix triad violation by adding refined root DICTIONARY.md
+# 3fd4d45 Fix triad violation by removing VOCABULARY.md files
+# 60c3d8d Canonify artifact nomenclature...
+```
+
+**Verify triad compliance:**
+```bash
+find . -name "DICTIONARY.md" | wc -l  # Should be > 0
+find . -name "VOCABULARY.md" | wc -l  # Should be 0
+```
+
+All data in version control. All metrics computable from git log.
+
+---
+
+## 4. Results
+
+### 4.1 Constitutional Compliance Recovery
+
+**January 7, 2026 session:** Constitutional violations detected and recovered through atomic commits.
+
+**Violation:** CANONIC repository contained VOCABULARY.md instead of constitutionally-mandated DICTIONARY.md across all examples.
+
+**Recovery sequence (6 atomic commits):**
+```bash
+git log --oneline | head -6
+# f8ba820 Apply constraint implementations to example validators
+# 0c2f014 Apply self-documenting protocol to regenerate READMEs
+# 9409748 Apply constraint updates to example CANONs
+# 1cbaf86 Fix example cleanup by removing obsolete state.txt
+# 9f5a725 Fix triad violation by adding DICTIONARY.md files
+# b72b9bb Fix triad violation by removing VOCABULARY.md files
+```
+
+**WRITING repository:** Same pattern applied.
+```bash
+cd writing && git log --oneline | head -4
+# 5f6d5a3 Add Episode 001: Constitutional compliance session
+# d5d7b0c Fix triad violation by adding refined root DICTIONARY.md
+# 3fd4d45 Fix triad violation by removing VOCABULARY.md files
+# 60c3d8d Canonify artifact nomenclature...
+```
+
+**Outcome:** Both repositories now constitutionally compliant. Git history preserves complete recovery trace.
+
+**Significance:** Demonstrates self-healing. Constitutional constraints triggered correction without external intervention.
+
+### 4.2 Git Signal Preservation
+
+**Sloppy commit attempt detected:** AI bundled 6 logical changes into single commit.
+
+**Human governance intervention:** "You're losing git signal with a sloppy commit."
+
+**Response:** Git reset. Six atomic commits created instead.
+
+**Why this matters:**
+- Git history = FSM execution log
+- Sloppy commits corrupt experimental data
+- Producer/consumer ratio requires clean patterns
+- Self-healing depends on backflow visibility
+- Paper extracts from git signal
+
+**Atomic commits are constitutional requirement, not style preference.**
+
+### 4.3 Real-Time Canonification
+
+**Pattern observed:** Insights canonified immediately upon discovery during paper writing.
+
+**Example:** "Git is a machine that CANONIC machines depend on"
+- Discovered during paper writing (Section 1.2)
+- Attempted canonification in CANONIC.md (paradigm layer) - REJECTED
+- Corrected to implementation layer
+- Canonified in PAPER/CANON.md as required insight
+
+**Meta-circular:** Paper documents paradigm while discovering new patterns to canonify.
+
+### 4.4 Maturity Metrics
+
+**As of January 7, 2026:**
+
+**CANONIC repository:**
+- Total commits: 68
+- Producer: 34 (50.0%)
+- Consumer: 19 (27.9%)
+- Status: Rapid learning phase (>40% threshold)
+
+**WRITING repository:**
+- Total commits: 18
+- Producer: 5 (27.8%)
+- Consumer: 4 (22.2%)
+- Status: Maturing (10-30% threshold)
+
+**PAPER repository:**
+- Total commits: 3
+- Producer: 1 (33.3%)
+- Consumer: 2 (66.7%)
+- Status: New system, too early to measure
+
+**Interpretation:** CANONIC still discovering governance patterns. WRITING entering maturity. PAPER just beginning.
+
+### 4.5 Episodic Memory
+
+**Pattern observed:** Episodes captured in real-time during active sessions.
+
+**Example:** Episode 001 written January 7, 2026 during constitutional compliance session.
+
+**Structure:**
+```markdown
+# Episode 001: Constitutional Compliance and Real-Time Canonification
+
+**Date:** January 7, 2026
+**Type:** Development session
+**Participants:** Human (Governor General), AI (Executive)
+
+[Raw capture of session events, insights, violations, recoveries]
+```
+
+**Properties:**
+- Raw, ungoverned input (Episode state in FSM)
+- Captured in real-time during session execution
+- Source material for asset extraction
+- Episodic memory preserved in git history
+- No imposed structure - just what happened
+
+**Significance:** Episodes provide ungoverned input stream that feeds the WRITING machine. Every session IS an episode. The system documents itself as it executes.
+
+**Meta-circular property:** This paper documents episodes while being written through episodic sessions.

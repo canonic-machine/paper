@@ -1,6 +1,8 @@
-# DICTIONARY (paper/)
+# VOCAB (paper/)
 
 **Alphabetically ordered term definitions for the WRITING machine paper.**
+
+**VOCAB is temporal** - evolves with the machine.
 
 Inherits all terms from [canonic-machine/writing](https://github.com/canonic-machine/writing).
 
@@ -31,4 +33,4 @@ Property where every claim, reference, and example can be verified through git h
 
 ---
 
-End of DICTIONARY.
+End of VOCAB.

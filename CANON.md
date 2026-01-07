@@ -59,8 +59,10 @@ All links, citations, examples must be verifiable.
 - Real-time canonification pattern
 - Producer/consumer legislative process
 - Constitutional compliance through git signal
-- Triad requirement (CANON, DICTIONARY, README)
+- Triad requirement (CANON, VOCAB, README)
+- VOCAB is temporal (evolves with machine, not static dictionary)
 - Self-* properties (six introspective properties)
 - Every session is an episode (meta-circular writing)
+- Episodes captured in real-time during sessions (episodic memory)
 
 **Violation:** Missing key insights, insights without git evidence
