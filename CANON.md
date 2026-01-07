@@ -47,3 +47,20 @@ Sections:
 All links, citations, examples must be verifiable.
 
 **Violation:** Broken links, hallucinated references, unverifiable claims
+
+### Key Insights Required
+
+**The paper must document these insights:**
+
+- Git is a machine that CANONIC machines depend on (not just storage)
+- AI-driven, human-governed execution model (governor general metaphor)
+- Atomic commits as critical infrastructure (FSM execution log)
+- Layer discipline (paradigm vs implementation)
+- Real-time canonification pattern
+- Producer/consumer legislative process
+- Constitutional compliance through git signal
+- Triad requirement (CANON, DICTIONARY, README)
+- Self-* properties (six introspective properties)
+- Every session is an episode (meta-circular writing)
+
+**Violation:** Missing key insights, insights without git evidence
