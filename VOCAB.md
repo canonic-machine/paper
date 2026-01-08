@@ -1,4 +1,4 @@
-# VOCAB (paper/)
+# VOCAB (/)
 
 **Alphabetically ordered term definitions for the WRITING machine paper.**
 
@@ -9,6 +9,9 @@ Inherits all terms from [canonic-machine/writing](https://github.com/canonic-mac
 ---
 
 ## Paper-Specific Terms
+
+### PAPER
+The CANONIC WRITING MACHINE paper specification. Documents best practices for writing CANONIC papers discovered through analyzing git interactions (productive and consumptive commits). Covers entire stack: CANONIC paradigm, MACHINE validation engine, WRITING application, and constitutional governance model.
 
 ### abstract
 Concise summary of the paper's contribution, methods, and findings. First section readers encounter.
