@@ -26,6 +26,12 @@ This paper documents the **entire CANONIC MACHINE WRITING PAPER stack** - paradi
 - Understanding measurement (cleaner triads correlate with improved communication efficiency - fewer corrections, shorter episodes, faster drift→fixation, decreased sentiment frequency, higher first-pass compliance)
 - Drift → fixation detection (AGENT learning through canonification)
 - Re-canonization detection (rediscovered insights signal accessible, correct canon - cross-reference episodes with existing canon to validate completeness)
+- **Git evolutionary analysis** (chronological producer→consumer commit pairs across repos reveal discovery patterns):
+  1. Constitutional cascade (canonic → machine/writing)
+  2. Cross-repo synchronization (parallel constraint canonification)
+  3. Episode-driven compliance (episode → all repos update)
+  4. Redo protocol (violation → redo → documentation)
+  5. Generated file synchronization (canon → all READMEs/VOCABs)
 
 **We don't know the best practices yet.** The paper discovers them through analysis of our own git history.
 
