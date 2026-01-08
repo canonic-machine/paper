@@ -17,7 +17,7 @@ This paper documents the **entire CANONIC MACHINE WRITING PAPER stack** - paradi
 
 **The paper's purpose:** Discover best practices for writing CANONIC papers by analyzing our CANONIC interactions with the GIT MACHINE.
 
-**Method:** Analyze productive and consumptive git commits to extract traceable, robust best practices.
+**Method:** Git-based evolutionary analysis of WRITING. Track drift, fixation, AGENT learning through episode chronology and commit patterns.
 
 **We don't know the best practices yet.** The paper discovers them through analysis of our own git history.
 
@@ -58,7 +58,7 @@ Standard academic paper structure:
 2. **Introduction** - Problem (AI slop), solution (CANONIC stack), thesis (git interactions reveal best practices)
 3. **Model** - CANONIC paradigm (constraints, triad, inheritance, producer/consumer, git-FSM)
 4. **Implementation** - WRITING machine + GIT MACHINE interactions (how we govern the stack)
-5. **Results** - Best practices discovered through git analysis (constitutional compliance, maturity metrics, episodes, resets, canonical locality)
+5. **Results** - Best practices discovered through evolutionary analysis (episodic drift tracking, AGENT learning fixation, constitutional compliance, maturity metrics, resets, canonical locality)
 6. **Discussion** - What works, what fails, patterns that emerged, implications
 7. **Conclusion** - Best practices summary, significance for CANONIC paper writing
 8. **References** - Citations to external work
@@ -94,17 +94,21 @@ Standard academic paper structure:
 - 4-state FSM (Episode → Asset → Prose → Output)
 - Episodes are ungoverned input (fleeting moments, episodic memory)
 - Episodes captured in real-time during sessions
+- Episodes track AGENT drift over time (temporal VOCAB for AGENT behavior)
 - Canonical locality (artifacts placed closest to canon that governs them)
 - Self-* properties (self-validating, self-documenting, self-healing, self-measuring, self-optimizing, self-strengthening)
 
-**Best practices (discovered through git analysis):**
+**Best practices (discovered through evolutionary analysis):**
 - Every session is an episode (capture fleeting moments)
+- Episodes preserve drift signal (don't fix violations - they're learning evidence)
+- Chronological episode analysis reveals AGENT evolution (drift → fixation pattern)
 - Form vs governance (file existence ≠ compliance)
 - Layer discipline (paradigm vs implementation vs domain)
 - Meta-circular writing (paper documents its own creation)
 - Backwards discovery (work from application to discover machine constraints)
 - Four-repo evolution (CANONIC, MACHINE, WRITING, PAPER evolve together)
 - Active learning (use the machine to discover what the machine needs)
+- Precise VOCAB usage (most precise term prevents drift)
 
 ---
 
