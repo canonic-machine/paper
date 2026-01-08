@@ -81,7 +81,7 @@ Repository links exist on GitHub. Commit hashes exist in git history. File paths
 
 **Episodes are ungoverned INPUT to the WRITING machine.**
 
-Episodes are RAW capture of human direction and session events. No AI-imposed structure without canonical basis.
+Episodes are RAW capture of human direction and session events. No AI-imposed structure without canonification.
 
 **Canonified episode structure:**
 - ## Context (brief - what's happening in this episode)
@@ -92,17 +92,17 @@ Episodes are RAW capture of human direction and session events. No AI-imposed st
 - Raw, direct capture (what was said, what happened)
 - Fleeting moments preserved (temporal snapshots)
 - Human specs captured verbatim (Governor General directives)
-- Structured according to CANON (not AI assumption)
+- CANONIFIED structure only (structure defined in CANON.md)
 
 **Episodes must NOT be:**
-- Analyzed or organized beyond canonical structure
+- Analyzed or organized beyond canonified structure
 - Pre-processed into assets (extraction happens after capture)
 - Written as mini-papers with AI-invented "Key Insights" sections
 - Formatted as Prose or Output states
 
-**Violation:** AI invents episode structure without canonical basis, episodes contain extracted assets instead of raw material, episodes written as polished prose
+**Violation:** AI invents episode structure without canonification, episodes contain extracted assets instead of raw material, episodes written as polished prose
 
-**Rationale:** Episodes are Episode state in 4-state FSM. Structure from CANON is required. AI-imposed structure without canonical basis violates governance. Asset extraction happens AFTER episode capture.
+**Rationale:** Episodes are Episode state in 4-state FSM. CANONIFIED structure required. AI-imposed structure without canonification violates governance. Asset extraction happens AFTER episode capture.
 
 ### Meta-Circular Properties
 
