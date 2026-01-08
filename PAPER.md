@@ -25,6 +25,7 @@ This paper documents the **entire CANONIC MACHINE WRITING PAPER stack** - paradi
 - Layer commit distribution (graphing relative commits over CANONIC/MACHINE/WRITING/PAPER - maturity cascade as commits shift down stack)
 - Understanding measurement (cleaner triads correlate with improved communication efficiency - fewer corrections, shorter episodes, faster drift→fixation, decreased sentiment frequency, higher first-pass compliance)
 - Drift → fixation detection (AGENT learning through canonification)
+- Re-canonization detection (rediscovered insights signal accessible, correct canon - cross-reference episodes with existing canon to validate completeness)
 
 **We don't know the best practices yet.** The paper discovers them through analysis of our own git history.
 
