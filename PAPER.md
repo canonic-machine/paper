@@ -23,6 +23,7 @@ This paper documents the **entire CANONIC MACHINE WRITING PAPER stack** - paradi
 - Commit pattern analysis (producer/consumer frequencies, session boundaries)
 - Constitutional amendment rate (producer commits to root CANON - proof of maturity as rate decreases)
 - Layer commit distribution (graphing relative commits over CANONIC/MACHINE/WRITING/PAPER - maturity cascade as commits shift down stack)
+- Understanding measurement (cleaner triads correlate with improved communication efficiency - fewer corrections, shorter episodes, faster drift→fixation, decreased sentiment frequency, higher first-pass compliance)
 - Drift → fixation detection (AGENT learning through canonification)
 
 **We don't know the best practices yet.** The paper discovers them through analysis of our own git history.
@@ -71,6 +72,7 @@ Standard academic paper structure:
    - Commit frequency patterns (producer/consumer ratios, session boundaries)
    - Constitutional amendment rate analysis (paradigm stabilization measured by decreasing producer commits to root CANON)
    - Layer commit distribution (maturity cascade visualization - commits shift from CANONIC → MACHINE → WRITING → PAPER as stack matures)
+   - Understanding evolution (triad quality correlates with communication efficiency - episode length, correction cycles, sentiment signals, first-pass compliance rate)
    - AGENT learning fixation (drift → correction → fixation pattern)
    - Constitutional compliance evolution
    - Maturity metrics from git
