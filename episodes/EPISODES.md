@@ -62,9 +62,10 @@ Additional sections may emerge and become canonified as structure evolves.
 ## Indexing
 
 Episodes use zero-based sequential numbering:
-- **ep000** - First episode (genesis)
-- **ep001** - Second episode
-- **epNNN** - Nth episode
+- **ep000** - 0th episode (genesis)
+- **ep001** - 1st episode
+- **ep002** - 2nd episode
+- **epNNN** - Nth episode (where N is the index)
 
 **Filename pattern:** `epNNN-descriptive-name.md`
 - Three-digit zero-padded number (000-999)
