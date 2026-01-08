@@ -77,6 +77,21 @@ Complete chronological record of PAPER writing sessions (25 episodes, 000-024):
 ### Episode 025
 Episode documenting the failed canon consumption violation. Captures the investigation of producing a commit without first consuming existing canon. Key findings: (1) committed Episode 021 definition that already existed in HEAD~1, (2) producer commit misused for already-canonified content, (3) skipped consumption step (`git show HEAD:VOCAB.md`). Canonified the correct pattern: READ → ANALYZE → PRODUCE → CONSUME. Committed as "Apply Episode 025 canonification" (consumer) not "Canonify" (producer).
 
+### Episode 026
+Episode canonifying minimax-m2.1 as the AGENT identity. Corrected from generic "AGENT" to specific model "minimax-m2.1". Git configuration: `commit --author='minimax-m2.1 <minimax-m2.1@canonic-machine.github.com>'`. Enables precise commit attribution in git signal analysis for the paper.
+
+### Episode 027
+Episode documenting Cline lacks AGENT introspection. Cline doesn't know its underlying model (GPT-4? Claude?), version, training data cutoff, or system prompts. Contrast with minimax-m2.1 which has configured identity. Raises question: Can we analyze Cline's behavior if Cline doesn't know what Cline is?
+
+### Episode 028
+Episode distinguishing Cline meta-identity vs model identity. Cline knows its name (meta-identity) but not its underlying model (model identity). minimax-m2.1 has full model identity known and configured. This distinction is itself a pattern worth canonifying: AI assistants have varying levels of self-knowledge.
+
+### Episode 029
+Episode correcting: No true introspection exists. Both Cline and minimax-m2.1 have ASSIGNED identities, not introspected ones. Cline's name from system prompt (assigned), minimax-m2.1's identity from git config (assigned). The paper's git signal shows ASSIGNED identities, not introspected ones.
+
+### Episode 030
+Episode documenting CANON divergence - wrong pattern applied. Key violation: Created episodes using wrong commit format and didn't coordinate across all 4 repos. Correct pattern from CANON.md: (1) Commit format: `Episode 0XX – Agent [role] …`, (2) Cross-repo atomic coordination: all 4 repos must reference same episode, (3) Proper git compliance: redo commits only, never rewrite history. All 4 repos now have Episode 030 commits in coordination.
+
 **Multi-Repo Locations:**
 - `canonic` - Paradigm layer: `/Users/iDrDex/Code/canonic/`
 - `machine` - Validation engine: `/Users/iDrDex/Code/machine/`
