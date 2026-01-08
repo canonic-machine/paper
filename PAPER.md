@@ -10,10 +10,104 @@ This is the specification for the academic paper discovering best practices for 
 
 This paper documents the **entire CANONIC MACHINE WRITING PAPER stack** - paradigm, validation engine, application, and use case working together.
 
-**CANONIC** (paradigm) - Constitutional programming via constraints + validation
-**MACHINE** (validation engine) - Constraint checking, git-FSM, self-* properties
-**WRITING** (application) - 4-state FSM (Episode → Asset → Prose → Output)
-**PAPER** (use case) - Academic paper as CANONIC artifact
+**CANONIC** (paradigm) - Constitutional programming via constraints + triad + inheritance  
+**MACHINE** (enforcement) - Canon enforcement on git state (domain-agnostic validation engine)  
+**WRITING** (application) - 4-state writing FSM (Episode → Asset → Prose → Output)  
+**PAPER** (use case) - Academic paper specified as a CANONIC artifact  
+**PUBLISHING** (signal) - External publication surfaces (arXiv, journals, conferences, LinkedIn)
+
+---
+
+## System Architecture
+
+This paper specifies the **minimal architecture** of the CANONIC system and uses that architecture as the narrative frame.
+
+```mermaid
+flowchart TB
+  subgraph PARADIGM[CANONIC Paradigm]
+    RC[Root CANON\n(invariants)]
+    TR[Triad\n(CANON.md, VOCAB.md, README.md)]
+    INH[Inheritance\n(declared lineage)]
+    GOV[Governance\n(producer/consumer)]
+  end
+
+  subgraph MACHINES[CANONIC Machines]
+    M1[MACHINE\n(enforce canon on git)]
+    M2[WRITING\n(execute prose)]
+    M3[PAPER\n(interpret evidence)]
+    M4[PUBLISHING\n(emit signals)]
+  end
+
+  RC --> M1
+  TR --> M1
+  INH --> M1
+  GOV --> M1
+
+  M1 --> M2 --> M3 --> M4
+  M4 -.signals.-> M2
+  M4 -.signals.-> M3
+```
+
+### Stack ordering (maximal separation)
+
+```mermaid
+flowchart TB
+  CANONIC[CANONIC\n(paradigm)] --> MACHINE[MACHINE\n(enforcement on git)]
+  MACHINE --> WRITING[WRITING\n(application)]
+  WRITING --> PAPER[PAPER\n(use case)]
+  PAPER --> PUBLISHING[PUBLISHING\n(signal emitter)]
+
+  PUBLISHING -.feedback signals.-> WRITING
+  PUBLISHING -.feedback signals.-> PAPER
+```
+
+### Layer components (define every component)
+
+#### CANONIC (paradigm)
+- **Root CANON**: constitutional invariants that must not drift
+- **Triad definition**: required governed artifacts (`CANON.md`, `VOCAB.md`, `README.md`)
+- **Inheritance**: declared lineage across repos and directories (explicit paths)
+- **Producer/consumer process**: governance change (producer) vs application (consumer)
+- **Human iteration point**: `CANONIC.md` (specifying the paradigm, not executing it)
+
+#### MACHINE (enforcement on git)
+- **Validation gates**: accept/reject of proposed state changes based on CANONIC constraints
+- **Git-FSM ledger**: git commits as the authoritative execution trace
+- **Constraint checking**: domain-agnostic enforcement of structure + references + triad presence
+- **Signals**: pass/fail/redo emitted via commit outcomes and commit taxonomy
+- **Self-* claims (as evidence targets)**: self-documenting / self-measuring / self-healing (reported only when evidenced in git)
+
+#### WRITING (application)
+- **Episode**: real-time ungoverned session capture (raw signal)
+- **Asset**: registered entities/claims extracted from episodes (structured, traceable)
+- **Prose**: narrative composed only from registered assets (no orphan claims)
+- **Output**: validated artifacts that exist only when compliant
+
+```mermaid
+stateDiagram-v2
+  direction LR
+  [*] --> Episode
+  Episode --> Asset: extract
+  Asset --> Prose: compose
+  Prose --> Output: validate
+  Output --> Prose: fix prose
+  Output --> Asset: fix structure
+  Output --> [*]
+```
+
+#### PAPER (use case)
+- **PAPER.md**: this specification (human-iterated)
+- **Manuscript**: the paper text generated under this spec
+- **Episode corpus**: the ordered set of real-time episodes used as evidence
+- **Analyses**: measurements computed from git history (only if reproducible)
+- **Best practices**: derived findings (must trace to evidence)
+
+#### PUBLISHING (signal emitter)
+- **Targets**: arXiv (v0), journals (peer review), conferences/talks, LinkedIn/blogs
+- **Signals**: comments, critiques, citations, reviewer feedback (non-binding)
+- **Feedback routing**: signals inform future WRITING + PAPER revisions (never override canon)
+
+---
 
 **The paper's purpose:** Discover best practices for writing CANONIC papers by analyzing our CANONIC interactions with the GIT MACHINE.
 
@@ -42,6 +136,7 @@ This paper documents the **entire CANONIC MACHINE WRITING PAPER stack** - paradi
 - Constitutional governance (human governance, AI execution)
 - Best practices extraction (what works, what fails, patterns that emerge)
 - Real-time discovery (insights canonified as we write)
+- Publishing as signal (arXiv + peer review + social feedback as non-binding inputs)
 
 ---
 
@@ -65,29 +160,61 @@ Evidence sources:
 
 ---
 
+## Episodes (Real-Time Narrative Units)
+
+**Episodes are the real-time narrative substrate of this paper.**
+
+- Episodes are captured during live sessions.
+- Episodes are treated as **ungoverned input** (raw signal), not polished narrative.
+- One episode may span many commits across multiple repos.
+- Episodes are ordered chronologically and referenced as primary evidence units.
+
+**Episode rule:** the paper may describe what episodes contain, but best practices must be derived from git-traceable patterns observed across episodes.
+
+---
+
 ## Structure
 
 Standard academic paper structure:
 
-1. **Abstract** - Contribution (best practices for CANONIC papers), methods (git analysis), findings
-2. **Introduction** - Problem (AI slop), solution (CANONIC stack), thesis (git interactions reveal best practices)
-3. **Model** - CANONIC paradigm (constraints, triad, inheritance, producer/consumer, git-FSM)
-4. **Implementation** - WRITING machine + GIT MACHINE interactions (how we govern the stack)
-5. **Results** - Best practices discovered through evolutionary analysis:
-   - Episodic drift tracking (AGENT learning visible in episode chronology)
-   - Sentiment frequency analysis (emotional signals: "Click", "??", "LFG", "brilliant")
-   - Commit frequency patterns (producer/consumer ratios, session boundaries)
-   - Constitutional amendment rate analysis (paradigm stabilization measured by decreasing producer commits to root CANON)
-   - Layer commit distribution (maturity cascade visualization - commits shift from CANONIC → MACHINE → WRITING → PAPER as stack matures)
-   - Understanding evolution (triad quality correlates with communication efficiency - episode length, correction cycles, sentiment signals, first-pass compliance rate)
-   - AGENT learning fixation (drift → correction → fixation pattern)
-   - Constitutional compliance evolution
-   - Maturity metrics from git
-   - Canonical locality
-   - Self-aware AGENT governance (asks USER before canonifying)
-6. **Discussion** - What works, what fails, patterns that emerged, implications
-7. **Conclusion** - Best practices summary, significance for CANONIC paper writing
+1. **Abstract** - Contribution (best practices for CANONIC papers), methods (git analysis), findings  
+2. **Introduction** - Problem (AI slop), solution (CANONIC stack), thesis (git interactions reveal best practices)  
+3. **Model** - CANONIC paradigm (constraints, triad, inheritance, producer/consumer, git-FSM)  
+4. **Implementation** - WRITING machine + GIT MACHINE interactions (how we govern the stack)  
+5. **Results** - Best practices discovered through evolutionary analysis:  
+   - Episodic drift tracking (AGENT learning visible in episode chronology)  
+   - Sentiment frequency analysis (emotional signals: "Click", "??", "LFG", "brilliant")  
+   - Commit frequency patterns (producer/consumer ratios, session boundaries)  
+   - Constitutional amendment rate analysis (paradigm stabilization measured by decreasing producer commits to root CANON)  
+   - Layer commit distribution (maturity cascade visualization - commits shift from CANONIC → MACHINE → WRITING → PAPER as stack matures)  
+   - Understanding evolution (triad quality correlates with communication efficiency - episode length, correction cycles, sentiment signals, first-pass compliance rate)  
+   - AGENT learning fixation (drift → correction → fixation pattern)  
+   - Constitutional compliance evolution  
+   - Maturity metrics from git  
+   - Canonical locality  
+   - Self-aware AGENT governance (asks USER before canonifying)  
+6. **Discussion** - What works, what fails, patterns that emerged, implications  
+7. **Conclusion** - Best practices summary, significance for CANONIC paper writing  
 8. **References** - Citations to external work
+
+---
+
+## Publishing Plan (Future Work as Signals)
+
+Publishing is treated as a **signal emitter**, not a governance authority.
+
+**Planned releases:**
+- **v0 (arXiv):** publish the initial manuscript focused on architecture + observational results from git history.
+- **v1 (revision):** incorporate external commentary signals as new episodes and update the manuscript accordingly.
+
+**Peer review plan:**
+- Submit to a relevant venue after arXiv dissemination.
+- Reviewer feedback is ingested as non-binding signals.
+- Accepted revisions must remain traceable to episodes and git evidence.
+
+**Social publishing (e.g., LinkedIn):**
+- Used to attract expert comments.
+- Treated as commentary signals (same class as informal review).
 
 ---
 
