@@ -21,6 +21,7 @@ This paper documents the **entire CANONIC MACHINE WRITING PAPER stack** - paradi
 - Episode chronology (AGENT drift tracking through narrative captures)
 - Sentiment frequency analysis (emotional signals in episodes and corrections)
 - Commit pattern analysis (producer/consumer frequencies, session boundaries)
+- Constitutional amendment rate (producer commits to root CANON - proof of maturity as rate decreases)
 - Drift → fixation detection (AGENT learning through canonification)
 
 **We don't know the best practices yet.** The paper discovers them through analysis of our own git history.
@@ -67,6 +68,7 @@ Standard academic paper structure:
    - Episodic drift tracking (AGENT learning visible in episode chronology)
    - Sentiment frequency analysis (emotional signals: "Click", "??", "LFG", "brilliant")
    - Commit frequency patterns (producer/consumer ratios, session boundaries)
+   - Constitutional amendment rate analysis (paradigm stabilization measured by decreasing producer commits to root CANON)
    - AGENT learning fixation (drift → correction → fixation pattern)
    - Constitutional compliance evolution
    - Maturity metrics from git
