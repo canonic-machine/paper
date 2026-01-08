@@ -74,6 +74,9 @@ Complete chronological record of PAPER writing sessions (25 episodes, 000-024):
 | 24 | 023-agentized-git-signal-review.md | Agentized git signal review |
 | 25 | 024-proper-git-compliance.md | Proper git compliance patterns |
 
+### Episode 025
+Episode documenting the failed canon consumption violation. Captures the investigation of producing a commit without first consuming existing canon. Key findings: (1) committed Episode 021 definition that already existed in HEAD~1, (2) producer commit misused for already-canonified content, (3) skipped consumption step (`git show HEAD:VOCAB.md`). Canonified the correct pattern: READ → ANALYZE → PRODUCE → CONSUME. Committed as "Apply Episode 025 canonification" (consumer) not "Canonify" (producer).
+
 **Multi-Repo Locations:**
 - `canonic` - Paradigm layer: `/Users/iDrDex/Code/canonic/`
 - `machine` - Validation engine: `/Users/iDrDex/Code/machine/`
