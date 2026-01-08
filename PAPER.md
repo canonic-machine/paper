@@ -17,7 +17,11 @@ This paper documents the **entire CANONIC MACHINE WRITING PAPER stack** - paradi
 
 **The paper's purpose:** Discover best practices for writing CANONIC papers by analyzing our CANONIC interactions with the GIT MACHINE.
 
-**Method:** Git-based evolutionary analysis of WRITING. Track drift, fixation, AGENT learning through episode chronology and commit patterns.
+**Method:** Git-based evolutionary analysis combining:
+- Episode chronology (AGENT drift tracking through narrative captures)
+- Sentiment frequency analysis (emotional signals in episodes and corrections)
+- Commit pattern analysis (producer/consumer frequencies, session boundaries)
+- Drift → fixation detection (AGENT learning through canonification)
 
 **We don't know the best practices yet.** The paper discovers them through analysis of our own git history.
 
@@ -58,7 +62,15 @@ Standard academic paper structure:
 2. **Introduction** - Problem (AI slop), solution (CANONIC stack), thesis (git interactions reveal best practices)
 3. **Model** - CANONIC paradigm (constraints, triad, inheritance, producer/consumer, git-FSM)
 4. **Implementation** - WRITING machine + GIT MACHINE interactions (how we govern the stack)
-5. **Results** - Best practices discovered through evolutionary analysis (episodic drift tracking, AGENT learning fixation, constitutional compliance, maturity metrics, resets, canonical locality)
+5. **Results** - Best practices discovered through evolutionary analysis:
+   - Episodic drift tracking (AGENT learning visible in episode chronology)
+   - Sentiment frequency analysis (emotional signals: "Click", "??", "LFG", "brilliant")
+   - Commit frequency patterns (producer/consumer ratios, session boundaries)
+   - AGENT learning fixation (drift → correction → fixation pattern)
+   - Constitutional compliance evolution
+   - Maturity metrics from git
+   - Canonical locality
+   - Self-aware AGENT governance (asks USER before canonifying)
 6. **Discussion** - What works, what fails, patterns that emerged, implications
 7. **Conclusion** - Best practices summary, significance for CANONIC paper writing
 8. **References** - Citations to external work
