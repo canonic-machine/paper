@@ -16,6 +16,9 @@ Episode documenting the canonic refactoring. Episode 020 focused on canon bloat 
 ### Episode 021
 Episode documenting the multi-repo disconnect pattern. Captures the investigation of asymmetric drift across `canonic`, `machine`, `writing`, and `paper` repos. Key findings: (1) asymmetric drift (one repo clean while others have edits), (2) incomplete staging (untracked files), (3) cross-repo coordination gap (no simultaneous commit signal). Canonified the requirement for atomic commits across repos and episode linking in commit messages.
 
+### fully synchronized
+The state where all repositories in a CANONIC system have the same governance understanding. Local commits match upstream, new canonifications are consumed, and no repositories are ahead or behind. Achieved through regular push/pull cycles and explicit consumption of canonified patterns. Contrast with drift where repositories have divergent governance states.
+
 ### PAPER
 The CANONIC WRITING MACHINE paper specification. Documents best practices for writing CANONIC papers discovered through analyzing git interactions (productive and consumptive commits). Covers entire stack: CANONIC paradigm, MACHINE validation engine, WRITING application, and constitutional governance model.
 
