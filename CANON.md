@@ -7,9 +7,9 @@
 ## Paper Constraints
 
 ### Subject
-**This paper documents the entire CANONIC WRITING MACHINE stack.**
+**This paper documents the entire CANONIC MACHINE WRITING PAPER stack.**
 
-CANONIC (paradigm), WRITING (machine), MACHINE (semantic methods governing the stack).
+CANONIC (paradigm), MACHINE (validation engine), WRITING (application), PAPER (use case).
 
 Purpose: Discover best practices for writing CANONIC papers by analyzing CANONIC interactions with GIT MACHINE.
 

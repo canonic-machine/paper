@@ -8,11 +8,12 @@ This is the specification for the academic paper discovering best practices for 
 
 ## Subject
 
-This paper documents the **entire CANONIC WRITING MACHINE stack** - paradigm, machine, and application working together.
+This paper documents the **entire CANONIC MACHINE WRITING PAPER stack** - paradigm, validation engine, application, and use case working together.
 
 **CANONIC** (paradigm) - Constitutional programming via constraints + validation
-**WRITING** (machine) - 4-state FSM (Episode → Asset → Prose → Output)
-**MACHINE** (semantic methods) - How we govern the stack
+**MACHINE** (validation engine) - Constraint checking, git-FSM, self-* properties
+**WRITING** (application) - 4-state FSM (Episode → Asset → Prose → Output)
+**PAPER** (use case) - Academic paper as CANONIC artifact
 
 **The paper's purpose:** Discover best practices for writing CANONIC papers by analyzing our CANONIC interactions with the GIT MACHINE.
 
