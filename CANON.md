@@ -11,9 +11,9 @@
 
 CANONIC (paradigm), MACHINE (validation engine), WRITING (application), PAPER (use case).
 
-Purpose: Discover best practices for writing CANONIC papers by analyzing CANONIC interactions with GIT MACHINE.
+Purpose: Discover best practices for writing CANONIC papers through realtime episodes capturing AGENT interactions with GIT MACHINE.
 
-Method: Analyze productive/consumptive git commits to extract traceable, robust best practices.
+Method: Capture episodes in realtime, analyze productive/consumptive git commits to extract traceable, robust best practices.
 
 **We don't know best practices yet - the paper discovers them through git analysis.**
 
