@@ -24,41 +24,30 @@ This paper specifies the **minimal architecture** of the CANONIC system and uses
 
 ```mermaid
 flowchart TB
-  subgraph PARADIGM[CANONIC Paradigm]
-    RC[Root CANON\n(invariants)]
-    TR[Triad\n(CANON.md, VOCAB.md, README.md)]
-    INH[Inheritance\n(declared lineage)]
-    GOV[Governance\n(producer/consumer)]
-  end
+    subgraph Paradigm
+        direction LR
+        RC[Root CANON] --> M1
+        TR[Triad] --> M1
+        INH[Inheritance] --> M1
+        GOV[Governance] --> M1
+    end
 
-  subgraph MACHINES[CANONIC Machines]
-    M1[MACHINE\n(enforce canon on git)]
-    M2[WRITING\n(execute prose)]
-    M3[PAPER\n(interpret evidence)]
-    M4[PUBLISHING\n(emit signals)]
-  end
-
-  RC --> M1
-  TR --> M1
-  INH --> M1
-  GOV --> M1
-
-  M1 --> M2 --> M3 --> M4
-  M4 -.signals.-> M2
-  M4 -.signals.-> M3
+    subgraph Machines
+        M1[MACHINE] --> M2[WRITING]
+        M2 --> M3[PAPER]
+        M3 --> M4[PUBLISHING]
+        M4 -.-> M2
+        M4 -.-> M3
+    end
 ```
 
 ### Stack ordering (maximal separation)
 
 ```mermaid
 flowchart TB
-  CANONIC[CANONIC\n(paradigm)] --> MACHINE[MACHINE\n(enforcement on git)]
-  MACHINE --> WRITING[WRITING\n(application)]
-  WRITING --> PAPER[PAPER\n(use case)]
-  PAPER --> PUBLISHING[PUBLISHING\n(signal emitter)]
-
-  PUBLISHING -.feedback signals.-> WRITING
-  PUBLISHING -.feedback signals.-> PAPER
+    CANONIC --> MACHINE --> WRITING --> PAPER --> PUBLISHING
+    PUBLISHING -.-> WRITING
+    PUBLISHING -.-> PAPER
 ```
 
 ### Layer components (define every component)
@@ -295,3 +284,5 @@ This paper:
 ---
 
 **This is the specification. PAPER.md is the human iteration point. CANON.md regenerates from this source.**
+
+
