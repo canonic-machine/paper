@@ -17,7 +17,9 @@ Method: Capture episodes in realtime, analyze productive/consumptive git commits
 
 **We don't know best practices yet - the paper discovers them through git analysis.**
 
-**Violation:** Paper claims to already know best practices, paper documents only WRITING machine without paradigm context, paper documents only paradigm without machine context
+**All insights discovered during PAPER writing must be canonified.** This is the PAPER's core constraint. Insights discovered through practice are immediately canonified in appropriate CANONs (root CANON for paradigm insights, MACHINE/WRITING/PAPER CANONs for implementation insights).
+
+**Violation:** Paper claims to already know best practices, paper documents only WRITING machine without paradigm context, paper documents only paradigm without machine context, discovered insights not canonified
 
 ### Evidence Source
 **All claims must trace to git history from actual CANONIC paper writing sessions.**
