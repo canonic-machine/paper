@@ -79,30 +79,32 @@ Repository links exist on GitHub. Commit hashes exist in git history. File paths
 
 ### Episode Constraints
 
-**Episodes are ungoverned INPUT to the WRITING machine.**
+**Episodes are unprocessed INPUT to the WRITING machine.**
 
-Episodes are RAW capture of human direction and session events. No AI-imposed structure without canonification.
+Episodes are narrative captures of sessions. Structured, but unprocessed (no MACHINE processing - no concept extraction, no analysis, no asset references).
 
 **Canonified episode structure:**
-- ## Context (brief - what's happening in this episode)
-- ## Session content (raw capture - quotes, events, scenes)
-- Optional sections IF canonified (not AI invention)
+- ## Context (brief - what's happening)
+- ## Session narrative (storytelling, scene-setting, voice - what happened, what was said)
+- Narrative voice like ep001 (scene recreation, emotional beats, "Click" moments)
+- Direct quotes preserved with context
+- Optional sections IF canonified
 
 **Episodes must be:**
-- Raw, direct capture (what was said, what happened)
-- Fleeting moments preserved (temporal snapshots)
-- Human specs captured verbatim (Governor General directives)
-- CANONIFIED structure only (structure defined in CANON.md)
+- Unprocessed (no MACHINE processing - no concept extraction, no analysis)
+- Narrative (storytelling voice, scene-setting, context)
+- Structured (canonified sections)
+- Chronologically ordered
+- Fleeting moments preserved
 
 **Episodes must NOT be:**
-- Analyzed or organized beyond canonified structure
-- Pre-processed into assets (extraction happens after capture)
+- Processed by MACHINE (no asset extraction, no concept analysis)
+- Sterile bullet points (should have narrative voice)
 - Written as mini-papers with AI-invented "Key Insights" sections
-- Formatted as Prose or Output states
 
-**Violation:** AI invents episode structure without canonification, episodes contain extracted assets instead of raw material, episodes written as polished prose
+**Violation:** MACHINE processes episodes (extracts concepts, analyzes), episodes lack narrative voice, AI invents structure without canonification
 
-**Rationale:** Episodes are Episode state in 4-state FSM. CANONIFIED structure required. AI-imposed structure without canonification violates governance. Asset extraction happens AFTER episode capture.
+**Rationale:** Episodes are Episode state (unprocessed). Asset extraction happens in Asset state. Prose processes episodes. Episodes preserve narrative voice for human interrogation of AGENT comprehension.
 
 ### Meta-Circular Properties
 
