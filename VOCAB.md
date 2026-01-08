@@ -1,4 +1,4 @@
-# VOCAB (/)
+# VOCAB (/canonic/machine/writing/paper/)
 
 **Alphabetically ordered term definitions for the WRITING machine paper.**
 
