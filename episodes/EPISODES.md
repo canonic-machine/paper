@@ -62,15 +62,17 @@ Additional sections may emerge and become canonified as structure evolves.
 ## Indexing
 
 Episodes use zero-based sequential numbering:
-- **ep000** - 0th episode (genesis)
-- **ep001** - 1st episode
-- **ep002** - 2nd episode
-- **epNNN** - Nth episode (where N is the index)
+- **000** - 0th episode (genesis)
+- **001** - 1st episode
+- **002** - 2nd episode
+- **NNN** - Nth episode (where N is the index)
 
-**Filename pattern:** `epNNN-descriptive-name.md`
+**Filename pattern:** `NNN-descriptive-name.md`
 - Three-digit zero-padded number (000-999)
 - Descriptive kebab-case name
 - .md extension
+
+No prefix. Natural alphabetic sorting.
 
 ---
 
@@ -78,12 +80,12 @@ Episodes use zero-based sequential numbering:
 
 Episode structure writes itself through practice.
 
-Early episodes (ep000-004) differ from later episodes - this is intentional. The differences are preserved as drift signal showing how understanding evolved.
+Early episodes (000-004) differ from later episodes - this is intentional. The differences are preserved as drift signal showing how understanding evolved.
 
 **Structure maturity visible in chronology:**
-- ep000-004: Experimental structure, finding voice
-- ep005-010: Structure emerging
-- ep011+: Canonified ## Context pattern
+- 000-004: Experimental structure, finding voice
+- 005-010: Structure emerging
+- 011+: Canonified ## Context pattern
 
 Don't retroactively fix early episodes. Drift is evidence.
 
