@@ -101,6 +101,9 @@ Standard academic paper structure:
 - Form vs governance (file existence ≠ compliance)
 - Layer discipline (paradigm vs implementation vs domain)
 - Meta-circular writing (paper documents its own creation)
+- Backwards discovery (work from application to discover machine constraints)
+- Four-repo evolution (CANONIC, MACHINE, WRITING, PAPER evolve together)
+- Active learning (use the machine to discover what the machine needs)
 
 ---
 
