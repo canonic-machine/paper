@@ -1,12 +1,15 @@
-# Episode 033: Pending Commits and Untracked Changes - Canon Enforcement Gap
+# Episode 033: Pending Commits and Untracked Changes - Canon Enforcement Gap (Follow-up to 021)
 
 ## Context
 
 During canonbase review, user asked: "why are there so many commits pending?"
 
+This is a **follow-up to Episode 021: Multi-Repo Disconnect**, which identified the same pattern but did not canonify a fix.
+
 Investigation revealed:
 - Local branch is 10 commits ahead of `origin/main`
 - 3 files modified but unstaged: CANON.md, CANONIC.md, README.md
+- PAPER repo: 39 commits ahead, untracked episode files
 
 ## The Violation
 
