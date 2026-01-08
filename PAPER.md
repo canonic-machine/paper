@@ -45,6 +45,7 @@ Evidence sources:
 - PAPER repository commits (this paper's writing sessions)
 - WRITING repository commits (machine development)
 - CANONIC repository commits (paradigm evolution)
+- Constitutional amendments (producer commits to root CANON showing paradigm discoveries)
 - Producer/consumer commit patterns (legislative process)
 - Episodes (episodic memory of sessions)
 - Constitutional violations and recoveries (governance in action)
