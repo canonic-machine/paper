@@ -1,4 +1,4 @@
-# CANON (paper/)
+# CANON (/)
 
 **Inherits from:** [canonic-machine/writing](https://github.com/canonic-machine/writing)
 
