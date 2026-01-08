@@ -1,28 +1,32 @@
 # PAPER
 
-**The CANONIC WRITING machine paper specification.**
+**The CANONIC WRITING MACHINE paper specification.**
 
-This is the specification for the academic paper documenting the WRITING machine. PAPER.md is human-iterated and defines what this paper IS.
+This is the specification for the academic paper discovering best practices for writing CANONIC papers. PAPER.md is human-iterated and defines what this paper IS.
 
 ---
 
 ## Subject
 
-This paper documents the **CANONIC WRITING machine**, not the CANONIC paradigm.
+This paper documents the **entire CANONIC WRITING MACHINE stack** - paradigm, machine, and application working together.
 
-The WRITING machine is a 4-state FSM (Episode → Asset → Prose → Output) that transforms lived experience into durable, traceable prose under constitutional governance.
+**CANONIC** (paradigm) - Constitutional programming via constraints + validation
+**WRITING** (machine) - 4-state FSM (Episode → Asset → Prose → Output)
+**MACHINE** (semantic methods) - How we govern the stack
+
+**The paper's purpose:** Discover best practices for writing CANONIC papers by analyzing our CANONIC interactions with the GIT MACHINE.
+
+**Method:** Analyze productive and consumptive git commits to extract traceable, robust best practices.
+
+**We don't know the best practices yet.** The paper discovers them through analysis of our own git history.
 
 **Focus:**
-- 4-state FSM implementation
-- AI-driven, human-governed writing
-- Git as underlying machine dependency
-- Constitutional writing governance
-- Episodes as ungoverned input
-- Assets as governed meaning units
-- Prose as narrative referencing assets
-- Output as validated artifact
-
-**Out of scope:** CANONIC paradigm details beyond what's needed to understand WRITING machine governance.
+- CANONIC paradigm (constraints, validation, triad, inheritance, producer/consumer)
+- WRITING machine (4-state FSM, episodes/assets/prose/output)
+- GIT MACHINE interactions (productive commits, consumptive commits)
+- Constitutional governance (human governance, AI execution)
+- Best practices extraction (what works, what fails, patterns that emerge)
+- Real-time discovery (insights canonified as we write)
 
 ---
 
@@ -30,15 +34,16 @@ The WRITING machine is a 4-state FSM (Episode → Asset → Prose → Output) th
 
 **All claims must trace to git history.**
 
-The paper is an analysis of git commits, not theoretical speculation.
+The paper analyzes git commits from our actual CANONIC paper writing sessions.
 
 Evidence sources:
-- WRITING repository commits
-- CANONIC repository commits (for inherited constraints)
-- Producer/consumer commit patterns
-- FSM state transitions visible in commit messages
-- Constitutional violations and recoveries
-- Maturity metrics computed from git log
+- PAPER repository commits (this paper's writing sessions)
+- WRITING repository commits (machine development)
+- CANONIC repository commits (paradigm evolution)
+- Producer/consumer commit patterns (legislative process)
+- Episodes (episodic memory of sessions)
+- Constitutional violations and recoveries (governance in action)
+- Maturity metrics computed from git log (evolution measurement)
 
 **No hallucinated claims.** Every assertion must be verifiable by cloning repos and running git commands.
 
@@ -48,13 +53,13 @@ Evidence sources:
 
 Standard academic paper structure:
 
-1. **Abstract** - Contribution, methods, findings (one paragraph)
-2. **Introduction** - Problem (AI slop), solution (CANONIC), thesis
-3. **Model** - CANONIC paradigm essentials (triad, inheritance, producer/consumer)
-4. **Implementation** - WRITING machine (4-state FSM, validation gates, git-FSM)
-5. **Results** - Constitutional compliance, git signal, maturity metrics, episodes, resets
-6. **Discussion** - Implications, limitations, future work
-7. **Conclusion** - Summary and significance
+1. **Abstract** - Contribution (best practices for CANONIC papers), methods (git analysis), findings
+2. **Introduction** - Problem (AI slop), solution (CANONIC stack), thesis (git interactions reveal best practices)
+3. **Model** - CANONIC paradigm (constraints, triad, inheritance, producer/consumer, git-FSM)
+4. **Implementation** - WRITING machine + GIT MACHINE interactions (how we govern the stack)
+5. **Results** - Best practices discovered through git analysis (constitutional compliance, maturity metrics, episodes, resets, canonical locality)
+6. **Discussion** - What works, what fails, patterns that emerged, implications
+7. **Conclusion** - Best practices summary, significance for CANONIC paper writing
 8. **References** - Citations to external work
 
 ---
@@ -63,21 +68,39 @@ Standard academic paper structure:
 
 **The paper must document these insights extracted from git history:**
 
-- Git is a machine that CANONIC machines depend on (not just storage)
-- AI-driven, human-governed execution model (governor general metaphor)
-- Atomic commits as critical infrastructure (FSM execution log)
-- Layer discipline (paradigm vs implementation vs domain)
-- Real-time canonification pattern (insights captured during execution)
-- Producer/consumer legislative process (maturity measurement)
-- Constitutional compliance through git signal (violations visible, recoverable)
+**Paradigm layer (CANONIC):**
+- Constitutional programming via constraints + validation
 - Triad requirement (CANON, VOCAB, README - all LLM-generated)
 - VOCAB is temporal (evolves with machine, not static dictionary)
-- Self-* properties (self-validating, self-documenting, self-healing, self-measuring, self-optimizing, self-strengthening)
-- Every session is an episode (meta-circular writing)
-- Episodes captured in real-time (fleeting moments, episodic memory)
-- Episodes are ungoverned input (may be messy, contradictory, incomplete)
-- GitHub is the ledger (single source of truth, consumed to compute local metrics)
+- Specifications are human iteration points (CANONIC.md, WRITING.md, PAPER.md)
+- Producer/consumer legislative process (maturity measurement)
+- Inheritance (implementations inherit from paradigm)
+
+**Machine layer (GIT MACHINE):**
+- Git is a machine (not just storage)
+- Atomic commits as critical infrastructure (FSM execution log)
+- GitHub is the ledger (single source of truth)
+- Git signal = FSM execution trace
 - One episode spans many commits (producer + consumer sequences)
+
+**Governance:**
+- AI-driven, human-governed execution model (governor general metaphor)
+- Constitutional compliance through git signal (violations visible, recoverable)
+- Human governance catches AI drift (pattern blindness vs constitutional enforcement)
+- Real-time canonification (insights captured during execution)
+
+**Application layer (WRITING + PAPER):**
+- 4-state FSM (Episode → Asset → Prose → Output)
+- Episodes are ungoverned input (fleeting moments, episodic memory)
+- Episodes captured in real-time during sessions
+- Canonical locality (artifacts placed closest to canon that governs them)
+- Self-* properties (self-validating, self-documenting, self-healing, self-measuring, self-optimizing, self-strengthening)
+
+**Best practices (discovered through git analysis):**
+- Every session is an episode (capture fleeting moments)
+- Form vs governance (file existence ≠ compliance)
+- Layer discipline (paradigm vs implementation vs domain)
+- Meta-circular writing (paper documents its own creation)
 
 ---
 
@@ -89,6 +112,7 @@ Every artifact reference must resolve:
 - File paths → must exist at specified commits
 - Git commands → must produce stated results
 - Metrics → must be computable from git log
+- Episodes → must trace to actual sessions
 
 No broken links. No hallucinated references. Complete verifiability.
 
@@ -97,14 +121,15 @@ No broken links. No hallucinated references. Complete verifiability.
 ## Meta-Circular Properties
 
 This paper:
-- Documents the WRITING machine
-- Is written using the WRITING machine
-- Captures episodes from its own writing sessions
+- Documents best practices for CANONIC papers
+- Is itself a CANONIC paper
+- Discovers best practices by analyzing its own writing
+- Captures episodes from its own sessions
 - Canonifies insights discovered during writing
-- Validates its own claims against git history
+- Validates its own claims against its own git history
 - Demonstrates every pattern it describes
 
-The system observes itself and reports findings.
+**The paper IS the experiment.** We analyze our CANONIC interactions with the GIT MACHINE to discover what works.
 
 ---
 
