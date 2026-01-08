@@ -77,6 +77,29 @@ Repository links exist on GitHub. Commit hashes exist in git history. File paths
 
 **Violation:** Missing insights, insights without git evidence, insights not organized by layer
 
+### Episode Constraints
+
+**Episodes are ungoverned INPUT to the WRITING machine.**
+
+Episodes are RAW capture of human direction and session events. No AI-imposed structure.
+
+**Episodes must be:**
+- Raw, direct capture (what was said, what happened)
+- Ungoverned (no sections, no analysis, no organization)
+- Fleeting moments preserved (temporal snapshots)
+- Human specs captured verbatim (Governor General directives)
+
+**Episodes must NOT be:**
+- Structured with ## sections or ### subsections
+- Analyzed or organized by AI
+- Pre-processed into assets
+- Written as mini-papers with "Key Insights" or "Conclusions"
+- Formatted as Prose or Output states
+
+**Violation:** AI imposes structure on episodes, episodes contain assets instead of raw material, episodes written as polished prose
+
+**Rationale:** Episodes are Episode state in 4-state FSM. Asset extraction happens AFTER episode capture. AI imposing structure confuses input with output.
+
 ### Meta-Circular Properties
 
 **The paper IS the experiment.**
