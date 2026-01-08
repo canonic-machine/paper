@@ -168,8 +168,48 @@ Recovery sequence updated...
 
 ---
 
-**Status:** Episode in progress, PAPER.md created, executing consumer commits
+---
 
-**This episode spans:** From false claim of compliance → through violation detection → through how-AI-missed-it analysis → to paper compliance via producer/consumer git sequence
+## Recovery Complete
 
-**Git commits will preserve this complete recovery journey.**
+**Git signal (5 commits):**
+
+```bash
+cd paper && git log --oneline | head -6
+# 6c44b48 Fix arxiv.md compliance: Add Section 4.7
+# b0f2e79 Apply spec to regenerate README.md
+# a2e977e Apply spec to regenerate CANON.md from PAPER.md
+# dcaf6bc Apply canonical locality: Move episodes to paper repo
+# e16bcd3 Canonify paper specification in PAPER.md
+# 012dd57 Document VOCAB constitutional reset in paper
+```
+
+**Producer/consumer ratio:** 1 producer (Canonify PAPER.md), 4 consumers (Apply spec, move artifacts, regenerate triad, fix compliance).
+
+**Outcome:**
+
+PAPER repository now compliant:
+- PAPER.md (spec) - human iteration point ✓
+- CANON.md (constraints) - LLM-generated from PAPER.md ✓
+- VOCAB.md (terms) - LLM-generated, temporal ✓
+- README.md (docs) - LLM-generated from triad ✓
+- arxiv.md (artifact) - documents its own recovery ✓
+- episodes/ (episodic memory) - canonical locality ✓
+
+**Insights canonified:**
+
+1. **Specifications are constitutional** - Humans iterate specs, LLMs generate triads
+2. **Canonical locality** - Artifacts placed closest to canon that governs them
+3. **One episode spans many commits** - Producer/consumer sequences
+4. **Human governance catches AI drift** - Pattern blindness vs constitutional enforcement
+5. **Form vs governance** - File existence ≠ compliance
+
+**This episode documented:** From false claim → through violation detection → through how-AI-missed-it → through canonical locality discovery → to constitutional compliance.
+
+**Meta-circular:** Paper now documents its own spec violation and recovery in Section 4.7.
+
+---
+
+**Status:** Episode complete, recovery executed, paper constitutionally compliant
+
+**This episode spanned:** 5 git commits (1 producer, 4 consumers) documenting complete violation-to-compliance journey
