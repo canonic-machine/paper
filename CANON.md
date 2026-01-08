@@ -35,6 +35,20 @@ Sections: Abstract (best practices contribution), Introduction (AI slop problem,
 
 **Violation:** Missing required sections, non-standard organization, claims best practices without analysis
 
+### Paper Triad
+**PAPER follows SPEC vs VOCAB vs CANON pattern to generate output.**
+
+**PAPER writing process:**
+- **PAPER.md** (SPEC): Human-iterated source of truth. What the paper IS.
+- **VOCAB.md**: LLM-generated PAPER-specific term definitions. What PAPER terms mean.
+- **CANON.md**: LLM-generated constraints. How the paper must work.
+
+All three are editable/regeneratable to produce:
+- **README.md**: Human-readable guidance for working with PAPER
+- **Output**: The actual academic paper artifact (final validated form)
+
+**Violation:** Paper missing triad structure, output generated without CANON compliance, README not regenerated from triad
+
 ### Traceability
 **Every artifact reference must resolve.**
 
