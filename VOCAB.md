@@ -31,6 +31,9 @@ Formal research document following standard structure (abstract, introduction, m
 ### ArXiv
 Open-access preprint repository for academic papers. Target publication venue for this work.
 
+### episode template
+A canonical episode scaffold stored in `episodes/templates/` that defines required sections and fields for a specific episode type.
+
 ### TUNING
 The governance scope for violation handling between MACHINE and PAPER.
 

@@ -64,6 +64,14 @@ Each episode follows the Episode 000 format.
 
 ---
 
+## Templates
+
+Canonical episode templates live in `episodes/templates/`.
+
+Use the template that matches the episode type (violation, redo, canonification, compliance, vocab, scope, agent, git signal, analysis, base). Templates are flat in the folder (no subfolders) to keep discovery simple.
+
+---
+
 ## Indexing
 
 Episodes use zero-based sequential numbering:
