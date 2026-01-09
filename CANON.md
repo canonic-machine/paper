@@ -111,6 +111,14 @@ Repository links exist on GitHub. Commit hashes exist in git history. File paths
 
 **Violation:** Missing insights, insights without git evidence, insights not organized by layer
 
+### Hypothesis
+
+**The paper must test the hypothesis that standardized episode templates reduce drift.**
+
+Evidence comes from comparing episodes before and after template canonification. Episodes are the analysis record for this comparison.
+
+**Violation:** Hypothesis missing, or no before/after comparison anchored in episodes
+
 ### Episode Constraints
 
 **Episodes are standardized session records for the PAPER machine.**

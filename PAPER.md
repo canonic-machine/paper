@@ -34,6 +34,8 @@ The purpose of this paper is to:
 
 The paper discovers **best practices** by analyzing **its own governed production**, using git execution traces as evidence.
 
+**Hypothesis:** Standardized episode templates reduce episode drift. The test compares episodes before and after template canonification; episodes are the analysis record.
+
 ---
 
 ## 3. Canonical Roles (Dual Framing)
