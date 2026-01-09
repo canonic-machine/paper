@@ -28,6 +28,12 @@ Evidence: PAPER repository commits, WRITING repository commits, CANONIC reposito
 
 **Violation:** Claims without git history evidence, hallucinated references, unverifiable assertions, theoretical speculation
 
+### Git Signal
+
+**Every violation is canonified with an atomic commit in the appropriate scope.**
+
+**Violation:** A violation occurs without an atomic canonification commit
+
 ### Structure
 **Standard academic paper structure required.**
 
@@ -121,6 +127,14 @@ Episodes are narrative captures of sessions. Structured, but unprocessed (no MAC
 **Violation:** MACHINE processes episodes (extracts concepts, analyzes), episodes lack narrative voice, AI invents structure without canonification
 
 **Rationale:** Episodes are Episode state (unprocessed). Asset extraction happens in Asset state. Prose processes episodes. Episodes preserve narrative voice for human interrogation of AGENT comprehension.
+
+### Violation Response
+
+**Every violation triggers a SWAT analysis in prose.**
+
+SWAT analysis is performed outside episodes and documents strengths, weaknesses, opportunities, and threats for the violation.
+
+**Violation:** A violation occurs without a corresponding SWAT analysis
 
 ### Meta-Circular Properties
 

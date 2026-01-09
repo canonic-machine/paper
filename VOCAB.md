@@ -43,6 +43,9 @@ This artifact. Documents the CANONIC WRITING machine through analysis of git his
 ### traceability
 Property where every claim, reference, and example can be verified through git history or external sources.
 
+### SWAT analysis
+A structured review of a violation covering strengths, weaknesses, opportunities, and threats.
+
 ---
 
 ## Episode Timeline

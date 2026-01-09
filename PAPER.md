@@ -175,6 +175,7 @@ The paper uses **retrospective reconstruction** based on:
 - Episode boundaries
 - Reverts and redo events
 - Cross-repo synchronization
+- SWAT analysis after any violation (prose layer)
 
 No mechanisms are assumed.  
 Only observable outcomes are reported.
