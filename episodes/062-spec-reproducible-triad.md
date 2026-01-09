@@ -5,9 +5,11 @@
 **Context:** CANONIC regeneration method and triad linkage  
 **Agent:** codex
 
+**Type:** Unknown
+**Participants:** Unknown
 ---
 
-## Context
+## The Session
 We were refining CANONIC so it stays minimal, reproducible, and aligned with the CANON -> VOCAB -> README chain.
 
 ## Session narrative
@@ -16,3 +18,21 @@ The insight landed: SPEC should define how CANON and VOCAB are generated, not ju
 ---
 
 **End Episode 062**
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Violations Detected and Fixed
+
+Not recorded in original episode.
+
+## Git Signal
+
+Not recorded in original episode.
+
+## The Insight
+
+Not recorded in original episode.
+
+**Status:** Not recorded in original episode.

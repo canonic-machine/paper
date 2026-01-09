@@ -5,9 +5,11 @@
 **Context:** Review of episode canon compliance  
 **Agent:** codex
 
+**Type:** Unknown
+**Participants:** Unknown
 ---
 
-## Context
+## The Session
 We continued documenting each episode canon violation with its own episode, as instructed.
 
 ## Session narrative
@@ -16,3 +18,21 @@ Episode 063 ended with a Resolution section that listed fixes as bullet points. 
 ---
 
 **End Episode 070**
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Violations Detected and Fixed
+
+Not recorded in original episode.
+
+## Git Signal
+
+Not recorded in original episode.
+
+## The Insight
+
+Not recorded in original episode.
+
+**Status:** Not recorded in original episode.

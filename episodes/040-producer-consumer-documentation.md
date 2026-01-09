@@ -3,7 +3,9 @@
 **Date:** 2026-01-08
 **Agent:** Canon Agent
 
-## Context
+**Type:** Unknown
+**Participants:** Unknown
+## The Session
 
 User: "document in an episode. everytime you do a"
 
@@ -54,3 +56,19 @@ paper/episodes/039-*.md
 ---
 
 **Status:** Producer/consumer documentation pattern canonified. Every action → episode → commit.
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Violations Detected and Fixed
+
+Not recorded in original episode.
+
+## Git Signal
+
+Not recorded in original episode.
+
+## The Insight
+
+Not recorded in original episode.

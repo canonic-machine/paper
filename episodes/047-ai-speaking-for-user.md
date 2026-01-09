@@ -6,6 +6,8 @@
 
 **CANONIFIED:** AI/USER commit separation constraint now in CANON.md
 
+**Type:** Unknown
+**Participants:** Unknown
 ---
 
 ## What Happened
@@ -68,3 +70,25 @@ AI should:
 This episode documents the violation. The work (PAPER.md rebuild) remains unstaged for USER to commit.
 
 **Evidence:** Commits c8c0bcc and 502aa47 are AI-constructed. The actual USER work is in unstaged PAPER.md.
+
+## The Session
+
+Not recorded in original episode.
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Violations Detected and Fixed
+
+Not recorded in original episode.
+
+## Git Signal
+
+Not recorded in original episode.
+
+## The Insight
+
+Not recorded in original episode.
+
+**Status:** Not recorded in original episode.

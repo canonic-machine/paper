@@ -2,26 +2,24 @@
 
 **The PAPER episode collection specification.**
 
-This is the specification for episodes - narrative captures of PAPER writing sessions. EPISODES.md is human-iterated and defines what episodes ARE.
+This is the specification for episodes - standardized records of PAPER writing sessions. EPISODES.md is human-iterated and defines what episodes ARE.
 
 ---
 
 ## What Episodes Are
 
-Episodes are unprocessed narrative captures of sessions. They preserve fleeting moments, emotional beats, and the raw story of how this PAPER was written.
+Episodes are standardized session records. They preserve the story of what happened and the governance signals needed for later analysis.
 
 **Episodes are:**
-- Narrative (storytelling voice, scene-setting, direct quotes)
-- Structured (canonified sections: ## Context, session narrative)
-- Unprocessed (no MACHINE processing - no concept extraction, asset references, or analysis)
+- Structured (canonified sections and header fields)
+- Narrative (scene-setting, direct quotes, lived moments)
 - Chronological (indexed sequentially to reveal drift patterns)
-- Evolvable (structure emerges and improves over time)
+- Traceable (git signals must be evidence-backed)
 
 **Episodes are not:**
-- Analysis (that's prose)
-- Logs (they're stories)
-- Static (can be updated with later context)
-- Perfect (they preserve drift as evidence)
+- Final paper prose
+- Freeform logs without structure
+- Ungoverned artifacts
 
 ---
 
@@ -39,23 +37,23 @@ Episodes serve multiple functions:
 
 ## Structure
 
-Each episode follows this canonified structure:
+Each episode follows the Episode 000 format.
+
+### Required Header Fields
+
+- **Date**
+- **Type**
+- **Participants**
+- **Agent**
 
 ### Required Sections
 
-**## Context** - Brief scene-setting (2-3 sentences)
-- What's happening in this session
-- Where we are in the PAPER writing process
-
-**Session narrative** - Storytelling with voice
-- Direct quotes preserved ("??" "Click" "LFG")
-- Emotional beats captured
-- Scene recreation (not just facts)
-- What was said, what happened, how it felt
-
-### Optional Sections
-
-Additional sections may emerge and become canonified as structure evolves.
+- ## The Session
+- ## Key Assets Discovered
+- ## Violations Detected and Fixed
+- ## Git Signal
+- ## The Insight
+- **Status:** <single-line status at end>
 
 ---
 
@@ -78,39 +76,13 @@ No prefix. Natural alphabetic sorting.
 
 ## Evolution
 
-Episode structure writes itself through practice.
-
-Early episodes (000-004) differ from later episodes - this is intentional. The differences are preserved as drift signal showing how understanding evolved.
-
-**Structure maturity visible in chronology:**
-- 000-004: Experimental structure, finding voice
-- 005-010: Structure emerging
-- 011+: Canonified ## Context pattern
-
-Don't retroactively fix early episodes. Drift is evidence.
-
----
-
-## Meaning vs Prose
-
-**Meaning is constant.** The core story of what happened remains true.
-
-**Prose is ephemeral.** How we tell the story evolves as we learn better ways to communicate.
-
-Episodes can be updated with context discovered later, but original meaning is preserved. Updates enhance understanding without erasing drift signal.
+Episode format is standardized. Deviations are violations and must be corrected via redo.
 
 ---
 
 ## Processing
 
-Episodes flow through the WRITING machine:
-
-1. **Episode** (input) - Unprocessed narrative capture
-2. **Asset** - Meaning extracted from episodes
-3. **Prose** - Processed analysis of episodes
-4. **Output** - Final validated paper
-
-Episodes remain unprocessed. Prose processes episodes into analyzed content for PAPER Results section.
+Episodes are the canonical session record. Assets and prose are derived later, but episodes may list assets and violations as evidence for downstream work.
 
 ---
 

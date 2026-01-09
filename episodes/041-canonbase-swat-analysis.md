@@ -6,6 +6,8 @@
 
 **Analysis:** 4-repo commit history reveals systematic producer/consumer patterns that expose the failure mode.
 
+**Type:** Unknown
+**Participants:** Unknown
 ---
 
 ## SWAT Analysis: Canonbase Governance Review
@@ -83,3 +85,25 @@ Episode 038 → CANONIC: 3b8ea95, PAPER: 3c9743c, WRITING: (implicit)
 - Commit analysis across 4 repos confirms patterns
 - SWAT framework applied to git history
 - Violations identified: layer confusion, triad gaps, terminology leakage
+
+## The Session
+
+Not recorded in original episode.
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Violations Detected and Fixed
+
+Not recorded in original episode.
+
+## Git Signal
+
+Not recorded in original episode.
+
+## The Insight
+
+Not recorded in original episode.
+
+**Status:** Not recorded in original episode.

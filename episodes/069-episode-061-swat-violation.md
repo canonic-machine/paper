@@ -5,9 +5,11 @@
 **Context:** Review of episode canon compliance  
 **Agent:** codex
 
+**Type:** Unknown
+**Participants:** Unknown
 ---
 
-## Context
+## The Session
 We were asked to fix every episode canon violation by documenting it with a new episode.
 
 ## Session narrative
@@ -16,3 +18,21 @@ When we looked back at Episode 061, it contained a full SWAT section and a Resol
 ---
 
 **End Episode 069**
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Violations Detected and Fixed
+
+Not recorded in original episode.
+
+## Git Signal
+
+Not recorded in original episode.
+
+## The Insight
+
+Not recorded in original episode.
+
+**Status:** Not recorded in original episode.

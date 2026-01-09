@@ -64,3 +64,25 @@ AI writes detailed ep004.
 ---
 
 **End raw episode.**
+
+## The Session
+
+Not recorded in original episode.
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Violations Detected and Fixed
+
+Not recorded in original episode.
+
+## Git Signal
+
+Not recorded in original episode.
+
+## The Insight
+
+Not recorded in original episode.
+
+**Status:** Not recorded in original episode.

@@ -5,9 +5,11 @@
 **Context:** Reproducibility insight for governed CANONIC machine  
 **Agent:** codex
 
+**Type:** Unknown
+**Participants:** Unknown
 ---
 
-## Context
+## The Session
 We were clarifying what constitutes the core of a shippable CANONIC machine.
 
 ## Session narrative
@@ -16,3 +18,21 @@ The question sharpened into a clean line: if CANON and SPEC are preserved, can t
 ---
 
 **End Episode 066**
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Violations Detected and Fixed
+
+Not recorded in original episode.
+
+## Git Signal
+
+Not recorded in original episode.
+
+## The Insight
+
+Not recorded in original episode.
+
+**Status:** Not recorded in original episode.

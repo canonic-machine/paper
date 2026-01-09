@@ -113,32 +113,37 @@ Repository links exist on GitHub. Commit hashes exist in git history. File paths
 
 ### Episode Constraints
 
-**Episodes are unprocessed INPUT to the WRITING machine.**
+**Episodes are standardized session records for the PAPER machine.**
 
-Episodes are narrative captures of sessions. Structured, but unprocessed (no MACHINE processing - no concept extraction, no analysis, no asset references).
+Episodes capture narrative, violations, assets, git signal, and insight in a consistent format. They are not the final paper, but they are governed artifacts with required structure.
 
-**Canonified episode structure:**
-- ## Context (brief - what's happening)
-- ## Session narrative (storytelling, scene-setting, voice - what happened, what was said)
-- Narrative voice like ep001 (scene recreation, emotional beats, "Click" moments)
-- Direct quotes preserved with context
-- Optional sections IF canonified
+**Required header fields:**
+- **Date**
+- **Type**
+- **Participants**
+- **Agent**
+
+**Canonified episode structure (Episode 000 format):**
+- ## The Session
+- ## Key Assets Discovered
+- ## Violations Detected and Fixed
+- ## Git Signal
+- ## The Insight
+- **Status:** <single-line status at end>
 
 **Episodes must be:**
-- Unprocessed (no MACHINE processing - no concept extraction, no analysis)
-- Narrative (storytelling voice, scene-setting, context)
-- Structured (canonified sections)
-- Chronologically ordered
-- Fleeting moments preserved
+- Structured to the standardized format
+- Chronologically ordered and indexed
+- Traceable to git evidence when signals are asserted
 
 **Episodes must NOT be:**
-- Processed by MACHINE (no asset extraction, no concept analysis)
-- Sterile bullet points (should have narrative voice)
-- Written as mini-papers with AI-invented "Key Insights" sections
+- Missing required sections or header fields
+- Missing Git Signal when claims depend on git history
+- Written as final paper prose
 
-**Violation:** MACHINE processes episodes (extracts concepts, analyzes), episodes lack narrative voice, AI invents structure without canonification
+**Violation:** Episodes missing required structure, unverifiable git signals, or prose that bypasses the episode role
 
-**Rationale:** Episodes are Episode state (unprocessed). Asset extraction happens in Asset state. Prose processes episodes. Episodes preserve narrative voice for human interrogation of AGENT comprehension.
+**Rationale:** Episodes are the canonical session record. Standardized structure makes drift measurable and consumption repeatable.
 
 ### Evolutionary Analysis Cadence
 

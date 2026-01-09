@@ -5,6 +5,8 @@
 **Context:** Reset protocol and atomic canonification  
 **Agent:** codex
 
+**Type:** Unknown
+**Participants:** Unknown
 ---
 
 ## The Problem
@@ -41,3 +43,21 @@ CANONIC and MACHINE drifted after iterative edits: the triad was briefly broken,
 ---
 
 **End Episode 060**
+
+## The Session
+
+Not recorded in original episode.
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Violations Detected and Fixed
+
+Not recorded in original episode.
+
+## Git Signal
+
+Not recorded in original episode.
+
+**Status:** Not recorded in original episode.

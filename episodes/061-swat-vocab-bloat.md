@@ -5,9 +5,11 @@
 **Context:** CANONIC cohesion pass, VOCAB overexpansion  
 **Agent:** codex
 
+**Type:** Unknown
+**Participants:** Unknown
 ---
 
-## Context
+## The Session
 We were tightening CANONIC to be cohesive and human-first. I regenerated VOCAB after a "regenerate per CANONIC CANON" prompt and overshot with a long list of terms.
 
 ## Session narrative
@@ -39,3 +41,21 @@ We reset CANONIC to the CANON -> VOCAB -> README chain, tightened introspection 
 ---
 
 **End Episode 061**
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Violations Detected and Fixed
+
+Not recorded in original episode.
+
+## Git Signal
+
+Not recorded in original episode.
+
+## The Insight
+
+Not recorded in original episode.
+
+**Status:** Not recorded in original episode.

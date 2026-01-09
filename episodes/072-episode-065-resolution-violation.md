@@ -5,9 +5,11 @@
 **Context:** Review of episode canon compliance  
 **Agent:** codex
 
+**Type:** Unknown
+**Participants:** Unknown
 ---
 
-## Context
+## The Session
 We were finalizing the list of recent episode violations and documenting each one in sequence.
 
 ## Session narrative
@@ -16,3 +18,21 @@ Episode 065 closed with a Resolution section that summarized actions, which cros
 ---
 
 **End Episode 072**
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Violations Detected and Fixed
+
+Not recorded in original episode.
+
+## Git Signal
+
+Not recorded in original episode.
+
+## The Insight
+
+Not recorded in original episode.
+
+**Status:** Not recorded in original episode.

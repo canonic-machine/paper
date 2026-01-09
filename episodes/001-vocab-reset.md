@@ -74,3 +74,23 @@ The machine's self-reference leads. WRITING defines itself first. Then the terms
 ---
 
 **Status:** Episodic capture complete, ready for constitutional reset execution
+
+## The Session
+
+Not recorded in original episode.
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Violations Detected and Fixed
+
+Not recorded in original episode.
+
+## Git Signal
+
+Not recorded in original episode.
+
+## The Insight
+
+Not recorded in original episode.

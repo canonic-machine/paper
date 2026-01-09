@@ -4,6 +4,8 @@
 **Date:** 2026-01-08
 **Agent:** Canon Agent
 
+**Type:** Unknown
+**Participants:** Unknown
 ---
 
 ## The Wrong Constraint
@@ -71,3 +73,25 @@ This episode preserves:
 - The correct constraint in MACHINE/CANON.md
 
 All evidence traces to git history.
+
+## The Session
+
+Not recorded in original episode.
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Violations Detected and Fixed
+
+Not recorded in original episode.
+
+## Git Signal
+
+Not recorded in original episode.
+
+## The Insight
+
+Not recorded in original episode.
+
+**Status:** Not recorded in original episode.

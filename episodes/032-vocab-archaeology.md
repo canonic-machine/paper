@@ -22,6 +22,30 @@
 
 **Violation:** Confating rename with canonify, leaving producer commits unconsumed.
 
+**Type:** Unknown
+**Participants:** Unknown
 ---
 
 **Evidence:** Git history analysis revealed terminology changes made via rename without corresponding canonification commits.
+
+## The Session
+
+Not recorded in original episode.
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Violations Detected and Fixed
+
+Not recorded in original episode.
+
+## Git Signal
+
+Not recorded in original episode.
+
+## The Insight
+
+Not recorded in original episode.
+
+**Status:** Not recorded in original episode.

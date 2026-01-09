@@ -5,9 +5,11 @@
 **Context:** Template generalization and SPEC naming  
 **Agent:** codex
 
+**Type:** Unknown
+**Participants:** Unknown
 ---
 
-## Context
+## The Session
 We were tightening templates to avoid CANONIC-specific language and clarifying that SPEC is the variable while CANONIC is the value.
 
 ## Session narrative
@@ -22,3 +24,21 @@ The user stopped the flow: the templates were mixing documentation with canon, a
 ---
 
 **End Episode 063**
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Violations Detected and Fixed
+
+Not recorded in original episode.
+
+## Git Signal
+
+Not recorded in original episode.
+
+## The Insight
+
+Not recorded in original episode.
+
+**Status:** Not recorded in original episode.

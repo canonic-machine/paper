@@ -3,7 +3,9 @@
 **Date:** 2026-01-08
 **Agent:** Canon Agent
 
-## Context
+**Type:** Unknown
+**Participants:** Unknown
+## The Session
 
 During canonbase review, user asked: "why are there so many commits pending?"
 
@@ -102,3 +104,19 @@ When a producer commits canonified constraints:
 ---
 
 **Status:** Canon enforcement gap documented, propagation constraint identified for canonification
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Violations Detected and Fixed
+
+Not recorded in original episode.
+
+## Git Signal
+
+Not recorded in original episode.
+
+## The Insight
+
+Not recorded in original episode.

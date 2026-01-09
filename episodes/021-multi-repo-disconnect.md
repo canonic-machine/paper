@@ -3,7 +3,9 @@
 **Date:** 2026-01-08
 **Agent:** Canon Agent
 
-## Context
+**Type:** Unknown
+**Participants:** Unknown
+## The Session
 
 User requested: “all need atomic commits. intelligent. why the disconnect? investigate and document in paper episode. follow the canons.” The request came after reviewing all four repositories (`canonic`, `machine`, `writing`, `paper`) and noticing inconsistent states across them. This episode captures that investigation, which starts from the PAPER specification and works backward through the rest of the stack.
 
@@ -35,3 +37,21 @@ The PAPER specification demands that every claim still traces to git history. Wh
 3. **Atomic commits**: When ready to push, create targeted commits per repository using the correct prefix (`Canonify …` for governance updates in `canonic`/`machine`, `Apply …` or `Fix …` for implementation changes in `writing`/`paper`). Document how each commit addresses the disconnect.
 
 End of Episode 021.
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Violations Detected and Fixed
+
+Not recorded in original episode.
+
+## Git Signal
+
+Not recorded in original episode.
+
+## The Insight
+
+Not recorded in original episode.
+
+**Status:** Not recorded in original episode.

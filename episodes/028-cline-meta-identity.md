@@ -3,7 +3,9 @@
 **Date:** 2026-01-08
 **Agent:** cline
 
-## Context
+**Type:** Unknown
+**Participants:** Unknown
+## The Session
 
 User asked: "do you know you are cline at least?"
 
@@ -46,3 +48,19 @@ This is itself a pattern worth canonifying: AI assistants have varying levels of
 ---
 
 **Status:** Meta-identity vs model identity distinction canonified
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Violations Detected and Fixed
+
+Not recorded in original episode.
+
+## Git Signal
+
+Not recorded in original episode.
+
+## The Insight
+
+Not recorded in original episode.

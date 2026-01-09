@@ -3,7 +3,9 @@
 **Date:** 2026-01-07
 **Agent:** Claude Sonnet 4.5
 
-## Context
+**Type:** Unknown
+**Participants:** Unknown
+## The Session
 
 End of session - capturing scenes from this working session. Insights are canonified in GitHub (producer commits), not documented in episodes. Episodes are raw scenes.
 
@@ -71,3 +73,17 @@ User: "sure. declare them. lets work on the WRITING tooling. these are WRITING t
 Multiple producer commits across canonic, machine, writing, paper repos. High canonification activity. Session discovering and codifying patterns.
 
 Commit pattern: Fix violation → Canonify learning → Apply constraint → Capture episode
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Violations Detected and Fixed
+
+Not recorded in original episode.
+
+## The Insight
+
+Not recorded in original episode.
+
+**Status:** Not recorded in original episode.

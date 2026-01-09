@@ -3,6 +3,8 @@
 **Date:** 2026-01-07
 **Agent:** Claude Sonnet 4.5
 
+**Type:** Unknown
+**Participants:** Unknown
 ## The Question
 
 User: "this is interestng. Theres now documented episodic drift. the first ones were actually episodic. the last ones are what happened. right? can you tell me why? investigate"

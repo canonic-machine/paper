@@ -4,6 +4,8 @@
 **Date:** 2026-01-08
 **Agent:** Canon Agent
 
+**Type:** Unknown
+**Participants:** Unknown
 ---
 
 ## SWAT Analysis: Episode 042 (Non-Compliance Documentation)
@@ -97,3 +99,25 @@ paper/episodes/README.md: EXISTS (modified Jan 7)
 ---
 
 **Evidence:** Episode 042 file exists, triad verified, sequence intact. Git commits pending.
+
+## The Session
+
+Not recorded in original episode.
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Violations Detected and Fixed
+
+Not recorded in original episode.
+
+## Git Signal
+
+Not recorded in original episode.
+
+## The Insight
+
+Not recorded in original episode.
+
+**Status:** Not recorded in original episode.

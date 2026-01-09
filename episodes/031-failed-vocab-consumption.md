@@ -15,6 +15,30 @@ When triad file naming changes (e.g., DICTIONARY.md → VOCAB.md):
 
 **Violation:** Files renamed without canonification, or canonification without consumption (stale documentation, unreferenced terminology in specs).
 
+**Type:** Unknown
+**Participants:** Unknown
 ---
 
 **Evidence:** DICTIONARY.md → VOCAB.md rename occurred across multiple repos without coordinated canonification.
+
+## The Session
+
+Not recorded in original episode.
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Violations Detected and Fixed
+
+Not recorded in original episode.
+
+## Git Signal
+
+Not recorded in original episode.
+
+## The Insight
+
+Not recorded in original episode.
+
+**Status:** Not recorded in original episode.

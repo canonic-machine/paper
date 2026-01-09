@@ -5,9 +5,11 @@
 **Context:** Temporary SWAT insertion removed from Episode 066  
 **Agent:** codex
 
+**Type:** Unknown
+**Participants:** Unknown
 ---
 
-## Context
+## The Session
 We were auditing episode canon compliance after the user asked for a SWAT analysis and then reminded us that episodes are unprocessed and frozen.
 
 ## Session narrative
@@ -16,3 +18,21 @@ I added a SWAT section and Resolution to Episode 066 in response to the request,
 ---
 
 **End Episode 073**
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Violations Detected and Fixed
+
+Not recorded in original episode.
+
+## Git Signal
+
+Not recorded in original episode.
+
+## The Insight
+
+Not recorded in original episode.
+
+**Status:** Not recorded in original episode.

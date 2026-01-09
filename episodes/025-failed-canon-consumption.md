@@ -3,7 +3,9 @@
 **Date:** 2026-01-08
 **Agent:** Canon Agent
 
-## Context
+**Type:** Unknown
+**Participants:** Unknown
+## The Session
 
 User asked: "is git compliant? I see changes. why dont you follow the canon?" This followed a commit where I added Episode 021 definition and episode timeline to VOCAB.md without first consuming the existing canon.
 
@@ -79,3 +81,19 @@ The git signal shows the violation clearly: my commit duplicated existing canon 
 ---
 
 **Status:** Episode documented, reset and correction pending
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Violations Detected and Fixed
+
+Not recorded in original episode.
+
+## Git Signal
+
+Not recorded in original episode.
+
+## The Insight
+
+Not recorded in original episode.

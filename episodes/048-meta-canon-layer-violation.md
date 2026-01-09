@@ -4,6 +4,8 @@
 **Date:** 2026-01-08
 **Agent:** Canon Agent
 
+**Type:** Unknown
+**Participants:** Unknown
 ---
 
 ## What Happened
@@ -101,3 +103,25 @@ Layer violation detected → Reset to understand → Canonify in correct layer
 - Episode 047 documents the original violation
 - This episode documents the meta-pattern
 - MACHINE/CANON.md contains the correct constraint
+
+## The Session
+
+Not recorded in original episode.
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Violations Detected and Fixed
+
+Not recorded in original episode.
+
+## Git Signal
+
+Not recorded in original episode.
+
+## The Insight
+
+Not recorded in original episode.
+
+**Status:** Not recorded in original episode.

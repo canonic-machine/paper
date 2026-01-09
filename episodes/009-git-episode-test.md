@@ -3,7 +3,9 @@
 **Date:** 2026-01-07
 **Agent:** Claude Sonnet 4.5
 
-## Context
+**Type:** Unknown
+**Participants:** Unknown
+## The Session
 
 User test: "take the last epoisode. conform or refute that the github commens are enough to regenerate it"
 
@@ -89,3 +91,21 @@ Both needed. Git without episodes loses the human story. Episodes without git la
 ## Meta
 
 This episode itself demonstrates the pattern: git commit "Apply git-episode-test" won't capture this dialogue, user's test prompt, or this analysis. The commit preserves the insight, the episode preserves the scene.
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Violations Detected and Fixed
+
+Not recorded in original episode.
+
+## Git Signal
+
+Not recorded in original episode.
+
+## The Insight
+
+Not recorded in original episode.
+
+**Status:** Not recorded in original episode.

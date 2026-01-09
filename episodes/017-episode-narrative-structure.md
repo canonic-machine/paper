@@ -3,7 +3,9 @@
 **Date:** 2026-01-07
 **Agent:** Claude Sonnet 4.5
 
-## Context
+**Type:** Unknown
+**Participants:** Unknown
+## The Session
 
 User reviewing episode evolution.
 
@@ -50,3 +52,17 @@ Episodes are:
 Episodes capture what happened AS narrative, not AS raw text dump.
 
 Compaction/chat exports are truly raw. Episodes are narrative renderings of sessions.
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Violations Detected and Fixed
+
+Not recorded in original episode.
+
+## Git Signal
+
+Not recorded in original episode.
+
+**Status:** Not recorded in original episode.

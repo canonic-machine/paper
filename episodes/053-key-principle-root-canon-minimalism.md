@@ -3,6 +3,8 @@
 **Date:** 2026-01-08
 **Agent:** Canon Agent
 
+**Type:** Unknown
+**Participants:** Unknown
 ## The Key Principle
 
 **Root CANON is minimal. Episodes document. MACHINE implements.**
@@ -36,7 +38,7 @@
 - **Clarity:** Paradigm says "what", Implementation says "how".
 - **Layer discipline:** No conflation of concerns.
 
-## Violations Caught
+## Violations Detected and Fixed Caught
 
 - Episode 050: Canonified vocabulary to CANON.md (wrong layer)
 - Episode 051: SWAT analysis caught layer violation
@@ -50,3 +52,21 @@ Discovery (episode) → Canonify (episode) → Implement (MACHINE) → Never add
 ```
 
 Human defines paradigm (CANONIC.md iteration). LLM implements in MACHINE. Episodes document everything.
+
+## The Session
+
+Not recorded in original episode.
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Git Signal
+
+Not recorded in original episode.
+
+## The Insight
+
+Not recorded in original episode.
+
+**Status:** Not recorded in original episode.

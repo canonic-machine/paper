@@ -5,9 +5,11 @@
 **Context:** Violation response requirement and episode 067  
 **Agent:** codex
 
+**Type:** Unknown
+**Participants:** Unknown
 ---
 
-## Context
+## The Session
 We were reviewing why some episodes include SWAT sections and others do not, and the user asked to document the violation and then canonify SWAT after any violation.
 
 ## Session narrative
@@ -16,3 +18,21 @@ The answer landed plainly: SWAT was practice, not canon, which is why Episode 06
 ---
 
 **End Episode 068**
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Violations Detected and Fixed
+
+Not recorded in original episode.
+
+## Git Signal
+
+Not recorded in original episode.
+
+## The Insight
+
+Not recorded in original episode.
+
+**Status:** Not recorded in original episode.

@@ -5,9 +5,11 @@
 **Context:** SWAT response recorded inside the episode stream  
 **Agent:** codex
 
+**Type:** Unknown
+**Participants:** Unknown
 ---
 
-## Context
+## The Session
 We needed a SWAT response that stayed inside the episode stream after the SWAT.md file was rejected.
 
 ## Session narrative
@@ -16,3 +18,21 @@ We treated the violation itself as the moment to anchor the SWAT. The strengths 
 ---
 
 **End Episode 075**
+
+## Key Assets Discovered
+
+Not recorded in original episode.
+
+## Violations Detected and Fixed
+
+Not recorded in original episode.
+
+## Git Signal
+
+Not recorded in original episode.
+
+## The Insight
+
+Not recorded in original episode.
+
+**Status:** Not recorded in original episode.
