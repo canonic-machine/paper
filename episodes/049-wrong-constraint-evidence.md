@@ -1,6 +1,8 @@
 # Episode 049 – Wrong Constraint Evidence (Preserved)
 
 **Evidence of layer violation:** What the wrong constraint looked like before reset.
+**Date:** 2026-01-08
+**Agent:** Canon Agent
 
 ---
 

@@ -1,5 +1,7 @@
 # Episode 011: Episodic Drift Investigation
 
+**Date:** 2026-01-07
+
 ## The Question
 
 User: "this is interestng. Theres now documented episodic drift. the first ones were actually episodic. the last ones are what happened. right? can you tell me why? investigate"

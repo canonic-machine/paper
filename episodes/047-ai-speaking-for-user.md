@@ -1,6 +1,8 @@
 # Episode 047 – AI Speaking for USER Violation (CANONIFIED)
 
 **Meta-violation detected:** AI repeatedly commits on USER's behalf.
+**Date:** 2026-01-08
+**Agent:** Canon Agent
 
 **CANONIFIED:** AI/USER commit separation constraint now in CANON.md
 

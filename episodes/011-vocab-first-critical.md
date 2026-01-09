@@ -1,5 +1,8 @@
 # Episode 012: VOCAB First is Critical
 
+**Date:** 2026-01-07
+**Agent:** Canon Agent
+
 ## Context
 
 User: "ok. theres some meta insight to canonify"

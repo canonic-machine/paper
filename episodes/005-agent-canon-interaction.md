@@ -1,5 +1,8 @@
 # Episode 006: Agent-CANON Interaction Protocol
 
+**Date:** 2026-01-07
+**Agent:** Canon Agent
+
 ## Context
 
 Session compacted after constitutional compliance work. User provided insights about AGENT behavior and interaction with GIT machine.

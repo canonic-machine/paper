@@ -1,5 +1,8 @@
 # Episode 039: Untracked Files Canonification
 
+**Date:** 2026-01-08
+**Agent:** Canon Agent
+
 ## Context
 
 User: "untracked files. lets canonize the untracked files problem"

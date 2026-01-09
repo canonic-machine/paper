@@ -1,5 +1,8 @@
 # Episode 017: Prose Processes Episodes
 
+**Date:** 2026-01-07
+**Agent:** Canon Agent
+
 ## Context
 
 User correcting episode understanding.

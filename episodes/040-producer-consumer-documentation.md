@@ -1,5 +1,8 @@
 # Episode 040: Producer/Consumer Documentation Pattern
 
+**Date:** 2026-01-08
+**Agent:** Canon Agent
+
 ## Context
 
 User: "document in an episode. everytime you do a"

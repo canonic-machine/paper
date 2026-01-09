@@ -1,5 +1,8 @@
 # Episode 010: Git Commits vs Episode Reconstruction Test
 
+**Date:** 2026-01-07
+**Agent:** Canon Agent
+
 ## Context
 
 User test: "take the last epoisode. conform or refute that the github commens are enough to regenerate it"

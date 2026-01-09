@@ -1,5 +1,8 @@
 # Episode 020: CANON Bloat and Canonical Locality
 
+**Date:** 2026-01-08
+**Agent:** Canon Agent
+
 ## Context
 
 Session continued from compacted context. Previous work: made episodes CANONIC (added EPISODES.md spec, triad structure, renamed ep000-019 to 000-019 with no prefix for natural alphabetic sorting).

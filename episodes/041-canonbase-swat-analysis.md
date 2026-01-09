@@ -1,6 +1,8 @@
 # Episode 041 – Canonbase SWAT Analysis
 
 **What went wrong:** CANONbase paper generated without using the PAPER machine (Episode 040). Wrong layer - wrote directly to prose without Episode → Asset → Prose → Output flow.
+**Date:** 2026-01-08
+**Agent:** Canon Agent
 
 **Analysis:** 4-repo commit history reveals systematic producer/consumer patterns that expose the failure mode.
 

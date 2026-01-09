@@ -1,5 +1,8 @@
 # Episode 021: Multi-Repo Disconnect
 
+**Date:** 2026-01-08
+**Agent:** Canon Agent
+
 ## Context
 
 User requested: “all need atomic commits. intelligent. why the disconnect? investigate and document in paper episode. follow the canons.” The request came after reviewing all four repositories (`canonic`, `machine`, `writing`, `paper`) and noticing inconsistent states across them. This episode captures that investigation, which starts from the PAPER specification and works backward through the rest of the stack.

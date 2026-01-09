@@ -1,6 +1,8 @@
 # Episode 031 – Failed VOCAB Consumption
 
 **Terminology changes are constitutional amendments, not file renames.**
+**Date:** 2026-01-08
+**Agent:** Canon Agent
 
 When triad file naming changes (e.g., DICTIONARY.md → VOCAB.md):
 1. Producer commit canonifies the terminology change in root CANON

@@ -3,6 +3,7 @@
 **Date:** January 7, 2026
 **Type:** Constitutional violation detection and recovery
 **Participants:** Human (Governor General), AI (Executive)
+**Agent:** Canon Agent
 
 ---
 

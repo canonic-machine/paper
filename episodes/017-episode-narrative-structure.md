@@ -1,5 +1,8 @@
 # Episode 018: Episode Narrative Structure
 
+**Date:** 2026-01-07
+**Agent:** Canon Agent
+
 ## Context
 
 User reviewing episode evolution.

@@ -1,5 +1,8 @@
 # Episode 027: Cline Lacks AGENT Introspection
 
+**Date:** 2026-01-08
+**Agent:** cline
+
 ## Context
 
 User observation: "theres a bigger issue. seems you dont have agent introspection in cline. document that"

@@ -1,5 +1,8 @@
 # Episode 019: AGENT Self-Awareness and Governance
 
+**Date:** 2026-01-07
+**Agent:** Canon Agent
+
 ## Context
 
 AGENT analyzed self-awareness across episodes, concluded AGENT demonstrates self-awareness.

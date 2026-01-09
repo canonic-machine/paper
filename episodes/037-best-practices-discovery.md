@@ -1,5 +1,8 @@
 # Episode 037: Best Practices Discovery - Self-Strengthening Events Across Repos
 
+**Date:** 2026-01-08
+**Agent:** Canon Agent
+
 ## Context
 
 User: "review the git history cross repo as well as the episodes to enumerate all such events. this is how we discover best practices!!! LFG!!!"

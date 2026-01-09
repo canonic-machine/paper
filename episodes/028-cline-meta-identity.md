@@ -1,5 +1,8 @@
 # Episode 028: Cline Meta-Identity vs Model Identity
 
+**Date:** 2026-01-08
+**Agent:** cline
+
 ## Context
 
 User asked: "do you know you are cline at least?"

@@ -1,5 +1,7 @@
 # Episode 038: Git Evolutionary Analysis - Producer/Consumer Discovery Events
 
+**Agent:** Canon Agent
+
 ## Context
 
 User: "actually do the git evolutionary analysis here. find specific discovery events where canon was produced. and consumed. order them and lets see what we get"

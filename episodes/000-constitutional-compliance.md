@@ -3,6 +3,7 @@
 **Date:** January 7, 2026
 **Type:** Development session
 **Participants:** Human (Governor General), AI (Executive)
+**Agent:** Canon Agent
 
 ---
 

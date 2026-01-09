@@ -1,6 +1,8 @@
 # Episode 048 – Meta-Canon Layer Violation and Resolution
 
 **Meta-pattern discovery:** How layer violations are detected, reset, and canonified in the correct layer.
+**Date:** 2026-01-08
+**Agent:** Canon Agent
 
 ---
 

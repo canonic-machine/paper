@@ -1,6 +1,8 @@
 # Episode 046 – External Agent Interaction and PAPER Spec Rebuild
 
 **Interaction with external agent triggered iterative refinement of PAPER specification.**
+**Date:** 2026-01-08
+**Agent:** external agent
 
 ---
 

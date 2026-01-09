@@ -1,5 +1,8 @@
 # Episode 030: CANON Divergence - Wrong Pattern Applied
 
+**Date:** 2026-01-08
+**Agent:** Canon Agent
+
 ## Context
 
 User: "hold on. why are you making an episode. this is the CANON for paper. why did you diverge from the CANON?"

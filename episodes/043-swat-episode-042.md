@@ -1,6 +1,8 @@
 # Episode 043 – SWAT Analysis of Episode 042
 
 **Meta-circular analysis:** Applying the SWAT framework to Episode 042 itself—the non-compliance documentation.
+**Date:** 2026-01-08
+**Agent:** Canon Agent
 
 ---
 

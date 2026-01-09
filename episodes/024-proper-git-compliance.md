@@ -1,5 +1,8 @@
 # Episode 024: Proper Git Compliance
 
+**Date:** 2026-01-08
+**Agent:** Canon Agent
+
 ## Context
 
 After defining agentized git signals, we now canonify “proper git compliance” itself: when prior commits lack the required agent/episode signal, we do not rewrite history— we add a redo commit that carries the missing proof. This episode documents that redo practice, linking the new constraint to the documented Episode 023 inspection and making future compliance transparent.

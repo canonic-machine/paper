@@ -1,5 +1,8 @@
 # Episode 033: Pending Commits and Untracked Changes - Canon Enforcement Gap (Follow-up to 021)
 
+**Date:** 2026-01-08
+**Agent:** Canon Agent
+
 ## Context
 
 During canonbase review, user asked: "why are there so many commits pending?"

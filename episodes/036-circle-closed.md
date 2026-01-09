@@ -1,5 +1,8 @@
 # Episode 036: Circle Closed - Canon Propagation Gap Resolved
 
+**Date:** 2026-01-08
+**Agent:** Canon Agent
+
 ## Context
 
 User: "document as an episode that closed the circle"

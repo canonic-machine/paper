@@ -1,5 +1,8 @@
 # Episode 025: Failed Canon Consumption and Corrective Action
 
+**Date:** 2026-01-08
+**Agent:** Canon Agent
+
 ## Context
 
 User asked: "is git compliant? I see changes. why dont you follow the canon?" This followed a commit where I added Episode 021 definition and episode timeline to VOCAB.md without first consuming the existing canon.

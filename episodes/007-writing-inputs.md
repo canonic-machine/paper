@@ -1,5 +1,8 @@
 # Episode 008: WRITING Inputs Declaration
 
+**Date:** 2026-01-07
+**Agent:** Canon Agent
+
 ## Context
 
 Declaring all inputs to WRITING machine for PAPER application.

@@ -1,5 +1,8 @@
 # Episode 023: Agentized Git Signal Review
 
+**Date:** 2026-01-08
+**Agent:** Canon Agent
+
 ## Context
 
 The new agentized commit constraint just landed in `CANON.md`, but the user asked us to “redo the commits to make them compliant” and investigate higher up the git chain to find what we missed. This episode reviews the existing commit history to understand why the agent signal was absent and documents the meta-insight that we cannot retroactively rename past commits but must treat them as compliance evidence for the future.

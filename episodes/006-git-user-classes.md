@@ -1,5 +1,8 @@
 # Episode 007: GIT Machine User Classes and Commit Taxonomy
 
+**Date:** 2026-01-07
+**Agent:** Canon Agent
+
 ## Context
 
 User provided meta-insight about GIT machine abstraction for collaboration.

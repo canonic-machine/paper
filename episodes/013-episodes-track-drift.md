@@ -1,5 +1,8 @@
 # Episode 014: Episodes Track AGENT Drift
 
+**Date:** 2026-01-07
+**Agent:** Canon Agent
+
 ## Context
 
 User: "its fine. hers a meta insight to canonify in the paper. episodes should help us to track drift in your understanding. whats special about episodes vs prose??"

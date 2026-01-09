@@ -1,5 +1,8 @@
 # Episode 035: Rediscovered Canon - Meta-Pattern of Re-Canonization
 
+**Date:** 2026-01-08
+**Agent:** Canon Agent
+
 ## Context
 
 User: "review PAPER spec. is that insight already contained within?"

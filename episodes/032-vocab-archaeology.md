@@ -1,6 +1,8 @@
 # Episode 032 – VOCAB Terminology Archaeology
 
 **Mechanical rename ≠ constitutional amendment.**
+**Date:** 2026-01-08
+**Agent:** Canon Agent
 
 **Rename (git mv):**
 - Changes file location

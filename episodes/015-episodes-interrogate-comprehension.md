@@ -1,5 +1,8 @@
 # Episode 016: Episodes Interrogate Comprehension
 
+**Date:** 2026-01-07
+**Agent:** Canon Agent
+
 ## Context
 
 User: "and selection. see if we can extrapolate patterns in your understanding and my instructions"

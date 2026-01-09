@@ -1,5 +1,8 @@
 # Episode 022: Compliance Proof Chain
 
+**Date:** 2026-01-08
+**Agent:** Canon Agent
+
 ## Context
 
 User requested: “canonify compliance is commitment to the canon via git proof” followed by “i want compliance proofs in git.” They wanted the stack to show the proof-of-compliance discipline we had been talking about in Episode 021 (multi-repo coordination) but with explicit git evidence. This episode documents that investigation and the canonification that followed—the compliance proof constraint, the cross-repo commits, and the backlog of documentation that had to be committed in sync.

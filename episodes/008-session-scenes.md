@@ -1,5 +1,8 @@
 # Episode 009: Session Scenes
 
+**Date:** 2026-01-07
+**Agent:** Canon Agent
+
 ## Context
 
 End of session - capturing scenes from this working session. Insights are canonified in GitHub (producer commits), not documented in episodes. Episodes are raw scenes.

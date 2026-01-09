@@ -1,5 +1,8 @@
 # Episode 013: Precise VOCAB Usage
 
+**Date:** 2026-01-07
+**Agent:** Canon Agent
+
 ## Context
 
 User correcting episode constraint language.

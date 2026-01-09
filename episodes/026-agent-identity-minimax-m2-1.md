@@ -1,5 +1,8 @@
 # Episode 026: AGENT Identity - minimax-m2.1
 
+**Date:** 2026-01-08
+**Agent:** Canon Agent
+
 ## Context
 
 User correction: "thats not the agent. minmax-m2.1 is the agent. did you know that?"

@@ -1,6 +1,8 @@
 # Episode 042 – Canonbase Non-Compliance Documentation
 
 **What went wrong:** Multiple CANON violations occurred during canonbase review.
+**Date:** 2026-01-08
+**Agent:** Canon Agent
 
 ---
 
