@@ -1,6 +1,6 @@
 # CANON (/canonic/machine/writing/paper/)
 
-**Inherits from:** [canonic-machine/writing](https://github.com/canonic-machine/writing)
+**Inherits from:** [canonic-machine/tuning](https://github.com/canonic-machine/tuning)
 
 **Generated from:** PAPER.md
 
@@ -9,7 +9,7 @@
 ### Subject
 **This paper documents the entire CANONIC MACHINE WRITING PAPER stack.**
 
-CANONIC (paradigm), MACHINE (validation engine), WRITING (application), PAPER (use case).
+CANONIC (paradigm), MACHINE (validation engine), TUNING (violation governance), WRITING (application), PAPER (use case).
 
 Purpose: Discover best practices for writing CANONIC papers through realtime episodes capturing AGENT interactions with GIT MACHINE.
 
@@ -33,6 +33,14 @@ Evidence: PAPER repository commits, WRITING repository commits, CANONIC reposito
 **Every violation is canonified with an atomic commit in the appropriate scope.**
 
 **Violation:** A violation occurs without an atomic canonification commit
+
+### Branch Scope
+
+**Canon is branch-scoped.** Constraints apply only within the branch where they are canonified unless explicitly merged or re-canonified.
+
+**Paradigm isolation:** CANONIC (paradigm) remains minimal. Higher-layer governance (e.g., SWAT, paper process rules) must not be assumed in CANONIC.
+
+**Violation:** Branch-local rules assumed to govern other branches; higher-layer governance back-propagated into CANONIC
 
 ### Structure
 **Standard academic paper structure required.**
@@ -78,6 +86,10 @@ Repository links exist on GitHub. Commit hashes exist in git history. File paths
 - GitHub is the ledger
 - Git signal = FSM execution trace
 - One episode spans many commits
+
+**Tuning layer (TUNING):**
+- Violation governance is scoped above MACHINE and below PAPER
+- Separation of concerns prevents paradigm contamination
 
 **Governance:**
 - AI-driven, human-governed execution
@@ -127,6 +139,14 @@ Episodes are narrative captures of sessions. Structured, but unprocessed (no MAC
 **Violation:** MACHINE processes episodes (extracts concepts, analyzes), episodes lack narrative voice, AI invents structure without canonification
 
 **Rationale:** Episodes are Episode state (unprocessed). Asset extraction happens in Asset state. Prose processes episodes. Episodes preserve narrative voice for human interrogation of AGENT comprehension.
+
+### Evolutionary Analysis Cadence
+
+**Every 25 episodes, perform a git evolutionary analysis of producer/consumer discovery events.**
+
+The analysis is a **prose artifact**, traceable to git history, and is not embedded in episodes.
+
+**Violation:** A 25-episode block closes without an evolutionary analysis
 
 ### Violation Response
 

@@ -31,6 +31,12 @@ Formal research document following standard structure (abstract, introduction, m
 ### ArXiv
 Open-access preprint repository for academic papers. Target publication venue for this work.
 
+### TUNING
+The governance scope for violation handling between MACHINE and PAPER.
+
+### branch scope
+The boundary where canon applies only within the branch it is canonified. Higher-layer rules do not back-propagate into minimal CANONIC unless explicitly merged.
+
 ### citation
 Reference to external work that supports claims or provides context.
 
