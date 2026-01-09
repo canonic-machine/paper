@@ -1,6 +1,7 @@
 # Episode 011: Episodic Drift Investigation
 
 **Date:** 2026-01-07
+**Agent:** Claude Sonnet 4.5
 
 ## The Question
 

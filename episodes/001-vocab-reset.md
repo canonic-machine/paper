@@ -3,7 +3,7 @@
 **Date:** January 7, 2026
 **Type:** Governance decision
 **Participants:** Human (Governor General), AI (Executive)
-**Agent:** Canon Agent
+**Agent:** Claude Sonnet 4.5
 
 ---
 

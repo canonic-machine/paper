@@ -3,7 +3,7 @@
 **Date:** January 7, 2026
 **Type:** Raw session capture
 **Participants:** Human (Governor General), AI (Executive)
-**Agent:** Canon Agent
+**Agent:** Claude Sonnet 4.5
 
 ---
 
