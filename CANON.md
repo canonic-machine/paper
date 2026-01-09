@@ -136,7 +136,7 @@ Episodes capture narrative, violations, assets, git signal, and insight in a con
 - Chronologically ordered and indexed
 - Traceable to git evidence when signals are asserted
 - Immutable once recorded; corrections require new episodes (redo)
-- Instantiated from canonical templates in `/paper/episodes/templates`
+- Instantiated from canonical templates in `/paper/episodes/templates` for new episodes
 
 **Episodes must NOT be:**
 - Missing required sections or header fields

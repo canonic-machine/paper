@@ -15,6 +15,8 @@ Episodes are governed (canonified structure, narrative voice) but unprocessed (n
 - Narrative voice (scene recreation, emotional beats, direct quotes with context)
 - Optional sections IF canonified
 
+**New episodes must be instantiated from templates in `/paper/episodes/templates/`.** Legacy episodes remain unchanged as evidence of drift.
+
 **Violation:** Episode missing Context section, episode contains MACHINE processing (concept extraction, asset references, analysis), episode lacks narrative voice
 
 ### Episode Indexing
