@@ -135,6 +135,7 @@ Episodes capture narrative, violations, assets, git signal, and insight in a con
 - Structured to the standardized format
 - Chronologically ordered and indexed
 - Traceable to git evidence when signals are asserted
+- Immutable once recorded; corrections require new episodes (redo)
 
 **Episodes must NOT be:**
 - Missing required sections or header fields
@@ -155,11 +156,11 @@ The analysis is a **prose artifact**, traceable to git history, and is not embed
 
 ### Violation Response
 
-**Every violation triggers a SWAT analysis in prose.**
+**Every violation triggers a SWAT analysis in the episode.**
 
-SWAT analysis is performed outside episodes and documents strengths, weaknesses, opportunities, and threats for the violation.
+SWAT analysis is recorded inside the episode under the violations section.
 
-**Violation:** A violation occurs without a corresponding SWAT analysis
+**Violation:** A violation occurs without a corresponding SWAT analysis in the episode
 
 ### Meta-Circular Properties
 

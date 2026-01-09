@@ -15,6 +15,7 @@ Episodes are standardized session records. They preserve the story of what happe
 - Narrative (scene-setting, direct quotes, lived moments)
 - Chronological (indexed sequentially to reveal drift patterns)
 - Traceable (git signals must be evidence-backed)
+- Immutable once recorded; corrections require new episodes (redo)
 
 **Episodes are not:**
 - Final paper prose
@@ -54,6 +55,12 @@ Each episode follows the Episode 000 format.
 - ## Git Signal
 - ## The Insight
 - **Status:** <single-line status at end>
+
+**Violations section structure (required when violations exist):**
+- Strengths
+- Weaknesses
+- Opportunities
+- Threats
 
 ---
 
