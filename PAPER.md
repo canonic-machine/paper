@@ -164,6 +164,8 @@ Episodes:
 
 Episodes do **not** change canon by themselves.
 
+Episodes live in `/canonic/machine/paper/episodes/` and the paper evolves from this record.
+
 They are the **primary empirical units** of this paper.
 
 ---

@@ -98,7 +98,7 @@ Episodes document paper writing sessions:
 - **ep002-vocab-reset.md** - Constitutional reset DICTIONARY → VOCAB
 - **ep003-paper-spec-violation.md** - Violation detection and recovery (this session)
 
-Episodes are raw, ungoverned input. They capture fleeting moments from active sessions.
+Episodes are governed, unprocessed input. They capture fleeting moments from active sessions.
 
 ---
 

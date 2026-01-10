@@ -31,6 +31,9 @@ Formal research document following standard structure (abstract, introduction, m
 ### ArXiv
 Open-access preprint repository for academic papers. Target publication venue for this work.
 
+### autocommit
+Automated commit by the AI after canon production or consumption, unless the USER overrides it.
+
 ### drift
 Deviation from canon over time, visible in episodes and governance artifacts.
 
@@ -45,9 +48,6 @@ A reusable scaffold defining required episode structure.
 
 ### templates
 The collection of episode templates in `episodes/templates/`.
-
-### TUNING
-The governance scope for violation handling between MACHINE and PAPER.
 
 ### branch scope
 The boundary where canon applies only within the branch it is canonified. Higher-layer rules do not back-propagate into minimal CANONIC unless explicitly merged.

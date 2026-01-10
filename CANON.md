@@ -1,6 +1,6 @@
 # CANON (/canonic/machine/writing/paper/)
 
-**Inherits from:** [canonic-machine/tuning](https://github.com/canonic-machine/tuning)
+**Inherits from:** [canonic-machine/writing](https://github.com/canonic-machine/writing)
 
 **Generated from:** PAPER.md
 
@@ -9,7 +9,7 @@
 ### Subject
 **This paper documents the entire CANONIC MACHINE WRITING PAPER stack.**
 
-CANONIC (paradigm), MACHINE (validation engine), TUNING (violation governance), WRITING (application), PAPER (use case).
+CANONIC (paradigm), MACHINE (validation engine), WRITING (application), PAPER (use case).
 
 Purpose: Discover best practices for writing CANONIC papers through realtime episodes capturing AGENT interactions with GIT MACHINE.
 
@@ -31,6 +31,8 @@ Evidence: PAPER repository commits, WRITING repository commits, CANONIC reposito
 ### Git Signal
 
 **Every violation is canonified with an atomic commit in the appropriate scope.**
+
+**Autocommit:** After producing or consuming canon, the AI stages and commits changes unless the USER explicitly requests otherwise.
 
 **Violation:** A violation occurs without an atomic canonification commit
 
@@ -87,10 +89,6 @@ Repository links exist on GitHub. Commit hashes exist in git history. File paths
 - Git signal = FSM execution trace
 - One episode spans many commits
 
-**Tuning layer (TUNING):**
-- Violation governance is scoped above MACHINE and below PAPER
-- Separation of concerns prevents paradigm contamination
-
 **Governance:**
 - AI-driven, human-governed execution
 - Constitutional compliance through git signal
@@ -124,6 +122,8 @@ Evidence comes from comparing episodes before and after template canonification.
 **Episodes are standardized session records for the PAPER machine.**
 
 Episodes capture narrative, violations, assets, git signal, and insight in a consistent format. They are not the final paper, but they are governed artifacts with required structure.
+
+**Episodes are governed for template compliance.**
 
 **Required header fields:**
 - **Date**
