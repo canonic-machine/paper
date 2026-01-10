@@ -37,6 +37,12 @@ Automated commit by the AI after canon production or consumption, unless the USE
 ### canonification approval
 Explicit USER confirmation required before applying canon changes.
 
+### episode category
+The template type assigned to an episode (e.g., violation, canonification, analysis).
+
+### episode categorization
+Assigning an episode to a template type and using the matching template.
+
 ### commit + push coupling
 Requirement that a canon commit is pushed immediately as part of the same action.
 

@@ -70,6 +70,8 @@ Canonical episode templates live in `episodes/templates/`.
 
 Use the template that matches the episode type (violation, redo, canonification, compliance, vocab, scope, agent, git signal, analysis, base). Templates are flat in the folder (no subfolders) to keep discovery simple.
 
+Episodes are categorized by template type. The **Type** header must match the template used.
+
 Templates apply to new episodes only. Legacy episodes remain unchanged as drift evidence.
 
 ---

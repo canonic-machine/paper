@@ -101,7 +101,7 @@ Repository links exist on GitHub. Commit hashes exist in git history. File paths
 
 **Application layer (WRITING + PAPER):**
 - 4-state FSM (Episode → Asset → Prose → Output)
-- Episodes are ungoverned input (fleeting moments)
+- Episodes are governed input (fleeting moments)
 - Canonical locality (artifacts near governing canon)
 - Self-* properties
 
@@ -127,7 +127,7 @@ Evidence comes from comparing episodes before and after template canonification.
 
 Episodes capture narrative, violations, assets, git signal, and insight in a consistent format. They are not the final paper, but they are governed artifacts with required structure.
 
-**Episodes are governed for template compliance.**
+**Episodes are governed for template compliance and must be categorized to match their template.**
 
 **Required header fields:**
 - **Date**
