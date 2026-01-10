@@ -5,7 +5,7 @@
 This document defines **what the paper is, how it is produced, and how it evolves** under CANONIC governance.  
 It is a **constitutional specification**, not the manuscript itself.
 
-`PAPER.md` is a **human legislative artifact**.  
+`PAPER-000_spec.md` is a **human legislative artifact**.  
 The manuscript is generated under this constraint and validated externally.
 
 ---

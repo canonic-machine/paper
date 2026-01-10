@@ -377,10 +377,10 @@ cd paper && git log --oneline | head -1
 
 **Trigger:** AI claimed "Constitutional reset complete" after VOCAB changes. Governor General: "paper has no spec."
 
-**Violation:** PAPER had CANON.md but no source specification (PAPER.md). AI had edited CANON.md directly, violating governance model.
+**Violation:** PAPER had CANON.md but no source specification (PAPER-000_spec.md). AI had edited CANON.md directly, violating governance model.
 
 **Governance model:**
-- Humans iterate specs (CANONIC.md, WRITING.md, PAPER.md)
+- Humans iterate specs (CANONIC.md, WRITING.md, PAPER-000_spec.md)
 - LLMs generate triads (CANON.md, VOCAB.md, README.md)
 - Humans never edit CANON.md directly
 
@@ -391,19 +391,19 @@ cd paper && git log --oneline | head -1
 - Didn't compare PAPER structure to CANONIC structure (which has spec)
 
 **Recovery sequence (Episode 003):**
-1. Create PAPER.md specification (producer commit)
+1. Create PAPER-000_spec.md specification (producer commit)
 2. Move episodes to paper/episodes/ (canonical locality)
 3. Remove episodes from writing/episodes/ (consumer commit)
-4. Regenerate CANON.md from PAPER.md (consumer commit)
+4. Regenerate CANON.md from PAPER-000_spec.md (consumer commit)
 5. Regenerate README.md from triad (consumer commit)
 
 **Git signal:**
 ```bash
 cd paper && git log --oneline | head -5
 # b0f2e79 Apply spec to regenerate README.md
-# a2e977e Apply spec to regenerate CANON.md from PAPER.md
+# a2e977e Apply spec to regenerate CANON.md from PAPER-000_spec.md
 # dcaf6bc Apply canonical locality: Move episodes to paper repo
-# e16bcd3 Canonify paper specification in PAPER.md
+# e16bcd3 Canonify paper specification in PAPER-000_spec.md
 # 012dd57 Document VOCAB constitutional reset in paper
 ```
 
@@ -413,7 +413,7 @@ Episodes ep001-ep003 document paper writing sessions. PAPER/CANON.md governs the
 
 WRITING/episodes would contain episodes about developing the WRITING machine itself.
 
-**Significance:** Demonstrates constitutional enforcement through human governance. AI violated spec requirement. Governor General detected immediately. Recovery executed through producer/consumer commit sequence (1 producer: Canonify PAPER.md, 4 consumers: Apply spec changes).
+**Significance:** Demonstrates constitutional enforcement through human governance. AI violated spec requirement. Governor General detected immediately. Recovery executed through producer/consumer commit sequence (1 producer: Canonify PAPER-000_spec.md, 4 consumers: Apply spec changes).
 
 **Key insights:**
 - Specifications are human iteration points (constitutional requirement)

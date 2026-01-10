@@ -11,7 +11,7 @@ All PAPER terms (episode, drift, fixation, etc.) are inherited from the parent P
 ## Episode-Specific Terms
 
 ### episodes
-Directory containing sequential narrative captures of PAPER writing sessions. Each episode is a numbered markdown file (ep001, ep002, etc.) with narrative voice and canonified structure.
+Directory containing sequential narrative captures of PAPER writing sessions. Each episode is a numbered markdown file (episodes-001, episodes-002, etc.) with narrative voice and canonified structure.
 
 ---
 

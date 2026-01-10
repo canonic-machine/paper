@@ -2,7 +2,7 @@
 
 **The PAPER episode collection specification.**
 
-This is the specification for episodes - standardized records of PAPER writing sessions. EPISODES.md is human-iterated and defines what episodes ARE.
+This is the specification for episodes - standardized records of PAPER writing sessions. EPISODES-000_spec.md is human-iterated and defines what episodes ARE.
 
 ---
 
@@ -84,12 +84,12 @@ Episodes use zero-based sequential numbering:
 - **002** - 2nd episode
 - **NNN** - Nth episode (where N is the index)
 
-**Filename pattern:** `NNN-descriptive-name.md`
+**Filename pattern:** `episodes-NNN_stub.md`
 - Three-digit zero-padded number (000-999)
-- Descriptive kebab-case name
+- Stub is lowercase kebab-case
 - .md extension
 
-No prefix. Natural alphabetic sorting.
+**Spec artifact:** `EPISODES-000_spec.md`
 
 ---
 
@@ -105,4 +105,4 @@ Episodes are the canonical session record. Assets and prose are derived later, b
 
 ---
 
-**This is the specification. EPISODES.md is the human iteration point. CANON.md regenerates from this source.**
+**This is the specification. EPISODES-000_spec.md is the human iteration point. CANON.md regenerates from this source.**

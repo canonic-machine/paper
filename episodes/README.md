@@ -23,9 +23,9 @@ Episodes are governed (structured) but unprocessed (no concept extraction, no as
 ## Indexing
 
 Episodes are numbered sequentially:
-- `ep001-constitutional-compliance.md`
-- `ep002-vocab-reset.md`
-- `ep003-paper-spec-violation.md`
+- `episodes-001_constitutional-compliance.md`
+- `episodes-002_vocab-reset.md`
+- `episodes-003_paper-spec-violation.md`
 - ...
 
 ## Evolution

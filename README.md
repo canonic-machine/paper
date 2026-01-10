@@ -10,11 +10,11 @@ This repository contains an ArXiv paper analyzing the WRITING machine through gi
 
 ```
 paper/
-├── PAPER.md          # Human-iterated specification
-├── CANON.md          # LLM-generated constraints (from PAPER.md)
+├── PAPER-000_spec.md          # Human-iterated specification
+├── CANON.md          # LLM-generated constraints (from PAPER-000_spec.md)
 ├── VOCAB.md          # LLM-generated term definitions
 ├── README.md         # This file (LLM-generated documentation)
-├── arxiv.md          # The paper artifact
+├── paper-001_arxiv.md          # The paper artifact
 └── episodes/         # Paper writing session episodes
 ```
 
@@ -48,7 +48,7 @@ The paper documents 16 insights extracted from git history:
 10. Self-* properties
 11. Every session is an episode
 12. Episodes captured in real-time
-13. Episodes are ungoverned input
+13. Episodes are governed input
 14. GitHub is the ledger
 15. One episode spans many commits
 16. Canonical locality
@@ -94,9 +94,9 @@ This paper:
 
 Episodes document paper writing sessions:
 
-- **ep001-constitutional-compliance.md** - Initial session, VOCABULARY → DICTIONARY fixes
-- **ep002-vocab-reset.md** - Constitutional reset DICTIONARY → VOCAB
-- **ep003-paper-spec-violation.md** - Violation detection and recovery (this session)
+- **episodes-001_constitutional-compliance.md** - Initial session, VOCABULARY → DICTIONARY fixes
+- **episodes-002_vocab-reset.md** - Constitutional reset DICTIONARY → VOCAB
+- **episodes-003_paper-spec-violation.md** - Violation detection and recovery (this session)
 
 Episodes are governed, unprocessed input. They capture fleeting moments from active sessions.
 
