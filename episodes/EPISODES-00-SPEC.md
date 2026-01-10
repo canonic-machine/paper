@@ -2,7 +2,7 @@
 
 **The PAPER episode collection specification.**
 
-This is the specification for episodes - standardized records of PAPER writing sessions. EPISODES-000_spec.md is human-iterated and defines what episodes ARE.
+This is the specification for episodes - standardized records of PAPER writing sessions. EPISODES-00-SPEC.md is human-iterated and defines what episodes ARE.
 
 ---
 
@@ -89,7 +89,7 @@ Episodes use zero-based sequential numbering:
 - Stub is lowercase kebab-case
 - .md extension
 
-**Spec artifact:** `EPISODES-000_spec.md`
+**Spec artifact:** `EPISODES-00-SPEC.md`
 
 ---
 
@@ -105,4 +105,4 @@ Episodes are the canonical session record. Assets and prose are derived later, b
 
 ---
 
-**This is the specification. EPISODES-000_spec.md is the human iteration point. CANON.md regenerates from this source.**
+**This is the specification. EPISODES-00-SPEC.md is the human iteration point. CANON.md regenerates from this source.**
