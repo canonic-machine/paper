@@ -34,6 +34,15 @@ Open-access preprint repository for academic papers. Target publication venue fo
 ### autocommit
 Automated commit by the AI after canon production or consumption, unless the USER overrides it.
 
+### canonification approval
+Explicit USER confirmation required before applying canon changes.
+
+### commit + push coupling
+Requirement that a canon commit is pushed immediately as part of the same action.
+
+### push
+Send local commits to the remote repository.
+
 ### drift
 Deviation from canon over time, visible in episodes and governance artifacts.
 
