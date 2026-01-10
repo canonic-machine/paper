@@ -90,31 +90,31 @@ Complete chronological record of PAPER writing sessions (25 episodes, 000-024):
 
 | # | Episode | Focus |
 |---|---------|-------|
-| 1 | episodes-000_constitutional-compliance.md | VOCABULARY→DICTIONARY, AI-driven≠AI-directed, atomic commits, git as machine |
-| 2 | episodes-001_vocab-reset.md | Vocabulary reset pattern |
-| 3 | episodes-002_paper-spec-violation.md | Paper specification violations |
-| 4 | episodes-003_spec-correction-untracked-files.md | Untracked file corrections |
-| 5 | episodes-004_compaction-and-license.md | Compaction and licensing |
-| 6 | episodes-005_agent-canon-interaction.md | AGENT-CANON interaction patterns |
-| 7 | episodes-006_git-user-classes.md | GIT user classes: AGENT/USER, Producer/Consumer/Manual commits |
-| 8 | episodes-007_writing-inputs.md | WRITING machine inputs |
-| 9 | episodes-008_session-scenes.md | Session scene capture |
-| 10 | episodes-009_git-episode-test.md | Git-episode testing |
-| 11 | episodes-010_episodic-drift-analysis.md | Episodic drift analysis methodology |
-| 12 | episodes-011_vocab-first-critical.md | VOCAB-first criticality |
-| 13 | episodes-012_precise-vocab-usage.md | Precise VOCAB usage patterns |
-| 14 | episodes-013_episodes-track-drift.md | Episode drift tracking |
-| 15 | episodes-014_pattern-extraction-analysis.md | Pattern extraction from episodes |
-| 16 | episodes-015_episodes-interrogate-comprehension.md | Episode interrogation for comprehension |
-| 17 | episodes-016_prose-processes-episodes.md | Prose processing episodes |
-| 18 | episodes-017_episode-narrative-structure.md | Episode narrative structure |
-| 19 | episodes-018_agent-self-awareness-governance.md | AGENT self-awareness in governance |
-| 20 | episodes-019_canonic-refactoring.md | Canonic refactoring patterns |
-| 21 | episodes-020_canon-bloat-canonical-locality.md | Canon bloat and canonical locality |
-| 22 | episodes-021_multi-repo-disconnect.md | Multi-repo disconnect investigation |
-| 23 | episodes-022_compliance-proof-chain.md | Compliance proof chain |
-| 24 | episodes-023_agentized-git-signal-review.md | Agentized git signal review |
-| 25 | episodes-024_proper-git-compliance.md | Proper git compliance patterns |
+| 1 | ep000-constitutional-compliance.md | VOCABULARY→DICTIONARY, AI-driven≠AI-directed, atomic commits, git as machine |
+| 2 | ep001-vocab-reset.md | Vocabulary reset pattern |
+| 3 | ep002-paper-spec-violation.md | Paper specification violations |
+| 4 | ep003-spec-correction-untracked-files.md | Untracked file corrections |
+| 5 | ep004-compaction-and-license.md | Compaction and licensing |
+| 6 | ep005-agent-canon-interaction.md | AGENT-CANON interaction patterns |
+| 7 | ep006-git-user-classes.md | GIT user classes: AGENT/USER, Producer/Consumer/Manual commits |
+| 8 | ep007-writing-inputs.md | WRITING machine inputs |
+| 9 | ep008-session-scenes.md | Session scene capture |
+| 10 | ep009-git-episode-test.md | Git-episode testing |
+| 11 | ep010-episodic-drift-analysis.md | Episodic drift analysis methodology |
+| 12 | ep011-vocab-first-critical.md | VOCAB-first criticality |
+| 13 | ep012-precise-vocab-usage.md | Precise VOCAB usage patterns |
+| 14 | ep013-episodes-track-drift.md | Episode drift tracking |
+| 15 | ep014-pattern-extraction-analysis.md | Pattern extraction from episodes |
+| 16 | ep015-episodes-interrogate-comprehension.md | Episode interrogation for comprehension |
+| 17 | ep016-prose-processes-episodes.md | Prose processing episodes |
+| 18 | ep017-episode-narrative-structure.md | Episode narrative structure |
+| 19 | ep018-agent-self-awareness-governance.md | AGENT self-awareness in governance |
+| 20 | ep019-canonic-refactoring.md | Canonic refactoring patterns |
+| 21 | ep020-canon-bloat-canonical-locality.md | Canon bloat and canonical locality |
+| 22 | ep021-multi-repo-disconnect.md | Multi-repo disconnect investigation |
+| 23 | ep022-compliance-proof-chain.md | Compliance proof chain |
+| 24 | ep023-agentized-git-signal-review.md | Agentized git signal review |
+| 25 | ep024-proper-git-compliance.md | Proper git compliance patterns |
 
 ### Episode 025
 Episode documenting the failed canon consumption violation. Captures the investigation of producing a commit without first consuming existing canon. Key findings: (1) committed Episode 021 definition that already existed in HEAD~1, (2) producer commit misused for already-canonified content, (3) skipped consumption step (`git show HEAD:VOCAB.md`). Canonified the correct pattern: READ → ANALYZE → PRODUCE → CONSUME. Committed as "Apply Episode 025 canonification" (consumer) not "Canonify" (producer).

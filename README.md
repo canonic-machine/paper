@@ -10,11 +10,11 @@ This repository contains an ArXiv paper analyzing the WRITING machine through gi
 
 ```
 paper/
-├── PAPER-00-SPEC.md          # Human-iterated specification
-├── CANON.md          # LLM-generated constraints (from PAPER-00-SPEC.md)
+├── 00-PAPER.md          # Human-iterated specification
+├── CANON.md          # LLM-generated constraints (from 00-PAPER.md)
 ├── VOCAB.md          # LLM-generated term definitions
 ├── README.md         # This file (LLM-generated documentation)
-├── paper-001_arxiv.md          # The paper artifact
+├── pa001-arxiv.md          # The paper artifact
 └── episodes/         # Paper writing session episodes
 ```
 
@@ -94,9 +94,9 @@ This paper:
 
 Episodes document paper writing sessions:
 
-- **episodes-001_constitutional-compliance.md** - Initial session, VOCABULARY → DICTIONARY fixes
-- **episodes-002_vocab-reset.md** - Constitutional reset DICTIONARY → VOCAB
-- **episodes-003_paper-spec-violation.md** - Violation detection and recovery (this session)
+- **ep001-constitutional-compliance.md** - Initial session, VOCABULARY → DICTIONARY fixes
+- **ep002-vocab-reset.md** - Constitutional reset DICTIONARY → VOCAB
+- **ep003-paper-spec-violation.md** - Violation detection and recovery (this session)
 
 Episodes are governed, unprocessed input. They capture fleeting moments from active sessions.
 

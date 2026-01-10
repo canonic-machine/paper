@@ -14,7 +14,7 @@ Detected that spec artifacts were named `*-000_spec.md` instead of the intended 
 ## Key Assets Discovered
 
 - machine/CANON.md
-- paper/episodes/EPISODES-00-SPEC.md
+- paper/episodes/00-EPISODES.md
 
 ## Violations Detected and Fixed
 

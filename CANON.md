@@ -2,7 +2,7 @@
 
 **Inherits from:** [canonic-machine/writing](https://github.com/canonic-machine/writing)
 
-**Generated from:** PAPER-00-SPEC.md
+**Generated from:** 00-PAPER.md
 
 ## Paper Constraints
 
@@ -59,7 +59,7 @@ Sections: Abstract (best practices contribution), Introduction (AI slop problem,
 **PAPER follows SPEC vs VOCAB vs CANON pattern to generate output.**
 
 **PAPER writing process:**
-- **PAPER-00-SPEC.md** (SPEC): Human-iterated source of truth. What the paper IS.
+- **00-PAPER.md** (SPEC): Human-iterated source of truth. What the paper IS.
 - **VOCAB.md**: LLM-generated PAPER-specific term definitions. What PAPER terms mean.
 - **CANON.md**: LLM-generated constraints. How the paper must work.
 

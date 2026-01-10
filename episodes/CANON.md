@@ -23,7 +23,7 @@ Episodes are governed (canonified structure, narrative voice) but unprocessed (n
 **Episodes must be indexed sequentially with descriptive filenames.**
 
 **Filename pattern:** epNNN-episode-name.md
-- Sequential numbering (episodes-001, episodes-002, etc.)
+- Sequential numbering (ep001, ep002, etc.)
 - Descriptive kebab-case name
 - .md extension
 

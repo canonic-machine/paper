@@ -12,6 +12,6 @@ Episode templates for the PAPER episodes scope.
 - /canonic/machine/writing/paper/episodes/
 
 ## References
-- TEMPLATES-00-SPEC.md
+- 00-TEMPLATES.md
 - CANON.md
 - VOCAB.md
