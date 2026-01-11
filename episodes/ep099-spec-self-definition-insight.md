@@ -13,7 +13,7 @@ You pressed on how SPEC functions as the human source of truth when it is not me
 
 ## Key Assets Discovered
 
-- `canonic/00-CANONIC.md` (SPEC self-definition)
+- `canonic/CANONIC.md` (SPEC self-definition)
 - `canonic/CANON.md` (minimal enforceable axioms only)
 - `canonic/VOCAB.md` (CANON-closed terms)
 - `canonic/README.md` (local narrative)

@@ -62,7 +62,7 @@ All governed directories contain three files:
 **VOCAB.md** - Terms (LLM-generated, alphabetically ordered, temporal)
 **README.md** - Documentation (LLM-generated from sources)
 
-**Critical property:** Humans never edit triad files. They iterate 00-CANONIC.md (the specification). The triad regenerates from that source.
+**Critical property:** Humans never edit triad files. They iterate CANONIC.md (the specification). The triad regenerates from that source.
 
 **Why this works:**
 - Stable governance interface
@@ -267,7 +267,7 @@ cd writing && git log --oneline | head -4
 
 **Example:** "Git is a machine that CANONIC machines depend on"
 - Discovered during paper writing (Section 1.2)
-- Attempted canonification in 00-CANONIC.md (paradigm layer) - REJECTED
+- Attempted canonification in CANONIC.md (paradigm layer) - REJECTED
 - Corrected to implementation layer
 - Canonified in PAPER/CANON.md as required insight
 
@@ -344,7 +344,7 @@ cd writing && git log --oneline | head -4
 
 **Execution sequence:**
 1. Episode 002 captured the decision rationale (episodic memory)
-2. CANONIC/00-CANONIC.md updated: Mandated VOCAB.md in triad
+2. CANONIC/CANONIC.md updated: Mandated VOCAB.md in triad
 3. CANONIC/CANON.md updated: Triad = CANON + VOCAB + README
 4. CANONIC/DICTIONARY.md → VOCAB.md (git mv)
 5. All examples/*/DICTIONARY.md → VOCAB.md (git mv)
@@ -377,10 +377,10 @@ cd paper && git log --oneline | head -1
 
 **Trigger:** AI claimed "Constitutional reset complete" after VOCAB changes. Governor General: "paper has no spec."
 
-**Violation:** PAPER had CANON.md but no source specification (00-PAPER.md). AI had edited CANON.md directly, violating governance model.
+**Violation:** PAPER had CANON.md but no source specification (PAPER.md). AI had edited CANON.md directly, violating governance model.
 
 **Governance model:**
-- Humans iterate specs (00-CANONIC.md, 00-WRITING.md, 00-PAPER.md)
+- Humans iterate specs (CANONIC.md, WRITING.md, PAPER.md)
 - LLMs generate triads (CANON.md, VOCAB.md, README.md)
 - Humans never edit CANON.md directly
 
@@ -391,19 +391,19 @@ cd paper && git log --oneline | head -1
 - Didn't compare PAPER structure to CANONIC structure (which has spec)
 
 **Recovery sequence (Episode 003):**
-1. Create 00-PAPER.md specification (producer commit)
+1. Create PAPER.md specification (producer commit)
 2. Move episodes to paper/episodes/ (canonical locality)
 3. Remove episodes from writing/episodes/ (consumer commit)
-4. Regenerate CANON.md from 00-PAPER.md (consumer commit)
+4. Regenerate CANON.md from PAPER.md (consumer commit)
 5. Regenerate README.md from triad (consumer commit)
 
 **Git signal:**
 ```bash
 cd paper && git log --oneline | head -5
 # b0f2e79 Apply spec to regenerate README.md
-# a2e977e Apply spec to regenerate CANON.md from 00-PAPER.md
+# a2e977e Apply spec to regenerate CANON.md from PAPER.md
 # dcaf6bc Apply canonical locality: Move episodes to paper repo
-# e16bcd3 Canonify paper specification in 00-PAPER.md
+# e16bcd3 Canonify paper specification in PAPER.md
 # 012dd57 Document VOCAB constitutional reset in paper
 ```
 
@@ -413,7 +413,7 @@ Episodes ep001-ep003 document paper writing sessions. PAPER/CANON.md governs the
 
 WRITING/episodes would contain episodes about developing the WRITING machine itself.
 
-**Significance:** Demonstrates constitutional enforcement through human governance. AI violated spec requirement. Governor General detected immediately. Recovery executed through producer/consumer commit sequence (1 producer: Canonify 00-PAPER.md, 4 consumers: Apply spec changes).
+**Significance:** Demonstrates constitutional enforcement through human governance. AI violated spec requirement. Governor General detected immediately. Recovery executed through producer/consumer commit sequence (1 producer: Canonify PAPER.md, 4 consumers: Apply spec changes).
 
 **Key insights:**
 - Specifications are human iteration points (constitutional requirement)

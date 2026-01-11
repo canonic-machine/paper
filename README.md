@@ -10,8 +10,8 @@ This repository contains an ArXiv paper analyzing the WRITING machine through gi
 
 ```
 paper/
-├── 00-PAPER.md          # Human-iterated specification
-├── CANON.md          # LLM-generated constraints (from 00-PAPER.md)
+├── PAPER.md          # Human-iterated specification
+├── CANON.md          # LLM-generated constraints (from PAPER.md)
 ├── VOCAB.md          # LLM-generated concept definitions
 ├── README.md         # This file (LLM-generated documentation)
 ├── pa001-arxiv.md          # The paper artifact

@@ -14,7 +14,7 @@ User requested: “all need atomic commits. intelligent. why the disconnect? inv
 We treated git status as the primary sensor. Running `git status -sb` in each repo showed:
 
 - `canonic`: clean working tree, branch ahead of `origin/main` by four commits (latest: `17ff36b Revert "Canonify vocabulary references"`). No local edits to stage.
-- `machine`: local modifications in `00-MACHINE.md`, `01-AGENTS.md`, `02-PROTOCOLS.md`, `04-LEARNINGS.md`, `CANON.md`, `README.md`, and the entire `tools/` subtree (`CANON.md`, `README.md`, `canonic_validator.py`, `fsm_status.py`, `trace_asset.py`). Branch ahead by four commits (`0c6214f`, `e17ac8f`, `75bd024`, `828551a`), pointing to ongoing governance and tooling refinements.
+- `machine`: local modifications in `MACHINE.md`, `01-AGENTS.md`, `02-PROTOCOLS.md`, `04-LEARNINGS.md`, `CANON.md`, `README.md`, and the entire `tools/` subtree (`CANON.md`, `README.md`, `canonic_validator.py`, `fsm_status.py`, `trace_asset.py`). Branch ahead by four commits (`0c6214f`, `e17ac8f`, `75bd024`, `828551a`), pointing to ongoing governance and tooling refinements.
 - `writing`: single tracked modification in `WRITING.md` plus a commit history that raised the SPEC (`5337a02 Canonify WRITING.md as human-iterated SPEC` at the head). Branch ahead by five commits, signalling continued work on the writing FSM and tools.
 - `paper`: branch ahead by 25 commits, with an untracked episode `episodes/020-canon-bloat-canonical-locality.md`. The new episode documents the canonical locality refactor and the agent self-check violation discussed earlier.
 

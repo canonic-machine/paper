@@ -25,7 +25,7 @@ User redirected AGENT communication style: "produce and consume CANON" and "nada
 
 ### Spec vs CANON Violation
 
-AGENT edited 00-MACHINE.md (spec file) directly instead of adding constraint to CANON.md. User caught it: "wrong. you broke canon. follow canon always" and "dont edit prose"
+AGENT edited MACHINE.md (spec file) directly instead of adding constraint to CANON.md. User caught it: "wrong. you broke canon. follow canon always" and "dont edit prose"
 
 **Scene:** AGENT confusion between human-iterated specs and LLM-generated CANONs. Critical distinction.
 

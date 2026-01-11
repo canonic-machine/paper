@@ -15,7 +15,7 @@ You required a report proving that CANONIC OS is minimal and closed, and asked t
 
 - `os/CANON.md`
 - `os/VOCAB.md`
-- `os/00-OS.md`
+- `os/OS.md`
 - `machine/CANON.md`
 
 ## Violations Detected and Fixed

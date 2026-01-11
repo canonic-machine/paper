@@ -13,11 +13,11 @@ You stated that OS, WRITING, PAPER, and GIT are now CANONIC compilers themselves
 
 ## Key Assets Discovered
 
-- `os/00-OS.md`
+- `os/OS.md`
 - `os/CANON.md`
-- `writing/00-WRITING.md`
-- `paper/00-PAPER.md`
-- `git/00-GIT.md`
+- `writing/WRITING.md`
+- `paper/PAPER.md`
+- `git/GIT.md`
 
 ## Violations Detected and Fixed
 

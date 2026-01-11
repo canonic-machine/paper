@@ -14,7 +14,7 @@ Realigned spec naming to reflect the intended hierarchy: specs are human entry p
 ## Key Assets Discovered
 
 - machine/CANON.md
-- paper/episodes/00-EPISODES.md
+- paper/episodes/EPISODES.md
 
 ## Violations Detected and Fixed
 

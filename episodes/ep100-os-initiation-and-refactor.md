@@ -13,19 +13,19 @@ You directed a refactor: make MACHINE minimal like CANONIC, extract enforcement 
 
 ## Key Assets Discovered
 
-- `os/00-OS.md`
+- `os/OS.md`
 - `os/CANON.md`
 - `os/VOCAB.md`
 - `os/README.md`
-- `machine/00-MACHINE.md`
+- `machine/MACHINE.md`
 - `machine/CANON.md`
 - `writing/CANON.md`
-- `writing/00-WRITING.md`
+- `writing/WRITING.md`
 - `git/CANON.md`
-- `git/00-GIT.md`
+- `git/GIT.md`
 - `paper/CANON.md`
 - `paper/VOCAB.md`
-- `paper/00-PAPER.md`
+- `paper/PAPER.md`
 
 ## Violations Detected and Fixed
 
