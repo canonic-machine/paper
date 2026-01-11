@@ -29,9 +29,10 @@ Human asked about branch naming. I checked branch status and said "This is a vio
 
 - `paper` - ep113 documented branch naming analysis (correct)
 - `canonic` - my earlier statement (not committed) was false
+- `os` - axiom 6 (verify) canonified, pending human approval
 
 ## The Insight
 
 AI must read CANON before stating violations. Claims without canon review are false statements. The CANONIC system is evidence-based. Without reading, I cannot make valid claims.
 
-**Status:** Documented; human must verify fix.
+**Status:** Violation documented; canon fix (OS axiom 6) canonified; awaiting human approval.
