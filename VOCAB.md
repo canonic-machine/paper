@@ -37,6 +37,9 @@ Automatic staging of new canon files for the canon commit unless the USER overri
 ### autocommit
 Automated commit by the AI after canon production or consumption, unless the USER overrides it.
 
+### automation
+Use of repeatable procedures to execute canon steps.
+
 ### canonification approval
 Explicit USER confirmation required before applying canon changes.
 
@@ -78,6 +81,12 @@ Commit logs, patterns, and transitions used to prove claims about the WRITING ma
 
 ### paper
 This artifact. Documents the CANONIC WRITING machine through analysis of git history.
+
+### precision
+The degree of exactness reached by governed output.
+
+### redo
+A repeat execution to correct drift without rewriting history.
 
 ### traceability
 Property where every claim, reference, and example can be verified through git history or external sources.

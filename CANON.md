@@ -100,6 +100,7 @@ Repository links exist on GitHub. Commit hashes exist in git history. File paths
 - Constitutional compliance through git signal
 - Human governance catches AI drift
 - Real-time canonification
+- Automation and redo are the correction loop; drift resolves through repeatable redo toward precision
 
 **Application layer (WRITING + PAPER):**
 - 4-state FSM (Episode → Asset → Prose → Output)

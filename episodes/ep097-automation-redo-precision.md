@@ -21,10 +21,10 @@ None.
 
 ## Git Signal
 
-- Insight recorded; canon update pending approval.
+- Canonify automation + redo precision insight in paper/CANON.md and paper/VOCAB.md.
 
 ## The Insight
 
 - Automation and redo are the correction path; drift is expected and resolved by repeatable redo that increases precision.
 
-**Status:** Insight recorded; canon update pending approval.
+**Status:** Insight canonified.
