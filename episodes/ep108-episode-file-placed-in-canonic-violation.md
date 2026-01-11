@@ -9,7 +9,7 @@
 
 ## The Session
 
-You flagged layer drift and a constitutional violation when an episode appeared under CANONIC. We traced it to Episode 107, which had been created in the CANONIC repo under `paper/episodes/`. That placement crossed the paradigm boundary. We moved the episode to the PAPER repo and removed the stray folder from CANONIC.
+Human flagged layer drift and a constitutional violation when an episode appeared under CANONIC. We traced it to Episode 107, which had been created in the CANONIC repo under `paper/episodes/`. That placement crossed the paradigm boundary. We moved the episode to the PAPER repo and removed the stray folder from CANONIC.
 
 ## Key Assets Discovered
 
