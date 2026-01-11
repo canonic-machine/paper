@@ -14,10 +14,11 @@ The manuscript is generated under this constraint and validated externally.
 
 This paper documents and analyzes the **CANONIC system** as an institutional, governed process.
 
-It concerns the interaction of five strictly separated layers:
+It concerns the interaction of six strictly separated layers:
 
 **CANONIC** — paradigm and law  
-**MACHINE** — enforcement on git  
+**MACHINE** — constitution enforcement  
+**OS** — governance enforcement on git  
 **WRITING** — execution under constraint  
 **PAPER** — interpretation and science  
 **PUBLISHING** — external signal emission  
@@ -77,11 +78,12 @@ flowchart TB
     GOV["Governance (producer / consumer)"]
   end
 
-  subgraph STACK ["CANONIC Machines"]
-    M1["MACHINE (judiciary on git)"]
-    M2["WRITING (execution)"]
-    M3["PAPER (interpretation)"]
-    M4["PUBLISHING (signal emission)"]
+  subgraph STACK ["CANONIC Stack"]
+    M1["MACHINE (constitution)"]
+    M2["OS (judiciary on git)"]
+    M3["WRITING (execution)"]
+    M4["PAPER (interpretation)"]
+    M5["PUBLISHING (signal emission)"]
   end
 
   subgraph AGENTS ["External Agents (no authority)"]
@@ -100,16 +102,16 @@ flowchart TB
   INH --> M1
   GOV --> M1
 
-  M1 --> M2 --> M3 --> M4
+  M1 --> M2 --> M3 --> M4 --> M5
 
-  M4 -.-> M2
-  M4 -.-> M3
+  M5 -.-> M3
+  M5 -.-> M4
   A3 -.-> M2
   A3 -.-> M3
 
   A1 -.-> GG
   A2 -.-> GG
-  M1 -.-> GG
+  M2 -.-> GG
 ```
 
 ---
@@ -123,28 +125,33 @@ flowchart TB
 - Changes only through **human producer commits**
 - Does not execute or interpret
 
-### 5.2 MACHINE (judiciary on git)
+### 5.2 MACHINE (constitution)
+
+- Enforces CANONIC constitution only
+- Defines evaluation, decision, and signal behavior
+- Produces no prose and asserts no meaning
+
+### 5.3 OS (judiciary on git)
 
 - Enforces CANONIC constraints on git state
 - Accepts or rejects commits
 - Emits redo signals
-- Produces no prose and asserts no meaning
 
-### 5.3 WRITING (execution)
+### 5.4 WRITING (execution)
 
 - Produces prose under constraint
 - Operates in real time
 - Has no authority
 - Generates candidate artifacts only
 
-### 5.4 PAPER (interpretation)
+### 5.5 PAPER (interpretation)
 
 - Reconstructs what happened
 - Treats git history and episodes as data
 - Tests institutional hypotheses
 - Never enforces or legislates
 
-### 5.5 PUBLISHING (signals)
+### 5.6 PUBLISHING (signals)
 
 - Emits snapshots to external institutions
 - Generates commentary, critique, and legitimacy signals
@@ -164,7 +171,7 @@ Episodes:
 
 Episodes do **not** change canon by themselves.
 
-Episodes live in `/canonic/machine/paper/episodes/` and the paper evolves from this record.
+Episodes live in `/canonic/machine/os/writing/paper/episodes/` and the paper evolves from this record.
 
 They are the **primary empirical units** of this paper.
 

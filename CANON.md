@@ -1,4 +1,4 @@
-# CANON (/canonic/machine/writing/paper/)
+# CANON (/canonic/machine/os/writing/paper/)
 
 **Inherits from:** [canonic-machine/writing](https://github.com/canonic-machine/writing)
 
@@ -7,9 +7,9 @@
 ## Paper Constraints
 
 ### Subject
-**This paper documents the entire CANONIC MACHINE WRITING PAPER stack.**
+**This paper documents the entire CANONIC MACHINE OS WRITING PAPER stack.**
 
-CANONIC (paradigm), MACHINE (validation engine), WRITING (application), PAPER (use case).
+CANONIC (paradigm), MACHINE (constitution engine), OS (governance enforcement), WRITING (application), PAPER (use case).
 
 Purpose: Discover best practices for writing CANONIC papers through realtime episodes capturing AGENT interactions with GIT MACHINE.
 
@@ -17,7 +17,7 @@ Method: Capture episodes in realtime, analyze productive/consumptive git commits
 
 **We don't know best practices yet - the paper discovers them through git analysis.**
 
-**All insights discovered during PAPER writing must be canonified.** This is the PAPER's core constraint. Insights discovered through practice are immediately canonified in appropriate CANONs (root CANON for paradigm insights, MACHINE/WRITING/PAPER CANONs for implementation insights).
+**All insights discovered during PAPER writing must be canonified.** This is the PAPER's core constraint. Insights discovered through practice are immediately canonified in appropriate CANONs (root CANON for paradigm insights, MACHINE/OS/WRITING/PAPER CANONs for implementation insights).
 
 **Violation:** Paper claims to already know best practices, paper documents only WRITING machine without paradigm context, paper documents only paradigm without machine context, discovered insights not canonified
 
@@ -70,6 +70,11 @@ All three are editable/regeneratable to produce:
 - **Output**: The actual academic paper artifact (final validated form)
 
 **Violation:** Paper missing triad structure, output generated without CANON compliance, README not regenerated from triad
+
+### Outputs
+**Reports are episodes.** All reports generated for PAPER are recorded as episodes.
+
+**Episodes are an output type.** Episodes are a governed output class of PAPER.
 
 ### Traceability
 **Every artifact reference must resolve.**

@@ -1,4 +1,4 @@
-# VOCAB (/canonic/machine/writing/paper/)
+# VOCAB (/canonic/machine/os/writing/paper/)
 
 **Alphabetically ordered term definitions for the WRITING machine paper.**
 
@@ -21,6 +21,9 @@ The state where all repositories in a CANONIC system have the same governance un
 
 ### PAPER
 The CANONIC WRITING MACHINE paper specification. Documents best practices for writing CANONIC papers discovered through analyzing git interactions (productive and consumptive commits). Covers entire stack: CANONIC paradigm, MACHINE validation engine, WRITING application, and constitutional governance model.
+
+### OS
+The governance enforcement layer for machine scopes.
 
 ### abstract
 Concise summary of the paper's contribution, methods, and findings. First section readers encounter.
@@ -81,6 +84,12 @@ Commit logs, patterns, and transitions used to prove claims about the WRITING ma
 
 ### paper
 This artifact. Documents the CANONIC WRITING machine through analysis of git history.
+
+### output
+A produced artifact of the paper process.
+
+### report
+A structured analysis artifact recorded as an episode.
 
 ### precision
 The degree of exactness reached by governed output.
