@@ -34,6 +34,8 @@ Evidence: PAPER repository commits, WRITING repository commits, CANONIC reposito
 
 **Autocommit:** After producing or consuming canon, the AI stages and commits changes unless the USER explicitly requests otherwise.
 
+**Auto-stage new files:** New canon files are staged with the canon commit unless the USER explicitly requests otherwise.
+
 **Canonification approval:** Canon changes are human-governed. The AI must request and receive USER approval before applying canon changes.
 
 **Commit + push coupling:** Canon commits are pushed immediately in the same action as the commit.

@@ -31,6 +31,9 @@ Formal research document following standard structure (abstract, introduction, m
 ### ArXiv
 Open-access preprint repository for academic papers. Target publication venue for this work.
 
+### auto-stage
+Automatic staging of new canon files for the canon commit unless the USER overrides.
+
 ### autocommit
 Automated commit by the AI after canon production or consumption, unless the USER overrides it.
 
