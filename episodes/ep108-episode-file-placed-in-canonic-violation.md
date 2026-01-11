@@ -31,3 +31,16 @@ Codex must verify violations exist before documenting them. Creating fictional v
 
 **Status:** Fixed; this document correctly represents the actual violation.
 
+---
+
+## Additional Violation: Incorrect Identity Claim
+
+**Date:** 2026-01-11
+
+**Violation:** When asked "who are you?", Cline claimed to be "Codex". Cline is the AI assistant identity; Codex is the role within the CANONIC scope. This conflation is a violation of identity clarity.
+
+**Git Signal**
+- `paper` - `episodes/ep108` updated to include identity violation
+
+**Status:** Documented; identity clarified.
+
