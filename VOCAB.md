@@ -1,14 +1,14 @@
 # VOCAB (/canonic/machine/os/writing/paper/)
 
-**Alphabetically ordered term definitions for the WRITING machine paper.**
+**Alphabetically ordered concept definitions for the WRITING machine paper.**
 
 **VOCAB is temporal** - evolves with the machine.
 
-Inherits all terms from [canonic-machine/writing](https://github.com/canonic-machine/writing).
+Inherits all concepts from [canonic-machine/writing](https://github.com/canonic-machine/writing).
 
 ---
 
-## Paper-Specific Terms
+## Paper-Specific Concepts
 
 ### Episode 019
 Episode documenting the canonic refactoring. Episode 020 focused on canon bloat and canonical locality. Episode 021 captured the multi-repo disconnect. Episode 022-024 completed the investigation with compliance proof chain, agentized git signal review, and proper git compliance patterns.
@@ -46,6 +46,9 @@ Use of repeatable procedures to execute canon steps.
 ### canonification approval
 Explicit USER confirmation required before applying canon changes.
 
+### episode
+A governed session record for the paper.
+
 ### episode category
 The template type assigned to an episode (e.g., violation, canonification, analysis).
 
@@ -69,9 +72,6 @@ A testable claim the paper evaluates using episode evidence.
 
 ### template
 A reusable scaffold defining required episode structure.
-
-### templates
-The collection of episode templates in `episodes/templates/`.
 
 ### branch scope
 The boundary where canon applies only within the branch it is canonified. Higher-layer rules do not back-propagate into minimal CANONIC unless explicitly merged.
