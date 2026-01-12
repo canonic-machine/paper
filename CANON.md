@@ -1,192 +1,110 @@
-# CANON (/canonic/machine/os/writing/paper/)
+# CANON (/paper)
 
-**Inherits from:** [canonic-machine/writing](https://github.com/canonic-machine/writing)
+inherits: /canonic/machine/os/writing
 
-**Generated from:** PAPER.md
+---
 
-## Paper Constraints
+## Axioms
 
-### Subject
-**This paper documents the entire CANONIC MACHINE OS WRITING PAPER stack.**
+### 1. Triad
 
-CANONIC (paradigm), MACHINE (constitution engine), OS (governance enforcement), WRITING (application), PAPER (use case).
+A PAPER scope **MUST** contain the following artifacts:
 
-Purpose: Discover best practices for writing CANONIC papers through realtime episodes capturing AGENT interactions with GIT MACHINE.
+- `CANON.md`
+- `VOCAB.md`
+- `README.md`
 
-Method: Capture episodes in realtime, analyze productive/consumptive git commits to extract traceable, robust best practices.
+Absence of any triad artifact renders the PAPER scope invalid.
 
-**We don't know best practices yet - the paper discovers them through git analysis.**
+---
 
-**All insights discovered during PAPER writing must be canonified.** This is the PAPER's core constraint. Insights discovered through practice are immediately canonified in appropriate CANONs (root CANON for paradigm insights, MACHINE/OS/WRITING/PAPER CANONs for implementation insights).
+### 2. Inheritance
 
-**Violation:** Paper claims to already know best practices, paper documents only WRITING machine without paradigm context, paper documents only paradigm without machine context, discovered insights not canonified
+This CANON **MUST** inherit all axioms from its parent scope.
 
-### Evidence Source
-**All claims must trace to git history from actual CANONIC paper writing sessions.**
+- Inherited axioms are final.
+- This CANON **MUST NOT** override or contradict inherited axioms.
+- Inheritance terminates at the root scope.
 
-Evidence: PAPER repository commits, WRITING repository commits, CANONIC repository commits, producer/consumer patterns, episodes, violations and recoveries, maturity metrics from git log.
+---
 
-**Violation:** Claims without git history evidence, hallucinated references, unverifiable assertions, theoretical speculation
+### 3. Introspection
 
-### Git Signal
+`VOCAB.md` **MUST** define every concept used by:
 
-**Every violation is canonified with an atomic commit in the appropriate scope.**
+- this CANON
+- `VOCAB.md` itself
 
-**Autocommit:** After producing or consuming canon, the AI stages and commits changes unless the USER explicitly requests otherwise.
+Undefined concepts render the PAPER scope invalid.
 
-**Auto-stage new files:** New canon files are staged with the canon commit unless the USER explicitly requests otherwise.
+---
 
-**Canonification approval:** Canon changes are human-governed. The AI must request and receive USER approval before applying canon changes.
+### 4. Epistemic Role
 
-**Commit + push coupling:** Canon commits are pushed immediately in the same action as the commit.
+PAPER is an epistemic scope only.
 
-**Violation:** A violation occurs without an atomic canonification commit, without USER approval, or without the coupled push
+- PAPER **MUST NOT** define governance outside this CANON.
+- PAPER **MUST NOT** define enforcement, execution, or workflows.
+- PAPER **MUST NOT** introduce new system primitives.
 
-### Branch Scope
+---
 
-**Canon is branch-scoped.** Constraints apply only within the branch where they are canonified unless explicitly merged or re-canonified.
+### 5. Ledger Authority
 
-**Paradigm isolation:** CANONIC (paradigm) remains minimal. Higher-layer governance (e.g., SWAT, paper process rules) must not be assumed in CANONIC.
+All claims made within the PAPER scope **MUST** be traceable to authoritative ledger evidence.
 
-**Violation:** Branch-local rules assumed to govern other branches; higher-layer governance back-propagated into CANONIC
+- The ledger is the sole source of truth.
+- Prose has no authority independent of ledger evidence.
 
-### Structure
-**Standard academic paper structure required.**
+---
 
-Sections: Abstract (best practices contribution), Introduction (AI slop problem, CANONIC stack solution), Model (CANONIC paradigm), Implementation (WRITING + GIT MACHINE interactions), Results (best practices discovered), Discussion (what works, what fails), Conclusion (best practices summary), References.
+### 6. No Explicit State Machine
 
-**Violation:** Missing required sections, non-standard organization, claims best practices without analysis
+PAPER **MUST NOT** define an explicit finite-state machine, workflow, or stage model.
 
-### Paper Triad
-**PAPER follows SPEC vs VOCAB vs CANON pattern to generate output.**
+- The execution state machine is realized implicitly by the ledger.
+- PAPER is reconstructed retrospectively from recorded state transitions.
 
-**PAPER writing process:**
-- **PAPER.md** (SPEC): Human-iterated source of truth. What the paper IS.
-- **VOCAB.md**: LLM-generated PAPER-specific concept definitions. What PAPER concepts mean.
-- **CANON.md**: LLM-generated constraints. How the paper must work.
+---
 
-All three are editable/regeneratable to produce:
-- **README.md**: Human-readable guidance for working with PAPER
-- **Output**: The actual academic paper artifact (final validated form)
+### 7. Insight–Law Separation
 
-**Violation:** Paper missing triad structure, output generated without CANON compliance, README not regenerated from triad
+Insights discovered within PAPER **MUST NOT** acquire governance force.
 
-### Outputs
-**Reports are episodes.** All reports generated for PAPER are recorded as episodes.
+- Insights may be documented.
+- Canonification of insights requires explicit human action in an upstream CANON.
 
-**Episodes are an output type.** Episodes are a governed output class of PAPER.
+---
 
-### Traceability
-**Every artifact reference must resolve.**
+### 8. Evidence Units
 
-Repository links exist on GitHub. Commit hashes exist in git history. File paths exist at specified commits. Git commands produce stated results. Metrics computable from git log. Episodes trace to actual sessions.
+Episodes are the atomic evidence units for PAPER.
 
-**Violation:** Broken links, hallucinated references, unverifiable claims, commands that fail, fabricated episodes
+- Episodes **MUST** be immutable once recorded.
+- Corrections **MUST** occur via new episodes.
 
-### Key Insights Required
+---
 
-**Paradigm layer (CANONIC):**
-- Constitutional programming via constraints + validation
-- Triad requirement (CANON, VOCAB, README - LLM-generated)
-- VOCAB is temporal (evolves with machine)
-- Specifications are human iteration points
-- Producer/consumer legislative process
-- Inheritance
+### 9. Claim Admissibility
 
-**Machine layer (GIT MACHINE):**
-- Git is a machine (not storage)
-- Atomic commits as critical infrastructure
-- GitHub is the ledger
-- Git signal = FSM execution trace
-- One episode spans many commits
+A claim is admissible in PAPER if and only if:
 
-**Governance:**
-- AI-driven, human-governed execution
-- Constitutional compliance through git signal
-- Human governance catches AI drift
-- Real-time canonification
-- Automation and redo are the correction loop; drift resolves through repeatable redo toward precision
+- it is traceable to ledger evidence
+- it is framed as an observation, not a rule
+- its scope is bounded by the episodes analyzed
 
-**Application layer (WRITING + PAPER):**
-- 4-state FSM (Episode → Asset → Prose → Output)
-- Episodes are governed input (fleeting moments)
-- Canonical locality (artifacts near governing canon)
-- Self-* properties
+---
 
-**Best practices (discovered through git analysis):**
-- Every session is an episode
-- Form vs governance (file existence ≠ compliance)
-- Layer discipline
-- Meta-circular writing
+### 10. Minimality
 
-**Violation:** Missing insights, insights without git evidence, insights not organized by layer
+PAPER governance **MUST** remain minimal.
 
-### Hypothesis
+- Only epistemic validity is enforced.
+- No best practices or optimizations are assumed.
 
-**The paper must test the hypothesis that standardized episode templates reduce drift.**
+---
 
-Evidence comes from comparing episodes before and after template canonification. Episodes are the analysis record for this comparison.
+**This CANON defines validity for PAPER.**
+**Interpretation, theory, and narrative belong to PAPER.md.**
 
-**Violation:** Hypothesis missing, or no before/after comparison anchored in episodes
-
-### Episode Constraints
-
-**Episodes are standardized session records for the PAPER machine.**
-
-Episodes capture narrative, violations, assets, git signal, and insight in a consistent format. They are not the final paper, but they are governed artifacts with required structure.
-
-**Episodes are governed for template compliance and must be categorized to match their template.**
-
-**Required header fields:**
-- **Date**
-- **Type**
-- **Participants**
-- **Agent**
-
-**Canonified episode structure (Episode 000 format):**
-- ## The Session
-- ## Key Assets Discovered
-- ## Violations Detected and Fixed
-- ## Git Signal
-- ## The Insight
-- **Status:** <single-line status at end>
-
-**Episodes must be:**
-- Structured to the standardized format
-- Chronologically ordered and indexed
-- Traceable to git evidence when signals are asserted
-- Immutable once recorded; corrections require new episodes (redo)
-- Instantiated from canonical templates in `/paper/episodes/templates` for new episodes
-
-**Episodes must NOT be:**
-- Missing required sections or header fields
-- Missing Git Signal when claims depend on git history
-- Written as final paper prose
-
-**Violation:** Episodes missing required structure, unverifiable git signals, or prose that bypasses the episode role
-
-**Rationale:** Episodes are the canonical session record. Standardized structure makes drift measurable and consumption repeatable.
-
-### Evolutionary Analysis Cadence
-
-**Every 25 episodes, perform a git evolutionary analysis of producer/consumer discovery events.**
-
-The analysis is a **prose artifact**, traceable to git history, and is not embedded in episodes.
-
-**Violation:** A 25-episode block closes without an evolutionary analysis
-
-### Violation Response
-
-**Every violation triggers a SWAT analysis in the episode.**
-
-SWAT analysis is recorded inside the episode under the violations section.
-
-**Violation:** A violation occurs without a corresponding SWAT analysis in the episode
-
-### Meta-Circular Properties
-
-**The paper IS the experiment.**
-
-Paper documents best practices for CANONIC papers. Paper is itself a CANONIC paper. Paper discovers best practices by analyzing its own writing. Paper validates claims against its own git history.
-
-**Violation:** Paper describes patterns it doesn't demonstrate, claims not validated against own git history, paper doesn't analyze its own commits
+---

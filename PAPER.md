@@ -1,239 +1,194 @@
 # PAPER
 
-**The CANONIC paper specification.**
+**The CANONIC Paper Specification**
 
-This document defines **what the paper is, how it is produced, and how it evolves** under CANONIC governance.  
-It is a **constitutional specification**, not the manuscript itself.
+This document defines **what a paper is** under the CANONIC paradigm, **how it is generated**, and **how its claims are validated**.  
+It is not the manuscript. It is the **law governing the manuscript**.
 
-`PAPER.md` is a **human legislative artifact**.  
-The manuscript is generated under this constraint and validated externally.
+The central claim of this specification is itself empirical:
 
----
+> **Under CANONIC, the paper is the experiment.**
 
-## 1. Subject
-
-This paper documents and analyzes the **CANONIC system** as an institutional, governed process.
-
-It concerns the interaction of six strictly separated layers:
-
-**CANONIC** — paradigm and law  
-**MACHINE** — constitution enforcement  
-**OS** — governance enforcement on git  
-**WRITING** — execution under constraint  
-**PAPER** — interpretation and science  
-**PUBLISHING** — external signal emission  
-
-The paper is **not** a tooling description, implementation guide, or optimization manual.
+The system that produces the paper is governed, executed, recorded, and audited. The paper is a reconstruction of that execution. As a result, the paper is self-evidencing: its claims are provable directly from the ledger that produced it.
 
 ---
 
-## 2. Purpose
+## 1. Ontology of PAPER
 
-The purpose of this paper is to:
+PAPER is a **purely epistemic layer**. It has no authority to govern, enforce, or execute. Its sole role is to **observe, reconstruct, and interpret** what occurred under governance.
 
-> **Empirically evaluate whether constitutional governance, stabilized vocabulary, and explicit separation of authority reduce drift and improve clarity in human–LLM writing systems.**
+PAPER exists downstream of:
 
-The paper discovers **best practices** by analyzing **its own governed production**, using git execution traces as evidence.
+- **CANON** (law)
+- **MACHINE / VALIDATORS** (enforcement)
+- **LEDGER (git)** (execution and state)
+- **WRITING** (candidate generation)
 
-**Hypothesis:** Standardized episode templates reduce episode drift. The test compares episodes before and after template canonification; episodes are the analysis record.
-
----
-
-## 3. Canonical Roles (Dual Framing)
-
-### 3.1 Engineering framing
-
-| Role | Engineering term |
-|---|---|
-| Change definition | **Producer** |
-| Change application | **Consumer** |
-| Enforcement | **Validator** |
-| Execution trace | **Ledger (git)** |
-
-### 3.2 Canon law framing
-
-| Role | Canon law term |
-|---|---|
-| Law creation | **Legislator** |
-| Law application | **Executor** |
-| Law enforcement | **Judiciary** |
-| Dispute resolution | **Litigation / redo** |
-
-These framings are equivalent and used interchangeably where clarity demands.
+PAPER does not introduce primitives. It consumes them.
 
 ---
 
-## 4. Minimal System Architecture
+## 2. Core Axiom
 
-### 4.1 CANONIC paradigm and machine stack
+> **A paper is valid if and only if every claim it makes is traceable to ledger evidence produced under CANONIC governance.**
 
-```mermaid
-flowchart TB
-  GG["Human Governor-General (sole legislator)"]
-
-  subgraph PARADIGM ["CANONIC Paradigm"]
-    RC["Root CANON (invariants)"]
-    TR["Triad (CANON.md • VOCAB.md • README.md)"]
-    INH["Inheritance (declared lineage)"]
-    GOV["Governance (producer / consumer)"]
-  end
-
-  subgraph STACK ["CANONIC Stack"]
-    M1["MACHINE (constitution)"]
-    M2["OS (judiciary on git)"]
-    M3["WRITING (execution)"]
-    M4["PAPER (interpretation)"]
-    M5["PUBLISHING (signal emission)"]
-  end
-
-  subgraph AGENTS ["External Agents (no authority)"]
-    A1["ChatGPT / LLMs (draft + synthesis)"]
-    A2["Tooling agents (optional)"]
-    A3["Peers / reviewers (comments)"]
-  end
-
-  GG -->|producer commits| RC
-  GG --> TR
-  GG --> INH
-  GG --> GOV
-
-  RC --> M1
-  TR --> M1
-  INH --> M1
-  GOV --> M1
-
-  M1 --> M2 --> M3 --> M4 --> M5
-
-  M5 -.-> M3
-  M5 -.-> M4
-  A3 -.-> M2
-  A3 -.-> M3
-
-  A1 -.-> GG
-  A2 -.-> GG
-  M2 -.-> GG
-```
+This axiom is sufficient.
 
 ---
 
-## 5. Definition of Each Layer
+## 3. The Paper-as-Experiment Paradigm
 
-### 5.1 CANONIC (law)
+Traditional scientific papers describe experiments that occur elsewhere. Under CANONIC, this separation collapses.
 
-- Declares invariants, vocabulary, and inheritance
-- Defines what is valid and invalid
-- Changes only through **human producer commits**
-- Does not execute or interpret
+- The **system** is governed.
+- The **execution** is recorded.
+- The **ledger** is authoritative.
+- The **paper** reconstructs what happened.
 
-### 5.2 MACHINE (constitution)
+Therefore:
 
-- Enforces CANONIC constitution only
-- Defines evaluation, decision, and signal behavior
-- Produces no prose and asserts no meaning
+> **The paper is not a report of an experiment. The paper *is* the experiment.**
 
-### 5.3 OS (judiciary on git)
-
-- Enforces CANONIC constraints on git state
-- Accepts or rejects commits
-- Emits redo signals
-
-### 5.4 WRITING (execution)
-
-- Produces prose under constraint
-- Operates in real time
-- Has no authority
-- Generates candidate artifacts only
-
-### 5.5 PAPER (interpretation)
-
-- Reconstructs what happened
-- Treats git history and episodes as data
-- Tests institutional hypotheses
-- Never enforces or legislates
-
-### 5.6 PUBLISHING (signals)
-
-- Emits snapshots to external institutions
-- Generates commentary, critique, and legitimacy signals
-- Has zero governance authority
+The hypothesis, method, results, and limitations are all derivable from the same ledger.
 
 ---
 
-## 6. Episodes (Temporal Governance Units)
+## 4. Ledger-First Reconstruction
 
-**Episodes are real-time, human-declared boundaries** capturing live execution.
+PAPER is constructed by traversing the execution ledger backward:
 
-Episodes:
-- Span multiple commits
-- May cross repositories
-- Preserve drift, confusion, correction, and fixation
-- Are immutable once closed
+- Commits define state
+- Merges define convergence
+- Reverts define rejection
+- Episodes define temporal scope
 
-Episodes do **not** change canon by themselves.
+No forward-planned workflow is assumed. No finite-state machine is defined for the paper, because the finite-state machine already exists as the ledger.
 
-Episodes live in `/canonic/machine/os/writing/paper/episodes/` and the paper evolves from this record.
-
-They are the **primary empirical units** of this paper.
+> **Git is the state machine. PAPER is the interpretation of its trace.**
 
 ---
 
-## 7. Method (Observational)
+## 5. Epistemic Separation of Authority
 
-The paper uses **retrospective reconstruction** based on:
+### 5.1 Governance
 
-- Git commit history (authoritative ledger)
-- Producer vs consumer commit sequences
-- Episode boundaries
-- Reverts and redo events
-- Cross-repo synchronization
-- SWAT analysis after any violation (prose layer)
+Governance flows exclusively through **CANON**.
 
-No mechanisms are assumed.  
-Only observable outcomes are reported.
+- CANON defines legality
+- CANON defines invariants
+- CANON defines vocabulary
+
+PAPER cannot alter governance.
+
+### 5.2 Enforcement
+
+Enforcement flows through **MACHINE and VALIDATORS**.
+
+- States are accepted or rejected
+- Invalid transitions cannot persist
+
+PAPER cannot enforce.
+
+### 5.3 Insight
+
+Insight flows exclusively through **PAPER**.
+
+- Observations
+- Interpretations
+- Design discoveries
+- Negative results
+
+Insight has no force of law.
 
 ---
 
-## 8. Structure of the Manuscript
+## 6. Episodes (Units of Evidence)
 
-1. **Abstract** — Scope, method, summary findings  
-2. **Introduction** — Problem of drift, institutional approach  
-3. **System** — CANONIC architecture and separation of authority  
-4. **Methodology** — Episodes and git-based reconstruction  
-5. **Results** — Chronological episode analysis and patterns  
-6. **Best Practices (Derived)** — Only when traceable to evidence  
-7. **Discussion** — Interpretation and theory mapping (optional v0)  
-8. **Limitations** — Scope, time horizon, non-claims  
-9. **Conclusion** — What was shown, what remains untested  
-10. **References**
+Episodes are **human-declared temporal boundaries** that segment execution.
+
+- Episodes span commits
+- Episodes may cross repositories
+- Episodes preserve confusion, correction, and fixation
+- Episodes are immutable once closed
+
+Episodes do not change law. They are evidentiary only.
+
+The paper is derived from episode analysis.
 
 ---
 
-## 9. Best Practice Constraint
+## 7. Method (Retrospective and Observational)
 
-A practice may be reported **only if**:
+The method is fixed and minimal:
 
-- It appears across multiple episodes
-- It is traceable to git evidence
+- Observe the ledger
+- Segment by episodes
+- Reconstruct sequences
+- Identify patterns
+- State claims conservatively
+
+No hidden mechanisms are assumed. Only observable state transitions are admissible evidence.
+
+---
+
+## 8. Claims and Admissibility
+
+A claim is admissible if:
+
+- It is traceable to ledger evidence
+- It appears across multiple episodes (unless explicitly labeled anecdotal)
 - It is phrased as an observation, not a rule
 
-If it sounds like law, it belongs in CANONIC, not PAPER.
+Claims that sound like law are invalid in PAPER.
 
 ---
 
-## 10. Publishing and Peer Review Plan
+## 9. Best Practices
 
-- **v0**: arXiv release (observational, minimal interpretation)
-- **v1+**: incorporate external signals as new episodes
-- Peer review is treated as **signal ingestion**, not authority
-- No retroactive rewriting of history
+Best practices are **derived observations**, not prescriptions.
 
----
-
-## 11. Canonical Statement
-
-> This paper empirically studies CANONIC writing as a governed institutional process, using git execution traces and real-time episodes to discover best practices for reducing drift in human–LLM systems.
+They:
+- May inform future governance
+- May be canonified by human decision
+- Have no authority within PAPER
 
 ---
 
-**This file is the PAPER specification.  
-The manuscript is generated under this law.**
+## 10. Self-Proving Property
+
+Because:
+
+- Governance is explicit
+- Execution is recorded
+- Evidence is immutable
+- Interpretation is constrained
+
+The paper proves itself.
+
+Any reader with access to the ledger can independently reconstruct the experiment and verify the claims.
+
+---
+
+## 11. Scope and Limits
+
+This paper makes no claims about:
+
+- Optimality
+- General intelligence
+- Model performance
+- Universality
+
+It studies **institutional behavior under governance**.
+
+---
+
+## 12. Canonical Statement
+
+> **This paper empirically demonstrates that governed, ledger-first human–LLM systems can produce self-evidencing scientific artifacts, where the paper itself constitutes the experiment it describes.**
+
+---
+
+**This file is the PAPER law.**  
+**The manuscript is generated under it.**
+
+---
