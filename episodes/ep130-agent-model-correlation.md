@@ -103,3 +103,31 @@ The high violation rate attributed to "Cline" was actually MiniMax M2.1, a Chine
 **Status:** Documented. Episode metadata should specify actual model, not just tool name.
 
 ---
+
+## SWAT Analysis
+
+**Strengths:**
+- Session logs preserved model identity across all tools (Claude Code, Codex CLI, Cline, Copilot)
+- Git Co-Authored-By trailers provided partial model traceability
+- Ledger history (git log) provided temporal correlation to map dates to sessions
+- Cross-tool investigation revealed hidden model diversity behind "Cline" label
+
+**Weaknesses:**
+- Episode Agent field used tool names, not model IDs
+- No Co-Authored-By trailers in early commits (before convention established)
+- Cline rotated through multiple models without episode-level tracking
+- "Canon Agent" was a role name with no model specificity
+
+**Opportunities:**
+- Canonify model ID requirement in episode metadata
+- Add model field to episode template: `**Model:** claude-opus-4-5-20251101`
+- Require Co-Authored-By in all AI-assisted commits
+- Create model registry in VOCAB for valid model identifiers
+
+**Threats:**
+- Tool abstraction hides model identity from governance
+- Multi-model tools (Cline) obscure accountability
+- Historical episodes cannot be retroactively corrected (immutability)
+- Future model changes may introduce new drift patterns
+
+---
