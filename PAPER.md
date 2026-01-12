@@ -192,3 +192,119 @@ It studies **institutional behavior under governance**.
 **The manuscript is generated under it.**
 
 ---
+
+# PAPER
+
+## 1. Purpose
+
+Define the PAPER scope as the epistemic reconstruction layer of the CANONIC stack.
+
+PAPER governs how claims are reconstructed, interpreted, and presented from recorded execution, without defining governance, enforcement, or execution behavior.
+
+---
+
+## 2. Scope
+
+- Applies to `/canonic/machine/os/writing/paper/`.
+- Inherits from `/canonic/machine/os/writing/`.
+- Consumes WRITING output and LEDGER history.
+
+---
+
+## 3. Normative language
+
+The key words **MUST**, **MUST NOT**, **SHOULD**, **SHOULD NOT**, and **MAY** are to be interpreted as described in RFC 2119.
+
+Statements using these key words are normative. Examples and narrative explanations are non-normative unless explicitly marked otherwise.
+
+---
+
+## 4. Principles
+
+### 4.1 Epistemic role
+
+PAPER is a purely epistemic layer.
+
+PAPER exists to observe, reconstruct, and interpret what occurred under governance.
+
+---
+
+### 4.2 Ledger primacy
+
+The execution ledger is the authoritative source of evidence.
+
+All PAPER content is derived retrospectively from ledger history.
+
+---
+
+### 4.3 Separation of authority
+
+PAPER does not define governance, enforcement, or execution semantics.
+
+Insight produced in PAPER has no force of law.
+
+---
+
+## 5. Constraints
+
+- PAPER **MUST** contain the triad:
+  - `CANON.md`
+  - `VOCAB.md`
+  - `README.md`
+
+- PAPER **MUST** consume only evidence produced under CANONIC governance.
+- PAPER **MUST** reconstruct claims exclusively from LEDGER and WRITING episodes.
+- PAPER **MUST NOT** introduce new primitives or execution workflows.
+- PAPER **MUST NOT** express claims as governance or enforcement.
+
+---
+
+## 6. Claims and admissibility
+
+A claim is admissible in PAPER if and only if:
+
+- it is traceable to ledger evidence,
+- it is supported by one or more WRITING episodes, and
+- it is expressed as an observation rather than a rule.
+
+Claims that resemble law, policy, or enforcement are invalid in PAPER.
+
+---
+
+## 7. Method
+
+The PAPER method is retrospective and observational:
+
+- traverse ledger history,
+- segment execution into episodes,
+- reconstruct sequences and state transitions,
+- identify patterns conservatively, and
+- state claims with explicit evidentiary support.
+
+No forward-planned workflow or finite-state machine is defined at this layer.
+
+---
+
+## 8. Validation
+
+A PAPER scope is valid if and only if:
+
+- the triad is present,
+- all claims are traceable to ledger evidence,
+- no governance or enforcement is introduced, and
+- interpretation is clearly separated from evidence.
+
+---
+
+## 9. Consumption notes
+
+- PAPER output may inform future governance decisions but does not itself govern.
+- Canonification of insights requires explicit human action in an upstream CANON.
+- Readers may independently reconstruct the paper by replaying ledger history.
+
+---
+
+**This SPEC is descriptive and non-authoritative.**  
+**Governance is defined exclusively by CANON.**
+
+---
