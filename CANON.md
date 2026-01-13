@@ -39,7 +39,7 @@ Undefined concepts render the PAPER scope invalid.
 
 ---
 
-### 4. Epistemic-Only Scope
+### 4. Epistemic-only scope
 
 PAPER is an epistemic scope only.
 
@@ -49,7 +49,7 @@ PAPER is an epistemic scope only.
 
 ---
 
-### 5. Ledger Authority
+### 5. Ledger authority
 
 All claims made within the PAPER scope **MUST** be traceable to authoritative ledger evidence.
 
@@ -58,7 +58,7 @@ All claims made within the PAPER scope **MUST** be traceable to authoritative le
 
 ---
 
-### 6. Evidence Units
+### 6. Evidence units
 
 Episodes are the atomic evidence units for PAPER.
 
@@ -67,26 +67,38 @@ Episodes are the atomic evidence units for PAPER.
 
 ---
 
-### 7. Claim Admissibility
+### 7. Claim admissibility
 
 A claim is admissible in PAPER if and only if:
 
-- it is traceable to ledger evidence
-- it is framed as an observation, not a rule
-- its scope is bounded by the episodes analyzed
+- it is traceable to ledger evidence,
+- it is framed as an observation, not a rule,
+- its scope is bounded by the episodes analyzed.
 
 ---
 
-### 8. No Explicit Workflow
+### 8. Retrospective reconstruction
 
-PAPER **MUST NOT** define an explicit finite-state machine, workflow, or stage model.
+PAPER **MUST** be reconstructed retrospectively from recorded execution.
 
-- The execution state machine is realized implicitly by the ledger.
-- PAPER is reconstructed retrospectively from recorded state transitions.
+- No forward-planned workflow or finite-state model may be defined.
+- Any apparent execution structure is inferred from ledger state transitions.
 
 ---
 
-### 9. Insight-Law Separation
+### 9. Evolutionary timeline disclosure
+
+PAPER **MUST** disclose the evolutionary timeline of the system under study, including:
+
+- the earliest relevant CANON artifact(s),
+- all declared fixation or freeze points,
+- the ordering of episodes analyzed.
+
+Timeline disclosure **MAY** be qualitative or quantitative, but **MUST** be explicit.
+
+---
+
+### 10. Insight–law separation
 
 Insights discovered within PAPER **MUST NOT** acquire governance force.
 
@@ -95,26 +107,16 @@ Insights discovered within PAPER **MUST NOT** acquire governance force.
 
 ---
 
-### 10. Timeline Disclosure
-
-PAPER output **MUST** disclose:
-
-- the timestamp and commit hash of the first CANON artifact in the stack
-- the timestamp and commit hash of the freeze declaration
-- the elapsed time between those timestamps
-
----
-
 ### 11. Minimality
 
 PAPER governance **MUST** remain minimal.
 
 - Only epistemic validity is enforced.
-- No best practices or optimizations are assumed.
+- No best practices, optimizations, or prescriptions are assumed.
 
 ---
 
 **This CANON defines validity for PAPER.**
-**Interpretation, theory, and narrative belong to PAPER.md.**
+**Interpretation, theory, and narrative belong to `PAPER.md`.**
 
 ---
