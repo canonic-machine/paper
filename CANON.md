@@ -39,7 +39,7 @@ Undefined concepts render the PAPER scope invalid.
 
 ---
 
-### 4. Epistemic Role
+### 4. Epistemic-Only Scope
 
 PAPER is an epistemic scope only.
 
@@ -58,25 +58,7 @@ All claims made within the PAPER scope **MUST** be traceable to authoritative le
 
 ---
 
-### 6. No Explicit State Machine
-
-PAPER **MUST NOT** define an explicit finite-state machine, workflow, or stage model.
-
-- The execution state machine is realized implicitly by the ledger.
-- PAPER is reconstructed retrospectively from recorded state transitions.
-
----
-
-### 7. Insight–Law Separation
-
-Insights discovered within PAPER **MUST NOT** acquire governance force.
-
-- Insights may be documented.
-- Canonification of insights requires explicit human action in an upstream CANON.
-
----
-
-### 8. Evidence Units
+### 6. Evidence Units
 
 Episodes are the atomic evidence units for PAPER.
 
@@ -85,7 +67,7 @@ Episodes are the atomic evidence units for PAPER.
 
 ---
 
-### 9. Claim Admissibility
+### 7. Claim Admissibility
 
 A claim is admissible in PAPER if and only if:
 
@@ -95,7 +77,35 @@ A claim is admissible in PAPER if and only if:
 
 ---
 
-### 10. Minimality
+### 8. No Explicit Workflow
+
+PAPER **MUST NOT** define an explicit finite-state machine, workflow, or stage model.
+
+- The execution state machine is realized implicitly by the ledger.
+- PAPER is reconstructed retrospectively from recorded state transitions.
+
+---
+
+### 9. Insight-Law Separation
+
+Insights discovered within PAPER **MUST NOT** acquire governance force.
+
+- Insights may be documented.
+- Canonification of insights requires explicit human action in an upstream CANON.
+
+---
+
+### 10. Timeline Disclosure
+
+PAPER output **MUST** disclose:
+
+- the timestamp and commit hash of the first CANON artifact in the stack
+- the timestamp and commit hash of the freeze declaration
+- the elapsed time between those timestamps
+
+---
+
+### 11. Minimality
 
 PAPER governance **MUST** remain minimal.
 

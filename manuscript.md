@@ -8,7 +8,7 @@
 
 What if an AI couldn't bullshit you—not because it chose not to, but because the system made it structurally impossible?
 
-We built CANONIC, a governance framework where every claim traces to an immutable ledger, every term must be defined, and the AI cannot promote its own ideas to rules. Over 129 recorded sessions, we discovered that seven simple constraints eliminate "AI slop"—that confident-sounding garbage LLMs produce when they hallucinate or hand-wave.
+We built CANONIC, a governance framework where every claim traces to an immutable ledger, every term must be defined, and the AI cannot promote its own ideas to rules. Across 129 recorded episodes (stack-freeze-2026-01-12), we discovered that seven simple constraints eliminate "AI slop"—that confident-sounding garbage LLMs produce when they hallucinate or hand-wave.
 
 The result: this paper. It doesn't describe an experiment. It *is* the experiment. Every claim links to a commit. Every commit is immutable. You can verify everything yourself.
 
@@ -64,6 +64,21 @@ graph TD
 
 We call the framework CANONIC. It has seven primitives:
 
+### Ledger-as-evidence pipeline
+
+```mermaid
+flowchart LR
+    subgraph Governance
+        CANON[CANON\nRules] --> MACHINE[MACHINE\nValidation]
+    end
+    subgraph Execution
+        AGENT[Agents + Humans] --> ARTIFACTS[Artifacts]
+        ARTIFACTS --> MACHINE
+    end
+    MACHINE --> LEDGER[LEDGER\nImmutable commit history]
+    LEDGER --> PAPER[PAPER\nClaims + citations]
+```
+
 ### 1. Triad
 
 Every scope needs three files: `CANON.md` (rules), `VOCAB.md` (definitions), `README.md` (description). Missing any = invalid. You can't publish half-baked work.
@@ -96,7 +111,7 @@ The AI can discover patterns and propose ideas. But those insights have zero leg
 
 ## What We Actually Did
 
-We built the system across 7 public git repositories:
+We built the system across the public CANONIC stack:
 
 | Repo | Purpose |
 |------|---------|
@@ -107,10 +122,37 @@ We built the system across 7 public git repositories:
 | writing | Episode production |
 | paper | This paper's governance |
 | stack | Multi-system composition |
+| validators | Enforcement outcomes (public) |
+| patents | Disclosures and governance IP |
+| publishing | Submission and dissemination artifacts |
 
-Enforcement is handled by private validators whose implementation is opaque; only their outcomes appear in the ledger.
+Enforcement outcomes are recorded in the ledger; validator implementations may be public or private.
 
-Then we used it. For months. 129 recorded episodes of human–AI collaboration, each with:
+Publishing is a post-freeze dissemination scope and is not part of the freeze evidence window.
+
+### From single scope to multi-repo
+
+```mermaid
+flowchart LR
+    canonic[canonic\n(root CANON)] --> machine[machine\n(exec semantics)]
+    machine --> os[os\n(authority bounds)]
+    os --> writing[writing\n(episodes)]
+    writing --> paper[paper\n(epistemic reconstruction)]
+
+    canonic --> ledger[ledger\n(immutability rules)]
+    canonic --> stack[stack\n(multi-repo composition)]
+    canonic --> validators[validators\n(enforcement)]
+    canonic --> patents[patents\n(disclosures)]
+
+    stack -.-> canonic
+    stack -.-> machine
+    stack -.-> os
+    stack -.-> writing
+    stack -.-> paper
+    stack -.-> ledger
+```
+
+Then we used it. At the `stack-freeze-2026-01-12` tag, the writing repo contains 129 episode artifacts in `writing/episodes/` documenting human–AI collaboration. When applicable, episodes record:
 
 - Explicit model disclosure
 - Commit-linked evidence
@@ -122,21 +164,33 @@ On January 12, 2026, we froze the ledger:
 
 > "I declare that all SPEC evolution across the CANONIC stack is complete and stable... This declaration constitutes human fixation." — Dexter Hadley
 
+```mermaid
+timeline
+    title Evidence Window (Ledger Freeze)
+    2026-01-05 : First CANON committed (writing/CANON.md)
+    2026-01-06 : Machine scope split (machine repo)
+    2026-01-10 : OS + Ledger scope separated
+    2026-01-12 : Validators + Stack added
+    2026-01-12 : Freeze declared (stack-freeze-2026-01-12)
+```
+
+The first CANON artifact in the stack was committed in `writing/CANON.md` at `2026-01-05T14:13:20-05:00` (`writing:bca9ec0`). The freeze declaration at `stack-freeze-2026-01-12` (`writing:f8acf128`) occurred **7 days, 4:21:27** later.
+
 Everything at or before the freeze is evidence. Everything after (including this revision) is reconstruction.
 
 ---
 
 ## Results: It Works
 
-At freeze, the system achieved full compliance:
+At freeze, the system achieved triad compliance across the stack:
 
-**12 scopes across 7 public repositories. 100% triad compliance.**
+**12 triad scopes across 9 repositories** (`paper/TRIAD_COMPLIANCE.md` at `stack-freeze-2026-01-12`).
 
-Every scope has CANON, VOCAB, and README. Every term is defined. Every rule traces to root.
+Each listed scope contains CANON, VOCAB, and README at the freeze tag.
 
 ### The Violation Record
 
-Over 50 episodes document explicit violations:
+At freeze, 33 episodes are explicitly labeled as violations by filename (`writing/episodes/*violation*`):
 
 - Missing VOCAB files (most common)
 - Undefined terms in CANON
@@ -168,10 +222,10 @@ Here's the weird part: this paper proves itself.
 
 | Claim | Verification |
 |-------|--------------|
-| "12 scopes compliant" | Run triad check on frozen repos |
-| "129 episodes" | Count files in writing/episodes/ |
-| "50+ violations documented" | Grep episode filenames for "violation" |
-| "Ledger frozen Jan 12" | Check git tag `paper-freeze-2026-01-12` |
+| "12 triad scopes compliant" | See `paper/TRIAD_COMPLIANCE.md` at tag `stack-freeze-2026-01-12` |
+| "129 episodes (stack-freeze-2026-01-12)" | Count files matching `writing/episodes/ep*` at tag `stack-freeze-2026-01-12` |
+| "33 violation-labeled episodes" | Grep episode filenames for `violation` at `stack-freeze-2026-01-12` |
+| "Ledger frozen Jan 12" | Check git tag `stack-freeze-2026-01-12` |
 
 You don't have to trust us. Clone the repos. Replay the history. The evidence is the system that produced the evidence.
 
@@ -217,8 +271,8 @@ We don't claim:
 
 - **Optimality**: These seven primitives work. Fewer might suffice.
 - **Generalizability**: This worked for governance specs. Other domains may differ.
-- **Scalability**: 7 public repos, 129 episodes. Enterprise scale is unproven.
-- **Model-independence**: We used Claude. Other models may behave differently.
+- **Scalability**: 9 public repos, 129 episode artifacts at `stack-freeze-2026-01-12`. Enterprise scale is unproven.
+- **Model-independence**: Multiple models and agents were used; post-freeze sampling is small.
 
 The study is bounded by one frozen ledger. Claims are observations, not universal laws.
 
@@ -229,7 +283,7 @@ The study is bounded by one frozen ledger. Claims are observations, not universa
 The entire system is in the ledger. Clone it. Check compliance. Trace any claim to its commit.
 
 ```
-git clone [repo] && git checkout paper-freeze-2026-01-12
+git clone [repo] && git checkout stack-freeze-2026-01-12
 ```
 
 The paper isn't asking you to believe anything. It's showing you the evidence and inviting you to verify.
@@ -242,7 +296,7 @@ We asked: can a governed human–AI system produce a self-evidencing scientific 
 
 The answer is yes. You're reading it.
 
-Seven primitives. 129 episodes. One frozen ledger. Every claim traceable. Every term defined. Every correction preserved.
+Seven primitives. 129 episode artifacts. One frozen ledger. Every claim traceable. Every term defined. Every correction preserved.
 
 The AI contributed substantially. But it couldn't lie, because lies don't compile. Undefined terms fail introspection. Unverifiable claims fail ledger-first. Invented authority fails inheritance.
 
@@ -252,14 +306,16 @@ Constitutional governance makes verifiability structural, not procedural. The pa
 
 ## Evidence
 
-**Public repositories** (current HEAD):
+**Public repositories** (`stack-freeze-2026-01-12`):
 - canonic:0b063b8
 - machine:a57f159
 - os:4c2919d
 - ledger:3b95de2
-- writing:148c89c
-- paper:8c1bf50
-- stack:fe14623
+- writing:f8acf12
+- paper:0ee1970
+- stack:f58ad6d
+- validators:e772048
+- patents:4bd3dd0
 
 Enforcement repositories are private; their outcomes are observable in the ledger.
 
