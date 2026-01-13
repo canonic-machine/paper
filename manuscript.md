@@ -6,7 +6,7 @@
 
 ## Abstract
 
-What if an AI could not bluff its way through scientific prose - not because it chose not to, but because the system made unsupported claims inadmissible?
+What if an AI could not bullshit its way through scientific prose - not because it chose not to, but because the system made unsupported claims inadmissible?
 
 In ledger notes we called the failure mode "AI bullshit"; in this paper we use the more formal term **slop**. We built CANONIC, a governance framework where claims must trace to a ledger, every term used in rules must be defined, and the AI cannot promote its own ideas to law. Across 129 recorded episodes at `stack-freeze-2026-01-12`, we observed recurring failures (undefined terms, evidence gaps, governance leakage) and the corrections that followed.
 
@@ -194,7 +194,7 @@ Everything at or before the freeze is evidence. Everything after is reconstructi
 
 ## Results: Observations at Freeze
 
-At freeze, the triad compliance report lists 12 triad scopes across 9 repositories (`paper/TRIAD_COMPLIANCE.md` at `stack-freeze-2026-01-12`).
+At freeze, the triad compliance report lists 12 triad scopes across 9 repositories (see `writing/episodes/ep136-stack-compliance-reports.md`).
 
 Each listed scope contains CANON, VOCAB, and README at the freeze tag.
 
@@ -221,7 +221,7 @@ Governance shrank by iteration. Root axioms were reduced to three, and vocabular
 |-------|--------------------|
 | "129 episode artifacts" | `writing/episodes/` file count at tag `stack-freeze-2026-01-12` |
 | "33 violation-labeled episodes" | `writing/episodes/*violation*` file count at tag `stack-freeze-2026-01-12` |
-| "12 triad scopes across 9 repos" | `paper/TRIAD_COMPLIANCE.md` at tag `stack-freeze-2026-01-12` |
+| "12 triad scopes across 9 repos" | `writing/episodes/ep136-stack-compliance-reports.md` (Report A) |
 | "First CANON timestamp" | `writing/CANON.md` initial commit `writing:bca9ec0` |
 | "Freeze timestamp" | tag `stack-freeze-2026-01-12` (tag timestamp `2026-01-12T18:34:47-05:00`, commit `writing:f8acf128`) |
 
