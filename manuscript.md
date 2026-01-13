@@ -6,11 +6,11 @@
 
 ## Abstract
 
-What if an AI could not bullshit its way through scientific prose, not because it chose not to, but because the system made unsupported claims inadmissible?
+What if an AI could not bullshit its way through scientific prose—not because it chose not to, but because the system rendered unsupported claims inadmissible? We call this failure mode **AI slop**.
 
-In ledger notes, we called the failure mode "AI bullshit"; in this paper we use the more formal term **slop**. We built CANONIC, a governance framework where claims must trace to a ledger, every term used in rules must be defined, and the AI cannot promote its own ideas to law. Across 129 recorded episodes at `stack-freeze-2026-01-12`, we observed recurring failures (undefined terms, evidence gaps, governance leakage) and the corrections that followed.
+CANONIC is the governance framework we built to make AI slop structurally inadmissible. Claims must trace to a ledger; every term used in rules must be defined; the AI cannot promote its own ideas to law. Across 129 recorded episodes at `stack-freeze-2026-01-12`, we observed recurring failures (undefined terms, evidence gaps, governance leakage) and the corrections that followed.
 
-The result is this paper. It does not describe an experiment. It is the experiment. Key claims link to evidence references (commits, tags, episodes) so you can verify them yourself.
+The result is this paper. It does not describe an experiment. It is the experiment. Key claims cite evidence references (commits, tags, episodes) so you can verify them yourself.
 
 We asked whether a governed human-AI system could produce a self-evidencing scientific paper. You are reading the answer.
 
@@ -18,17 +18,17 @@ We asked whether a governed human-AI system could produce a self-evidencing scie
 
 ## The Problem: AI Slop Is Eating Scientific Writing
 
-LLMs are everywhere in research now. They're great, until they're not.
+LLMs are everywhere in research. They are powerful—until they are not.
 
-The failure mode has a name: **slop**. It's text that sounds authoritative but means nothing. Undefined terms. Unverifiable claims. Confident fabrications. The AI equivalent of a student padding an essay.
+The failure mode has a name: **AI slop**. It reads as authoritative and means nothing: undefined terms, unverifiable claims, confident fabrications. The AI equivalent of padding an essay.
 
-Current defenses do not work:
+Current defenses fail:
 
 - **Detection tools** are unreliable and easily fooled
 - **Disclosure policies** are unverifiable ("I used AI responsibly" proves nothing)
-- **Human review** catches slop but doesn't prevent it
+- **Human review** catches AI slop but does not prevent it
 
-We wanted something different: a system where slop-like failure modes are structurally inadmissible in the ledger. Not filtered out. Invalid by construction.
+We wanted something different: a system where AI-slop-like failure modes are structurally inadmissible to the ledger—invalid by construction, not filtered out.
 
 ---
 
@@ -36,16 +36,15 @@ We wanted something different: a system where slop-like failure modes are struct
 
 The insight is simple: treat AI collaboration like a legal system.
 
-The root primitive is the Triad: `CANON.md`, `VOCAB.md`, and `README.md`.
+The root primitive is the Triad—`CANON.md`, `VOCAB.md`, and `README.md`.
 
-With the Triad in place, a constitution defines what's valid. A ledger records what happened. Courts (validators) check compliance. Crucially, the AI can observe and propose, but only humans can change the rules.
+With the Triad in place, a constitution defines validity, a ledger records what happened, and courts (validators) check compliance. Crucially, the AI can observe and propose, but only humans can change the rules.
 
-We call the framework CANONIC. In the frozen stack, it relies on seven governance primitives.
+We call the framework CANONIC. In the frozen stack, it rests on seven governance primitives.
 
 ### 1. Triad
 
-Every scope needs three files: `CANON.md` (rules), `VOCAB.md` (definitions), `README.md` (description). Missing any makes the scope invalid.
-When present, `SPEC.md` is part of the closure: SPEC, CANON, and README may only use terms defined in VOCAB.
+Every scope needs three files: `CANON.md` (rules), `VOCAB.md` (definitions), `README.md` (description). Missing any makes the scope invalid. When present, `SPEC.md` is part of the closure: SPEC, CANON, and README may only use terms defined in VOCAB.
 
 Figure 1 shows the triad and closure rules across SPEC, CANON, VOCAB, and README.
 
@@ -81,7 +80,7 @@ Sessions SHOULD record the actual model identity. This was not consistently capt
 
 ### 6. Ledger-first evidence
 
-Claims without evidence references are inadmissible. "The system achieved compliance" means nothing unless you can point to the commit where it happened.
+Claims without evidence references are inadmissible; "the system achieved compliance" means nothing unless you can point to the commit where it happened.
 
 ### 7. Insight-law separation
 
@@ -161,8 +160,7 @@ This pipeline is the basis for the evidence window and claim admissibility.
 
 ### From single scope to multi-repo
 
-With the evidence pipeline in place, we can show how the architecture expanded.
-Figure 3 shows how the single-scope system became a multi-repo stack.
+With the evidence pipeline in place, we can show how the architecture expanded. Figure 3 shows the single-scope system becoming a multi-repo stack.
 
 ```mermaid
 flowchart LR
@@ -184,23 +182,22 @@ flowchart LR
     stack -.-> ledger
 ```
 
-The expansion created distinct scopes without collapsing governance boundaries.
-That stack boundary defines the evidence window described next.
+The expansion created distinct scopes without collapsing governance boundaries. That stack boundary defines the evidence window described next.
 
 ### Minimal CANONIC OS (operating substrate)
 
-We treat CANONIC OS as an operating substrate for the LLM: a frozen, minimal layer
-that constrains execution without mutating under the session. The OS is not a
-policy playground; it is the stable substrate that all downstream scopes rely on.
+We treat CANONIC OS as the operating substrate for the LLM: a frozen, minimal layer
+that constrains execution and does not mutate during a session. The OS is not a
+policy playground; it is the stable substrate on which downstream scopes rely.
 
 Best practice: instantiate new WRITING and PAPER work against a frozen OS so the
-evidence window is stable and governance is not drifting under the experiment.
+evidence window stays stable and governance does not drift under the experiment.
 
 For this paper, the OS substrate is `os:4c2919d` at `stack-freeze-2026-01-12`.
 
 ### Evidence window
 
-Version: v0.1.0 (anchor tag `stack-freeze-2026-01-12`)
+Version v0.1.0 (anchor tag `stack-freeze-2026-01-12`)
 
 Pre-freeze evidence is anchored at tag `stack-freeze-2026-01-12` (tag timestamp `2026-01-12T18:34:47-05:00`, commit `writing:f8acf128`). All counts and timestamps in this manuscript are computed from that tag. Post-freeze revisions are marked as reconstruction.
 
@@ -236,7 +233,7 @@ Everything at or before the freeze is evidence. Everything after is reconstructi
 
 ## Results: Observations at Freeze
 
-At freeze, the triad compliance report lists 12 triad scopes across 9 repositories (see `writing/episodes/ep136-stack-compliance-reports.md`). See Figure 1 for the triad closure model.
+At freeze, the triad compliance report lists 12 triad scopes across 9 repositories (see `writing/episodes/ep136-stack-compliance-reports.md`). Figure 1 shows the triad closure model.
 
 Each listed scope contains CANON, VOCAB, and README at the freeze tag.
 
@@ -244,10 +241,7 @@ Each listed scope contains CANON, VOCAB, and README at the freeze tag.
 
 At freeze, 33 episodes are explicitly labeled as violations by filename (`writing/episodes/*violation*`).
 
-Every violation was:
-1. Detected (mechanically or by review)
-2. Documented (in an episode)
-3. Corrected (via new commit, never revision)
+Every violation was detected (mechanically or by review), documented (in an episode), and corrected (via new commit, never revision).
 
 The violations are features, not bugs. They show the system catches problems and preserves the learning process.
 
@@ -255,7 +249,7 @@ The violations are features, not bugs. They show the system catches problems and
 
 We also reviewed the post-freeze slice recorded after `stack-freeze-2026-01-12`.
 Five episodes exist in that window (ep132-ep136). One is violation-labeled (ep133).
-This is too small a sample to support a performance claim. We treat it as a
+The sample is too small to support a performance claim. We treat it as a
 hypothesis for the next freeze (v0.1.1), not evidence.
 
 | Window | Episodes | Violation-labeled | Status |
@@ -288,7 +282,7 @@ The table below links key claims to ledger evidence.
 
 You do not have to trust us. Clone the repos. Replay the history. The evidence is the system that produced the evidence.
 
-Traditional papers describe experiments that happened elsewhere. This paper is the experiment it describes. The method, results, and limitations all derive from the same ledger. With evidence mapped, we can discuss why it matters.
+Traditional papers describe experiments that happened elsewhere; this paper is the experiment it describes. The method, results, and limitations all derive from the same ledger. With evidence mapped, we can discuss why it matters.
 
 ---
 
@@ -308,7 +302,7 @@ It also clarifies authority. The AI can contribute, but it cannot change the rul
 
 ### For AI Slop
 
-The primitives target slop-like failure modes by making them invalid to commit:
+The primitives target AI-slop-like failure modes by making them invalid to commit:
 
 | Primitive | What It Blocks |
 |-----------|----------------|
