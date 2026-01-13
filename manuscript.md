@@ -61,6 +61,8 @@ flowchart TB
     VOCAB -->|self-definition| VOCAB
 ```
 
+This closure makes terms admissible before any downstream execution.
+
 ### 2. Inheritance
 
 Rules flow from a root constitution. You can add constraints downstream, but you cannot override upstream rules.
@@ -113,6 +115,8 @@ graph TD
     style H fill:#fce4ec
 ```
 
+This loop explains why authority stays human while execution can scale.
+
 ---
 
 ## What We Actually Did
@@ -153,6 +157,8 @@ flowchart LR
     LEDGER --> PAPER[PAPER<br/>Claims + citations]
 ```
 
+This pipeline is the basis for the evidence window and claim admissibility.
+
 ### From single scope to multi-repo
 
 Figure 3 shows how the single-scope system expanded into a multi-repo stack.
@@ -176,6 +182,8 @@ flowchart LR
     stack -.-> paper
     stack -.-> ledger
 ```
+
+The expansion created distinct scopes without collapsing governance boundaries.
 
 ### Evidence window
 
@@ -242,6 +250,8 @@ hypothesis for the next freeze (v0.1.1), not evidence.
 | Pre-freeze | See freeze window above | See freeze window above | Evidence |
 | Post-freeze | 5 (ep132-ep136) | 1 (ep133) | Reconstruction |
 
+This table is informational only and does not support a performance claim.
+
 ### The Compression
 
 Governance shrank by iteration. Root axioms were reduced to three, and vocabularies stabilized at scope level. The change is visible across the refactoring, minimalism, and fixed-point episodes (ep019, ep053, ep060).
@@ -249,6 +259,8 @@ Governance shrank by iteration. Root axioms were reduced to three, and vocabular
 ---
 
 ## Evidence Links (Key Claims)
+
+The table below links key claims to ledger evidence.
 
 | Claim | Evidence reference |
 |-------|--------------------|
