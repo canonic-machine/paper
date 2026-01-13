@@ -38,6 +38,30 @@ The insight is simple: treat AI collaboration like a legal system.
 
 A constitution defines what's valid. A ledger records what happened. Courts (validators) check compliance. And crucially: the AI can observe and propose, but only humans can change the rules.
 
+```mermaid
+graph TD
+    subgraph "Human Authority"
+        H[Human] -->|declares| CANON[CANON<br/>Constitution]
+        H -->|freezes| LEDGER[LEDGER<br/>Immutable Record]
+    end
+
+    subgraph "AI Production"
+        AI[AI Agent] -->|produces| CANDIDATES[Candidate<br/>Artifacts]
+        CANDIDATES -->|evaluated by| MACHINE[MACHINE<br/>Validator]
+    end
+
+    CANON -->|governs| MACHINE
+    MACHINE -->|accept/reject| LEDGER
+    LEDGER -->|evidence for| PAPER[PAPER<br/>This Document]
+
+    AI -.->|observes, cannot change| CANON
+
+    style CANON fill:#e1f5fe
+    style LEDGER fill:#fff3e0
+    style PAPER fill:#e8f5e9
+    style H fill:#fce4ec
+```
+
 We call the framework CANONIC. It has seven primitives:
 
 ### 1. Triad
