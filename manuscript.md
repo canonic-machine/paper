@@ -47,30 +47,18 @@ We call the framework CANONIC. In the frozen stack, it relies on seven governanc
 Every scope needs three files: `CANON.md` (rules), `VOCAB.md` (definitions), `README.md` (description). Missing any makes the scope invalid.
 When present, `SPEC.md` is part of the closure: SPEC, CANON, and README may only use terms defined in VOCAB.
 
-Figure 1 sketches the governance loop.
+Figure 1 shows the triad and closure rules across SPEC, CANON, VOCAB, and README.
 
 ```mermaid
-graph TD
-    subgraph "Human Authority"
-        H[Human] -->|declares| CANON[CANON<br/>Constitution]
-        H -->|freezes| LEDGER[LEDGER<br/>Immutable Record]
-    end
+flowchart TB
+    SPEC[SPEC<br/>Scope intent] --> CANON[CANON<br/>Rules]
+    SPEC --> README[README<br/>Scope description]
 
-    subgraph "AI Production"
-        AI[AI Agent] -->|produces| CANDIDATES[Candidate<br/>Artifacts]
-        CANDIDATES -->|evaluated by| MACHINE[MACHINE<br/>Validator]
-    end
+    SPEC -->|terms| VOCAB[VOCAB<br/>Definitions]
+    CANON -->|terms| VOCAB
+    README -->|terms| VOCAB
 
-    CANON -->|governs| MACHINE
-    MACHINE -->|accept/reject| LEDGER
-    LEDGER -->|evidence for| PAPER[PAPER<br/>This Document]
-
-    AI -.->|observes, cannot change| CANON
-
-    style CANON fill:#e1f5fe
-    style LEDGER fill:#fff3e0
-    style PAPER fill:#e8f5e9
-    style H fill:#fce4ec
+    VOCAB -->|self-definition| VOCAB
 ```
 
 ### 2. Inheritance
@@ -97,21 +85,32 @@ Claims without evidence references are inadmissible. "The system achieved compli
 
 The AI can discover patterns and propose ideas. But those insights have zero legal force until a human explicitly adds them to CANON.
 
-### Ledger-as-evidence pipeline
+### Governance loop
 
-The pipeline below shows how rules become evidence and claims.
+Figure 2 sketches the governance loop across authority, execution, and evidence.
 
 ```mermaid
-flowchart LR
-    subgraph Governance
-        CANON[CANON<br/>Rules] --> MACHINE[MACHINE<br/>Validation]
+graph TD
+    subgraph "Human Authority"
+        H[Human] -->|declares| CANON[CANON<br/>Constitution]
+        H -->|freezes| LEDGER[LEDGER<br/>Immutable Record]
     end
-    subgraph Execution
-        AGENT[Agents + Humans] --> ARTIFACTS[Artifacts]
-        ARTIFACTS --> MACHINE
+
+    subgraph "AI Production"
+        AI[AI Agent] -->|produces| CANDIDATES[Candidate<br/>Artifacts]
+        CANDIDATES -->|evaluated by| MACHINE[MACHINE<br/>Validator]
     end
-    MACHINE --> LEDGER[LEDGER<br/>Immutable commit history]
-    LEDGER --> PAPER[PAPER<br/>Claims + citations]
+
+    CANON -->|governs| MACHINE
+    MACHINE -->|accept/reject| LEDGER
+    LEDGER -->|evidence for| PAPER[PAPER<br/>This Document]
+
+    AI -.->|observes, cannot change| CANON
+
+    style CANON fill:#e1f5fe
+    style LEDGER fill:#fff3e0
+    style PAPER fill:#e8f5e9
+    style H fill:#fce4ec
 ```
 
 ---
@@ -137,15 +136,26 @@ Enforcement outcomes are recorded in the ledger; validator implementations may b
 
 Publishing is a post-freeze dissemination scope and is not part of the freeze evidence window.
 
-### Evidence window
+### Ledger-as-evidence pipeline
 
-Version: v0.1.0 (anchor tag `stack-freeze-2026-01-12`)
+The pipeline below shows how rules become evidence and claims.
 
-Pre-freeze evidence is anchored at tag `stack-freeze-2026-01-12` (tag timestamp `2026-01-12T18:34:47-05:00`, commit `writing:f8acf128`). All counts and timestamps in this manuscript are computed from that tag. Post-freeze revisions are marked as reconstruction.
+```mermaid
+flowchart LR
+    subgraph Governance
+        CANON[CANON<br/>Rules] --> MACHINE[MACHINE<br/>Validation]
+    end
+    subgraph Execution
+        AGENT[Agents + Humans] --> ARTIFACTS[Artifacts]
+        ARTIFACTS --> MACHINE
+    end
+    MACHINE --> LEDGER[LEDGER<br/>Immutable commit history]
+    LEDGER --> PAPER[PAPER<br/>Claims + citations]
+```
 
 ### From single scope to multi-repo
 
-Figure 2 shows how the single-scope system expanded into a multi-repo stack.
+Figure 3 shows how the single-scope system expanded into a multi-repo stack.
 
 ```mermaid
 flowchart LR
@@ -167,6 +177,12 @@ flowchart LR
     stack -.-> ledger
 ```
 
+### Evidence window
+
+Version: v0.1.0 (anchor tag `stack-freeze-2026-01-12`)
+
+Pre-freeze evidence is anchored at tag `stack-freeze-2026-01-12` (tag timestamp `2026-01-12T18:34:47-05:00`, commit `writing:f8acf128`). All counts and timestamps in this manuscript are computed from that tag. Post-freeze revisions are marked as reconstruction.
+
 At `stack-freeze-2026-01-12`, the writing repo contains 129 episode artifacts in `writing/episodes/`, documenting human-AI collaboration. When applicable, episodes record:
 
 - Explicit model disclosure
@@ -179,7 +195,7 @@ On January 12, 2026, we froze the ledger:
 
 > "I declare that all SPEC evolution across the CANONIC stack is complete and stable... This declaration constitutes human fixation." - Dexter Hadley
 
-The timeline below anchors the evidence window.
+Figure 4 anchors the evidence window timeline.
 
 ```mermaid
 timeline
@@ -199,21 +215,7 @@ Everything at or before the freeze is evidence. Everything after is reconstructi
 
 ## Results: Observations at Freeze
 
-At freeze, the triad compliance report lists 12 triad scopes across 9 repositories (see `writing/episodes/ep136-stack-compliance-reports.md`).
-
-Figure 3 shows the triad and closure rules across SPEC, CANON, VOCAB, and README.
-
-```mermaid
-flowchart TB
-    SPEC[SPEC<br/>Scope intent] --> CANON[CANON<br/>Rules]
-    SPEC --> README[README<br/>Scope description]
-
-    SPEC -->|terms| VOCAB[VOCAB<br/>Definitions]
-    CANON -->|terms| VOCAB
-    README -->|terms| VOCAB
-
-    VOCAB -->|self-definition| VOCAB
-```
+At freeze, the triad compliance report lists 12 triad scopes across 9 repositories (see `writing/episodes/ep136-stack-compliance-reports.md`). See Figure 1 for the triad closure model.
 
 Each listed scope contains CANON, VOCAB, and README at the freeze tag.
 

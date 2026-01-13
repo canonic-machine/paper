@@ -133,6 +133,15 @@ The manuscript is the primary PAPER artifact.
 
 ---
 
+### 14. Section anchoring
+
+Figures and tables **MUST** be anchored to the section they illustrate.
+
+- Evidence window figures **MUST** remain within the Evidence window section.
+- Figures and tables **MUST NOT** interrupt unrelated sections.
+
+---
+
 **This CANON defines validity for PAPER.**
 **Interpretation, theory, and narrative belong to `PAPER.md`.**
 

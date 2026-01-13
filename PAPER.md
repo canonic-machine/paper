@@ -152,6 +152,11 @@ core narrative content.
 Figures and tables **MUST** be referenced in the surrounding text with a clear
 lead-in and a brief follow-through.
 
+Figures and tables **MUST** appear within the section they illustrate and
+**MUST NOT** be interleaved with unrelated section content.
+
+Evidence window figures **MUST** remain within the Evidence window section.
+
 Figures and tables **SHOULD** be distributed across the manuscript to avoid
 clustering.
 
