@@ -19,7 +19,7 @@ introducing governance.
 - Applies to the `/paper/` scope.
 - Inherits from WRITING.
 - Consumes LEDGER history and EPISODES.
-- Produces a manuscript and supporting appendices.
+- May produce a manuscript and supporting appendices.
 
 ---
 
@@ -67,7 +67,7 @@ Claims in PAPER:
 - **MUST** be traceable to ledger evidence,
 - **MUST NOT** assert governance or enforcement.
 
-Each claim **SHOULD** be labeled as one of:
+Each claim **SHOULD** be labeled using one of the following non-exhaustive categories:
 
 - observation,
 - quantitative claim,
@@ -88,8 +88,7 @@ PAPER **MUST** disclose an explicit timeline that links:
 - freeze declaration(s),
 - fixation points.
 
-Timeline disclosure **MUST** include timestamps and elapsed time where
-available.
+Timeline disclosure **MUST** include ordering information and **SHOULD** include timestamps and elapsed time where available.
 
 ---
 
