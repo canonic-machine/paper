@@ -6,9 +6,9 @@
 
 ## Abstract
 
-What if an AI could not bullshit its way through scientific prose - not because it chose not to, but because the system made unsupported claims inadmissible?
+What if an AI could not bullshit its way through scientific prose, not because it chose not to, but because the system made unsupported claims inadmissible?
 
-In ledger notes we called the failure mode "AI bullshit"; in this paper we use the more formal term **slop**. We built CANONIC, a governance framework where claims must trace to a ledger, every term used in rules must be defined, and the AI cannot promote its own ideas to law. Across 129 recorded episodes at `stack-freeze-2026-01-12`, we observed recurring failures (undefined terms, evidence gaps, governance leakage) and the corrections that followed.
+In ledger notes, we called the failure mode "AI bullshit"; in this paper we use the more formal term **slop**. We built CANONIC, a governance framework where claims must trace to a ledger, every term used in rules must be defined, and the AI cannot promote its own ideas to law. Across 129 recorded episodes at `stack-freeze-2026-01-12`, we observed recurring failures (undefined terms, evidence gaps, governance leakage) and the corrections that followed.
 
 The result is this paper. It does not describe an experiment. It is the experiment. Key claims link to evidence references (commits, tags, episodes) so you can verify them yourself.
 
@@ -18,17 +18,17 @@ We asked whether a governed human-AI system could produce a self-evidencing scie
 
 ## The Problem: AI Slop Is Eating Scientific Writing
 
-LLMs are everywhere in research now. And they're great - until they're not.
+LLMs are everywhere in research now. They're great, until they're not.
 
 The failure mode has a name: **slop**. It's text that sounds authoritative but means nothing. Undefined terms. Unverifiable claims. Confident fabrications. The AI equivalent of a student padding an essay.
 
-Current defenses don't work:
+Current defenses do not work:
 
 - **Detection tools** are unreliable and easily fooled
 - **Disclosure policies** are unverifiable ("I used AI responsibly" proves nothing)
 - **Human review** catches slop but doesn't prevent it
 
-We wanted something different: a system where slop-like failure modes are structurally inadmissible to the ledger. Not filtered out. Invalid by construction.
+We wanted something different: a system where slop-like failure modes are structurally inadmissible in the ledger. Not filtered out. Invalid by construction.
 
 ---
 
@@ -36,7 +36,7 @@ We wanted something different: a system where slop-like failure modes are struct
 
 The insight is simple: treat AI collaboration like a legal system.
 
-A constitution defines what's valid. A ledger records what happened. Courts (validators) check compliance. And crucially: the AI can observe and propose, but only humans can change the rules.
+A constitution defines what's valid. A ledger records what happened. Courts (validators) check compliance. Crucially, the AI can observe and propose, but only humans can change the rules.
 
 Figure 1 sketches the governance loop.
 
@@ -64,28 +64,12 @@ graph TD
     style H fill:#fce4ec
 ```
 
-We call the framework CANONIC. In the frozen stack it relies on seven governance primitives.
-
-### Ledger-as-evidence pipeline
-
-The pipeline below shows how rules become evidence and claims.
-
-```mermaid
-flowchart LR
-    subgraph Governance
-        CANON[CANON\nRules] --> MACHINE[MACHINE\nValidation]
-    end
-    subgraph Execution
-        AGENT[Agents + Humans] --> ARTIFACTS[Artifacts]
-        ARTIFACTS --> MACHINE
-    end
-    MACHINE --> LEDGER[LEDGER\nImmutable commit history]
-    LEDGER --> PAPER[PAPER\nClaims + citations]
-```
+We call the framework CANONIC. In the frozen stack, it relies on seven governance primitives.
 
 ### 1. Triad
 
-Every scope needs three files: `CANON.md` (rules), `VOCAB.md` (definitions), `README.md` (description). Missing any = invalid.
+Every scope needs three files: `CANON.md` (rules), `VOCAB.md` (definitions), `README.md` (description). Missing any makes the scope invalid.
+When present, `SPEC.md` is part of the closure: SPEC, CANON, and README may only use terms defined in VOCAB.
 
 ### 2. Inheritance
 
@@ -101,7 +85,7 @@ The ledger is treated as immutable. Corrections happen via new commits; history 
 
 ### 5. Model identity disclosure (best practice)
 
-Sessions SHOULD record the actual model identity. This was not consistently captured early and is documented as a limitation (see Limitations).
+Sessions SHOULD record the actual model identity. This was not consistently captured early; the gap is documented as a limitation (see Limitations).
 
 ### 6. Ledger-first evidence
 
@@ -110,6 +94,23 @@ Claims without evidence references are inadmissible. "The system achieved compli
 ### 7. Insight-law separation
 
 The AI can discover patterns and propose ideas. But those insights have zero legal force until a human explicitly adds them to CANON.
+
+### Ledger-as-evidence pipeline
+
+The pipeline below shows how rules become evidence and claims.
+
+```mermaid
+flowchart LR
+    subgraph Governance
+        CANON[CANON<br/>Rules] --> MACHINE[MACHINE<br/>Validation]
+    end
+    subgraph Execution
+        AGENT[Agents + Humans] --> ARTIFACTS[Artifacts]
+        ARTIFACTS --> MACHINE
+    end
+    MACHINE --> LEDGER[LEDGER<br/>Immutable commit history]
+    LEDGER --> PAPER[PAPER<br/>Claims + citations]
+```
 
 ---
 
@@ -144,15 +145,15 @@ Figure 2 shows how the single-scope system expanded into a multi-repo stack.
 
 ```mermaid
 flowchart LR
-    canonic[canonic\n(root CANON)] --> machine[machine\n(exec semantics)]
-    machine --> os[os\n(authority bounds)]
-    os --> writing[writing\n(episodes)]
-    writing --> paper[paper\n(epistemic reconstruction)]
+    canonic["canonic<br/>root CANON"] --> machine["machine<br/>exec semantics"]
+    machine --> os["os<br/>authority bounds"]
+    os --> writing["writing<br/>episodes"]
+    writing --> paper["paper<br/>epistemic reconstruction"]
 
-    canonic --> ledger[ledger\n(immutability rules)]
-    canonic --> stack[stack\n(multi-repo composition)]
-    canonic --> validators[validators\n(enforcement)]
-    canonic --> patents[patents\n(disclosures)]
+    canonic --> ledger["ledger<br/>immutability rules"]
+    canonic --> stack["stack<br/>multi-repo composition"]
+    canonic --> validators["validators<br/>enforcement"]
+    canonic --> patents["patents<br/>disclosures"]
 
     stack -.-> canonic
     stack -.-> machine
@@ -162,7 +163,7 @@ flowchart LR
     stack -.-> ledger
 ```
 
-At `stack-freeze-2026-01-12`, the writing repo contains 129 episode artifacts in `writing/episodes/` documenting human-AI collaboration. When applicable, episodes record:
+At `stack-freeze-2026-01-12`, the writing repo contains 129 episode artifacts in `writing/episodes/`, documenting human-AI collaboration. When applicable, episodes record:
 
 - Explicit model disclosure
 - Commit-linked evidence
@@ -195,6 +196,20 @@ Everything at or before the freeze is evidence. Everything after is reconstructi
 ## Results: Observations at Freeze
 
 At freeze, the triad compliance report lists 12 triad scopes across 9 repositories (see `writing/episodes/ep136-stack-compliance-reports.md`).
+
+Figure 3 shows the triad and closure rules across SPEC, CANON, VOCAB, and README.
+
+```mermaid
+flowchart TB
+    SPEC[SPEC<br/>Scope intent] --> CANON[CANON<br/>Rules]
+    SPEC --> README[README<br/>Scope description]
+
+    SPEC -->|terms| VOCAB[VOCAB<br/>Definitions]
+    CANON -->|terms| VOCAB
+    README -->|terms| VOCAB
+
+    VOCAB -->|self-definition| VOCAB
+```
 
 Each listed scope contains CANON, VOCAB, and README at the freeze tag.
 
@@ -270,7 +285,7 @@ We do not claim:
 - **Optimality**: These seven primitives work here. Fewer might suffice.
 - **Generalizability**: This worked for governance specs. Other domains may differ.
 - **Scalability**: 9 public repos, 129 episode artifacts at `stack-freeze-2026-01-12`. Enterprise scale is unproven.
-- **Model-identity completeness**: Some early episodes lack explicit model IDs; this gap is documented post-freeze in ep135.
+- **Model identity completeness**: Some early episodes lack explicit model IDs; this gap is documented post-freeze in ep135.
 
 The study is bounded by one frozen ledger. Claims are observations within that window.
 
@@ -300,7 +315,7 @@ Within this evidence window, the answer is yes.
 
 Seven primitives. 129 episode artifacts. One frozen ledger. Key claims trace to evidence. Every correction is preserved.
 
-Constitutional governance makes verifiability structural, not procedural. The paper does not just report an experiment - it is the experiment, and you can replay it.
+Constitutional governance makes verifiability structural, not procedural. The paper does not just report an experiment; it is the experiment, and you can replay it.
 
 ---
 
