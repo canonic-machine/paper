@@ -51,9 +51,10 @@ PAPER is epistemic only.
 ## 6. Evidence model
 
 PAPER reconstruction **MUST** declare an evidence window and cite evidence
-references (commits, tags, episodes). Freeze declarations anchor freeze
-windows and delimit pre-freeze and post-freeze evidence. Episodes are the
-atomic evidence units; corrections **MUST** occur via new episodes.
+references (commits, tags, episodes). The evidence window declaration **MUST**
+include the CANONIC OS substrate anchor used for execution. Freeze declarations
+anchor freeze windows and delimit pre-freeze and post-freeze evidence. Episodes
+are the atomic evidence units; corrections **MUST** occur via new episodes.
 
 ---
 

@@ -187,6 +187,17 @@ flowchart LR
 The expansion created distinct scopes without collapsing governance boundaries.
 That stack boundary defines the evidence window described next.
 
+### Minimal CANONIC OS (operating substrate)
+
+We treat CANONIC OS as an operating substrate for the LLM: a frozen, minimal layer
+that constrains execution without mutating under the session. The OS is not a
+policy playground; it is the stable substrate that all downstream scopes rely on.
+
+Best practice: instantiate new WRITING and PAPER work against a frozen OS so the
+evidence window is stable and governance is not drifting under the experiment.
+
+For this paper, the OS substrate is `os:4c2919d` at `stack-freeze-2026-01-12`.
+
 ### Evidence window
 
 Version: v0.1.0 (anchor tag `stack-freeze-2026-01-12`)
@@ -273,6 +284,7 @@ The table below links key claims to ledger evidence.
 | "12 triad scopes across 9 repos" | `writing/episodes/ep136-stack-compliance-reports.md` (Report A) |
 | "First CANON timestamp" | `writing/CANON.md` initial commit `writing:bca9ec0` |
 | "Freeze timestamp" | tag `stack-freeze-2026-01-12` (tag timestamp `2026-01-12T18:34:47-05:00`, commit `writing:f8acf128`) |
+| "OS is minimal substrate (frozen) for downstream work" | `writing/episodes/ep100-os-initiation-and-refactor.md`, `writing/episodes/ep101-canonic-os-minimality-report.md` |
 
 You do not have to trust us. Clone the repos. Replay the history. The evidence is the system that produced the evidence.
 
