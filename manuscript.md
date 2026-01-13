@@ -121,7 +121,7 @@ This loop explains why authority stays human while execution can scale.
 
 ## What We Actually Did
 
-We built the system across the public CANONIC stack:
+With the primitives and governance loop established, we built the system across the public CANONIC stack:
 
 | Repo | Purpose |
 |------|---------|
@@ -161,7 +161,8 @@ This pipeline is the basis for the evidence window and claim admissibility.
 
 ### From single scope to multi-repo
 
-Figure 3 shows how the single-scope system expanded into a multi-repo stack.
+With the evidence pipeline in place, we can show how the architecture expanded.
+Figure 3 shows how the single-scope system became a multi-repo stack.
 
 ```mermaid
 flowchart LR
@@ -184,6 +185,7 @@ flowchart LR
 ```
 
 The expansion created distinct scopes without collapsing governance boundaries.
+That stack boundary defines the evidence window described next.
 
 ### Evidence window
 
@@ -256,6 +258,8 @@ This table is informational only and does not support a performance claim.
 
 Governance shrank by iteration. Root axioms were reduced to three, and vocabularies stabilized at scope level. The change is visible across the refactoring, minimalism, and fixed-point episodes (ep019, ep053, ep060).
 
+The evidence links below map these observations to the ledger.
+
 ---
 
 ## Evidence Links (Key Claims)
@@ -272,7 +276,7 @@ The table below links key claims to ledger evidence.
 
 You do not have to trust us. Clone the repos. Replay the history. The evidence is the system that produced the evidence.
 
-Traditional papers describe experiments that happened elsewhere. This paper is the experiment it describes. The method, results, and limitations all derive from the same ledger.
+Traditional papers describe experiments that happened elsewhere. This paper is the experiment it describes. The method, results, and limitations all derive from the same ledger. With evidence mapped, we can discuss why it matters.
 
 ---
 

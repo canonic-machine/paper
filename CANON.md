@@ -142,6 +142,13 @@ Figures and tables **MUST** be anchored to the section they illustrate.
 
 ---
 
+### 15. Section continuity
+
+Each section **MUST** include a brief lead-in and a brief follow-through to
+maintain narrative continuity across the manuscript.
+
+---
+
 **This CANON defines validity for PAPER.**
 **Interpretation, theory, and narrative belong to `PAPER.md`.**
 

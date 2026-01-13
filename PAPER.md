@@ -157,6 +157,9 @@ Figures and tables **MUST** appear within the section they illustrate and
 
 Evidence window figures **MUST** remain within the Evidence window section.
 
+Each section **SHOULD** include a brief lead-in and a brief follow-through so
+readers can track transitions across the manuscript.
+
 Figures and tables **SHOULD** be distributed across the manuscript to avoid
 clustering.
 
