@@ -36,7 +36,16 @@ We wanted something different: a system where slop-like failure modes are struct
 
 The insight is simple: treat AI collaboration like a legal system.
 
-A constitution defines what's valid. A ledger records what happened. Courts (validators) check compliance. Crucially, the AI can observe and propose, but only humans can change the rules.
+The root primitive is the Triad: `CANON.md`, `VOCAB.md`, and `README.md`.
+
+With the Triad in place, a constitution defines what's valid. A ledger records what happened. Courts (validators) check compliance. Crucially, the AI can observe and propose, but only humans can change the rules.
+
+We call the framework CANONIC. In the frozen stack, it relies on seven governance primitives.
+
+### 1. Triad
+
+Every scope needs three files: `CANON.md` (rules), `VOCAB.md` (definitions), `README.md` (description). Missing any makes the scope invalid.
+When present, `SPEC.md` is part of the closure: SPEC, CANON, and README may only use terms defined in VOCAB.
 
 Figure 1 sketches the governance loop.
 
@@ -63,13 +72,6 @@ graph TD
     style PAPER fill:#e8f5e9
     style H fill:#fce4ec
 ```
-
-We call the framework CANONIC. In the frozen stack, it relies on seven governance primitives.
-
-### 1. Triad
-
-Every scope needs three files: `CANON.md` (rules), `VOCAB.md` (definitions), `README.md` (description). Missing any makes the scope invalid.
-When present, `SPEC.md` is part of the closure: SPEC, CANON, and README may only use terms defined in VOCAB.
 
 ### 2. Inheritance
 
@@ -136,6 +138,8 @@ Enforcement outcomes are recorded in the ledger; validator implementations may b
 Publishing is a post-freeze dissemination scope and is not part of the freeze evidence window.
 
 ### Evidence window
+
+Version: v0.1.0 (anchor tag `stack-freeze-2026-01-12`)
 
 Pre-freeze evidence is anchored at tag `stack-freeze-2026-01-12` (tag timestamp `2026-01-12T18:34:47-05:00`, commit `writing:f8acf128`). All counts and timestamps in this manuscript are computed from that tag. Post-freeze revisions are marked as reconstruction.
 
@@ -223,6 +227,18 @@ Every violation was:
 3. Corrected (via new commit, never revision)
 
 The violations are features, not bugs. They show the system catches problems and preserves the learning process.
+
+### Post-freeze signal (preliminary)
+
+We also reviewed the post-freeze slice recorded after `stack-freeze-2026-01-12`.
+Five episodes exist in that window (ep132-ep136). One is violation-labeled (ep133).
+This is too small a sample to support a performance claim. We treat it as a
+hypothesis for the next freeze (v0.1.1), not evidence.
+
+| Window | Episodes | Violation-labeled | Status |
+|--------|----------|-------------------|--------|
+| Pre-freeze | See freeze window above | See freeze window above | Evidence |
+| Post-freeze | 5 (ep132-ep136) | 1 (ep133) | Reconstruction |
 
 ### The Compression
 

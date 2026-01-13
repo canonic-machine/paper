@@ -16,6 +16,8 @@ A PAPER scope **MUST** contain the following artifacts:
 
 Absence of any triad artifact renders the PAPER scope invalid.
 
+In PAPER narratives and figures, the Triad **MUST** be introduced before any downstream primitives or mechanisms.
+
 ---
 
 ### 2. Inheritance
@@ -69,11 +71,8 @@ Episodes are the atomic evidence units for PAPER.
 
 ### 7. Claim admissibility
 
-A claim is admissible in PAPER if and only if:
-
-- it is traceable to ledger evidence,
-- it is framed as an observation, not a rule,
-- its scope is bounded by the episodes analyzed.
+A claim is admissible in PAPER if and only if it is traceable to ledger evidence,
+framed as an observation (not a rule), and bounded by the episodes analyzed.
 
 ---
 
@@ -88,17 +87,26 @@ PAPER **MUST** be reconstructed retrospectively from recorded execution.
 
 ### 9. Evolutionary timeline disclosure
 
-PAPER **MUST** disclose the evolutionary timeline of the system under study, including:
-
-- the earliest relevant CANON artifact(s),
-- all declared fixation or freeze points,
-- the ordering of episodes analyzed.
+PAPER **MUST** disclose the evolutionary timeline of the system under study,
+including the earliest relevant CANON artifact(s), all declared fixation or
+freeze points, and the ordering of episodes analyzed.
 
 Timeline disclosure **MAY** be qualitative or quantitative, but **MUST** be explicit.
 
 ---
 
-### 10. Insight–law separation
+### 10. Versioning discipline
+
+PAPER versions **MUST** be explicit and anchored to a freeze or fixation
+reference.
+
+- Version labels **MUST** cite the anchor tag or commit.
+- Post-freeze material **MUST** be marked as reconstruction unless a new
+  version is declared.
+
+---
+
+### 11. Insight–law separation
 
 Insights discovered within PAPER **MUST NOT** acquire governance force.
 
@@ -107,12 +115,21 @@ Insights discovered within PAPER **MUST NOT** acquire governance force.
 
 ---
 
-### 11. Minimality
+### 12. Minimality
 
 PAPER governance **MUST** remain minimal.
 
 - Only epistemic validity is enforced.
 - No best practices, optimizations, or prescriptions are assumed.
+
+---
+
+### 13. Manuscript primacy
+
+The manuscript is the primary PAPER artifact.
+
+- Manuscript content **MUST** be preserved unless explicitly corrected with new evidence.
+- Appendices **MAY** extend the manuscript but **MUST NOT** replace or relocate core narrative content.
 
 ---
 
