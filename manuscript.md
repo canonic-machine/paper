@@ -8,7 +8,7 @@
 
 What if an AI couldn't bullshit you—not because it chose not to, but because the system made it structurally impossible?
 
-We built CANONIC, a governance framework where every claim traces to an immutable ledger, every term must be defined, and the AI cannot promote its own ideas to rules. Over 131 recorded sessions, we discovered that seven simple constraints eliminate "AI slop"—that confident-sounding garbage LLMs produce when they hallucinate or hand-wave.
+We built CANONIC, a governance framework where every claim traces to an immutable ledger, every term must be defined, and the AI cannot promote its own ideas to rules. Over 129 recorded sessions, we discovered that seven simple constraints eliminate "AI slop"—that confident-sounding garbage LLMs produce when they hallucinate or hand-wave.
 
 The result: this paper. It doesn't describe an experiment. It *is* the experiment. Every claim links to a commit. Every commit is immutable. You can verify everything yourself.
 
@@ -96,20 +96,21 @@ The AI can discover patterns and propose ideas. But those insights have zero leg
 
 ## What We Actually Did
 
-We built the system across 8 git repositories:
+We built the system across 7 public git repositories:
 
 | Repo | Purpose |
 |------|---------|
 | canonic | Root constitution |
-| machine | Enforcement semantics |
+| machine | Execution semantics |
 | os | Authority bounds |
 | ledger | Immutability rules |
 | writing | Episode production |
 | paper | This paper's governance |
-| validators | Compliance checking |
 | stack | Multi-system composition |
 
-Then we used it. For months. 131 recorded episodes of human–AI collaboration, each with:
+Enforcement is handled by private validators whose implementation is opaque; only their outcomes appear in the ledger.
+
+Then we used it. For months. 129 recorded episodes of human–AI collaboration, each with:
 
 - Explicit model disclosure
 - Commit-linked evidence
@@ -129,7 +130,7 @@ Everything at or before the freeze is evidence. Everything after (including this
 
 At freeze, the system achieved full compliance:
 
-**11 scopes across 8 repositories. 100% triad compliance.**
+**12 scopes across 7 public repositories. 100% triad compliance.**
 
 Every scope has CANON, VOCAB, and README. Every term is defined. Every rule traces to root.
 
@@ -167,8 +168,8 @@ Here's the weird part: this paper proves itself.
 
 | Claim | Verification |
 |-------|--------------|
-| "11 scopes compliant" | Run triad check on frozen repos |
-| "131 episodes" | Count files in writing/episodes/ |
+| "12 scopes compliant" | Run triad check on frozen repos |
+| "129 episodes" | Count files in writing/episodes/ |
 | "50+ violations documented" | Grep episode filenames for "violation" |
 | "Ledger frozen Jan 12" | Check git tag `paper-freeze-2026-01-12` |
 
@@ -216,7 +217,7 @@ We don't claim:
 
 - **Optimality**: These seven primitives work. Fewer might suffice.
 - **Generalizability**: This worked for governance specs. Other domains may differ.
-- **Scalability**: 8 repos, 131 episodes. Enterprise scale is unproven.
+- **Scalability**: 7 public repos, 129 episodes. Enterprise scale is unproven.
 - **Model-independence**: We used Claude. Other models may behave differently.
 
 The study is bounded by one frozen ledger. Claims are observations, not universal laws.
@@ -241,7 +242,7 @@ We asked: can a governed human–AI system produce a self-evidencing scientific 
 
 The answer is yes. You're reading it.
 
-Seven primitives. 131 episodes. One frozen ledger. Every claim traceable. Every term defined. Every correction preserved.
+Seven primitives. 129 episodes. One frozen ledger. Every claim traceable. Every term defined. Every correction preserved.
 
 The AI contributed substantially. But it couldn't lie, because lies don't compile. Undefined terms fail introspection. Unverifiable claims fail ledger-first. Invented authority fails inheritance.
 
@@ -251,15 +252,16 @@ Constitutional governance makes verifiability structural, not procedural. The pa
 
 ## Evidence
 
-**Repositories** (at tag `paper-freeze-2026-01-12`):
+**Public repositories** (current HEAD):
 - canonic:0b063b8
 - machine:a57f159
 - os:4c2919d
 - ledger:3b95de2
-- writing:f8acf12
-- paper:0ee1970
-- validators:e772048
-- stack:f58ad6d
+- writing:148c89c
+- paper:8c1bf50
+- stack:fe14623
+
+Enforcement repositories are private; their outcomes are observable in the ledger.
 
 **Key episodes**: ep000 (initial), ep019 (refactoring), ep053 (minimalism), ep060 (fixed point), ep131 (full compliance)
 
