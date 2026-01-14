@@ -16,6 +16,22 @@ We asked whether a governed human-AI system could produce a self-evidencing scie
 
 ---
 
+## Why Should You Care?
+
+AI writes convincingly. It also makes things up.
+
+When your doctor uses AI to summarize research, you want that summary to be true. When a scientist uses AI to draft a paper, you want the claims to be real. When policy is shaped by AI-assisted analysis, you want the evidence to exist.
+
+Right now, you have to trust. Trust the author checked. Trust the AI didn't hallucinate. Trust the peer reviewers caught the errors.
+
+We built a system where you don't have to trust. You can verify.
+
+Every claim in this paper links to a commit. Every commit is in a public ledger. Clone the repos. Check for yourself. The evidence is the system that produced the evidence.
+
+This matters because AI is already writing science. The question is whether we govern it or hope for the best.
+
+---
+
 ## The Problem: AI Slop Is Eating Scientific Writing
 
 LLMs are everywhere in research. They are powerful—until they are not.
