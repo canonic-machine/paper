@@ -16,6 +16,12 @@ An acting entity (human or AI) participating in production.
 
 ---
 
+### AI
+
+An artificial intelligence system capable of autonomous action.
+
+---
+
 ### alignment
 
 A mapping between episode agent labels and actual model identities.
@@ -34,6 +40,24 @@ A supplementary section attached to the manuscript.
 
 ---
 
+### caption
+
+A short descriptive line attached to a figure or table.
+
+---
+
+### cross-reference
+
+A prose reference that points to a figure or table in context.
+
+---
+
+### supporting materials
+
+Descriptive appendices and references that support the manuscript.
+
+---
+
 ### artifact
 
 A file governed by CANON.
@@ -49,6 +73,24 @@ A normative rule declared in CANON.
 ### best practice
 
 A derived observational recommendation grounded in ledger evidence.
+
+---
+
+### build
+
+The process of generating output artifacts from source files.
+
+---
+
+### build outputs
+
+The artifacts produced by the PAPER build process.
+
+---
+
+### branch
+
+A divergent line of ledger history under development.
 
 ---
 
@@ -206,6 +248,79 @@ The narrative paper produced under PAPER.
 ### mathematical appendix
 
 An appendix that formalizes properties with equations.
+
+---
+
+### pdf output
+
+The rendered PDF produced from the manuscript and appendices.
+
+---
+
+### typesetting profile
+
+The PDF layout contract (column count, margins, float spacing, and figure
+rendering expectations).
+
+---
+
+### TYPESET.md
+
+The typesetting specification artifact that defines PDF rendering details.
+
+---
+
+### two-column layout
+
+A PDF layout with two text columns per page.
+
+---
+
+### vector figure
+
+A figure rendered as vector graphics (for example, SVG or PDF).
+
+---
+
+### full-width figure
+
+A figure that spans both columns in the PDF for legibility.
+
+---
+
+### legible figure text
+
+Figure text that remains readable at the printed size.
+
+---
+
+### body font size
+
+The font size used for normal manuscript prose.
+
+---
+
+### figure asset
+
+A rendered figure file embedded in the manuscript.
+
+---
+
+### figure source
+
+A source file used to generate a figure asset.
+
+---
+
+### mermaid diagram
+
+A vector diagram rendered from Mermaid syntax.
+
+---
+
+### mermaid source
+
+A source file containing Mermaid syntax used to generate a mermaid diagram.
 
 ---
 

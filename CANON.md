@@ -80,7 +80,7 @@ framed as an observation (not a rule), and bounded by the episodes analyzed.
 
 PAPER **MUST** be reconstructed retrospectively from recorded execution.
 
-- No forward-planned workflow or finite-state model may be defined.
+- PAPER **MUST NOT** prescribe future actions or workflows.
 - Any apparent execution structure is inferred from ledger state transitions.
 
 ---
@@ -133,19 +133,52 @@ The manuscript is the primary PAPER artifact.
 
 ---
 
-### 14. Section anchoring
+### 14. Supporting materials
+
+PAPER **MUST** include `paper/supporting/` with appendices when the manuscript is updated.
+
+---
+
+### 15. Section anchoring
 
 Figures and tables **MUST** be anchored to the section they illustrate.
 
 - Evidence window figures **MUST** remain within the Evidence window section.
 - Figures and tables **MUST NOT** interrupt unrelated sections.
+- Prose **MUST** reference each figure or table in the section where it appears.
 
 ---
 
-### 15. Section continuity
+### 16. Section continuity
 
 Each section **MUST** include a brief lead-in and a brief follow-through to
 maintain narrative continuity across the manuscript.
+
+- Each section **MUST** develop its own claim and motivate the next section.
+
+---
+
+### 17. Typesetting profile
+
+PAPER pdf output **MUST** conform to `TYPESET.md`.
+
+---
+
+### 18. Build outputs
+
+PAPER build **MUST** produce:
+
+- `output/manuscript.pdf` — typeset PDF
+- `output/manuscript-full.md` — combined markdown (manuscript + appendices)
+
+---
+
+### 19. Model identity disclosure
+
+PAPER claims involving AI production **MUST** disclose model identity.
+
+- Agent labels alone are insufficient; the underlying model identifier **MUST** be recorded.
+- Model identity **MAY** be established via alignment analysis when direct recording is unavailable.
 
 ---
 
