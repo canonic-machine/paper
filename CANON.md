@@ -133,13 +133,7 @@ The manuscript is the primary PAPER artifact.
 
 ---
 
-### 14. Supporting materials
-
-PAPER **MUST** include `paper/supporting/` with appendices when the manuscript is updated.
-
----
-
-### 15. Section anchoring
+### 14. Section anchoring
 
 Figures and tables **MUST** be anchored to the section they illustrate.
 
@@ -149,7 +143,7 @@ Figures and tables **MUST** be anchored to the section they illustrate.
 
 ---
 
-### 16. Section continuity
+### 15. Section continuity
 
 Each section **MUST** include a brief lead-in and a brief follow-through to
 maintain narrative continuity across the manuscript.
@@ -158,22 +152,7 @@ maintain narrative continuity across the manuscript.
 
 ---
 
-### 17. Typesetting profile
-
-PAPER pdf output **MUST** conform to `TYPESET.md`.
-
----
-
-### 18. Build outputs
-
-PAPER build **MUST** produce:
-
-- `output/manuscript.pdf` — typeset PDF
-- `output/manuscript-full.md` — combined markdown (manuscript + appendices)
-
----
-
-### 19. Model identity disclosure
+### 16. Model identity disclosure
 
 PAPER claims involving AI production **MUST** disclose model identity.
 
