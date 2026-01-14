@@ -178,7 +178,23 @@ This pipeline is the basis for the evidence window and claim admissibility.
 
 ### From single scope to multi-repo
 
-With the evidence pipeline in place, we can show how the architecture expanded. Figure 3 shows the single-scope system becoming a multi-repo stack.
+The system did not start as nine repositories. It started as one.
+
+On January 5, 2026, the first CANON was committed to `writing`. Within 7 days, governance pressure forced the architecture to split: execution semantics moved to `machine`, authority bounds to `os`, immutability rules to `ledger`. Each split was recorded. Each boundary was deliberate.
+
+The evolution tells a story:
+
+| Day | Event | Commits |
+|-----|-------|---------|
+| 1 | First CANON (`writing`) | 1 |
+| 2 | Machine scope split | 12 |
+| 5 | OS + Ledger separated | 28 |
+| 7 | Validators + Stack added | 45 |
+| 7 | Freeze declared | 129 episodes |
+
+By freeze, the stack had grown to 9 governed repositories with 12 triad-compliant scopes. The expansion was not planned—it was discovered. Governance constraints revealed where boundaries needed to exist.
+
+Figure 3 shows the final architecture.
 
 ```mermaid
 flowchart LR
@@ -200,7 +216,9 @@ flowchart LR
     stack -.-> ledger
 ```
 
-The expansion created distinct scopes without collapsing governance boundaries. That stack boundary defines the evidence window described next.
+The dotted lines show the stack scope observing all others—composition without authority. The solid lines show inheritance: rules flow down from root, constraints accumulate, and no downstream scope can override its parent.
+
+This architecture emerged from use. The system taught us where the boundaries belonged.
 
 ### Minimal CANONIC OS (operating substrate)
 
