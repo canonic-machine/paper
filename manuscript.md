@@ -1,6 +1,6 @@
 # We Made an AI Write a Paper It Can't Lie About
 
-**Dexter Hadley**
+**Dexter Hadley, Fatima Boukrim**
 
 ---
 
@@ -17,6 +17,8 @@ We asked whether a governed human-AI system could produce a self-evidencing scie
 ---
 
 ## Why Should You Care?
+
+"Help me understand what this is for." — Fatima Boukrim
 
 AI writes convincingly. It also makes things up.
 
