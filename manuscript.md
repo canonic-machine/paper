@@ -1,6 +1,6 @@
 # We Made an AI Write a Paper It Can't Lie About
 
-**Dexter Hadley, Fatima Boukrim**
+**Dexter Hadley**
 
 ---
 
@@ -582,6 +582,14 @@ Use this checklist to verify that a claim is admissible under PAPER CANON.
 - Evidence exists within the freeze window when required.
 
 This checklist is descriptive and does not define governance.
+
+---
+
+## Acknowledgments
+
+Fatima Boukrim asked the question—"Help me understand what this is for"—that led to the "Why Should You Care?" section and grounded this paper for a lay audience.
+
+The AI agents (Claude Opus 4.5, Claude Sonnet 4.5, GPT-5) contributed production under governance. Their contributions are recorded in the ledger with model identity disclosure.
 
 ---
 
