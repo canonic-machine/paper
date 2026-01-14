@@ -18,7 +18,7 @@ We asked whether a governed human-AI system could produce a self-evidencing scie
 
 ## Why Should You Care?
 
-"Help me understand what this is for." — Fatima Boukrim
+> "Help me understand what this is for." — Fatima Boukrim
 
 AI writes convincingly. It also makes things up.
 
@@ -30,15 +30,15 @@ We built a system where you don't have to trust. You can verify.
 
 Every claim in this paper links to a commit. Every commit is in a public ledger. Clone the repos. Check for yourself. The evidence is the system that produced the evidence.
 
-This matters because AI is already writing science. The question is whether we govern it or hope for the best.
+This matters because AI is already writing science. The question is whether we govern it or hope for the best. That question has a name.
 
 ---
 
 ## The Problem: AI Slop Is Eating Scientific Writing
 
-LLMs are everywhere in research. They are powerful—until they are not.
+LLMs are everywhere in research. Powerful—until they are not.
 
-The failure mode has a name: **AI slop**. It reads as authoritative and means nothing: undefined terms, unverifiable claims, confident fabrications. The AI equivalent of padding an essay.
+The failure mode has a name: **AI slop**. Reads as authoritative, means nothing. Undefined terms, unverifiable claims, confident fabrications. The AI equivalent of padding an essay.
 
 Current defenses fail:
 
@@ -46,7 +46,7 @@ Current defenses fail:
 - **Disclosure policies** are unverifiable ("I used AI responsibly" proves nothing)
 - **Human review** catches AI slop but does not prevent it
 
-We wanted something different: a system where AI-slop-like failure modes are structurally inadmissible to the ledger—invalid by construction, not filtered out.
+We wanted something different: a system where AI-slop-like failure modes are structurally inadmissible to the ledger—invalid by construction, not filtered out. So we built one.
 
 ---
 
@@ -132,13 +132,13 @@ graph TD
     style H fill:#fce4ec
 ```
 
-This loop explains why authority stays human while execution can scale.
+This loop explains why authority stays human while execution can scale. The question is whether it works. We tested it on ourselves.
 
 ---
 
 ## What We Actually Did
 
-With the primitives and governance loop established, we built the system across the public CANONIC stack:
+We built the system across nine public repositories:
 
 | Repo | Purpose |
 |------|---------|
@@ -159,7 +159,7 @@ Publishing is a post-freeze dissemination scope and is not part of the freeze ev
 
 ### Ledger-as-evidence pipeline
 
-The pipeline below shows how rules become evidence and claims.
+Rules become evidence. Evidence becomes claims.
 
 ```mermaid
 flowchart LR
@@ -174,23 +174,29 @@ flowchart LR
     LEDGER --> PAPER[PAPER<br/>Claims + citations]
 ```
 
-This pipeline is the basis for the evidence window and claim admissibility.
-
-### From single scope to multi-repo
+### Evolution and evidence window
 
 The system did not start as nine repositories. It started as one.
 
-On January 5, 2026, the first CANON was committed to `writing`. Within 7 days, governance pressure forced the architecture to split: execution semantics moved to `machine`, authority bounds to `os`, immutability rules to `ledger`. Each split was recorded. Each boundary was deliberate.
+On January 5, 2026, the first CANON was committed to `writing`. Within 7 days, governance pressure forced the architecture to split. Each split was recorded. Each boundary was deliberate.
 
-The evolution tells a story:
+```mermaid
+timeline
+    title Evidence Window (Ledger Freeze)
+    2026-01-05 : First CANON committed (writing/CANON.md)
+    2026-01-06 : Machine scope split (machine repo)
+    2026-01-10 : OS + Ledger separated
+    2026-01-12 : Validators + Stack added
+    2026-01-12 : Freeze declared (stack-freeze-2026-01-12)
+```
 
-| Day | Event | Commits |
-|-----|-------|---------|
-| 1 | First CANON (`writing`) | 1 |
-| 2 | Machine scope split | 12 |
-| 5 | OS + Ledger separated | 28 |
-| 7 | Validators + Stack added | 45 |
-| 7 | Freeze declared | 129 episodes |
+| Date | Event | Reference |
+|------|-------|-----------|
+| 2026-01-05 | First CANON | `writing:bca9ec0` |
+| 2026-01-06 | Machine scope split | `machine` repo created |
+| 2026-01-10 | OS + Ledger separated | `os`, `ledger` repos |
+| 2026-01-12 | Freeze declared | `writing:f8acf128` |
+| **Duration** | **7 days, 4:21:27** | 129 episodes |
 
 By freeze, the stack had grown to 9 governed repositories with 12 triad-compliant scopes. The expansion was not planned—it was discovered. Governance constraints revealed where boundaries needed to exist.
 
@@ -216,54 +222,21 @@ flowchart LR
     stack -.-> ledger
 ```
 
-The dotted lines show the stack scope observing all others—composition without authority. The solid lines show inheritance: rules flow down from root, constraints accumulate, and no downstream scope can override its parent.
+Dotted lines show the stack scope observing all others—composition without authority. Solid lines show inheritance: rules flow down from root, constraints accumulate, no downstream scope can override its parent.
 
-This architecture emerged from use. The system taught us where the boundaries belonged.
+### CANONIC OS
 
-### Minimal CANONIC OS (operating substrate)
-
-We treat CANONIC OS as the operating substrate for the LLM: a frozen, minimal layer
-that constrains execution and does not mutate during a session. The OS is not a
-policy playground; it is the stable substrate on which downstream scopes rely.
-
-Best practice: instantiate new WRITING and PAPER work against a frozen OS so the
-evidence window stays stable and governance does not drift under the experiment.
+The OS scope (`os`) is the operating substrate for the LLM: a frozen, minimal layer that constrains execution and does not mutate during a session. It is not a policy playground; it is the stable substrate on which downstream scopes rely.
 
 For this paper, the OS substrate is `os:4c2919d` at `stack-freeze-2026-01-12`.
 
-### Evidence window
-
-Version v0.1.0 (anchor tag `stack-freeze-2026-01-12`)
-
-Pre-freeze evidence is anchored at tag `stack-freeze-2026-01-12` (tag timestamp `2026-01-12T18:34:47-05:00`, commit `writing:f8acf128`). All counts and timestamps in this manuscript are computed from that tag. Post-freeze revisions are marked as reconstruction.
-
-At `stack-freeze-2026-01-12`, the writing repo contains 129 episode artifacts in `writing/episodes/`, documenting human-AI collaboration. When applicable, episodes record:
-
-- Explicit model disclosure
-- Commit-linked evidence
-- Documented violations and corrections
-
-The system evolved through recorded revisions. By the freeze tag, the root CANON in `canonic` contains three axioms, and each scope's vocabulary is defined in its own `VOCAB.md`. Episodes ep019, ep053, and ep060 document the compression path.
+At freeze, the writing repo contains 129 episode artifacts documenting human-AI collaboration. Episodes record model disclosure, commit-linked evidence, and violations with corrections.
 
 On January 12, 2026, we froze the ledger:
 
-> "I declare that all SPEC evolution across the CANONIC stack is complete and stable... This declaration constitutes human fixation." - Dexter Hadley
+> "I declare that all SPEC evolution across the CANONIC stack is complete and stable... This declaration constitutes human fixation." — Dexter Hadley
 
-Figure 4 anchors the evidence window timeline.
-
-```mermaid
-timeline
-    title Evidence Window (Ledger Freeze)
-    2026-01-05 : First CANON committed (writing/CANON.md)
-    2026-01-06 : Machine scope split (machine repo)
-    2026-01-10 : OS + Ledger scope separated
-    2026-01-12 : Validators + Stack added
-    2026-01-12 : Freeze declared (stack-freeze-2026-01-12)
-```
-
-The first CANON artifact in the stack is `writing/CANON.md` at `2026-01-05T14:13:20-05:00` (`writing:bca9ec0`). The freeze declaration at `stack-freeze-2026-01-12` (`writing:f8acf128`, tag timestamp `2026-01-12T18:34:47-05:00`) occurred **7 days, 4:21:27** later.
-
-Everything at or before the freeze is evidence. Everything after is reconstruction.
+Everything at or before the freeze is evidence. Everything after is reconstruction. With the window defined, we can report what we observed.
 
 ---
 
@@ -279,7 +252,7 @@ At freeze, 33 episodes are explicitly labeled as violations by filename (`writin
 
 Every violation was detected (mechanically or by review), documented (in an episode), and corrected (via new commit, never revision).
 
-The violations are features, not bugs. They show the system catches problems and preserves the learning process.
+Violations are features, not bugs. They prove the system catches problems and preserves the learning process.
 
 ### Post-freeze signal (preliminary)
 
@@ -297,9 +270,9 @@ This table is informational only and does not support a performance claim.
 
 ### The Compression
 
-Governance shrank by iteration. Root axioms were reduced to three, and vocabularies stabilized at scope level. The change is visible across the refactoring, minimalism, and fixed-point episodes (ep019, ep053, ep060).
+Governance shrank by iteration. Root axioms compressed from many to three. Vocabularies stabilized at scope level. The compression path is visible in ep019, ep053, and ep060.
 
-The evidence links below map these observations to the ledger.
+These observations are claims. Claims require evidence.
 
 ---
 
@@ -318,7 +291,7 @@ The table below links key claims to ledger evidence.
 
 You do not have to trust us. Clone the repos. Replay the history. The evidence is the system that produced the evidence.
 
-Traditional papers describe experiments that happened elsewhere; this paper is the experiment it describes. The method, results, and limitations all derive from the same ledger. With evidence mapped, we can discuss why it matters.
+Traditional papers describe experiments that happened elsewhere; this paper is the experiment it describes. The method, results, and limitations all derive from the same ledger. So why does any of this matter?
 
 ---
 
@@ -326,19 +299,19 @@ Traditional papers describe experiments that happened elsewhere; this paper is t
 
 ### For Scientific Publishing
 
-If this approach generalizes, papers could be verifiable by construction. Instead of "trust the authors," check the ledger.
+Papers could be verifiable by construction. Instead of "trust the authors," check the ledger.
 
-Peer review could become: "Does every claim link to evidence? Do the commits exist? Is the governance valid?" Mechanical verification replaces subjective trust.
+Peer review becomes: Does every claim link to evidence? Do the commits exist? Is the governance valid? Mechanical verification replaces subjective trust.
 
 ### For AI Collaboration
 
-The framework improves attribution when model identity is recorded: which model, which session, which commits.
+Attribution improves when model identity is recorded: which model, which session, which commits.
 
-It also clarifies authority. The AI can contribute, but it cannot change the rules. Insight-law separation keeps governance human.
+Authority stays clear. The AI can contribute but cannot change the rules. Insight-law separation keeps governance human.
 
 ### For AI Slop
 
-The primitives target AI-slop-like failure modes by making them invalid to commit:
+The primitives block slop at commit time:
 
 | Primitive | What It Blocks |
 |-----------|----------------|
@@ -350,7 +323,7 @@ The primitives target AI-slop-like failure modes by making them invalid to commi
 | Ledger-first | Unsupported claims |
 | Insight-law separation | AI self-promotion |
 
-This is not a filter. It is a governance boundary.
+This is not a filter. It is a governance boundary. But we are not claiming perfection.
 
 ---
 
@@ -363,7 +336,7 @@ We do not claim:
 - **Scalability**: 9 public repos, 129 episode artifacts at `stack-freeze-2026-01-12`. Enterprise scale is unproven.
 - **Model identity completeness**: Some early episodes lack explicit model IDs; this gap is documented post-freeze in ep135.
 
-The study is bounded by one frozen ledger. Claims are observations within that window.
+The study is bounded by one frozen ledger. Claims are observations within that window. If you want to test them, you can.
 
 ---
 
@@ -379,7 +352,7 @@ cd writing
 git checkout stack-freeze-2026-01-12
 ```
 
-For the full stack list, see `stack/public/STACK.yml` in the stack repo.
+For the full stack list, see `stack/public/STACK.yml` in the stack repo. Then decide for yourself.
 
 ---
 
@@ -402,13 +375,13 @@ In 7 days, 4 hours, and 21 minutes—from first CANON commit to freeze declarati
 | Governance primitives | 7 |
 | Root axioms | 3 |
 
-The system grew through recorded iteration. Every failure was caught, documented, and corrected via new commit. The violations are features: they prove the governance catches problems and preserves the learning process.
+The system grew through recorded iteration. Every failure was caught, documented, and corrected. The violations prove the governance works.
 
 ### What this means
 
-Constitutional governance makes verifiability structural, not procedural. The paper does not just report an experiment; it is the experiment, and you can replay it.
+Constitutional governance makes verifiability structural, not procedural. The paper is the experiment. You can replay it.
 
-Traditional papers describe work that happened elsewhere. This paper is the work. The method, results, and limitations all derive from the same ledger. Clone the repos. Trace any claim to its commit. The evidence is the system that produced the evidence.
+Traditional papers describe work that happened elsewhere. This paper is the work. Clone the repos. Trace any claim. The evidence is the system that produced the evidence.
 
 ### What comes next
 

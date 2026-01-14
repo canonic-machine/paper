@@ -43,11 +43,11 @@ Undefined concepts render the PAPER scope invalid.
 
 ### 4. Epistemic-only scope
 
-PAPER is an epistemic scope only.
+PAPER is epistemic only.
 
 - PAPER **MUST NOT** define governance outside this CANON.
 - PAPER **MUST NOT** define enforcement, execution, or workflows.
-- PAPER **MUST NOT** introduce new system primitives.
+- PAPER **MUST NOT** introduce new primitives.
 
 ---
 
@@ -120,7 +120,7 @@ Insights discovered within PAPER **MUST NOT** acquire governance force.
 PAPER governance **MUST** remain minimal.
 
 - Only epistemic validity is enforced.
-- No best practices, optimizations, or prescriptions are assumed.
+- No best practices or prescriptions.
 
 ---
 
@@ -154,9 +154,9 @@ maintain narrative continuity across the manuscript.
 
 ### 16. Model identity disclosure
 
-PAPER claims involving AI production **MUST** disclose model identity.
+Claims involving AI production **MUST** disclose model identity.
 
-- Agent labels alone are insufficient; the underlying model identifier **MUST** be recorded.
+- Agent labels are insufficient; model identifier **MUST** be recorded.
 - Model identity **MAY** be established via alignment analysis when direct recording is unavailable.
 
 ---
