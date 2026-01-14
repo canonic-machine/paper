@@ -353,9 +353,32 @@ We asked: can a governed human-AI system produce a self-evidencing scientific pa
 
 Within this evidence window, the answer is yes.
 
-Seven primitives. 129 episode artifacts. One frozen ledger. Key claims trace to evidence. Every correction is preserved.
+### What we built
+
+In 7 days, 4 hours, and 21 minutes—from first CANON commit to freeze declaration—we constructed:
+
+| Metric | Count |
+|--------|-------|
+| Governed repositories | 9 |
+| Episode artifacts | 129 |
+| Violation-labeled episodes | 33 |
+| Triad-compliant scopes | 12 |
+| Governance primitives | 7 |
+| Root axioms | 3 |
+
+The system grew through recorded iteration. Every failure was caught, documented, and corrected via new commit. The violations are features: they prove the governance catches problems and preserves the learning process.
+
+### What this means
 
 Constitutional governance makes verifiability structural, not procedural. The paper does not just report an experiment; it is the experiment, and you can replay it.
+
+Traditional papers describe work that happened elsewhere. This paper is the work. The method, results, and limitations all derive from the same ledger. Clone the repos. Trace any claim to its commit. The evidence is the system that produced the evidence.
+
+### What comes next
+
+This is v0.1—the frozen evidence window. The system continues to evolve. New discoveries made after the freeze will appear in future versions, each anchored to its own evidence window.
+
+The framework is open. The ledger is public. We invite verification, replication, and extension.
 
 ---
 
