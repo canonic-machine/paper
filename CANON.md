@@ -161,6 +161,18 @@ Claims involving AI production **MUST** disclose model identity.
 
 ---
 
+---
+
+## Lifecycle
+
+**Origin:** Created for epistemic reconstruction of governed execution. Produces self-evidencing scientific papers.
+
+**Current state:** AI-assisted. AI produces manuscript sections; human directs structure and claims. Describe-then-demonstrate pattern governs versioning.
+
+**Automation drift:** Bounded by epistemic constraints. AI may produce prose; humans ensure claim traceability and evidence validity. Full automation would undermine verification.
+
+---
+
 **This CANON defines validity for PAPER.**
 **Interpretation, theory, and narrative belong to `PAPER.md`.**
 
