@@ -111,6 +111,14 @@ Semantic meaning **SHOULD** follow:
 Each version **SHOULD** include a short change log listing scope changes,
 evidence window changes, and claim changes.
 
+**Describe-then-demonstrate pattern:**
+
+Version `v0.n` **SHOULD** describe findings as observations.
+Version `v0.n+1` **SHOULD** demonstrate features that were provisional in `v0.n`.
+
+Provisional claims in `v0.n` become evidence in `v0.n+1` when the system
+exhibits the described behavior. The paper proves itself by running.
+
 ---
 
 ## 10. Analyses
