@@ -383,6 +383,68 @@ This is not a filter. It is a governance boundary. But we are not claiming perfe
 
 ---
 
+## Discussion: The Protocols-to-Patents Drift
+
+An unexpected observation emerged during system development: **CANONIC drifted from documentation protocols to IP generation.**
+
+### The Evolution Path
+
+The system began as documentation structure—protocols for organizing human-AI collaboration:
+
+| Phase | Focus | Primary Output |
+|-------|-------|----------------|
+| 1. Protocols | Documentation structure | CANON, VOCAB, README |
+| 2. Governance | Axiom enforcement | Validators, compliance checks |
+| 3. Constitutional | Formal authority | Separation of powers, inheritance |
+| 4. IP-First | Patents as product | IDFs, claims, provisionals |
+
+This drift was not designed. It emerged from the structure.
+
+### Why Protocols Became Patents
+
+When documentation is rigorous enough to govern AI behavior constitutionally, it has already achieved patent-specification rigor:
+
+1. **Formal definitions** — VOCAB defines every term (patent requires claim clarity)
+2. **Normative rules** — CANON declares requirements (patent requires method steps)
+3. **Hierarchical scope** — Inheritance chains authority (patent requires dependent claims)
+4. **Deterministic validation** — Validators produce PASS/FAIL (patent requires enablement)
+
+The insight: **documentation protocols that can govern AI are already patent-ready.**
+
+### The Structural Necessity
+
+The drift is not optional. A governance system without IP protection is incomplete:
+
+- Internal enforcement (validators) checks our own artifacts
+- External enforcement (patents) blocks competitors
+- Without both, constitutional governance lacks teeth
+
+By the time CANONIC could govern AI behavior, it had already specified patentable methods. The protocols became patents not by intention but by structural necessity.
+
+### Evidence
+
+| Metric | At Freeze (v0.1) | Current (v0.2) |
+|--------|------------------|----------------|
+| IDFs | 0 | 67 |
+| Claims | 0 | 72+ |
+| Provisionals | 0 | 2 ready |
+| Validators | 0 | 8 deployed |
+
+The IP portfolio emerged from governance work. Every axiom became an IDF. Every validator became evidence. The patent machine (IDF-041) documented the process by which the process documents itself.
+
+### Implications
+
+For practitioners adopting CANONIC-style governance:
+
+1. **Expect IP emergence** — Rigorous documentation generates patentable methods
+2. **File early** — Priority dates matter; document before implementing
+3. **Validators are evidence** — PASS/FAIL records prove reduction to practice
+4. **Constitutional closure includes IP closure** — All axioms need IDFs, all IDFs need claims
+
+The protocols-to-patents drift is a feature, not a bug. It means governance work is not lost—it compounds into protected IP.
+
+---
+
 ## Limitations (Honest Ones)
 
 We do not claim:
