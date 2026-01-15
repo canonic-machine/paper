@@ -31,6 +31,10 @@ Run `./scripts/build_pdf.sh` (requires `pandoc` and a LaTeX engine).
 
 ---
 
+## Canonbase
+
+The **canonbase** is the full inheritance graph of all scopes governed by CANONIC, spanning all repositories in a workspace.
+
 ## Stack Navigation
 
 | Layer | Repository | Purpose |
