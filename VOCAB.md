@@ -60,18 +60,6 @@ Descriptive appendices and references that support the manuscript.
 
 ---
 
-### artifact
-
-A file governed by CANON.
-
----
-
-### axiom
-
-A normative rule declared in CANON.
-
----
-
 ### best practice
 
 A derived observational recommendation grounded in ledger evidence.
@@ -96,12 +84,6 @@ A divergent line of ledger history under development.
 
 ---
 
-### CANON
-
-The governance artifact of a scope.
-
----
-
 ### claim
 
 A statement made within PAPER traceable to ledger evidence.
@@ -123,12 +105,6 @@ A term defined in VOCAB.
 ### enforcement
 
 The process by which MACHINE evaluates states against CANON.
-
----
-
-### episode
-
-The atomic evidence unit representing a bounded production session.
 
 ---
 
@@ -214,12 +190,6 @@ The earliest ledger commit that introduces a CANON.md within the stack.
 ### governance
 
 The set of axioms that define validity.
-
----
-
-### inheritance
-
-The relationship by which a scope adopts axioms from a parent scope.
 
 ---
 
@@ -398,18 +368,6 @@ A claim expressed with counts, rates, durations, or other numeric metrics.
 
 ---
 
-### README
-
-The descriptive artifact of a scope.
-
----
-
-### scope
-
-A directory governed by a triad.
-
----
-
 ### stack
 
 The set of repositories governed under CANONIC.
@@ -447,19 +405,6 @@ The property of being linked to ledger evidence.
 
 ---
 
-### triad
-
-The set of artifacts (`CANON.md`, `VOCAB.md`, `README.md`) required for a valid
-scope.
-
----
-
-### validity
-
-The state of a scope that satisfies all applicable axioms.
-
----
-
 ### violation
 
 A documented failure to meet a governing constraint.
@@ -469,12 +414,6 @@ A documented failure to meet a governing constraint.
 ### violation analysis
 
 Analysis that identifies a violation, its evidence, and its correction path.
-
----
-
-### VOCAB
-
-The vocabulary artifact of a scope.
 
 ---
 
