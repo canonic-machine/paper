@@ -287,6 +287,49 @@ Governance shrank by iteration. Root axioms compressed from many to three. Vocab
 
 These observations are claims. Claims require evidence.
 
+### Multi-Dimensional Session Coherence (v0.2 Evidence Window)
+
+Sessions are not linear logs—they are multi-dimensional structures.
+
+| Dimension | What It Captures | Signal Type |
+|-----------|------------------|-------------|
+| Temporal | Turn sequence, timestamps, gaps | Pacing |
+| Semantic | Content, artifacts, decisions | Meaning |
+| Structural | Tool calls, errors, compaction | Mechanics |
+| Relational | Cross-references, inheritance | Context |
+| Behavioral | Patterns, efficiency, drift | Trends |
+
+When dimensions align, governance is healthy. When they diverge, drift is occurring.
+
+**CANONIC sessions vs regular transcripts:**
+
+| Metric | Regular Transcripts | CANONIC Sessions |
+|--------|---------------------|------------------|
+| Semantic backup | None | Structural evidence validates claims |
+| Drift detection | Manual review | Cross-dimensional divergence |
+| Artifact verification | Trust-based | Commit-linked, tool-call-validated |
+| Compaction resilience | Context lost | Governance preserved post-compaction |
+| Productivity measurement | Word count | Artifacts per session MB |
+
+**Session productivity as health signal (ep165):**
+
+| Date | Artifacts | Session MB | Ratio |
+|------|-----------|------------|-------|
+| 2026-01-07 | 156 | 18.4 | 8.5 |
+| 2026-01-13 | 84 | 4.5 | 18.7 |
+| 2026-01-14 | 139+ | 14.4 | 9.7+ |
+
+Jan 13 showed 2x efficiency vs Jan 7 (artifacts per MB). This correlates with governance maturity—later sessions produce more artifacts per session unit as the framework stabilizes.
+
+**Compaction as meta-signal:**
+
+This session itself demonstrates compaction resilience. Context exceeded limits; the model summarized what mattered; work resumed without governance loss. The compaction summary is itself evidence of governance health—what the model prioritized reveals what governance it preserved.
+
+**Evidence references (v0.2 window):**
+- `writing/episodes/ep165-session-productivity-health-signal.md`
+- `patents/disclosures/IDF-048-multidimensional-session-signals.md`
+- `transcript/` local session archive (293 sessions, 47 MB)
+
 ---
 
 ## Evidence Links (Key Claims)
