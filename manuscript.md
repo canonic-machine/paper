@@ -423,14 +423,20 @@ By the time CANONIC could govern AI behavior, it had already specified patentabl
 
 ### Evidence
 
-| Metric | At Freeze (v0.1) | Current (v0.2) |
-|--------|------------------|----------------|
-| IDFs | 0 | 67 |
-| Claims | 0 | 72+ |
-| Provisionals | 0 | 2 ready |
-| Validators | 0 | 8 deployed |
+| Metric | At Freeze (v0.1) | Post-Freeze (v0.2) |
+|--------|------------------|-------------------|
+| IDFs | 52 | 68 |
+| Claims | 54+ | 74+ |
+| Provisionals | 2 ready | 2 ready |
+| Validators | Documented | 8 deployed |
 
 The IP portfolio emerged from governance work. Every axiom became an IDF. Every validator became evidence. The patent machine (IDF-041) documented the process by which the process documents itself.
+
+### Release Gating
+
+**v0.1 (this paper):** Patents and IDFs are fully documented. Validator specifications are published as IDFs (IDF-057 through IDF-061). The constitutional governance framework is complete.
+
+**v0.2 (future release):** Validator implementations will be released. Code is gated behind IP filing to establish priority. The documentation-first approach ensures IP protection before code publication.
 
 ### Implications
 
@@ -503,9 +509,23 @@ Traditional papers describe work that happened elsewhere. This paper is the work
 
 ### What comes next
 
-This is v0.1—the frozen evidence window. The system continues to evolve. New discoveries made after the freeze will appear in future versions, each anchored to its own evidence window.
+This is v0.1—the frozen evidence window. The system continues to evolve.
 
-The framework is open. The ledger is public. We invite verification, replication, and extension.
+**v0.1 includes:**
+- Complete constitutional governance framework (8 axioms)
+- 68 IDFs documenting patterns and methods
+- 74+ patent claims across 5 layers
+- Validator specifications (IDF-057 through IDF-068)
+- Constitutional analogy and IP closure proofs
+
+**v0.2 will include:**
+- Validator implementation code (8 validators)
+- Compliance baseline data
+- Remediation tooling
+
+Code is gated behind IP filing. The documentation-first approach (protocols → patents → code) ensures protection before publication. This is the protocols-to-patents drift in action: governance work produces IP, IP establishes priority, code follows.
+
+The framework is open. The ledger is public. We invite verification, replication, and extension—within the boundaries established by the IP portfolio.
 
 ---
 
