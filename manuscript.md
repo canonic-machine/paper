@@ -176,29 +176,42 @@ flowchart LR
 
 ### Evolution and evidence window
 
-The system did not start as nine repositories. It started as one.
+The system did not start as nine repositories. It started as a book.
 
-On January 5, 2026, the first CANON was committed to `writing`. Within 7 days, governance pressure forced the architecture to split. Each split was recorded. Each boundary was deliberate.
+On December 29, 2025, we began writing a literary work called *Dividends & Deaths*. To govern the collaboration between human and AI, we created proto-governance artifacts: `CANNON.md` (note the double N), `VOCABULARY.md`, and the concept of a "Triad"—the required governance set per directory.
+
+This was proto-CANONIC. The naming was different. The structure was rougher. But the core insight was there: constitutional governance for human-AI collaboration.
 
 ```mermaid
 timeline
-    title Evidence Window (Ledger Freeze)
-    2026-01-05 : First CANON committed (writing/CANON.md)
-    2026-01-06 : Machine scope split (machine repo)
-    2026-01-10 : OS + Ledger separated
-    2026-01-12 : Validators + Stack added
-    2026-01-12 : Freeze declared (stack-freeze-2026-01-12)
+    title From Proto-CANONIC to Freeze
+    section Proto-CANONIC (2025)
+        2025-12-29 : Proto-governance begins (dividends)
+        2025-12-29 : CANNON.md, VOCABULARY.md, Triad concept
+    section CANONIC Crystallization (2026)
+        2026-01-05 : First CANON.md committed (writing)
+        2026-01-05 : canonic repo created (kernel extraction)
+        2026-01-06 : Machine scope split
+        2026-01-10 : OS + Ledger separated
+        2026-01-12 : Freeze declared
 ```
+
+Within one week of the new year, the kernel crystallized. The proto-governance artifacts in dividends (CANNON → CANON, VOCABULARY → VOCAB) became the constitutional framework we call CANONIC.
 
 | Date | Event | Reference |
 |------|-------|-----------|
-| 2026-01-05 | First CANON | `writing:bca9ec0` |
+| 2025-12-29 | Proto-governance begins | `dividends:07a5834` (initial commit) |
+| 2025-12-29 | CANNON.md, VOCABULARY.md created | Proto-CANONIC artifacts |
+| 2026-01-05 | First CANON.md | `writing:bca9ec0` |
+| 2026-01-05 | canonic repo created | Kernel extraction |
 | 2026-01-06 | Machine scope split | `machine` repo created |
 | 2026-01-10 | OS + Ledger separated | `os`, `ledger` repos |
 | 2026-01-12 | Freeze declared | `writing:f8acf128` |
-| **Duration** | **7 days, 4:21:27** | 129 episodes |
+| **Duration** | **14 days** | Proto-CANONIC to freeze |
 
 By freeze, the stack had grown to 9 governed repositories with 12 triad-compliant scopes. The expansion was not planned—it was discovered. Governance constraints revealed where boundaries needed to exist.
+
+The evolution from proto-CANONIC to CANONIC is itself evidence: constitutional governance emerged organically from the practice of governed human-AI collaboration, not from abstract design.
 
 Figure 3 shows the final architecture.
 
@@ -395,9 +408,11 @@ The framework is open. The ledger is public. We invite verification, replication
 
 **Evidence window:** `stack-freeze-2026-01-12` (tag timestamp `2026-01-12T18:34:47-05:00`, commit `writing:f8acf128`)
 
+**Proto-CANONIC origin:** `dividends:07a5834` at `2025-12-29T13:42:56-05:00` (CANNON.md, VOCABULARY.md, Triad concept)
+
 **First CANON artifact:** `writing/CANON.md` commit `writing:bca9ec0` at `2026-01-05T14:13:20-05:00`
 
-**Time to freeze:** 7 days, 4:21:27 (from first CANON to freeze tag timestamp)
+**Time to freeze:** 14 days (from proto-CANONIC to freeze); 7 days, 4:21:27 (from first CANON.md to freeze)
 
 **Public repositories** (tagged at `stack-freeze-2026-01-12`):
 - canonic:0b063b8
