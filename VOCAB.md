@@ -1,5 +1,7 @@
 # VOCAB (/paper/)
 
+inherits: /
+
 ---
 
 ## Content Concepts
