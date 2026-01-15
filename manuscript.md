@@ -421,6 +421,19 @@ The drift is not optional. A governance system without IP protection is incomple
 
 By the time CANONIC could govern AI behavior, it had already specified patentable methods. The protocols became patents not by intention but by structural necessity.
 
+### The Genomics Parallel
+
+We observed the same pattern in genomics: cancer fixed as the prominent application because cancer *is* genomic dysfunction by definition. The application wasn't chosen—it was revealed by the structure of the domain.
+
+| Domain | Structure | Inevitable Application |
+|--------|-----------|----------------------|
+| Genomics | Gene sequences and mutations | Cancer (genomic dysfunction) |
+| CANONIC | Governance specifications | Patents (specification protection) |
+
+In both cases, the "application" was not a choice but a recognition. Genomics didn't *decide* to focus on cancer—cancer is what happens when genomes fail. CANONIC didn't *decide* to generate patents—patents are what governance specifications become when formalized sufficiently.
+
+This parallel suggests a general principle: **rigorous formalization reveals its natural application domain.** The structure determines the use case.
+
 ### Evidence
 
 | Metric | At Freeze (v0.1) | Post-Freeze (v0.2) |
