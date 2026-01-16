@@ -204,6 +204,66 @@ PAPER **MUST** treat drift patterns as primary evidence, not secondary artifacts
 
 ---
 
+### 22. Unbounded space and time
+
+PAPER is unbounded in space and time.
+
+- PAPER **MUST NOT** impose page limits or submission deadlines as validity constraints.
+- Evidence windows **MAY** extend indefinitely into the future.
+- Claims accumulate across evidence windows; prior claims **MUST NOT** be erased.
+- PAPER **MAY** exist as a living document with continuous evidence integration.
+
+---
+
+### 23. Authoring modes
+
+PAPER **MAY** be authored in multiple valid modes:
+
+**Mode A: Evolutionary (gradual mutation)**
+- Human-driven incremental refinement
+- Low variance between versions
+- Preserves narrative spine across edits
+- Suitable for operational phase
+
+**Mode B: Reconstitution (ledger archaeology)**
+- AI-assisted concept extraction from LEDGER
+- High throughput, fires concepts at CANON
+- Synthesizes narrative structure after capture
+- Suitable for bootstrapping phase
+
+**Mode C: Oscillation**
+- Alternates between Mode A and Mode B
+- Uses Mode B to capture new evidence windows
+- Uses Mode A to integrate into coherent narrative
+- Transitions based on evidence density
+
+Each mode is valid under CANONIC governance. Mode selection is a human authoring decision, not a governance constraint.
+
+---
+
+### 24. Semantic paper versioning
+
+PAPER versions **SHOULD** follow semantic versioning conventions:
+
+- **v0.x**: Pre-release exploration (bootstrapping)
+- **v1.0**: First stable release (operational)
+- **vX.Y**: Minor versions add evidence; major versions restructure
+
+Version transitions **MUST** be anchored to freeze declarations.
+
+---
+
+### 25. Multi-temporal authorship
+
+PAPER **MAY** accumulate contributions across non-contiguous time windows.
+
+- Each contribution **MUST** declare its evidence window.
+- Contributors (human or AI) **MUST** be disclosed per evidence window.
+- Temporal gaps between contributions are permitted.
+- The ledger provides continuity across authorship gaps.
+
+---
+
 ## Inherited Constraints
 
 This scope inherits from WRITING (/canonic/machine/os/writing):

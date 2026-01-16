@@ -186,6 +186,60 @@ The preserved history of violations and corrections that documents system evolut
 
 ---
 
+### unbounded paper
+
+A paper with no imposed page limits or submission deadlines as validity constraints.
+
+---
+
+### living document
+
+A paper that exists with continuous evidence integration across indefinite time.
+
+---
+
+### authoring mode
+
+A valid approach to PAPER production under CANONIC governance.
+
+---
+
+### evolutionary mode
+
+Authoring mode characterized by human-driven incremental refinement with low variance between versions.
+
+---
+
+### reconstitution mode
+
+Authoring mode characterized by AI-assisted concept extraction from LEDGER with synthesis after capture.
+
+---
+
+### oscillation mode
+
+Authoring mode that alternates between evolutionary and reconstitution modes based on evidence density.
+
+---
+
+### semantic paper versioning
+
+Version numbering convention where v0.x indicates bootstrapping, v1.0 indicates first stable release, and vX.Y indicates evidence additions (minor) or restructuring (major).
+
+---
+
+### multi-temporal authorship
+
+Contribution pattern where authors (human or AI) contribute across non-contiguous time windows with ledger continuity.
+
+---
+
+### claim accumulation
+
+The property that new evidence windows add claims while prior claims remain (per immutability).
+
+---
+
 ### execution
 
 The realization of state transitions.
