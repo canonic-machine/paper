@@ -136,11 +136,16 @@ Each drift pattern observed → enforcement mechanism → blocking claim:
 DRIFT → VALIDATOR → PATENT → ENFORCEMENT
 
 The loop closes:
-- CANON defines validity
-- Drift violates validity
-- Validators detect drift
-- Patents protect validators
-- Patents enforce CANON
+- CANON defines validity (law)
+- Drift violates validity (violation)
+- Validators detect drift (detection)
+- Patents protect validators (IP)
+- Patents enforce CANON (action)
+
+Patents are the ACTION ARM of the ecosystem.
+
+Without patents: CANON is advisory
+With patents: CANON has teeth
 
 IDF-041: "CANONIC drifted from documentation protocols to IP generation"
 IDF-066: "Patents as Constitutional Enforcers"
