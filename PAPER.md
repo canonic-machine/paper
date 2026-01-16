@@ -149,6 +149,41 @@ With patents: CANON has teeth
 
 IDF-041: "CANONIC drifted from documentation protocols to IP generation"
 IDF-066: "Patents as Constitutional Enforcers"
+IDF-040: "AI Auto-Discovery IDF Protocol"
+```
+
+**IDF discovery is a native feature of CANONIC.**
+
+Every governed session produces:
+- Episodes (evidence)
+- Violations (drift signals)
+- Insights (IDF candidates)
+
+The AI observes drift → proposes enforcement → human canonifies → IDF filed.
+
+```
+SESSION → DRIFT → INSIGHT → IDF → PATENT
+
+135 IDFs discovered through normal operation.
+Not a separate IP process. Native to governance.
+```
+
+**VaaS is the natural monetization.**
+
+```
+Three-tier IP strategy:
+
+LAYER 1 (PUBLIC)     CANONIC specification (open)
+LAYER 2 (DISCLOSED)  Patent portfolio (filed)
+LAYER 3 (PRIVATE)    Validator implementations (trade secret)
+
+VaaS = Validators as a Service
+- WHAT is public (axioms, specs)
+- HOW is private (validator code)
+- ENFORCEMENT is licensed (VaaS API)
+
+IDF-070: "Validator-as-a-Service"
+IDF-123: "VaaS Product Architecture"
 ```
 
 ### IDF Portfolio
