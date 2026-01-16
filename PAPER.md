@@ -130,12 +130,20 @@ Each drift pattern observed → enforcement mechanism → blocking claim:
 | Authority creep | Inheritance termination | "Inheritance MUST terminate at /" |
 | Semantic drift | VOCAB self-reference | "VOCAB MUST define itself" |
 
-**The insight:** Observing drift reveals enforcement gaps. Enforcement gaps become validator specs. Validator specs become patent claims. The drift itself IS the patent machine.
+**The insight:** Observing drift reveals enforcement gaps. Enforcement gaps become validator specs. Validator specs become patent claims. Patents ARE enforcements of CANON.
 
 ```
-DRIFT → ENFORCEMENT → CLAIM
+DRIFT → VALIDATOR → PATENT → ENFORCEMENT
+
+The loop closes:
+- CANON defines validity
+- Drift violates validity
+- Validators detect drift
+- Patents protect validators
+- Patents enforce CANON
 
 IDF-041: "CANONIC drifted from documentation protocols to IP generation"
+IDF-066: "Patents as Constitutional Enforcers"
 ```
 
 ### IDF Portfolio
