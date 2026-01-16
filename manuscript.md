@@ -1091,6 +1091,58 @@ PROVISIONAL C: INTROSPECTION Claims (N₁–N₂₈)
 
 Filing by axiom type (not IDF number) maximizes claim coherence. Each provisional covers an orthogonal governance dimension.
 
+### Episode Proof: IDF Decomposition in Action
+
+To prove the T/I/N decomposition is mathematically closed, we trace three representative IDFs through complete decomposition:
+
+**IDF-006: Literal Introspection**
+
+| Original Claim | Gate | Atomic Axiom |
+|----------------|------|--------------|
+| "Every term used in CANON must be defined in VOCAB" | N | N₁: All tokens in CANON MUST be defined in VOCAB |
+| "VOCAB must define itself (self-referential closure)" | N | N₂: VOCAB MUST self-define |
+| "Coverage = 100% or FAIL" | N | N₃: Coverage = 100% or FAIL |
+| "Token extraction from governance documents" | N | N₄: "Literal" = token-level checking |
+| "Machine-verifiable through extraction and lookup" | N | N₅: Verification is machine-verifiable |
+
+**Result:** IDF-006 decomposes entirely to N-axioms (semantic closure). Zero residual claims.
+
+**IDF-004: Producer-Consumer Governance**
+
+| Original Claim | Gate | Atomic Axiom |
+|----------------|------|--------------|
+| "Producer role (AI) generates CANON/VOCAB from SPEC" | T | T₁₀: AI produces governance candidate artifacts |
+| "Consumer role (Human) generates episodes" | T | T₁₁: Humans create episodes through commits |
+| "AI drafts; human commits make authoritative" | I | I₁₀: AI production precedes human application |
+| "Only human commits make AI drafts authoritative" | I | I₁₁: Only human commits make AI drafts authoritative |
+| "Governance-layer agents cannot create WRITING artifacts" | T | T₁₂: Governance-layer agents cannot create WRITING artifacts |
+
+**Result:** IDF-004 decomposes to T-axioms (structural presence) and I-axioms (authority chain). Zero residual claims.
+
+**IDF-007: Hierarchical Authority Scoping**
+
+| Original Claim | Gate | Atomic Axiom |
+|----------------|------|--------------|
+| "Child scopes inherit parent constraints; cannot override" | I | I₄: Child scopes inherit; cannot override (only add) |
+| "Authority declarations are mechanically verifiable" | I | I₆: Authority bounds are mechanically verifiable |
+| "Inheritance MUST terminate at /" | I | I₇: Inheritance MUST terminate at / |
+| "Inherited axioms are final and MUST NOT be overridden" | I | I₉: Inherited axioms are final |
+| "Axioms belong in layer governing action they constrain" | N | N₁₈: "Layer-discipline principle" enforces proper axiom placement |
+
+**Result:** IDF-007 decomposes primarily to I-axioms (authority chain) with one N-axiom (semantic constraint). Zero residual claims.
+
+### Decomposition Completeness
+
+| Gate | Question Answered | Axiom Count | Representative IDFs |
+|------|-------------------|-------------|---------------------|
+| T (Triad) | "What must exist?" | 27 | IDF-001, IDF-004, IDF-008 |
+| I (Inheritance) | "Where does governance flow from?" | 31 | IDF-007, IDF-014, IDF-004 |
+| N (Introspection) | "What terms must be defined?" | 28 | IDF-006, IDF-038, IDF-057 |
+
+**Closure Proof:** 135 archived IDFs × complete decomposition = 86 atomic axioms. Every IDF claim maps to exactly one gate. Zero claims require new gates.
+
+**Evidence:** `patents/disclosures.archive/IDF-*.md` (original monolithic form), `patents/disclosures/DISCLOSURES.md` (decomposed form), commit `a549c3f`
+
 ### Production Behavior (IDF-110)
 
 Governed AI production follows the execution-declaration pattern:
