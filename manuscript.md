@@ -408,6 +408,62 @@ The study is bounded by two evidence windows: v0.1 freeze and v0.2 current state
 
 ---
 
+## Roadmap: v0.1 → v0.2 IP Flow
+
+The v0.1 freeze established foundational observations. The v0.2 evidence window demonstrates implementation. This section maps the IP flow between versions.
+
+### Foundational IDFs (v0.1 Evidence)
+
+These disclosures describe patterns observed in the frozen v0.1 ledger:
+
+| IDF | Title | v0.1 Observation |
+|-----|-------|------------------|
+| IDF-001 | Constitutional Governance Framework | Three axioms generate structure |
+| IDF-006 | Literal Introspection | VOCAB defines all CANON terms |
+| IDF-007 | Hierarchical Authority Scoping | Inheritance chains terminate at root |
+| IDF-008 | Deterministic Black-Box Validation | Validators produce PASS/FAIL only |
+| IDF-010 | Violation Pattern Taxonomy | 33 violations documented |
+| IDF-011 | Evidence-Based Epistemic Writing | Claims trace to ledger |
+
+### Validator IDFs (v0.2 Implementation)
+
+These disclosures specify validators deployed post-freeze:
+
+| IDF | Validator | Function |
+|-----|-----------|----------|
+| IDF-057 | vocab-locality-validator | Enforces VOCAB inheritance |
+| IDF-059 | introspection-validator | Checks term definition closure |
+| IDF-061 | inheritance-validator | Validates parent scope declarations |
+| IDF-096 | layer-drift-validator | Detects scope authority violations |
+| IDF-102 | axiom-bloat-validator | Identifies redundant axioms |
+
+### Commercial IDFs (v0.2 Architecture)
+
+These disclosures specify revenue and IP protection mechanisms:
+
+| IDF | Title | Mechanism |
+|-----|-------|-----------|
+| IDF-041 | Canonic as Patent Machine | Protocols → patents conversion |
+| IDF-068 | Protocols-to-Patents Drift | Documentation achieves patent rigor |
+| IDF-069 | IP-Gated Code Release | Code released after patent filing |
+| IDF-070 | Validator-as-a-Service | SaaS validation with black-box opacity |
+| IDF-073 | FRAND Licensing | Fair, reasonable, non-discriminatory terms |
+| IDF-075 | Certification Authority | Third-party compliance certification |
+
+### IP Protection Strategy
+
+The v0.1 paper establishes priority for foundational claims. Post-freeze, validators and commercial mechanisms are deployed. Code release follows patent protection (IDF-069).
+
+**Timeline:**
+1. v0.1 freeze: Foundational IDFs filed (IDF-001 through IDF-052)
+2. Post-freeze: Validator deployment (16 validators)
+3. v0.2: Commercial architecture IDFs (IDF-070, IDF-073, IDF-075)
+4. Post-filing: Public code release
+
+**Evidence:** `patents/disclosures/IDF-*.md` (105 total)
+
+---
+
 ## Conclusion
 
 We asked: can a governed human-AI system produce a self-evidencing scientific paper?
@@ -712,6 +768,48 @@ The dominance of MUST/MUST NOT (96%) reflects constitutional intent: hard constr
 | Manuscript drift | IDF-103 | Manuscript Drift Disclosure |
 | Semantic formatting | IDF-104 | Semantic Formatting Ontology |
 
-**Evidence:** `ls patents/disclosures/IDF-*.md | wc -l` = 104
+**Evidence:** `ls patents/disclosures/IDF-*.md | wc -l` = 105
+
+---
+
+## S8. IP Flow Inventory (v0.1 → v0.2)
+
+### v0.1 Foundational (Filed at Freeze)
+
+| Category | IDFs | Count |
+|----------|------|-------|
+| Core governance | IDF-001 through IDF-016 | 16 |
+| Pattern discovery | IDF-017 through IDF-032 | 16 |
+| Domain governance | IDF-033 through IDF-045 | 13 |
+| Stack architecture | IDF-046 through IDF-052 | 7 |
+| **Total v0.1** | | **52** |
+
+### v0.2 Post-Freeze (Implementation)
+
+| Category | IDFs | Count |
+|----------|------|-------|
+| Validator specs | IDF-057 through IDF-062 | 6 |
+| Constitutional theory | IDF-063 through IDF-068 | 6 |
+| Commercial architecture | IDF-069 through IDF-082 | 14 |
+| Mathematical closure | IDF-083 through IDF-092 | 10 |
+| Structural patterns | IDF-093 through IDF-099 | 7 |
+| Meta-validators | IDF-100 through IDF-105 | 6 |
+| **Total v0.2** | | **53** |
+
+### IP Flow Pattern
+
+```
+v0.1 OBSERVATIONS (frozen)
+    ↓
+IDF DISCLOSURES (filed)
+    ↓
+v0.2 IMPLEMENTATIONS (deployed)
+    ↓
+PATENT APPLICATIONS (pending)
+    ↓
+CODE RELEASE (gated by IDF-069)
+```
+
+**Evidence:** `git log patents/disclosures/ --oneline | wc -l`
 
 ---
