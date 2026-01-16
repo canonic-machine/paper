@@ -411,7 +411,7 @@ The study is bounded by two evidence windows: v0.1 freeze and v0.2 current state
 
 **Manuscript Drift:** This manuscript has evolved through 50+ commits. Early versions described "seven primitives" (triad, inheritance, introspection, immutability, model identity, ledger-first, insight-law separation). The current manuscript presents three root axioms (Triad, Inheritance, Introspection) with downstream primitives as specializations. This consolidation is intentional—the three axioms generate all other constraints—but readers should note that earlier commits used different framings.
 
-**SPEC Closure Drift:** Earlier versions of this manuscript (and the INTROSPECTION VOCAB) incorrectly described SPEC as "the triad" or showed SPEC terms constrained by VOCAB. IDF-116 (2026-01-16) formalized the correct model: SPEC is a fourth element, separate from triad, that closes CANON and can extend it. SPEC is not constrained by Axiom 3. This was a documented AI misunderstanding gap—see Supplement S9.
+**SPEC Closure Drift:** Earlier versions of this manuscript (and the INTROSPECTION VOCAB) incorrectly described SPEC as "the triad" or showed SPEC terms constrained by VOCAB. IDF-116 formalized the correct model from v0.1 evidence: SPEC is a fourth element, separate from triad, that closes CANON and can extend it. SPEC is not constrained by Axiom 3. The artifacts were frozen at v0.1; the formalization came later—see Supplement S9.
 
 ---
 
@@ -431,6 +431,7 @@ These disclosures describe patterns observed in the frozen v0.1 ledger:
 | IDF-008 | Deterministic Black-Box Validation | Validators produce PASS/FAIL only |
 | IDF-010 | Violation Pattern Taxonomy | 33 violations documented |
 | IDF-011 | Evidence-Based Epistemic Writing | Claims trace to ledger |
+| IDF-116 | SPEC Closure Model | Four-element structure (triad + SPEC) |
 
 ### Validator IDFs (v0.2 Implementation)
 
@@ -898,21 +899,29 @@ CODE RELEASE (gated by IDF-069)
 
 ---
 
-## S9. SPEC Evolution Forensics (v0.2)
+## S9. SPEC Closure Model (v0.1 Evidence)
 
-### The Four-Element Discovery (IDF-116)
+### The Four-Element Model (IDF-116)
 
-On 2026-01-16, a forensic analysis of the ledger revealed that SPEC understanding had been inconsistent throughout the project's evolution. The discovery: **SPEC is a fourth element, separate from the triad**, with distinct closure relationships grounded in Axiom 3.
+SPEC artifacts (CANONIC.md, PAPER.md) were present and open-sourced at v0.1 freeze. The four-element model describes what was already in the frozen evidence—the artifacts existed, the formalization came later.
 
-### Evolutionary Timeline
+### v0.1 Evidence
 
-| Date | Commit | SPEC Understanding |
-|------|--------|-------------------|
-| 2026-01-09 | `a7de0b1` | "SPEC is primary; CANON and VOCAB are co-equal canonical artifacts derived from it" |
+| Artifact | Commit at Freeze | Content |
+|----------|------------------|---------|
+| `canonic/CANONIC.md` | `0b063b8` | "This artifact is the paradigm specification" |
+| `paper/PAPER.md` | `0ee1970` | SPEC closing PAPER CANON |
+
+Both SPEC files existed at v0.1 freeze (`stack-freeze-2026-01-12`). The closure model describes frozen evidence.
+
+### Formalization Timeline
+
+| Date | Commit | Understanding Evolution |
+|------|--------|------------------------|
+| 2026-01-09 | `a7de0b1` | "SPEC is primary; CANON and VOCAB derived from it" |
 | 2026-01-09 | `7aaa779` | "SPEC states how CANON, VOCAB, and README relate" |
-| 2026-01-10 | `894d2c5` | CANONIC.md exists as separate SPEC file |
-| 2026-01-14 | `41c9295` | CANONIC.md clarifies: "This artifact is the paradigm specification; it is non-normative prose" |
-| 2026-01-16 | IDF-116 | Four-element model formalized with closure relationships |
+| 2026-01-12 | v0.1 freeze | SPEC artifacts frozen and open-sourced |
+| 2026-01-16 | IDF-116 | Four-element closure model formalized |
 
 ### The Closure Model
 
