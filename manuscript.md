@@ -16,6 +16,8 @@ The result is this paper. It does not describe an experiment. It is the experime
 
 **The deeper insight:** This paper is an evolutionary analysis of law and prose. Under constitutional constraint, governance axioms (law) and scientific claims (prose) co-evolve—each drift in one domain reveals structure in the other. The violations are not bugs; they are the fossil record of this co-evolution.
 
+**The v0.1 canon:** CANONIC IS closure. A scope is not a directory with governance files—it is a directory that is *closed* by its SPEC. The triad (CANON, VOCAB, README) makes a proto-scope. SPEC closes it into a scope. This insight emerged through 168 episodes and 135 IDFs. The paper proves itself by demonstrating closure.
+
 ---
 
 ## Why Should You Care?
