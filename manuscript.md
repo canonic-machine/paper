@@ -92,6 +92,29 @@ We call the framework CANONIC. It rests on three root axioms:
 
 These three axioms generate the entire constitutional structure. Every downstream axiom is either a specialization or a boundary declaration. (See Appendix A1 for full axiom text.)
 
+### CANONIC as a Formal Language
+
+A key insight emerged during v0.2: **CANONIC is not just a framework—it is a formal specification language.**
+
+```
+CANONIC (Language)          VaaS (Runtime)
+─────────────────          ──────────────
+Specification              Enforcement
+Documents                  Validators
+Grammar                    Interpreter
+Open/Public                Licensed/Private
+```
+
+The validity of any scope is mathematically defined:
+
+```
+VALIDITY = triad(scope) ∧ inheritance(scope) ∧ introspection(scope)
+```
+
+Validators are predicates that map scopes to truth values. Composition is conjunction. Exit code 0 = PASS (true). Exit code non-zero = FAIL (false).
+
+This framing has commercial implications: the language specification can be open while the enforcement runtime (VaaS—Validators as a Service) is the product. See IDF-122 (CANONIC Language Semantics) and IDF-123 (VaaS Product Architecture).
+
 ### The Governance Loop
 
 ```mermaid
@@ -468,7 +491,52 @@ The v0.1 paper establishes priority for foundational claims. Post-freeze, valida
 3. v0.2: Commercial architecture IDFs (IDF-070, IDF-073, IDF-075)
 4. Post-filing: Public code release
 
-**Evidence:** `patents/disclosures/IDF-*.md` (105 total)
+### Three-Tier IP Strategy (IDF-123)
+
+A key v0.2 discovery: CANONIC enables a layered intellectual property architecture where different components receive different protection levels.
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│ LAYER 1: PUBLIC (Open Specification)                        │
+│   • CANONIC.md specification                                │
+│   • Validity formula: VALIDITY = triad ∧ inheritance ∧ introspection │
+│   • Academic papers describing semantics                    │
+│   Purpose: Establish standard, enable adoption              │
+└─────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────┐
+│ LAYER 2: DISCLOSED (Patent Portfolio)                       │
+│   • IDFs documenting architecture patterns                  │
+│   • Axiom decomposition structure                           │
+│   • VaaS product architecture                               │
+│   Purpose: Defensive IP, patent claims                      │
+└─────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────┐
+│ LAYER 3: PRIVATE (Trade Secret)                             │
+│   • Atomic validator implementations                        │
+│   • Orchestrator implementations                            │
+│   • VaaS runtime code                                       │
+│   Purpose: Competitive advantage, black-box enforcement     │
+└─────────────────────────────────────────────────────────────┘
+```
+
+**The Black-Box Principle:** The WHAT is public, the HOW is private.
+
+| Aspect | Public | Private |
+|--------|--------|---------|
+| Validity formula | `VALIDITY = triad ∧ inheritance ∧ introspection` | — |
+| Axiom names | Triad, Inheritance, Introspection | — |
+| Check semantics | "CANON.md exists?" | — |
+| Check implementation | — | Validator source code |
+
+This separation enables open adoption (anyone can understand CANONIC semantics) while protecting enforcement (implementation is trade secret). The language specification is open; the runtime is the product.
+
+**Evidence:** IDF-008 (Black-Box Validation), IDF-070 (VaaS), IDF-123 (Three-Tier IP Strategy)
+
+**Evidence:** `patents/disclosures/IDF-*.md` (116 total)
 
 ---
 
@@ -821,7 +889,7 @@ The dominance of MUST/MUST NOT (96%) reflects constitutional intent: hard constr
 | "164 episodes" | `ls writing/episodes/*.md \| wc -l` |
 | "40 violation-labeled episodes" | `ls writing/episodes/*violation* \| wc -l` |
 | "54 CANON files" | `find . -name "CANON.md" \| wc -l` |
-| "104 IDFs" | `ls patents/disclosures/IDF-*.md \| wc -l` |
+| "116 IDFs" | `ls patents/disclosures/IDF-*.md \| wc -l` |
 | "16 deployed validators" | `find validators -name "validate.py" \| wc -l` |
 | "197 total axioms" | Sum of `grep -c "^### [0-9]"` across all CANON files (post-bloat-remediation) |
 | "29% axiom bloat" | `IDF-102-axiom-bloat-validator.md` |
@@ -833,6 +901,10 @@ The dominance of MUST/MUST NOT (96%) reflects constitutional intent: hard constr
 | "v0.1 freeze" | Tag `stack-freeze-2026-01-12` |
 | "First CANON" | `writing:bca9ec0` at 2026-01-05 |
 | "Proto-CANONIC" | `dividends:07a5834` at 2025-12-29 |
+| "CANONIC is a formal language" | `canonic/CANONIC.md:100-154`, IDF-122 |
+| "VaaS is the runtime" | `validators/vaas.py`, IDF-123 |
+| "Three-tier IP strategy" | IDF-123 Section 7 |
+| "Black-box principle" | IDF-008, IDF-123 Section 8 |
 
 ---
 
@@ -849,6 +921,8 @@ The dominance of MUST/MUST NOT (96%) reflects constitutional intent: hard constr
 | Inheritance paths | IDF-007 | Hierarchical Authority Scoping |
 | Manuscript drift | IDF-103 | Manuscript Drift Disclosure |
 | Semantic formatting | IDF-104 | Semantic Formatting Ontology |
+| Language semantics | IDF-122 | CANONIC Language Semantics |
+| Product architecture | IDF-123 | VaaS Product Architecture |
 | Intensity encoding | IDF-109 | Repetition Intensity Encoding |
 
 **Evidence:** `ls patents/disclosures/IDF-*.md | wc -l` = 116
