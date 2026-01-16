@@ -1012,6 +1012,44 @@ This constrains CANON and VOCAB only. README and SPEC are not mentioned.
 | README | Yes (triad) | Spans VOCAB, can extend |
 | SPEC | No (optional) | Closes CANON, can extend |
 
+### SPEC Closure Inventory (v0.2)
+
+**Key insight:** SPEC presence = scope closure. SPEC absence = scope open (can evolve).
+
+| Scope | SPEC File | Closes | Status |
+|-------|-----------|--------|--------|
+| `/canonic/` | CANONIC.md | CANON.md (3 axioms) | **CLOSED** |
+| `/paper/` | PAPER.md | CANON.md (paper axioms) | **CLOSED** |
+| `/patents/disclosures/` | DISCLOSURES.md | CANON.md (86 atomic axioms) | **CLOSED** |
+| `/patents/applications/` | APPLICATIONS.md | CANON.md (filing strategy) | **CLOSED** |
+| `/validators/introspection/` | INTROSPECTION.md | CANON.md (Axiom 3 enforcement) | **CLOSED** |
+
+**Scopes without SPECs (open):**
+- `/machine/`, `/os/`, `/writing/`, `/ledger/`, `/stack/`
+- `/validators/` (root and most subscopes)
+- `/patents/` (root)
+- All company/domain scopes
+
+**The closure pattern:**
+
+```
+54 total scopes
+ 5 closed (have SPEC)
+49 open (no SPEC)
+
+Closure rate: 9.3%
+```
+
+The low closure rate is intentional. Most scopes remain open for evolution. Only scopes with stable, complete semantics receive SPECs. The five closed scopes are:
+
+1. **ROOT** — constitutional foundation (immutable)
+2. **PAPER** — manuscript reconstruction (frozen at publication)
+3. **DISCLOSURES** — 86 atomic axioms (mathematically complete)
+4. **APPLICATIONS** — filing strategy (strategically fixed)
+5. **INTROSPECTION** — Axiom 3 enforcement (validator-complete)
+
+**Evidence:** `find . -name "*.md" | xargs grep -l "^# .* SPEC\|closes CANON"` across all repos
+
 ### The AI Misunderstanding Gap
 
 SPEC misunderstanding is a documented gap in human-AI collaboration. Throughout this project, AI agents (including those producing this manuscript) frequently conflated:
