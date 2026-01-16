@@ -97,6 +97,59 @@ PAPER validity requires:
 
 ---
 
+## 7. v0.1 Kernel
+
+The minimal fixed point discovered through 168 episodes and 135 IDFs:
+
+**CANONIC IS closure.**
+
+```
+Triad (CANON + VOCAB + README) = proto-scope (open)
+Triad + SPEC = scope (closed)
+```
+
+### Key Observations
+
+| Observation | Evidence | IDF |
+|-------------|----------|-----|
+| Three root axioms generate all governance | `canonic/CANON.md` | IDF-001 |
+| VOCAB closes semantics (Axiom 3) | introspection-validator | IDF-006 |
+| SPEC closes scope (governance path) | This document | IDF-116 |
+| 86 atomic axioms under T/I/N | `disclosures/DISCLOSURES.md` | IDF-135 |
+| Layer drift → structurally inadmissible | SPEC governance paths | IDF-096 |
+
+### IDF Portfolio
+
+```
+135 IDFs archived → 86 atomic axioms
+
+T (Triad):        27 axioms  → PROVISIONAL-A
+I (Inheritance):  31 axioms  → PROVISIONAL-B
+N (Introspection): 28 axioms → PROVISIONAL-C
+```
+
+### Roadmap
+
+```
+v0.1 (current)
+├── CANONIC IS closure (fixed point)
+├── 86 atomic axioms (T/I/N complete)
+├── 5 closed scopes (SPEC present)
+└── Paper demonstrates closure
+
+v0.2 (post-publication)
+├── Close remaining proto-scopes
+├── Deploy VaaS (Validators as a Service)
+└── File layered provisionals (A → B → C)
+
+v1.0 (operational)
+├── All scopes closed
+├── Commercial architecture live
+└── FRAND licensing active
+```
+
+---
+
 **This SPEC closes CANON. Governance is defined exclusively by CANON.**
 
 ---
