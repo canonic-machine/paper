@@ -166,6 +166,8 @@ SESSION → DRIFT → INSIGHT → IDF → PATENT
 
 135 IDFs discovered through normal operation.
 Not a separate IP process. Native to governance.
+
+Evidence: LEDGER (writing/episodes/, patents/disclosures/)
 ```
 
 **VaaS is the natural monetization.**
@@ -189,11 +191,13 @@ IDF-123: "VaaS Product Architecture"
 ### IDF Portfolio
 
 ```
-135 IDFs archived → 86 atomic axioms
+135 IDFs → 86 atomic axioms
 
 T (Triad):        27 axioms  → PROVISIONAL-A
 I (Inheritance):  31 axioms  → PROVISIONAL-B
 N (Introspection): 28 axioms → PROVISIONAL-C
+
+Evidence: LEDGER (patents/disclosures/)
 ```
 
 ### Roadmap
