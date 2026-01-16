@@ -489,15 +489,85 @@ Constitutional governance makes verifiability structural, not procedural. Tradit
 
 ## Evidence Window Declaration
 
-**v0.1:** Tag `stack-freeze-2026-01-12`, commit `writing:f8acf128`, timestamp `2026-01-12T18:34:47-05:00`
+### v0.1 Evidence Window
 
-**v0.2:** Date 2026-01-16, current ledger state (post-freeze reconstruction)
+**Freeze tag:** `stack-freeze-2026-01-12`
 
-**Proto-CANONIC:** Commit `dividends:07a5834`, timestamp `2025-12-29T13:42:56-05:00`
+**Commits at freeze:**
+- canonic:0b063b8
+- machine:a57f159
+- os:4c2919d
+- ledger:3b95de2
+- writing:f8acf128
+- paper:0ee1970
+- stack:f58ad6d
+- validators:e772048
+- patents:4bd3dd0
 
-**First CANON:** Commit `writing:bca9ec0`, timestamp `2026-01-05T14:13:20-05:00`
+**Timestamp:** 2026-01-12T18:34:47-05:00
 
-**Freeze Declaration:** Dexter Hadley, 2026-01-12
+**Freeze declaration:** Dexter Hadley
+
+**Metrics at v0.1:**
+| Metric | Count |
+|--------|-------|
+| Episodes | 129 |
+| Violations | 33 |
+| CANON files | 12 |
+| IDFs | 52 |
+| Validators deployed | 0 |
+
+---
+
+### v0.2 Evidence Window
+
+**Date:** 2026-01-16
+
+**Status:** Post-freeze reconstruction (no new freeze declared)
+
+**Metrics at v0.2:**
+| Metric | Count |
+|--------|-------|
+| Episodes | 164 |
+| Violations | 40 |
+| CANON files | 54 |
+| IDFs | 105 |
+| Validators deployed | 16 |
+
+---
+
+### Version Transition: v0.1 → v0.2
+
+Following PAPER CANON Axiom 27 (Version transition protocol):
+
+1. **New evidence window declared:** 2026-01-16 (post-freeze reconstruction)
+2. **New IDFs inventoried:** IDF-053 through IDF-105 (53 new disclosures)
+3. **Provisional claims mapped to evidence:**
+   - "Validators will enforce" → 16 validators deployed
+   - "Drift patterns exist" → 8 drift types categorized
+   - "Law-prose co-evolution" → Evolutionary analysis section added
+4. **Supplement sections updated:** S1-S8 reflect v0.2 metrics
+5. **Prior claims preserved:** All v0.1 claims remain; v0.2 extends
+
+---
+
+### Proto-CANONIC Origin
+
+**Commit:** `dividends:07a5834`
+
+**Timestamp:** 2025-12-29T13:42:56-05:00
+
+**Artifacts:** CANNON.md (note double N), VOCABULARY.md
+
+---
+
+### First CANON
+
+**Commit:** `writing:bca9ec0`
+
+**Timestamp:** 2026-01-05T14:13:20-05:00
+
+**Artifact:** First CANON.md with three axioms
 
 ---
 

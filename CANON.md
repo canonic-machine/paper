@@ -264,6 +264,46 @@ PAPER **MAY** accumulate contributions across non-contiguous time windows.
 
 ---
 
+### 26. IP flow disclosure
+
+PAPER **MUST** disclose the IP flow between evidence windows when IP protection is a system objective.
+
+- **Foundational IDFs** observed in evidence window N **MUST** be inventoried.
+- **Implementation IDFs** deployed in evidence window N+1 **MUST** be mapped to their foundational observations.
+- **Commercial IDFs** specifying revenue mechanisms **SHOULD** be disclosed with their gating dependencies.
+
+The IP flow pattern is:
+
+```
+OBSERVATIONS (frozen) → DISCLOSURES (filed) → IMPLEMENTATIONS (deployed) → APPLICATIONS (pending) → RELEASE (gated)
+```
+
+---
+
+### 27. Version transition protocol
+
+PAPER version transitions **MUST** follow this protocol:
+
+**From v0.n to v0.n+1:**
+1. Declare new evidence window with freeze tag
+2. Inventory new IDFs created since prior freeze
+3. Map provisional claims in v0.n to evidence in v0.n+1
+4. Update Supplement sections with current metrics
+5. Preserve prior claims (claim accumulation)
+
+**From v0.x to v1.0:**
+1. Human declares operational phase transition
+2. All v0.x claims consolidated
+3. Foundational and implementation IDFs complete
+4. Validators deployed and passing
+5. Commercial architecture specified
+
+Version transitions are human decisions, not automated triggers.
+
+(IDF-105)
+
+---
+
 ## Inherited Constraints
 
 This scope inherits from WRITING (/canonic/machine/os/writing):

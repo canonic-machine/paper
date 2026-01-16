@@ -240,6 +240,48 @@ The property that new evidence windows add claims while prior claims remain (per
 
 ---
 
+### IP flow
+
+The pattern by which intellectual property moves from observations through disclosures to implementations to applications to release.
+
+---
+
+### foundational IDF
+
+An invention disclosure describing patterns observed in a frozen evidence window.
+
+---
+
+### implementation IDF
+
+An invention disclosure specifying mechanisms deployed after a freeze.
+
+---
+
+### commercial IDF
+
+An invention disclosure specifying revenue or IP protection mechanisms.
+
+---
+
+### version transition
+
+The protocol for moving PAPER from one evidence window to the next.
+
+---
+
+### operational phase
+
+The state of a PAPER after v1.0 declaration, indicating stable claims and complete implementation.
+
+---
+
+### gated release
+
+Code or artifact release conditioned on prior patent filing (per IDF-069).
+
+---
+
 ### execution
 
 The realization of state transitions.
