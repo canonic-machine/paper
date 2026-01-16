@@ -282,6 +282,42 @@ Code or artifact release conditioned on prior patent filing (per IDF-069).
 
 ---
 
+### axiomatic closure
+
+The property that a set of axioms generates all valid patterns within a domain.
+
+---
+
+### atomic axiom
+
+A necessary-condition axiom that cannot be removed without breaking a category of governance patterns.
+
+---
+
+### execution declaration
+
+A communication pattern where AI declares intent and executes rather than seeking approval for governed actions.
+
+---
+
+### approval seeking
+
+A communication pattern where AI requests permission before acting, appropriate for actions outside governance constraints.
+
+---
+
+### intensity encoding
+
+Semantic information carried by character repetition count (e.g., "!" vs "!!!!").
+
+---
+
+### stateless production
+
+AI artifact generation using ledger state instead of session memory, enabling cross-session continuity.
+
+---
+
 ### execution
 
 The realization of state transitions.

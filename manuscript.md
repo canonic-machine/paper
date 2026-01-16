@@ -475,8 +475,8 @@ Within these evidence windows, the answer is yes.
 | Repositories | 10 |
 | CANON files | 54 |
 | Episodes | 168 |
-| IDFs | 102 |
-| Validators | 14 |
+| IDFs | 110 |
+| Validators | 16 |
 | Root axioms | 3 |
 
 The system grew through recorded iteration. Every failure was caught, documented, and corrected. The violations prove the governance works.
@@ -528,10 +528,10 @@ Constitutional governance makes verifiability structural, not procedural. Tradit
 **Metrics at v0.2:**
 | Metric | Count |
 |--------|-------|
-| Episodes | 164 |
-| Violations | 40 |
+| Episodes | 168 |
+| Violations | 41 |
 | CANON files | 54 |
-| IDFs | 105 |
+| IDFs | 110 |
 | Validators deployed | 16 |
 
 ---
@@ -541,11 +541,13 @@ Constitutional governance makes verifiability structural, not procedural. Tradit
 Following PAPER CANON Axiom 27 (Version transition protocol):
 
 1. **New evidence window declared:** 2026-01-16 (post-freeze reconstruction)
-2. **New IDFs inventoried:** IDF-053 through IDF-105 (53 new disclosures)
+2. **New IDFs inventoried:** IDF-053 through IDF-110 (58 new disclosures)
 3. **Provisional claims mapped to evidence:**
    - "Validators will enforce" → 16 validators deployed
    - "Drift patterns exist" → 8 drift types categorized
    - "Law-prose co-evolution" → Evolutionary analysis section added
+   - "Axiomatic closure" → IDF-108 proves {Triad, Inheritance, Introspection} complete
+   - "Execution declaration" → IDF-110 codifies governed production behavior
 4. **Supplement sections updated:** S1-S8 reflect v0.2 metrics
 5. **Prior claims preserved:** All v0.1 claims remain; v0.2 extends
 
@@ -837,8 +839,9 @@ The dominance of MUST/MUST NOT (96%) reflects constitutional intent: hard constr
 | Inheritance paths | IDF-007 | Hierarchical Authority Scoping |
 | Manuscript drift | IDF-103 | Manuscript Drift Disclosure |
 | Semantic formatting | IDF-104 | Semantic Formatting Ontology |
+| Intensity encoding | IDF-109 | Repetition Intensity Encoding |
 
-**Evidence:** `ls patents/disclosures/IDF-*.md | wc -l` = 105
+**Evidence:** `ls patents/disclosures/IDF-*.md | wc -l` = 110
 
 ---
 
@@ -864,7 +867,8 @@ The dominance of MUST/MUST NOT (96%) reflects constitutional intent: hard constr
 | Mathematical closure | IDF-083 through IDF-092 | 10 |
 | Structural patterns | IDF-093 through IDF-099 | 7 |
 | Meta-validators | IDF-100 through IDF-105 | 6 |
-| **Total v0.2** | | **53** |
+| Closure & production | IDF-106 through IDF-110 | 5 |
+| **Total v0.2** | | **58** |
 
 ### IP Flow Pattern
 
@@ -881,5 +885,48 @@ CODE RELEASE (gated by IDF-069)
 ```
 
 **Evidence:** `git log patents/disclosures/ --oneline | wc -l`
+
+---
+
+## S9. Closure & Production IDFs (v0.2)
+
+### Axiomatic Closure (IDF-108)
+
+The closure theorem proves {Triad, Inheritance, Introspection} is a complete basis:
+
+| Property | Axiom | Closure |
+|----------|-------|---------|
+| Structure | Triad | What files exist |
+| Authority | Inheritance | What can override what |
+| Semantics | Introspection | What terms mean |
+
+All 110 IDFs reduce to applications of these three axioms. No fourth axiom exists.
+
+### Atomic Axiom Consolidation
+
+107+ IDFs consolidate to ~20 atomic axioms for patent portfolio:
+
+| Atomic Axiom | Key IDFs | Blocking Scope |
+|--------------|----------|----------------|
+| A1: Ledger-defined state | 001, 027, 107 | All governance |
+| A2: Introspection closure | 006, 038, 059 | Semantic validity |
+| A3: Inheritance finality | 007, 061 | Authority hierarchy |
+| A4: Black-box validation | 008, 057-062 | Enforcement |
+| A7: Semantic formatting | 104, 109 | Structural validity |
+| A8: Stateless production | 107 | AI continuity |
+
+### Production Behavior (IDF-110)
+
+Governed AI production follows the execution-declaration pattern:
+
+```
+IF action within CANON constraints
+AND ledger state permits
+AND template exists
+THEN execute and declare (no approval needed)
+ELSE seek clarification
+```
+
+**Evidence:** IDF-107, IDF-108, IDF-109, IDF-110 were filed without approval-seeking.
 
 ---
