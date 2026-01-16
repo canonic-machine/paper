@@ -475,7 +475,7 @@ Within these evidence windows, the answer is yes.
 | Repositories | 10 |
 | CANON files | 54 |
 | Episodes | 168 |
-| IDFs | 110 |
+| IDFs | 116 |
 | Validators | 16 |
 | Root axioms | 3 |
 
@@ -531,7 +531,7 @@ Constitutional governance makes verifiability structural, not procedural. Tradit
 | Episodes | 168 |
 | Violations | 41 |
 | CANON files | 54 |
-| IDFs | 110 |
+| IDFs | 116 |
 | Validators deployed | 16 |
 
 ---
@@ -820,6 +820,8 @@ The dominance of MUST/MUST NOT (96%) reflects constitutional intent: hard constr
 | "98.1% Triad compliance" | `triad-validator` output across 54 scopes |
 | "63.0% Introspection closure" | `introspection-validator` output across 54 scopes |
 | "5 layer drift violations" | `IDF-096-layer-drift-validator.md` |
+| "SPEC is fourth element" | `IDF-116-spec-driven-paradigm-evolution.md` |
+| "SPEC closes CANON" | `canonic/CANONIC.md:107-108` |
 | "v0.1 freeze" | Tag `stack-freeze-2026-01-12` |
 | "First CANON" | `writing:bca9ec0` at 2026-01-05 |
 | "Proto-CANONIC" | `dividends:07a5834` at 2025-12-29 |
@@ -841,7 +843,7 @@ The dominance of MUST/MUST NOT (96%) reflects constitutional intent: hard constr
 | Semantic formatting | IDF-104 | Semantic Formatting Ontology |
 | Intensity encoding | IDF-109 | Repetition Intensity Encoding |
 
-**Evidence:** `ls patents/disclosures/IDF-*.md | wc -l` = 110
+**Evidence:** `ls patents/disclosures/IDF-*.md | wc -l` = 116
 
 ---
 
@@ -868,7 +870,8 @@ The dominance of MUST/MUST NOT (96%) reflects constitutional intent: hard constr
 | Structural patterns | IDF-093 through IDF-099 | 7 |
 | Meta-validators | IDF-100 through IDF-105 | 6 |
 | Closure & production | IDF-106 through IDF-110 | 5 |
-| **Total v0.2** | | **58** |
+| Gap remediation & architecture | IDF-111 through IDF-116 | 6 |
+| **Total v0.2** | | **64** |
 
 ### IP Flow Pattern
 
@@ -888,7 +891,70 @@ CODE RELEASE (gated by IDF-069)
 
 ---
 
-## S9. Closure & Production IDFs (v0.2)
+## S9. SPEC Evolution Forensics (v0.2)
+
+### The Four-Element Discovery (IDF-116)
+
+On 2026-01-16, a forensic analysis of the ledger revealed that SPEC understanding had been inconsistent throughout the project's evolution. The discovery: **SPEC is a fourth element, separate from the triad**, with distinct closure relationships grounded in Axiom 3.
+
+### Evolutionary Timeline
+
+| Date | Commit | SPEC Understanding |
+|------|--------|-------------------|
+| 2026-01-09 | `a7de0b1` | "SPEC is primary; CANON and VOCAB are co-equal canonical artifacts derived from it" |
+| 2026-01-09 | `7aaa779` | "SPEC states how CANON, VOCAB, and README relate" |
+| 2026-01-10 | `894d2c5` | CANONIC.md exists as separate SPEC file |
+| 2026-01-14 | `41c9295` | CANONIC.md clarifies: "This artifact is the paradigm specification; it is non-normative prose" |
+| 2026-01-16 | IDF-116 | Four-element model formalized with closure relationships |
+
+### The Closure Model
+
+Axiom 3 (Introspection) states:
+
+> `VOCAB.md` **MUST** define every content concept used by this CANON and VOCAB itself.
+
+This constrains CANON and VOCAB only. README and SPEC are not mentioned.
+
+| Element | Required | Closure Relationship |
+|---------|----------|---------------------|
+| CANON | Yes (triad) | Closed under VOCAB (Axiom 3) |
+| VOCAB | Yes (triad) | Self-defining (Axiom 3) |
+| README | Yes (triad) | Spans VOCAB, can extend |
+| SPEC | No (optional) | Closes CANON, can extend |
+
+### The AI Misunderstanding Gap
+
+SPEC misunderstanding is a documented gap in human-AI collaboration. Throughout this project, AI agents (including those producing this manuscript) frequently conflated:
+
+- SPEC with triad
+- SPEC with README
+- Closure relationships across elements
+
+**Evidence of conflation:** The INTROSPECTION VOCAB initially defined SPEC as "the triad (CANON.md + VOCAB.md + README.md)" — which is incorrect. SPEC is a fourth element.
+
+**Remediation:** IDF-116 filed as guidance for AI agents working in CANONIC systems.
+
+### SPEC Instances in CANONBASE
+
+| Scope | SPEC File | Closes |
+|-------|-----------|--------|
+| `/canonic/` | CANONIC.md | CANON.md (3 axioms) |
+| `/paper/` | PAPER.md | CANON.md (27 axioms) |
+
+The root CANONIC.md explicitly states at line 107-108:
+> "**This SPEC defines the constitutional semantics of CANONIC.**
+> **Validity is defined exclusively by CANON.**"
+
+### Implications
+
+1. **SPEC is optional** — Triad is required; SPEC is not
+2. **SPEC closes CANON** — Provides complete specification, can extend with generation details
+3. **SPEC is not constrained by Axiom 3** — Unlike CANON, SPEC can use terms not in VOCAB
+4. **Root CANON architecture sections** demonstrate README-style extension (spans VOCAB, can extend)
+
+**Evidence:** IDF-116, commits `a7de0b1` through `41c9295`, CANONIC.md:13-14, CANONIC.md:107-108
+
+---
 
 ### Axiomatic Closure (IDF-108)
 
