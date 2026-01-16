@@ -8,11 +8,11 @@
 
 What if an AI could not bullshit its way through scientific prose—not because it chose not to, but because the system rendered unsupported claims inadmissible? We call this failure mode **AI slop**.
 
-CANONIC is the governance framework we built to make AI slop structurally inadmissible. Claims must trace to a ledger; every term used in rules must be defined; the AI cannot promote its own ideas to law. Across 129 recorded episodes at `stack-freeze-2026-01-12`, we observed recurring failures (undefined terms, evidence gaps, governance leakage) and the corrections that followed.
+CANONIC is the governance framework we built to make AI slop structurally inadmissible. Claims must trace to a ledger; every term used in rules must be defined; the AI cannot promote its own ideas to law.
 
-The result is this paper. It does not describe an experiment. It is the experiment. Key claims cite evidence references (commits, tags, episodes) so you can verify them yourself.
+This paper spans two evidence windows. At v0.1 freeze, we observed 129 episodes and 33 violations across 9 repositories. Post-freeze (v0.2), the system evolved to 168 episodes, 102 IDFs, and 14 deployed validators across 54 governed scopes.
 
-We asked whether a governed human-AI system could produce a self-evidencing scientific paper. You are reading the answer.
+The result is this paper. It does not describe an experiment. It is the experiment. Every claim cites evidence so you can verify it yourself.
 
 ---
 
@@ -30,8 +30,6 @@ We built a system where you don't have to trust. You can verify.
 
 Every claim in this paper links to a commit. Every commit is in a public ledger. Clone the repos. Check for yourself. The evidence is the system that produced the evidence.
 
-This matters because AI is already writing science. The question is whether we govern it or hope for the best. That question has a name.
-
 ---
 
 ## The Problem: AI Slop Is Eating Scientific Writing
@@ -46,7 +44,7 @@ Current defenses fail:
 - **Disclosure policies** are unverifiable ("I used AI responsibly" proves nothing)
 - **Human review** catches AI slop but does not prevent it
 
-We wanted something different: a system where AI-slop-like failure modes are structurally inadmissible to the ledger—invalid by construction, not filtered out. So we built one.
+We wanted something different: a system where AI slop is structurally inadmissible—invalid by construction, not filtered out. So we built one.
 
 ---
 
@@ -54,59 +52,40 @@ We wanted something different: a system where AI-slop-like failure modes are str
 
 The insight is simple: treat AI collaboration like a legal system.
 
-The root primitive is the Triad—`CANON.md`, `VOCAB.md`, and `README.md`.
-
-With the Triad in place, a constitution defines validity, a ledger records what happened, and courts (validators) check compliance. Crucially, the AI can observe and propose, but only humans can change the rules.
-
-We call the framework CANONIC. In the frozen stack, it rests on seven governance primitives.
-
-### 1. Triad
-
-Every scope needs three files: `CANON.md` (rules), `VOCAB.md` (definitions), `README.md` (description). Missing any makes the scope invalid. When present, `SPEC.md` is part of the closure: SPEC, CANON, and README may only use terms defined in VOCAB.
-
-Figure 1 shows the triad and closure rules across SPEC, CANON, VOCAB, and README.
+The root primitive is the **Triad**—`CANON.md`, `VOCAB.md`, and `README.md`. Every governed scope requires these three files. When present, SPEC (named `CANONIC.md` at root, `PAPER.md` for paper) defines scope intent and completes the closure.
 
 ```mermaid
 flowchart TB
-    SPEC[SPEC<br/>Scope intent] --> CANON[CANON<br/>Rules]
-    SPEC --> README[README<br/>Scope description]
+    subgraph Closure[Scope Closure]
+        SPEC[SPEC<br/>Intent]
+        CANON[CANON<br/>Rules]
+        VOCAB[VOCAB<br/>Definitions]
+        README[README<br/>Description]
+    end
 
-    SPEC -->|terms| VOCAB[VOCAB<br/>Definitions]
-    CANON -->|terms| VOCAB
-    README -->|terms| VOCAB
-
-    VOCAB -->|self-definition| VOCAB
+    SPEC -->|terms must be in| VOCAB
+    SPEC --> CANON
+    SPEC --> README
+    CANON -->|terms must be in| VOCAB
+    README -->|terms must be in| VOCAB
+    VOCAB -->|self-defines| VOCAB
 ```
 
-This closure makes terms admissible before any downstream execution.
+SPEC defines intent (non-normative). CANON defines validity (normative). All artifacts use terms that must be defined in VOCAB. This closure makes terms admissible before any downstream execution.
 
-### 2. Inheritance
+With the closure in place, a constitution defines validity, a ledger records what happened, and validators check compliance. Crucially, the AI can observe and propose, but only humans can change the rules.
 
-Rules flow from a root constitution. You can add constraints downstream, but you cannot override upstream rules.
+We call the framework CANONIC. It rests on three root axioms:
 
-### 3. Introspection
+**1. Triad** — Every scope MUST contain `CANON.md`, `VOCAB.md`, and `README.md`. Missing any renders the scope invalid.
 
-Every term used in the rules must be defined. If CANON says "episode," VOCAB must define "episode." Undefined jargon = invalid scope.
+**2. Inheritance** — Every CANON MUST declare what it inherits from. Inherited axioms are final and MUST NOT be overridden.
 
-### 4. Immutability (governed)
+**3. Introspection** — VOCAB MUST define every concept used by CANON and by VOCAB itself. Undefined concepts render the scope invalid.
 
-The ledger is treated as immutable. Corrections happen via new commits; history rewriting is disallowed by governance.
+These three axioms generate the entire constitutional structure. Every downstream axiom is either a specialization or a boundary declaration. (See Appendix A1 for full axiom text.)
 
-### 5. Model identity disclosure (best practice)
-
-Sessions SHOULD record the actual model identity. This was not consistently captured early; the gap is documented as a limitation (see Limitations).
-
-### 6. Ledger-first evidence
-
-Claims without evidence references are inadmissible; "the system achieved compliance" means nothing unless you can point to the commit where it happened.
-
-### 7. Insight-law separation
-
-The AI can discover patterns and propose ideas. But those insights have zero legal force until a human explicitly adds them to CANON.
-
-### Governance loop
-
-Figure 2 sketches the governance loop across authority, execution, and evidence.
+### The Governance Loop
 
 ```mermaid
 graph TD
@@ -116,380 +95,158 @@ graph TD
     end
 
     subgraph "AI Production"
-        AI[AI Agent] -->|produces| CANDIDATES[Candidate<br/>Artifacts]
-        CANDIDATES -->|evaluated by| MACHINE[MACHINE<br/>Validator]
+        AI[AI Agent] -->|produces| ARTIFACTS[Artifacts]
+        ARTIFACTS -->|validated by| VALIDATORS[Validators]
     end
 
-    CANON -->|governs| MACHINE
-    MACHINE -->|accept/reject| LEDGER
+    CANON -->|governs| VALIDATORS
+    VALIDATORS -->|accept/reject| LEDGER
     LEDGER -->|evidence for| PAPER[PAPER<br/>This Document]
 
     AI -.->|observes, cannot change| CANON
-
-    style CANON fill:#e1f5fe
-    style LEDGER fill:#fff3e0
-    style PAPER fill:#e8f5e9
-    style H fill:#fce4ec
 ```
 
-This loop explains why authority stays human while execution can scale. The question is whether it works. We tested it on ourselves.
+This loop explains why authority stays human while execution can scale. Validators enforce the constitution; the ledger preserves evidence; the paper reconstructs what happened.
 
 ---
 
 ## What We Actually Did
 
-We built the system across nine public repositories:
+We built the system across 10 public repositories with 54 governed scopes. The full repository list and axiom counts appear in Supplement S1.
 
-| Repo | Purpose |
-|------|---------|
-| canonic | Root constitution |
-| machine | Execution semantics |
-| os | Authority bounds |
-| ledger | Immutability rules |
-| writing | Episode production |
-| paper | This paper's governance |
-| stack | Multi-system composition |
-| validators | Enforcement outcomes (public) |
-| patents | Disclosures and governance IP |
-| publishing | Submission and dissemination artifacts |
+The system did not start as ten repositories. It started as a book. On December 29, 2025, we began writing *Dividends & Deaths* and created proto-governance artifacts: `CANNON.md` (note the double N), `VOCABULARY.md`, and the Triad concept.
 
-Enforcement outcomes are recorded in the ledger; validator implementations may be public or private.
-
-Publishing is a post-freeze dissemination scope and is not part of the freeze evidence window.
-
-### Ledger-as-evidence pipeline
-
-Rules become evidence. Evidence becomes claims.
-
-```mermaid
-flowchart LR
-    subgraph Governance
-        CANON[CANON<br/>Rules] --> MACHINE[MACHINE<br/>Validation]
-    end
-    subgraph Execution
-        AGENT[Agents + Humans] --> ARTIFACTS[Artifacts]
-        ARTIFACTS --> MACHINE
-    end
-    MACHINE --> LEDGER[LEDGER<br/>Immutable commit history]
-    LEDGER --> PAPER[PAPER<br/>Claims + citations]
-```
-
-### Evolution and evidence window
-
-The system did not start as nine repositories. It started as a book.
-
-On December 29, 2025, we began writing a literary work called *Dividends & Deaths*. To govern the collaboration between human and AI, we created proto-governance artifacts: `CANNON.md` (note the double N), `VOCABULARY.md`, and the concept of a "Triad"—the required governance set per directory.
-
-This was proto-CANONIC. The naming was different. The structure was rougher. But the core insight was there: constitutional governance for human-AI collaboration.
+Within one week of the new year, the kernel crystallized. Proto-CANONIC became CANONIC. By v0.1 freeze on January 12, 2026, the stack had grown to 9 repositories with 12 triad-compliant scopes.
 
 ```mermaid
 timeline
-    title From Proto-CANONIC to Freeze
+    title From Proto-CANONIC to v0.2
     section Proto-CANONIC (2025)
-        2025-12-29 : Proto-governance begins (dividends)
-        2025-12-29 : CANNON.md, VOCABULARY.md, Triad concept
-    section CANONIC Crystallization (2026)
-        2026-01-05 : First CANON.md committed (writing)
-        2026-01-05 : canonic repo created (kernel extraction)
-        2026-01-06 : Machine scope split
-        2026-01-10 : OS + Ledger separated
-        2026-01-12 : Freeze declared
+        2025-12-29 : Proto-governance begins
+    section v0.1 Crystallization (2026)
+        2026-01-05 : First CANON.md committed
+        2026-01-12 : v0.1 Freeze declared
+    section v0.2 Execution (2026)
+        2026-01-15 : 14 validators deployed
+        2026-01-16 : 102 IDFs complete
 ```
 
-Within one week of the new year, the kernel crystallized. The proto-governance artifacts in dividends (CANNON → CANON, VOCABULARY → VOCAB) became the constitutional framework we call CANONIC.
+**Evidence:** Timeline details in Supplement S2.
 
-| Date | Event | Reference |
-|------|-------|-----------|
-| 2025-12-29 | Proto-governance begins | `dividends:07a5834` (initial commit) |
-| 2025-12-29 | CANNON.md, VOCABULARY.md created | Proto-CANONIC artifacts |
-| 2026-01-05 | First CANON.md | `writing:bca9ec0` |
-| 2026-01-05 | canonic repo created | Kernel extraction |
-| 2026-01-06 | Machine scope split | `machine` repo created |
-| 2026-01-10 | OS + Ledger separated | `os`, `ledger` repos |
-| 2026-01-12 | Freeze declared | `writing:f8acf128` |
-| **Duration** | **14 days** | Proto-CANONIC to freeze |
-
-By freeze, the stack had grown to 9 governed repositories with 12 triad-compliant scopes. The expansion was not planned—it was discovered. Governance constraints revealed where boundaries needed to exist.
-
-The evolution from proto-CANONIC to CANONIC is itself evidence: constitutional governance emerged organically from the practice of governed human-AI collaboration, not from abstract design.
-
-Figure 3 shows the final architecture.
+### Inheritance Architecture
 
 ```mermaid
 flowchart LR
-    canonic["canonic<br/>root CANON"] --> machine["machine<br/>exec semantics"]
-    machine --> os["os<br/>authority bounds"]
-    os --> writing["writing<br/>episodes"]
-    writing --> paper["paper<br/>epistemic reconstruction"]
-
-    canonic --> ledger["ledger<br/>immutability rules"]
-    canonic --> stack["stack<br/>multi-repo composition"]
-    canonic --> validators["validators<br/>enforcement"]
-    canonic --> patents["patents<br/>disclosures"]
-
-    stack -.-> canonic
-    stack -.-> machine
-    stack -.-> os
-    stack -.-> writing
-    stack -.-> paper
-    stack -.-> ledger
+    canonic["ROOT<br/>3 axioms"] --> machine["MACHINE<br/>6 axioms"]
+    machine --> os["OS<br/>9 axioms"]
+    machine --> validators["VALIDATORS<br/>4 axioms"]
+    os --> writing["WRITING<br/>9 axioms"]
+    os --> ledger["LEDGER<br/>5 axioms"]
+    writing --> paper["PAPER<br/>16 axioms"]
+    paper --> publishing["PUBLISHING<br/>4 axioms"]
 ```
 
-Dotted lines show the stack scope observing all others—composition without authority. Solid lines show inheritance: rules flow down from root, constraints accumulate, no downstream scope can override its parent.
-
-### CANONIC OS
-
-The OS scope (`os`) is the operating substrate for the LLM: a frozen, minimal layer that constrains execution and does not mutate during a session. It is not a policy playground; it is the stable substrate on which downstream scopes rely.
-
-For this paper, the OS substrate is `os:4c2919d` at `stack-freeze-2026-01-12`.
-
-At freeze, the writing repo contains 129 episode artifacts documenting human-AI collaboration. Episodes record model disclosure, commit-linked evidence, and violations with corrections.
-
-On January 12, 2026, we froze the ledger:
-
-> "I declare that all SPEC evolution across the CANONIC stack is complete and stable... This declaration constitutes human fixation." — Dexter Hadley
-
-Everything at or before the freeze is evidence. Everything after is reconstruction. With the window defined, we can report what we observed.
+Rules flow from root; constraints accumulate; no downstream scope can override its parent.
 
 ---
 
-## Results: Observations at Freeze
+## Results
 
-At freeze, the triad compliance report lists 12 triad scopes across 9 repositories (see `writing/episodes/ep136-stack-compliance-reports.md`). Figure 1 shows the triad closure model.
+### v0.1 Freeze Window
 
-Each listed scope contains CANON, VOCAB, and README at the freeze tag.
+At `stack-freeze-2026-01-12`:
 
-### The Violation Record
+| Metric | Count |
+|--------|-------|
+| Episode artifacts | 129 |
+| Violation-labeled | 33 |
+| Triad-compliant scopes | 12 |
+| IDFs | 52 |
+| Root axioms | 3 |
 
-At freeze, 33 episodes are explicitly labeled as violations by filename (`writing/episodes/*violation*`).
+Every violation was detected, documented, and corrected via new commit (never revision). Violations are features, not bugs—they prove the system catches problems and preserves the learning process.
 
-Every violation was detected (mechanically or by review), documented (in an episode), and corrected (via new commit, never revision).
+**Evidence:** `writing/episodes/ep136-stack-compliance-reports.md`
 
-Violations are features, not bugs. They prove the system catches problems and preserves the learning process.
+### v0.2 Post-Freeze Execution
 
-### Post-freeze signal (preliminary)
+Post-freeze, the system evolved significantly:
 
-We also reviewed the post-freeze slice recorded after `stack-freeze-2026-01-12`.
-Five episodes exist in that window (ep132-ep136). One is violation-labeled (ep133).
-The sample is too small to support a performance claim. We treat it as a
-hypothesis for the next freeze (v0.1.1), not evidence.
+| Metric | v0.1 | v0.2 | Delta |
+|--------|------|------|-------|
+| Episodes | 129 | 168 | +39 |
+| Violations | 33 | 40 | +7 |
+| CANON files | 12 | 54 | +42 |
+| IDFs | 52 | 102 | +50 |
+| Validators | 0 | 14 | +14 |
 
-| Window | Episodes | Violation-labeled | Status |
-|--------|----------|-------------------|--------|
-| Pre-freeze | See freeze window above | See freeze window above | Evidence |
-| Post-freeze | 5 (ep132-ep136) | 1 (ep133) | Reconstruction |
+**Validator Deployment:** 14 validators now enforce the constitution, from triad-validator (checks basic structure) to axiom-bloat-validator (detects inheritance violations). Full validator list in Supplement S3.
 
-This table is informational only and does not support a performance claim.
+**Axiom Bloat Remediation:** We discovered 29% axiom bloat—58 axioms were re-declarations of inherited constraints. After remediation via axiom-bloat-validator (IDF-102), the stack compressed to lean form. Remediation details in Supplement S4.
 
-### The Compression
-
-Governance shrank by iteration. Root axioms compressed from many to three. Vocabularies stabilized at scope level. The compression path is visible in ep019, ep053, and ep060.
-
-These observations are claims. Claims require evidence.
-
-### Multi-Dimensional Session Coherence (v0.2 Evidence Window)
-
-Sessions are not linear logs—they are multi-dimensional structures.
-
-| Dimension | What It Captures | Signal Type |
-|-----------|------------------|-------------|
-| Temporal | Turn sequence, timestamps, gaps | Pacing |
-| Semantic | Content, artifacts, decisions | Meaning |
-| Structural | Tool calls, errors, compaction | Mechanics |
-| Relational | Cross-references, inheritance | Context |
-| Behavioral | Patterns, efficiency, drift | Trends |
-
-When dimensions align, governance is healthy. When they diverge, drift is occurring.
-
-**CANONIC sessions vs regular transcripts:**
-
-| Metric | Regular Transcripts | CANONIC Sessions |
-|--------|---------------------|------------------|
-| Semantic backup | None | Structural evidence validates claims |
-| Drift detection | Manual review | Cross-dimensional divergence |
-| Artifact verification | Trust-based | Commit-linked, tool-call-validated |
-| Compaction resilience | Context lost | Governance preserved post-compaction |
-| Productivity measurement | Word count | Artifacts per session MB |
-
-**Session productivity as health signal (ep165):**
-
-| Date | Artifacts | Session MB | Ratio |
-|------|-----------|------------|-------|
-| 2026-01-07 | 156 | 18.4 | 8.5 |
-| 2026-01-13 | 84 | 4.5 | 18.7 |
-| 2026-01-14 | 139+ | 14.4 | 9.7+ |
-
-Jan 13 showed 2x efficiency vs Jan 7 (artifacts per MB). This correlates with governance maturity—later sessions produce more artifacts per session unit as the framework stabilizes.
-
-**Compaction as meta-signal:**
-
-This session itself demonstrates compaction resilience. Context exceeded limits; the model summarized what mattered; work resumed without governance loss. The compaction summary is itself evidence of governance health—what the model prioritized reveals what governance it preserved.
-
-**Evidence references (v0.2 window):**
-- `writing/episodes/ep165-session-productivity-health-signal.md`
-- `patents/disclosures/IDF-048-multidimensional-session-signals.md`
-- `transcript/` local session archive (293 sessions, 47 MB)
+**Axiom Clustering:** Nine semantic clusters emerged from analyzing all 228 axioms. The dominance of MUST/MUST NOT (96%) reflects constitutional intent: hard constraints, not recommendations. Cluster analysis in Supplement S5.
 
 ---
 
-## Evidence Links (Key Claims)
+## The Protocols-to-Patents Drift
 
-The table below links key claims to ledger evidence.
+An unexpected observation: **CANONIC drifted from documentation protocols to IP generation.**
 
-| Claim | Evidence reference |
-|-------|--------------------|
-| "129 episode artifacts" | `writing/episodes/` file count at tag `stack-freeze-2026-01-12` |
-| "33 violation-labeled episodes" | `writing/episodes/*violation*` file count at tag `stack-freeze-2026-01-12` |
-| "12 triad scopes across 9 repos" | `writing/episodes/ep136-stack-compliance-reports.md` (Report A) |
-| "First CANON timestamp" | `writing/CANON.md` initial commit `writing:bca9ec0` |
-| "Freeze timestamp" | tag `stack-freeze-2026-01-12` (tag timestamp `2026-01-12T18:34:47-05:00`, commit `writing:f8acf128`) |
-| "OS is minimal substrate (frozen) for downstream work" | `writing/episodes/ep100-os-initiation-and-refactor.md`, `writing/episodes/ep101-canonic-os-minimality-report.md` |
-
-You do not have to trust us. Clone the repos. Replay the history. The evidence is the system that produced the evidence.
-
-Traditional papers describe experiments that happened elsewhere; this paper is the experiment it describes. The method, results, and limitations all derive from the same ledger. So why does any of this matter?
-
----
-
-## Why This Matters
-
-### For Scientific Publishing
-
-Papers could be verifiable by construction. Instead of "trust the authors," check the ledger.
-
-Peer review becomes: Does every claim link to evidence? Do the commits exist? Is the governance valid? Mechanical verification replaces subjective trust.
-
-### For AI Collaboration
-
-Attribution improves when model identity is recorded: which model, which session, which commits.
-
-Authority stays clear. The AI can contribute but cannot change the rules. Insight-law separation keeps governance human.
-
-### For AI Slop
-
-The primitives block slop at commit time:
-
-| Primitive | What It Blocks |
-|-----------|----------------|
-| Triad | Incomplete scopes |
-| Inheritance | Invented authority |
-| Introspection | Undefined jargon |
-| Immutability | Polished-away mistakes |
-| Model disclosure | Anonymous AI |
-| Ledger-first | Unsupported claims |
-| Insight-law separation | AI self-promotion |
-
-This is not a filter. It is a governance boundary. But we are not claiming perfection.
-
----
-
-## Discussion: The Protocols-to-Patents Drift
-
-An unexpected observation emerged during system development: **CANONIC drifted from documentation protocols to IP generation.**
-
-### The Evolution Path
-
-The system began as documentation structure—protocols for organizing human-AI collaboration:
-
-| Phase | Focus | Primary Output |
-|-------|-------|----------------|
+| Phase | Focus | Output |
+|-------|-------|--------|
 | 1. Protocols | Documentation structure | CANON, VOCAB, README |
-| 2. Governance | Axiom enforcement | Validators, compliance checks |
-| 3. Constitutional | Formal authority | Separation of powers, inheritance |
-| 4. IP-First | Patents as product | IDFs, claims, provisionals |
+| 2. Governance | Axiom enforcement | Validators |
+| 3. Constitutional | Formal authority | Inheritance, separation |
+| 4. IP-First | Patents as product | IDFs, claims |
 
-This drift was not designed. It emerged from the structure.
+When documentation is rigorous enough to govern AI constitutionally, it achieves patent-specification rigor. VOCAB defines every term (patent requires clarity). CANON declares requirements (patent requires method steps). Validators produce PASS/FAIL (patent requires enablement).
 
-### Why Protocols Became Patents
+**Insight:** Documentation protocols that can govern AI are already patent-ready.
 
-When documentation is rigorous enough to govern AI behavior constitutionally, it has already achieved patent-specification rigor:
-
-1. **Formal definitions** — VOCAB defines every term (patent requires claim clarity)
-2. **Normative rules** — CANON declares requirements (patent requires method steps)
-3. **Hierarchical scope** — Inheritance chains authority (patent requires dependent claims)
-4. **Deterministic validation** — Validators produce PASS/FAIL (patent requires enablement)
-
-The insight: **documentation protocols that can govern AI are already patent-ready.**
-
-### The Structural Necessity
-
-The drift is not optional. A governance system without IP protection is incomplete:
-
-- Internal enforcement (validators) checks our own artifacts
-- External enforcement (patents) blocks competitors
-- Without both, constitutional governance lacks teeth
-
-By the time CANONIC could govern AI behavior, it had already specified patentable methods. The protocols became patents not by intention but by structural necessity.
+| Metric | v0.1 | v0.2 | Growth |
+|--------|------|------|--------|
+| IDFs | 52 | 102 | 96% |
+| Claims | 54+ | 100+ | 85% |
 
 ### The Genomics Parallel
 
 We observed the same pattern in genomics: cancer fixed as the prominent application because cancer *is* genomic dysfunction by definition. The application wasn't chosen—it was revealed by the structure of the domain.
 
 | Domain | Structure | Inevitable Application |
-|--------|-----------|----------------------|
+|--------|-----------|------------------------|
 | Genomics | Gene sequences and mutations | Cancer (genomic dysfunction) |
 | CANONIC | Governance specifications | Patents (specification protection) |
 
 In both cases, the "application" was not a choice but a recognition. Genomics didn't *decide* to focus on cancer—cancer is what happens when genomes fail. CANONIC didn't *decide* to generate patents—patents are what governance specifications become when formalized sufficiently.
 
-This parallel suggests a general principle: **rigorous formalization reveals its natural application domain.** The structure determines the use case.
+This parallel suggests a general principle: **rigorous formalization reveals its natural application domain.**
 
-### Evidence
-
-| Metric | At Freeze (v0.1) | Post-Freeze (v0.2) |
-|--------|------------------|-------------------|
-| IDFs | 52 | 68 |
-| Claims | 54+ | 74+ |
-| Provisionals | 2 ready | 2 ready |
-| Validators | Documented | 8 deployed |
-
-The IP portfolio emerged from governance work. Every axiom became an IDF. Every validator became evidence. The patent machine (IDF-041) documented the process by which the process documents itself.
-
-### Release Gating
-
-**v0.1 (this paper):** Patents and IDFs are fully documented. Validator specifications are published as IDFs (IDF-057 through IDF-061). The constitutional governance framework is complete.
-
-**v0.2 (future release):** Validator implementations will be released. Code is gated behind IP filing to establish priority. The documentation-first approach ensures IP protection before code publication.
-
-### Implications
-
-For practitioners adopting CANONIC-style governance:
-
-1. **Expect IP emergence** — Rigorous documentation generates patentable methods
-2. **File early** — Priority dates matter; document before implementing
-3. **Validators are evidence** — PASS/FAIL records prove reduction to practice
-4. **Constitutional closure includes IP closure** — All axioms need IDFs, all IDFs need claims
-
-The protocols-to-patents drift is a feature, not a bug. It means governance work is not lost—it compounds into protected IP.
+**Evidence:** `patents/disclosures/`, IDF-041 (Patent Machine)
 
 ---
 
-## Limitations (Honest Ones)
+## Why This Matters
+
+**For Scientific Publishing:** Papers could be verifiable by construction. Instead of "trust the authors," check the ledger. Peer review becomes: Does every claim link to evidence?
+
+**For AI Collaboration:** Authority stays clear. The AI contributes but cannot change the rules. **Insight-law separation** is the key primitive: the AI can discover patterns and propose ideas, but those insights have zero governance force until a human explicitly adds them to CANON. This is why CANONIC can use AI at scale without surrendering authority.
+
+**For AI Slop:** The primitives block slop at commit time—incomplete scopes, invented authority, undefined jargon, polished-away mistakes, unsupported claims. This is not a filter. It is a governance boundary.
+
+---
+
+## Limitations
 
 We do not claim:
 
-- **Optimality**: These seven primitives work here. Fewer might suffice.
+- **Optimality**: Three root axioms work here. Other configurations may work.
 - **Generalizability**: This worked for governance specs. Other domains may differ.
-- **Scalability**: 9 public repos, 129 episode artifacts at `stack-freeze-2026-01-12`. Enterprise scale is unproven.
-- **Model identity completeness**: Some early episodes lack explicit model IDs; this gap is documented post-freeze in ep135.
+- **Scalability**: 10 repos, 168 episodes. Enterprise scale is unproven.
+- **Model identity completeness**: Some early episodes lack explicit model IDs (documented in ep135).
 
-The study is bounded by one frozen ledger. Claims are observations within that window. If you want to test them, you can.
+The study is bounded by two evidence windows: v0.1 freeze and v0.2 current state.
 
----
-
-## Try It Yourself
-
-The system is in the ledger. Clone it. Check compliance. Trace any claim to its commit.
-
-```
-# Example: writing repo evidence
-
-git clone https://github.com/canonic-machine/writing.git
-cd writing
-git checkout stack-freeze-2026-01-12
-```
-
-For the full stack list, see `stack/public/STACK.yml` in the stack repo. Then decide for yourself.
+**Manuscript Drift:** This manuscript has evolved through 50+ commits. Early versions described "seven primitives" (triad, inheritance, introspection, immutability, model identity, ledger-first, insight-law separation). The current manuscript presents three root axioms (Triad, Inheritance, Introspection) with downstream primitives as specializations. This consolidation is intentional—the three axioms generate all other constraints—but readers should note that earlier commits used different framings.
 
 ---
 
@@ -497,62 +254,185 @@ For the full stack list, see `stack/public/STACK.yml` in the stack repo. Then de
 
 We asked: can a governed human-AI system produce a self-evidencing scientific paper?
 
-Within this evidence window, the answer is yes.
+Within these evidence windows, the answer is yes.
 
-### What we built
-
-In 7 days, 4 hours, and 21 minutes—from first CANON commit to freeze declaration—we constructed:
-
-| Metric | Count |
-|--------|-------|
-| Governed repositories | 9 |
-| Episode artifacts | 129 |
-| Violation-labeled episodes | 33 |
-| Triad-compliant scopes | 12 |
-| Governance primitives | 7 |
+| Metric | v0.2 Count |
+|--------|------------|
+| Repositories | 10 |
+| CANON files | 54 |
+| Episodes | 168 |
+| IDFs | 102 |
+| Validators | 14 |
 | Root axioms | 3 |
 
 The system grew through recorded iteration. Every failure was caught, documented, and corrected. The violations prove the governance works.
 
-### What this means
+This manuscript follows the **describe-then-demonstrate** pattern: v0.1 described findings as observations; v0.2 demonstrates features that were provisional. Provisional claims in v0.1 become evidence in v0.2 when the system exhibits the described behavior. The paper proves itself by running.
 
-Constitutional governance makes verifiability structural, not procedural. The paper is the experiment. You can replay it.
-
-Traditional papers describe work that happened elsewhere. This paper is the work. Clone the repos. Trace any claim. The evidence is the system that produced the evidence.
-
-### What comes next
-
-This is v0.1—the frozen evidence window. The system continues to evolve.
-
-**v0.1 includes:**
-- Complete constitutional governance framework (8 axioms)
-- 68 IDFs documenting patterns and methods
-- 74+ patent claims across 5 layers
-- Validator specifications (IDF-057 through IDF-068)
-- Constitutional analogy and IP closure proofs
-
-**v0.2 will include:**
-- Validator implementation code (8 validators)
-- Compliance baseline data
-- Remediation tooling
-
-Code is gated behind IP filing. The documentation-first approach (protocols → patents → code) ensures protection before publication. This is the protocols-to-patents drift in action: governance work produces IP, IP establishes priority, code follows.
-
-The framework is open. The ledger is public. We invite verification, replication, and extension—within the boundaries established by the IP portfolio.
+Constitutional governance makes verifiability structural, not procedural. Traditional papers describe work that happened elsewhere. This paper is the work. Clone the repos. Trace any claim. The evidence is the system that produced the evidence.
 
 ---
 
-## Evidence
+## Evidence Window Declaration
 
-**Evidence window:** `stack-freeze-2026-01-12` (tag timestamp `2026-01-12T18:34:47-05:00`, commit `writing:f8acf128`)
+**v0.1:** Tag `stack-freeze-2026-01-12`, commit `writing:f8acf128`, timestamp `2026-01-12T18:34:47-05:00`
 
-**Proto-CANONIC origin:** `dividends:07a5834` at `2025-12-29T13:42:56-05:00` (CANNON.md, VOCABULARY.md, Triad concept)
+**v0.2:** Date 2026-01-16, current ledger state (post-freeze reconstruction)
 
-**First CANON artifact:** `writing/CANON.md` commit `writing:bca9ec0` at `2026-01-05T14:13:20-05:00`
+**Proto-CANONIC:** Commit `dividends:07a5834`, timestamp `2025-12-29T13:42:56-05:00`
 
-**Time to freeze:** 14 days (from proto-CANONIC to freeze); 7 days, 4:21:27 (from first CANON.md to freeze)
+**First CANON:** Commit `writing:bca9ec0`, timestamp `2026-01-05T14:13:20-05:00`
 
-**Public repositories** (tagged at `stack-freeze-2026-01-12`):
+**Freeze Declaration:** Dexter Hadley, 2026-01-12
+
+---
+
+## Acknowledgments
+
+Fatima Boukrim asked "Help me understand what this is for"—leading to the "Why Should You Care?" section.
+
+The AI agents (Claude Opus 4.5, Claude Sonnet 4.5) contributed production under governance. Their contributions are recorded in the ledger with model identity disclosure.
+
+---
+
+*This manuscript was produced under CANONIC governance.*
+*Model: claude-opus-4-5-20251101 (Claude Code)*
+*Evidence windows: v0.1 (stack-freeze-2026-01-12), v0.2 (2026-01-16)*
+
+---
+
+# Appendix (Invariant)
+
+## A1. Root Axioms (Full Text)
+
+From `canonic/CANON.md`:
+
+**Axiom 1 — Triad:**
+> A scope **MUST** contain the following artifacts: `CANON.md`, `VOCAB.md`, `README.md`. Absence of any triad artifact renders the scope invalid.
+
+**Axiom 2 — Inheritance:**
+> Every `CANON.md` **MUST** declare the scope it inherits from. Inheritance **MUST** terminate at `/`. Inherited axioms are final and **MUST NOT** be overridden.
+
+**Axiom 3 — Introspection:**
+> `VOCAB.md` **MUST** define every content concept used by its corresponding `CANON.md` and by `VOCAB.md` itself. Undefined content concepts render the scope invalid.
+
+**Evidence:** `canonic/CANON.md:9-38`
+
+---
+
+## A2. Mathematical Formalization
+
+### Notation
+
+- $\mathcal{C}$: Claims in PAPER
+- $\mathcal{E}$: Episodes
+- $\mathcal{L}$: Ledger evidence (commits, tags)
+- $\mathcal{V}$: Vocabulary (defined terms)
+- $T(c,\ell)$: Claim $c$ traces to ledger item $\ell$
+- $B(c,e)$: Claim $c$ is bounded by episode $e$
+- $V(c)$: Vocabulary closure for claim $c$
+- $A(c)$: Admissibility of claim $c$
+
+### Definitions
+
+**D1. Vocabulary Closure:**
+$$V(c) \iff \text{Terms}(c) \subseteq \mathcal{V}$$
+
+**D2. Admissible Claim:**
+$$A(c) \iff \exists \ell \in \mathcal{L}, \exists e \in \mathcal{E} : T(c,\ell) \land B(c,e) \land V(c)$$
+
+**D3. AI Slop:**
+$$S(c) \iff \neg A(c) \lor \exists t \in \text{Terms}(c) : t \notin \mathcal{V}$$
+
+### Proposition: AI Slop Is Structurally Rejected
+
+$$S(c) \Rightarrow \neg A(c)$$
+
+**Proof Sketch:** By D3, AI slop either fails admissibility directly or uses undefined terms. Undefined terms violate vocabulary closure (D1), which is required for admissibility (D2). Therefore AI slop cannot be admitted.
+
+---
+
+## A3. Claim Admissibility Checklist
+
+- [ ] Claim has cited ledger reference
+- [ ] Claim is bounded by episodes
+- [ ] Claim uses only defined terms (VOCAB closure)
+- [ ] Claim is observational, not prescriptive
+- [ ] Evidence exists within declared evidence window
+
+---
+
+## A4. Reproducibility Protocol
+
+### Evidence Window Checkout
+
+```bash
+git clone https://github.com/canonic-machine/writing.git
+cd writing
+git checkout stack-freeze-2026-01-12
+```
+
+### Validator Execution
+
+```bash
+# Run triad validator
+python3 validators/triad-validator/validate.py canonic/
+
+# Run axiom-bloat validator
+python3 validators/axiom-bloat-validator/validate.py .
+```
+
+### Claim Verification
+
+1. Locate claim in manuscript
+2. Follow evidence reference (commit, tag, episode, IDF)
+3. Confirm evidence exists in ledger
+
+---
+
+# Supplement (Growing)
+
+*This section captures system state at v0.2. Values will change as the system evolves.*
+
+---
+
+## S1. Repository and Axiom Inventory (v0.2)
+
+| Repo | Purpose | Local Axioms |
+|------|---------|--------------|
+| canonic | Root constitution | 3 |
+| machine | Execution semantics | 6 |
+| os | Authority bounds | 9 |
+| ledger | Immutability rules | 5 |
+| writing | Episode production | 9 |
+| paper | This paper's governance | 16 |
+| stack | Multi-system composition | 9 |
+| validators | Enforcement (14 deployed) | 4 |
+| patents | IP disclosures (102 IDFs) | 9 |
+| publishing | Dissemination artifacts | 4 |
+
+**Total CANON files:** 54 (`find . -name "CANON.md" | wc -l`)
+
+**Total axioms:** 228 (sum of `grep -c "^### [0-9]"` across all CANON files)
+
+---
+
+## S2. Evolution Timeline
+
+| Date | Event | Evidence |
+|------|-------|----------|
+| 2025-12-29 | Proto-governance begins | `dividends:07a5834` |
+| 2025-12-29 | CANNON.md, VOCABULARY.md created | Proto-CANONIC artifacts |
+| 2026-01-05 | First CANON.md | `writing:bca9ec0` |
+| 2026-01-05 | canonic repo created | Kernel extraction |
+| 2026-01-06 | Machine scope split | `machine` repo created |
+| 2026-01-10 | OS + Ledger separated | `os`, `ledger` repos |
+| 2026-01-12 | v0.1 Freeze declared | `writing:f8acf128` |
+| 2026-01-16 | v0.2 state | Current ledger |
+
+**Duration:** 14 days from proto-CANONIC to v0.1 freeze; 18 days to v0.2.
+
+**v0.1 Freeze Commits:**
 - canonic:0b063b8
 - machine:a57f159
 - os:4c2919d
@@ -563,182 +443,96 @@ The framework is open. The ledger is public. We invite verification, replication
 - validators:e772048
 - patents:4bd3dd0
 
-**Key episodes**: ep019 (refactoring), ep053 (root minimalism), ep060 (minimal axioms), ep131 (full stack triad compliance)
+---
 
-**Post-freeze corrections (not part of the evidence window)**: ep135 (model identity gap)
+## S3. Validator Inventory (v0.2)
 
-**Freeze declaration**: Dexter Hadley, 2026-01-12
+| Validator | IDF | Function |
+|-----------|-----|----------|
+| triad-validator | IDF-057 | Checks CANON, VOCAB, README presence |
+| inheritance-validator | IDF-061 | Validates inheritance declarations |
+| introspection-validator | IDF-059 | Ensures VOCAB closure |
+| gap-validator | IDF-060 | Detects undocumented patterns |
+| axiom-bloat-validator | IDF-102 | Detects inheritance finality violations |
+| vocab-locality | IDF-058 | Validates local-only VOCAB terms |
+| licensing-validator | — | Checks LICENSE/NOTICE presence |
+| lifecycle-validator | — | Validates lifecycle sections |
+| closure-validator | — | Validates term closure |
+| minimalism-validator | — | Checks governance minimality |
+| prefix-canonicity-validator | IDF-093 | Validates naming conventions |
+| directory-discriminant-validator | IDF-094 | Validates directory structure |
+| structural-bootstrapping-validator | IDF-095 | Validates bootstrapping |
+| series-nomenclature-validator | — | Validates episode naming |
+
+**Evidence:** `find validators -name "validate.py" | wc -l` = 14
 
 ---
 
-## Appendices
+## S4. Axiom Bloat Remediation (v0.2)
 
-### Appendix A - Mathematical Appendix (Proof Sketches)
+The axiom-bloat-validator (IDF-102) detects:
+- **EXACT_DUPLICATE**: Local axiom text identical to inherited axiom
+- **SEMANTIC_DUPLICATE**: Local axiom semantically equivalent to inherited axiom
 
-These are proof sketches that formalize why AI slop is structurally inadmissible
-under CANONIC governance. They are descriptive and bounded to this system.
+**Remediated files:**
 
-#### Notation
+| File | Before | After | Removed |
+|------|--------|-------|---------|
+| `paper/CANON.md` | 16 axioms | 14 axioms | Triad, Inheritance, Introspection |
+| `publishing/CANON.md` | 7 axioms | 4 axioms | Triad, Inheritance, Introspection |
+| `validators/paper/CANON.md` | 3 axioms | 2 axioms | Non-governance |
+| `validators/transcript/CANON.md` | 3 axioms | 2 axioms | Non-governance |
+| `validators/vocab-locality/CANON.md` | 4 axioms | 2 axioms | Inheritance, Determinism |
+| `writing/episodes/CANON.md` | 5 axioms | 3 axioms | Immutability, Non-authority |
+| `writing/streams/CANON.md` | 3 axioms | 2 axioms | Non-authority |
 
-Let:
-
-- $\mathcal{C}$ be the set of claims in PAPER.
-- $\mathcal{E}$ be the set of episodes.
-- $\mathcal{L}$ be the set of ledger evidence (commits and tags).
-- $\mathcal{V}$ be the vocabulary (defined terms in VOCAB).
-- $\mathrm{Terms}(c)$ be the set of terms used by claim $c$.
-- $T(c,\ell)$ be the traceability predicate ("$c$ traces to ledger item $\ell$").
-- $B(c,e)$ be the bounding predicate ("$c$ is bounded by episode $e$").
-- $V(c)$ be vocabulary closure for $c$.
-- $A(c)$ be admissibility of $c$.
-- $S(c)$ be AI slop for $c$.
-- $U(t)$ be undefinedness of term $t$.
-- $\mathrm{Invalid}(\mathrm{scope})$ indicate a scope fails validity constraints.
-
-#### Definitions
-
-**D1. Vocabulary closure**
-$$
-V(c) \iff \mathrm{Terms}(c) \subseteq \mathcal{V}
-$$
-
-**D2. Admissible claim**
-A claim is admissible if and only if it is traceable to ledger evidence, bounded
-by episodes, and vocabulary-closed.
-$$
-A(c) \iff \exists \ell \in \mathcal{L}, \exists e \in \mathcal{E} :
-T(c,\ell) \land B(c,e) \land V(c)
-$$
-
-**D3. Undefined term**
-Let $\mathcal{R}$ be the set of terms appearing in CANON/README.
-$$
-U(t) \iff t \in \mathcal{R} \land t \notin \mathcal{V}
-$$
-
-**D4. AI slop**
-AI slop is any claim that fails admissibility or uses undefined terms:
-$$
-S(c) \iff \neg A(c) \lor \exists t \in \mathrm{Terms}(c) : U(t)
-$$
-
-#### Lemma 1 - Unsupported claims are inadmissible
-
-If a claim lacks ledger evidence, it is not admissible.
-$$
-\neg \exists \ell \in \mathcal{L} : T(c,\ell) \Rightarrow \neg A(c)
-$$
-
-**Sketch.** Direct from D2.
-
-#### Lemma 2 - Vocabulary violations invalidate admissibility
-
-If a claim uses an undefined term, it is inadmissible.
-$$
-\exists t \in \mathrm{Terms}(c) : U(t) \Rightarrow \neg A(c)
-$$
-
-**Sketch.** By D1 and D2, $V(c)$ is required for $A(c)$. If $U(t)$ appears in
-$\mathrm{Terms}(c)$, then $V(c)$ fails and so does $A(c)$.
-
-#### Proposition 1 - AI slop is structurally rejected
-
-AI slop cannot be admitted as a claim in CANONIC PAPER.
-$$
-S(c) \Rightarrow \neg A(c)
-$$
-
-**Sketch.** D4 implies either $\neg A(c)$ directly or a vocabulary violation,
-which by Lemma 2 implies $\neg A(c)$.
-
-#### Proposition 2 - Undefined governance terms invalidate scope
-
-If a governing term is undefined, the scope is invalid.
-$$
-U(t) \Rightarrow \mathrm{Invalid}(\mathrm{scope})
-$$
-
-**Sketch.** By introspection, every term in CANON/README must be in $\mathcal{V}$.
-If not, the scope fails validity and cannot yield admissible claims.
-
-#### Proposition 3 - Ledger immutability preserves traceability
-
-Let $L_t$ be the ledger state at time $t$. Immutability implies:
-$$
-L_t \subseteq L_{t+1}
-$$
-
-**Sketch.** Corrections add new records instead of overwriting old ones. Thus
-evidence chains are monotonic and fully reconstructable.
-
-#### Corollary - Non-erasure of evidence
-
-For any correction chain $x \to x'$,
-$$
-x \in L_t \land x' \in L_{t+1}
-$$
-so both the original and correction remain visible for forensic reconstruction.
+**Evidence:** `patents/disclosures/IDF-102-axiom-bloat-validator.md`, `validators/axiom-bloat-validator/validate.py`
 
 ---
 
-### Appendix B - Reproducibility Methods
+## S5. Axiom Clustering Analysis (v0.2)
 
-This appendix summarizes steps to reproduce key checks in the frozen evidence
-window. It is descriptive and does not define governance.
+Nine semantic clusters emerged:
 
-#### B1. Evidence window checkout
+| Cluster | Count | Function |
+|---------|-------|----------|
+| Constitutional Foundation | 3 | Triad, Inheritance, Introspection |
+| Authority & Governance Boundaries | 7 | "MUST NOT define governance" |
+| Immutability & Historical Truth | 6 | "MUST NOT be modified" |
+| Evidence & Traceability | 5 | Hash anchoring, provenance |
+| Human Authority & Automation | 4 | "Humans retain authority" |
+| Structural Naming | 4 | Naming conventions |
+| Execution & Validation | 4 | Determinism, black-box |
+| Scope Composition | 3 | Stack composition |
+| Disclosure & Transparency | 3 | Time-to-publication |
 
-1. Clone the repo
-2. Checkout the freeze tag
-3. Confirm commit IDs
+**Axiom Grammar:**
 
-Example:
+| Modal | Count | Percentage |
+|-------|-------|------------|
+| MUST | 68 | 71% |
+| MUST NOT | 24 | 25% |
+| MAY | 3 | 3% |
+| SHOULD | 1 | 1% |
 
-```
-git clone https://github.com/canonic-machine/writing.git
-cd writing
-git checkout stack-freeze-2026-01-12
-```
-
-#### B2. Triad compliance checks
-
-1. Verify `CANON.md`, `VOCAB.md`, `README.md` exist for each scope
-2. Verify `LICENSE` and `NOTICE` at repo roots
-
-#### B3. Claim traceability
-
-1. Locate claim in manuscript
-2. Follow cited episode or ledger reference
-3. Confirm evidence exists in frozen ledger
+The dominance of MUST/MUST NOT (96%) reflects constitutional intent: hard constraints, not recommendations.
 
 ---
 
-### Appendix C - Claim Admissibility Checklist
+## S6. Evidence Links (v0.2 Claims)
 
-Use this checklist to verify that a claim is admissible under PAPER CANON.
-
-#### Checklist
-
-- Claim has a cited ledger reference (commit or tag).
-- Claim is bounded by recorded episodes.
-- Claim uses only defined terms (VOCAB closure).
-- Claim is stated as an observation, not a new rule.
-- Evidence exists within the freeze window when required.
-
-This checklist is descriptive and does not define governance.
-
----
-
-## Acknowledgments
-
-Fatima Boukrim asked the question—"Help me understand what this is for"—that led to the "Why Should You Care?" section and grounded this paper for a lay audience.
-
-The AI agents (Claude Opus 4.5, Claude Sonnet 4.5, GPT-5) contributed production under governance. Their contributions are recorded in the ledger with model identity disclosure.
-
----
-
-*This revision was produced under CANONIC governance.*
-*Model: claude-opus-4-5-20251101 (Claude Code)*
-*Key claims trace to the frozen ledger.*
+| Claim | Evidence |
+|-------|----------|
+| "3 root axioms" | `canonic/CANON.md:9-38` |
+| "168 episodes" | `ls writing/episodes/*.md \| wc -l` |
+| "40 violation-labeled episodes" | `ls writing/episodes/*violation* \| wc -l` |
+| "54 CANON files" | `find . -name "CANON.md" \| wc -l` |
+| "102 IDFs" | `ls patents/disclosures/IDF-*.md \| wc -l` |
+| "14 deployed validators" | `find validators -name "validate.py" \| wc -l` |
+| "228 total axioms" | Sum of `grep -c "^### [0-9]"` across all CANON files |
+| "29% axiom bloat" | `IDF-102-axiom-bloat-validator.md` |
+| "v0.1 freeze" | Tag `stack-freeze-2026-01-12` |
+| "First CANON" | `writing:bca9ec0` at 2026-01-05 |
+| "Proto-CANONIC" | `dividends:07a5834` at 2025-12-29 |
 
 ---

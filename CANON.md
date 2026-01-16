@@ -6,42 +6,13 @@ inherits: /canonic/machine/os/writing
 
 ## Axioms
 
-### 1. Triad
-
-A PAPER scope **MUST** contain the following artifacts:
-
-- `CANON.md`
-- `VOCAB.md`
-- `README.md`
-
-Absence of any triad artifact renders the PAPER scope invalid.
+### 1. Triad primacy in narrative
 
 In PAPER narratives and figures, the Triad **MUST** be introduced before any downstream primitives or mechanisms.
 
 ---
 
-### 2. Inheritance
-
-This CANON **MUST** inherit all axioms from its parent scope.
-
-- Inherited axioms are final.
-- This CANON **MUST NOT** override or contradict inherited axioms.
-- Inheritance terminates at the root scope.
-
----
-
-### 3. Introspection
-
-`VOCAB.md` **MUST** define every concept used by:
-
-- this CANON
-- `VOCAB.md` itself
-
-Undefined concepts render the PAPER scope invalid.
-
----
-
-### 4. Epistemic-only scope
+### 2. Epistemic-only scope
 
 PAPER is epistemic only.
 
@@ -51,7 +22,7 @@ PAPER is epistemic only.
 
 ---
 
-### 5. Ledger authority
+### 3. Ledger authority
 
 All claims made within the PAPER scope **MUST** be traceable to authoritative ledger evidence.
 
@@ -60,7 +31,7 @@ All claims made within the PAPER scope **MUST** be traceable to authoritative le
 
 ---
 
-### 6. Evidence units
+### 4. Evidence units
 
 Episodes are the atomic evidence units for PAPER.
 
@@ -69,14 +40,14 @@ Episodes are the atomic evidence units for PAPER.
 
 ---
 
-### 7. Claim admissibility
+### 5. Claim admissibility
 
 A claim is admissible in PAPER if and only if it is traceable to ledger evidence,
 framed as an observation (not a rule), and bounded by the episodes analyzed.
 
 ---
 
-### 8. Retrospective reconstruction
+### 6. Retrospective reconstruction
 
 PAPER **MUST** be reconstructed retrospectively from recorded execution.
 
@@ -85,7 +56,7 @@ PAPER **MUST** be reconstructed retrospectively from recorded execution.
 
 ---
 
-### 9. Evolutionary timeline disclosure
+### 7. Evolutionary timeline disclosure
 
 PAPER **MUST** disclose the evolutionary timeline of the system under study,
 including the earliest relevant CANON artifact(s), all declared fixation or
@@ -95,7 +66,7 @@ Timeline disclosure **MAY** be qualitative or quantitative, but **MUST** be expl
 
 ---
 
-### 10. Versioning discipline
+### 8. Versioning discipline
 
 PAPER versions **MUST** be explicit and anchored to a freeze or fixation
 reference.
@@ -106,7 +77,7 @@ reference.
 
 ---
 
-### 11. Insight–law separation
+### 9. Insight–law separation
 
 Insights discovered within PAPER **MUST NOT** acquire governance force.
 
@@ -115,7 +86,7 @@ Insights discovered within PAPER **MUST NOT** acquire governance force.
 
 ---
 
-### 12. Minimality
+### 10. Minimality
 
 PAPER governance **MUST** remain minimal.
 
@@ -124,7 +95,7 @@ PAPER governance **MUST** remain minimal.
 
 ---
 
-### 13. Manuscript primacy
+### 11. Manuscript primacy
 
 The manuscript is the primary PAPER artifact.
 
@@ -133,7 +104,7 @@ The manuscript is the primary PAPER artifact.
 
 ---
 
-### 14. Section anchoring
+### 12. Section anchoring
 
 Figures and tables **MUST** be anchored to the section they illustrate.
 
@@ -143,7 +114,7 @@ Figures and tables **MUST** be anchored to the section they illustrate.
 
 ---
 
-### 15. Section continuity
+### 13. Section continuity
 
 Each section **MUST** include a brief lead-in and a brief follow-through to
 maintain narrative continuity across the manuscript.
@@ -152,7 +123,7 @@ maintain narrative continuity across the manuscript.
 
 ---
 
-### 16. Model identity disclosure
+### 14. Model identity disclosure
 
 Claims involving AI production **MUST** disclose model identity.
 
@@ -160,6 +131,65 @@ Claims involving AI production **MUST** disclose model identity.
 - Model identity **MAY** be established via alignment analysis when direct recording is unavailable.
 
 ---
+
+### 15. Multi-window evidence
+
+PAPER **MAY** span multiple evidence windows (e.g., v0.1 freeze, v0.2 post-freeze).
+
+- Each evidence window **MUST** be explicitly declared with tag, timestamp, and commit.
+- Claims **MUST** cite which evidence window bounds them.
+- Post-freeze claims **MUST** be marked as reconstruction unless a new freeze is declared.
+
+---
+
+### 16. Explicit claim citation
+
+Every quantitative or observational claim **MUST** cite evidence.
+
+- Evidence citations **MUST** reference verifiable artifacts (commits, tags, episodes, IDFs, commands).
+- Claims without citations are inadmissible.
+- An Evidence Links section **MUST** map key claims to their evidence references.
+
+---
+
+### 17. Describe-then-demonstrate pattern
+
+PAPER **SHOULD** follow the describe-then-demonstrate versioning pattern.
+
+- Version `v0.n` **SHOULD** describe findings as observations.
+- Version `v0.n+1` **SHOULD** demonstrate features that were provisional in `v0.n`.
+- Provisional claims in `v0.n` become evidence in `v0.n+1` when the system exhibits the described behavior.
+
+---
+
+### 18. Manuscript drift disclosure
+
+PAPER **MUST** disclose significant concept drift across manuscript evolution.
+
+- When framing changes (e.g., "seven primitives" → "three axioms"), the change **MUST** be documented.
+- Drift disclosure **MAY** appear in Limitations or as inline narrative.
+- Concept consolidation is permitted but **MUST** be traceable to commit history.
+
+---
+
+### 19. Appendix-supplement separation
+
+PAPER **SHOULD** separate invariant content (Appendix) from growing content (Supplement).
+
+- Appendix content (proofs, definitions, protocols) **MUST** remain stable across versions.
+- Supplement content (inventories, metrics, evidence links) **MAY** change with each evidence window.
+- Each supplement section **MUST** declare its evidence window (e.g., "v0.2").
+
+---
+
+## Inherited Constraints
+
+This scope inherits from WRITING (/canonic/machine/os/writing):
+- **Triad** (ROOT Axiom 1): CANON.md, VOCAB.md, README.md required
+- **Inheritance** (ROOT Axiom 2): Inherited axioms are final
+- **Introspection** (ROOT Axiom 3): VOCAB defines all concepts
+- **Non-governance** (WRITING Axiom 1): WRITING MUST NOT define governance
+- **Immutability** (WRITING Axiom 4): Recorded episodes MUST NOT be modified
 
 ---
 
