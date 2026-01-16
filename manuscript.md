@@ -1046,30 +1046,50 @@ The root CANONIC.md explicitly states at line 107-108:
 
 ---
 
-### Axiomatic Closure (IDF-108)
+### Axiomatic Closure (IDF-108, IDF-133, IDF-135)
 
 The closure theorem proves {Triad, Inheritance, Introspection} is a complete basis:
 
-| Property | Axiom | Closure |
-|----------|-------|---------|
-| Structure | Triad | What files exist |
-| Authority | Inheritance | What can override what |
-| Semantics | Introspection | What terms mean |
+| Property | Axiom | Symbol | Closure |
+|----------|-------|--------|---------|
+| Structure | Triad | T | What must exist |
+| Authority | Inheritance | I | Where authority flows from |
+| Semantics | Introspection | N | What terms must be defined |
 
-All 110 IDFs reduce to applications of these three axioms. No fourth axiom exists.
+**The T/I/N Decomposition:** Every IDF claim reduces to atomic axioms classified under exactly one of three gates. This was discovered during the v0.2 evidence window when an initial approach (scope-based IDFs) was recognized as non-canonical. The insight: "decompose IDFs into atomic axioms under TRIAD, INHERITANCE, INTROSPECTION" led to complete portfolio decomposition.
 
-### Atomic Axiom Consolidation
+**Ledger evidence:** The evolution is preserved in `patents/disclosures/archive-2026-01-16/` containing pre-decomposition IDFs (IDF-133 through IDF-140 originals). Commit `a549c3f` documents the transition.
 
-107+ IDFs consolidate to ~20 atomic axioms for patent portfolio:
+| Gate | Axiom Count | Examples |
+|------|-------------|----------|
+| T (Triad) | 27 | Scope MUST contain CANON.md; Evidence chain MUST be traversable |
+| I (Inheritance) | 31 | Humans hold exclusive authority; Child scopes cannot override parent |
+| N (Introspection) | 28 | All tokens in CANON MUST be defined in VOCAB; VOCAB MUST self-define |
+| **Total** | **86** | |
 
-| Atomic Axiom | Key IDFs | Blocking Scope |
-|--------------|----------|----------------|
-| A1: Ledger-defined state | 001, 027, 107 | All governance |
-| A2: Introspection closure | 006, 038, 059 | Semantic validity |
-| A3: Inheritance finality | 007, 061 | Authority hierarchy |
-| A4: Black-box validation | 008, 057-062 | Enforcement |
-| A7: Semantic formatting | 104, 109 | Structural validity |
-| A8: Stateless production | 107 | AI continuity |
+All 134 IDFs decompose completely. Zero claims fall outside T/I/N classification. This proves CANONIC governance is mathematically closed under three orthogonal dimensions.
+
+**Evidence:** IDF-133 (Axiomatic IDF Decomposition), IDF-134 (Portfolio Axiom Closure), IDF-135 (CANONIC Axiom Inventory)
+
+### Provisional Filing Structure
+
+The T/I/N decomposition enables axiom-typed patent filing:
+
+```
+PROVISIONAL A: TRIAD Claims (T₁–T₂₇)
+    Structural presence axioms
+    Patent: Constitutional Governance Structure
+
+PROVISIONAL B: INHERITANCE Claims (I₁–I₃₁)
+    Authority chain axioms
+    Patent: Hierarchical Authority Governance
+
+PROVISIONAL C: INTROSPECTION Claims (N₁–N₂₈)
+    Semantic closure axioms
+    Patent: Self-Referential Semantic Governance
+```
+
+Filing by axiom type (not IDF number) maximizes claim coherence. Each provisional covers an orthogonal governance dimension.
 
 ### Production Behavior (IDF-110)
 
