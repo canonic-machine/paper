@@ -182,6 +182,28 @@ PAPER **SHOULD** separate invariant content (Appendix) from growing content (Sup
 
 ---
 
+### 20. Law-prose co-evolution
+
+PAPER **SHOULD** document the co-evolution of governance axioms (law) and scientific claims (prose).
+
+- Drift in CANON (law) **MUST** be reflected in manuscript corrections (prose).
+- Drift in manuscript claims **MAY** reveal CANON incompleteness or misplacement.
+- The relationship is evolutionary: violations are failed mutations; corrections are adaptations.
+
+---
+
+### 21. Drift as evidence
+
+PAPER **MUST** treat drift patterns as primary evidence, not secondary artifacts.
+
+- Violations **MUST** be documented, not erased.
+- Each drift type **SHOULD** be categorized and quantified.
+- The drift record is the fossil record of system evolution.
+
+(IDF-104)
+
+---
+
 ## Inherited Constraints
 
 This scope inherits from WRITING (/canonic/machine/os/writing):

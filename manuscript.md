@@ -10,9 +10,11 @@ What if an AI could not bullshit its way through scientific prose—not because 
 
 CANONIC is the governance framework we built to make AI slop structurally inadmissible. Claims must trace to a ledger; every term used in rules must be defined; the AI cannot promote its own ideas to law.
 
-This paper spans two evidence windows. At v0.1 freeze, we observed 129 episodes and 33 violations across 9 repositories. Post-freeze (v0.2), the system evolved to 168 episodes, 102 IDFs, and 14 deployed validators across 54 governed scopes.
+This paper spans two evidence windows. At v0.1 freeze, we observed 129 episodes and 33 violations across 9 repositories. Post-freeze (v0.2), the system evolved to 164 episodes, 104 IDFs, and 16 deployed validators across 54 governed scopes.
 
 The result is this paper. It does not describe an experiment. It is the experiment. Every claim cites evidence so you can verify it yourself.
+
+**The deeper insight:** This paper is an evolutionary analysis of law and prose. Under constitutional constraint, governance axioms (law) and scientific claims (prose) co-evolve—each drift in one domain reveals structure in the other. The violations are not bugs; they are the fossil record of this co-evolution.
 
 ---
 
@@ -150,41 +152,197 @@ Rules flow from root; constraints accumulate; no downstream scope can override i
 
 ---
 
-## Results
+## Results: Drift Analysis
 
-### v0.1 Freeze Window
+We performed a complete closure analysis across all three root axioms. The results reveal where drift occurs and how it manifests.
 
-At `stack-freeze-2026-01-12`:
+### Axiom 1: Triad Closure
+
+**Definition:** Every scope MUST contain CANON.md, VOCAB.md, README.md.
 
 | Metric | Count |
 |--------|-------|
-| Episode artifacts | 129 |
-| Violation-labeled | 33 |
-| Triad-compliant scopes | 12 |
-| IDFs | 52 |
-| Root axioms | 3 |
+| Total scopes analyzed | 54 |
+| Fully compliant | 53 |
+| Violations | 1 |
+| **Compliance** | **98.1%** |
 
-Every violation was detected, documented, and corrected via new commit (never revision). Violations are features, not bugs—they prove the system catches problems and preserves the learning process.
+**The violation:** `validators/gap-validator` contains CANON.md and README.md but lacks VOCAB.md—an incomplete scope.
 
-**Evidence:** `writing/episodes/ep136-stack-compliance-reports.md`
+**Evidence:** `find . -name "CANON.md" | wc -l` across all repos.
 
-### v0.2 Post-Freeze Execution
+---
 
-Post-freeze, the system evolved significantly:
+### Axiom 2: Inheritance Closure
+
+**Definition:** Every CANON MUST declare inheritance; inherited axioms are final.
+
+| Metric | Count |
+|--------|-------|
+| Scopes with declared inheritance | 54/54 (100%) |
+| Scopes with verifiable parent scope | 24/54 (44.4%) |
+| Scopes with compound paths | 30/54 (55.6%) |
+| Axiom override violations | 0 |
+
+**The structural gap:** 30 scopes declare inheritance from compound paths (e.g., `/canonic/machine/os/writing`) that represent a *logical* governance hierarchy but don't correspond to actual filesystem directories. This is intentional—the inheritance architecture is semantic, not physical—but creates a validation gap.
+
+**Example:** `paper/CANON.md` inherits from `/canonic/machine/os/writing`, a path that exists logically but not as a single directory containing CANON.md.
+
+---
+
+### Axiom 3: Introspection Closure
+
+**Definition:** VOCAB MUST define every concept used by CANON and VOCAB itself.
+
+| Metric | Count |
+|--------|-------|
+| Scopes with complete introspection | 34 |
+| Scopes with undefined concepts | 19 |
+| Total undefined concepts | 59 |
+| **Closure** | **63.0%** |
+
+**Pattern:** Violations cluster in two categories:
+
+1. **Domain-specific terms** (regulatory, business): `companies/onconex/eu` references GDPR, MDR, EU AI Act without defining them.
+2. **Core axiom names**: `paper/`, `publishing/` reference "Triad", "Inheritance", "Introspection" without local VOCAB definitions.
+
+The second category reveals an architectural question: should downstream scopes re-define inherited concepts, or inherit VOCAB?
+
+**Evidence:** Introspection-validator output across all 54 CANON.md files.
+
+---
+
+### Drift Type Analysis
+
+We identified eight distinct drift patterns:
+
+| Drift Type | Instances | Violation? | Status |
+|------------|-----------|-----------|--------|
+| **Layer drift** | 5 | Yes | Remediated (IDF-096) |
+| **Axiom bloat** | 58 axioms (29%) | Yes | Validator deployed (IDF-102) |
+| **Automation drift** | 14+ scopes | No | Bounded by axioms |
+| **Vocabulary drift** | 19 scopes | Partial | Closure validator deployed |
+| **Protocols-to-patents drift** | 100% conversion | No | Structural phenomenon |
+| **Bootstrapping drift** | Multiple scopes | No | Phase transitions formalized |
+| **Inheritance path drift** | 30 scopes | Partial | Standardization debt |
+| **Manuscript drift** | 4 concept shifts | No | Disclosed (IDF-103) |
+
+---
+
+### Layer Drift (IDF-096)
+
+**Definition:** When a scope exceeds its layer purpose.
+
+The root CANON contained 8 axioms at v0.1. Analysis revealed 5 were layer violations:
+
+| Axiom | Violation Type | Proper Layer |
+|-------|---------------|--------------|
+| Repository licensing | Procedural | OS |
+| Root minimalism | Meta-referential | None (self-violating) |
+| VOCAB closure | Permissive guidance | TEMPLATES |
+| Layer discipline | Meta-referential | None (self-violating) |
+| Lifecycle documentation | Guidance | TEMPLATES |
+
+**Remediation:** Root CANON compressed to pure 3-axiom form. Commit `canonic:24d1b4b`.
+
+**Insight:** Meta-axioms like "Root minimalism" violate themselves by existing. IDF-096 formalizes this as a validator.
+
+---
+
+### Axiom Bloat Drift (IDF-102)
+
+**Definition:** Re-declaration of inherited axioms, violating inheritance finality.
+
+| Metric | Before | After | Removed |
+|--------|--------|-------|---------|
+| paper/CANON.md | 16 axioms | 14 axioms | Triad, Inheritance, Introspection |
+| publishing/CANON.md | 7 axioms | 4 axioms | Triad, Inheritance, Introspection |
+| writing/episodes/CANON.md | 5 axioms | 3 axioms | Immutability, Non-authority |
+
+**Total bloat:** 58 axioms (29% of 197) were redundant re-declarations.
+
+**Evidence:** `validators/axiom-bloat-validator/validate.py`
+
+---
+
+### Automation Drift
+
+**Definition:** Trajectory from human-governed to AI-assisted execution.
+
+Every CANON.md with a Lifecycle section declares its automation trajectory:
+
+| Scope | Current State | Drift Bound |
+|-------|--------------|-------------|
+| WRITING | AI-assisted | Axiom 6 (Human episode authority) |
+| PATENTS | AI-assisted discovery | Human fixation required |
+| CANONIC | AI-assisted validation | Axiom definition stays human |
+| STACK | AI-assisted validation | Membership authority stays human |
+
+**Insight:** Automation drift is bounded by axioms. Each scope declares what AI may automate and what must stay human. The bounds are constitutional, not technical.
+
+---
+
+### v0.1 vs v0.2 Evolution
 
 | Metric | v0.1 | v0.2 | Delta |
 |--------|------|------|-------|
-| Episodes | 129 | 168 | +39 |
-| Violations | 33 | 40 | +7 |
+| Episodes | 129 | 164 | +35 |
+| Violations documented | 33 | 40 | +7 |
 | CANON files | 12 | 54 | +42 |
-| IDFs | 52 | 102 | +50 |
-| Validators | 0 | 14 | +14 |
+| IDFs | 52 | 104 | +52 |
+| Validators | 0 | 16 | +16 |
+| Root axioms | 3 | 3 | 0 |
 
-**Validator Deployment:** 14 validators now enforce the constitution, from triad-validator (checks basic structure) to axiom-bloat-validator (detects inheritance violations). Full validator list in Supplement S3.
+**Key observation:** Root axioms stayed constant while downstream complexity grew 4x. This validates the constitutional model: stable foundation, extensible specialization.
 
-**Axiom Bloat Remediation:** We discovered 29% axiom bloat—58 axioms were re-declarations of inherited constraints. After remediation via axiom-bloat-validator (IDF-102), the stack compressed to lean form. Remediation details in Supplement S4.
+---
 
-**Axiom Clustering:** Nine semantic clusters emerged from analyzing all 228 axioms. The dominance of MUST/MUST NOT (96%) reflects constitutional intent: hard constraints, not recommendations. Cluster analysis in Supplement S5.
+## The Evolutionary Analysis: Law and Prose Co-Evolve
+
+The drift patterns reveal something unexpected: **law and prose are not separate artifacts—they co-evolve under constraint.**
+
+### The Co-Evolution Pattern
+
+When we write a CANON axiom (law), we implicitly constrain what the manuscript (prose) can claim. When we write a claim in the manuscript, we often discover that the axiom is incomplete, redundant, or misplaced. The correction requires updating both.
+
+| Drift Type | Law Effect | Prose Effect |
+|------------|-----------|--------------|
+| Layer drift | Axioms in wrong scope | Claims cite wrong authority |
+| Axiom bloat | Redundant governance | Redundant citations |
+| Vocabulary drift | Undefined terms in CANON | Undefined terms in manuscript |
+| Inheritance path drift | Structural debt | Citation path complexity |
+
+**Example:** The root CANON originally contained "Root minimalism"—an axiom that *is itself* a minimalism violation. Detecting this required *writing about it* in the manuscript, which forced us to confront the self-contradiction. The prose revealed the law's error.
+
+### Evolutionary Pressure
+
+Constitutional constraint creates selection pressure:
+
+1. **Inadmissibility** filters out claims that can't trace to evidence
+2. **Introspection** filters out terms that aren't defined
+3. **Inheritance finality** filters out redundant axioms
+
+The surviving claims and axioms are those that satisfy all constraints simultaneously. This is evolution by structural inadmissibility.
+
+### The Fossil Record
+
+Violations are the fossil record of this evolution:
+
+- **40 violation-labeled episodes** document claims that were initially inadmissible
+- **58 bloated axioms** document governance that was initially redundant
+- **5 layer violations** document authority that was initially misplaced
+
+Each violation is a failed mutation. The corrections are adaptations. The ledger preserves the entire phylogeny.
+
+### Why This Matters
+
+Traditional scientific writing separates method (how we did it) from results (what we found). Constitutional governance unifies them:
+
+- The **method** is the governance system (CANON, VOCAB, validators)
+- The **results** are the drift patterns detected by that system
+- The **paper** is both the observation and the observed
+
+This reflexivity is not a bug—it is the core contribution. The paper proves itself by documenting its own evolution.
 
 ---
 
@@ -524,15 +682,36 @@ The dominance of MUST/MUST NOT (96%) reflects constitutional intent: hard constr
 | Claim | Evidence |
 |-------|----------|
 | "3 root axioms" | `canonic/CANON.md:9-38` |
-| "168 episodes" | `ls writing/episodes/*.md \| wc -l` |
+| "164 episodes" | `ls writing/episodes/*.md \| wc -l` |
 | "40 violation-labeled episodes" | `ls writing/episodes/*violation* \| wc -l` |
 | "54 CANON files" | `find . -name "CANON.md" \| wc -l` |
-| "102 IDFs" | `ls patents/disclosures/IDF-*.md \| wc -l` |
-| "14 deployed validators" | `find validators -name "validate.py" \| wc -l` |
-| "228 total axioms" | Sum of `grep -c "^### [0-9]"` across all CANON files |
+| "104 IDFs" | `ls patents/disclosures/IDF-*.md \| wc -l` |
+| "16 deployed validators" | `find validators -name "validate.py" \| wc -l` |
+| "197 total axioms" | Sum of `grep -c "^### [0-9]"` across all CANON files (post-bloat-remediation) |
 | "29% axiom bloat" | `IDF-102-axiom-bloat-validator.md` |
+| "98.1% Triad compliance" | `triad-validator` output across 54 scopes |
+| "63.0% Introspection closure" | `introspection-validator` output across 54 scopes |
+| "5 layer drift violations" | `IDF-096-layer-drift-validator.md` |
 | "v0.1 freeze" | Tag `stack-freeze-2026-01-12` |
 | "First CANON" | `writing:bca9ec0` at 2026-01-05 |
 | "Proto-CANONIC" | `dividends:07a5834` at 2025-12-29 |
+
+---
+
+## S7. Drift Pattern IDFs (v0.2)
+
+| Drift Type | IDF | Title |
+|------------|-----|-------|
+| Layer drift | IDF-096 | Layer Drift Validator |
+| Axiom bloat | IDF-102 | Axiom Bloat Validator |
+| Automation drift | IDF-005 | Episodic Drift Detection |
+| Vocabulary drift | IDF-057 | Vocab Locality Validator |
+| Protocols-to-patents | IDF-068 | Protocols-to-Patents Drift |
+| Bootstrapping | IDF-095 | Structural Bootstrapping |
+| Inheritance paths | IDF-007 | Hierarchical Authority Scoping |
+| Manuscript drift | IDF-103 | Manuscript Drift Disclosure |
+| Semantic formatting | IDF-104 | Semantic Formatting Ontology |
+
+**Evidence:** `ls patents/disclosures/IDF-*.md | wc -l` = 104
 
 ---

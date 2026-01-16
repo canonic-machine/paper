@@ -138,9 +138,51 @@ Ledger-based analysis of changes across time in governance or artifacts.
 
 ---
 
+### law-prose co-evolution
+
+The phenomenon where governance axioms (law) and scientific claims (prose) evolve together under constitutional constraint, with drift in one revealing structure in the other.
+
+---
+
 ### drift
 
 Observed divergence of artifacts or behavior over time.
+
+---
+
+### layer drift
+
+Drift where a scope exceeds or violates its layer purpose.
+
+---
+
+### axiom bloat
+
+Redundant re-declaration of inherited axioms, violating inheritance finality.
+
+---
+
+### automation drift
+
+Trajectory from human-governed to AI-assisted execution within a scope.
+
+---
+
+### vocabulary drift
+
+Terms used without definition, or definitions without use.
+
+---
+
+### inheritance path drift
+
+Discrepancy between declared inheritance paths and actual filesystem structure.
+
+---
+
+### fossil record
+
+The preserved history of violations and corrections that documents system evolution.
 
 ---
 
