@@ -228,6 +228,18 @@ Version numbering convention where v0.x indicates bootstrapping, v1.0 indicates 
 
 ---
 
+### v0.n
+
+A pre-release version describing findings as observations.
+
+---
+
+### v0.n+1
+
+A subsequent version demonstrating features that were provisional in v0.n.
+
+---
+
 ### multi-temporal authorship
 
 Contribution pattern where authors (human or AI) contribute across non-contiguous time windows with ledger continuity.
@@ -243,6 +255,36 @@ The property that new evidence windows add claims while prior claims remain (per
 ### IP flow
 
 The pattern by which intellectual property moves from observations through disclosures to implementations to applications to release.
+
+---
+
+### observations
+
+Claims derived from frozen ledger evidence (IP flow stage 1).
+
+---
+
+### disclosures
+
+Filed invention disclosures documenting patterns (IP flow stage 2).
+
+---
+
+### implementations
+
+Deployed mechanisms based on disclosed patterns (IP flow stage 3).
+
+---
+
+### applications
+
+Patent applications filed based on disclosures (IP flow stage 4).
+
+---
+
+### release
+
+Public release of code or artifacts (IP flow stage 5).
 
 ---
 
