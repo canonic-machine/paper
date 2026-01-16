@@ -118,6 +118,26 @@ Triad + SPEC = scope (closed)
 | 86 atomic axioms under T/I/N | `disclosures/DISCLOSURES.md` | IDF-135 |
 | Layer drift → structurally inadmissible | SPEC governance paths | IDF-096 |
 
+### Drift IS the Patent Machine
+
+Each drift pattern observed → enforcement mechanism → blocking claim:
+
+| Drift Type | Enforcement | Claim |
+|------------|-------------|-------|
+| Layer drift | SPEC governance path | "Scope closed by SPEC" |
+| Axiom bloat | Inheritance finality | "Inherited axioms MUST NOT be overridden" |
+| Vocabulary drift | Introspection closure | "All tokens MUST be defined" |
+| Authority creep | Inheritance termination | "Inheritance MUST terminate at /" |
+| Semantic drift | VOCAB self-reference | "VOCAB MUST define itself" |
+
+**The insight:** Observing drift reveals enforcement gaps. Enforcement gaps become validator specs. Validator specs become patent claims. The drift itself IS the patent machine.
+
+```
+DRIFT → ENFORCEMENT → CLAIM
+
+IDF-041: "CANONIC drifted from documentation protocols to IP generation"
+```
+
 ### IDF Portfolio
 
 ```
