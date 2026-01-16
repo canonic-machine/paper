@@ -373,6 +373,12 @@ An observation discovered within PAPER that has no governance force.
 
 ---
 
+### inheritance
+
+The property that scopes derive axioms from their declared parent scope.
+
+---
+
 ### introspection
 
 The property that VOCAB defines all concepts used by CANON and VOCAB.
@@ -576,6 +582,12 @@ elapsed time between them.
 ### traceability
 
 The property of being linked to ledger evidence.
+
+---
+
+### triad
+
+The governance requirement that every scope contains CANON.md, VOCAB.md, and README.md.
 
 ---
 
