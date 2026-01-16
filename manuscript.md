@@ -54,26 +54,31 @@ We wanted something different: a system where AI slop is structurally inadmissib
 
 The insight is simple: treat AI collaboration like a legal system.
 
-The root primitive is the **Triad**—`CANON.md`, `VOCAB.md`, and `README.md`. Every governed scope requires these three files. When present, SPEC (named `CANONIC.md` at root, `PAPER.md` for paper) defines scope intent and completes the closure.
+The root primitive is the **Triad**—`CANON.md`, `VOCAB.md`, and `README.md`. Every governed scope requires these three files. Optionally, **SPEC** (named `CANONIC.md` at root, `PAPER.md` for paper) closes the CANON and can extend it with generation details.
 
 ```mermaid
 flowchart TB
-    subgraph Closure[Scope Closure]
-        SPEC[SPEC<br/>Intent]
+    subgraph Triad[Required Triad]
         CANON[CANON<br/>Rules]
         VOCAB[VOCAB<br/>Definitions]
         README[README<br/>Description]
     end
 
-    SPEC -->|terms must be in| VOCAB
-    SPEC --> CANON
-    SPEC --> README
-    CANON -->|terms must be in| VOCAB
-    README -->|terms must be in| VOCAB
-    VOCAB -->|self-defines| VOCAB
+    subgraph Optional[Optional Fourth Element]
+        SPEC[SPEC<br/>Closes CANON]
+    end
+
+    CANON <-->|mutual closure<br/>Axiom 3| VOCAB
+    README -->|spans, can extend| VOCAB
+    SPEC -->|closes, can extend| CANON
 ```
 
-SPEC defines intent (non-normative). CANON defines validity (normative). All artifacts use terms that must be defined in VOCAB. This closure makes terms admissible before any downstream execution.
+The closure relationships derive from Axiom 3 (Introspection):
+- **CANON ↔ VOCAB**: Mutual closure (Axiom 3 constrains both)
+- **README → VOCAB**: Spans VOCAB but can extend with new terms
+- **SPEC → CANON**: Closes CANON but can extend with generation details
+
+SPEC is optional but when present defines the paradigm. This four-element model was formalized in IDF-116.
 
 With the closure in place, a constitution defines validity, a ledger records what happened, and validators check compliance. Crucially, the AI can observe and propose, but only humans can change the rules.
 
@@ -405,6 +410,8 @@ We do not claim:
 The study is bounded by two evidence windows: v0.1 freeze and v0.2 current state.
 
 **Manuscript Drift:** This manuscript has evolved through 50+ commits. Early versions described "seven primitives" (triad, inheritance, introspection, immutability, model identity, ledger-first, insight-law separation). The current manuscript presents three root axioms (Triad, Inheritance, Introspection) with downstream primitives as specializations. This consolidation is intentional—the three axioms generate all other constraints—but readers should note that earlier commits used different framings.
+
+**SPEC Closure Drift:** Earlier versions of this manuscript (and the INTROSPECTION VOCAB) incorrectly described SPEC as "the triad" or showed SPEC terms constrained by VOCAB. IDF-116 (2026-01-16) formalized the correct model: SPEC is a fourth element, separate from triad, that closes CANON and can extend it. SPEC is not constrained by Axiom 3. This was a documented AI misunderstanding gap—see Supplement S9.
 
 ---
 
