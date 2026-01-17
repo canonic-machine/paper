@@ -18,12 +18,6 @@ An acting entity (human or AI) participating in production.
 
 ---
 
-### AI
-
-An artificial intelligence system capable of autonomous action.
-
----
-
 ### alignment
 
 A mapping between episode agent labels and actual model identities.
@@ -415,24 +409,6 @@ An observation discovered within PAPER that has no governance force.
 
 ---
 
-### inheritance
-
-The property that scopes derive axioms from their declared parent scope.
-
----
-
-### introspection
-
-The property that VOCAB defines all concepts used by CANON and VOCAB.
-
----
-
-### ledger
-
-The authoritative record of state transitions.
-
----
-
 ### manuscript
 
 The narrative paper produced under PAPER.
@@ -542,12 +518,6 @@ A claim framed descriptively rather than normatively.
 
 ---
 
-### PAPER
-
-The epistemic scope for analysis and narrative.
-
----
-
 ### post-freeze
 
 Evidence produced after the freeze declaration.
@@ -590,12 +560,6 @@ A claim expressed with counts, rates, durations, or other numeric metrics.
 
 ---
 
-### stack
-
-The set of repositories governed under CANONIC.
-
----
-
 ### stability analysis
 
 Analysis of whether constraints and patterns remain consistent across time.
@@ -624,12 +588,6 @@ elapsed time between them.
 ### traceability
 
 The property of being linked to ledger evidence.
-
----
-
-### triad
-
-The governance requirement that every scope contains CANON.md, VOCAB.md, and README.md.
 
 ---
 
