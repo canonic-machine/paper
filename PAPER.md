@@ -36,7 +36,7 @@ PAPER is epistemic only. It observes and reconstructs execution; it does not pre
 |-------|-------|
 | Path | `/canonic/machine/os/writing/paper/` |
 | Inherits | `/canonic/machine/os/writing/` |
-| Closes | CANON.md (28 axioms) |
+| Closes | CANON.md (29 axioms) |
 
 ---
 
@@ -99,11 +99,13 @@ PAPER validity requires:
 
 ## 7. Evolutionary Arc
 
-### Origin: MammoChat OptsEgo
+Per CANON Axiom 29 (Evolutionary arc disclosure), the following phases document CANONIC's evolution to closure.
 
-The CANONIC paradigm emerged from MammoChat OptsEgo—an AI agent that discovered governance patterns through its own execution. OptsEgo demonstrated that AI could observe, document, and propose constraints from operation. The agent became the first evidence that governance could be discovered, not designed.
+### Phase 0: Origin (MammoChat OptsEgo)
 
-### Pre-CANONIC: Dividends & Deaths
+The paradigm emerged from MammoChat OptsEgo—an AI agent that discovered governance patterns through its own execution. OptsEgo demonstrated that AI could observe, document, and propose constraints from operation. The agent became the first evidence that governance could be discovered, not designed.
+
+### Phase 1: Pre-CANONIC (Dividends & Deaths)
 
 Before formal axiomatization, governance was implicit:
 - **Dividends**: Benefits distributed when patterns succeeded
@@ -111,7 +113,7 @@ Before formal axiomatization, governance was implicit:
 
 This pre-formal phase established the core insight: observe execution → extract constraints → codify governance. The pattern preceded the language.
 
-### Axiomatic Transformation
+### Phase 2: Axiomatic Transformation
 
 The informal patterns crystallized into three root axioms:
 - **Triad** (Axiom 1): CANON + VOCAB + README = minimal governance unit
@@ -120,7 +122,26 @@ The informal patterns crystallized into three root axioms:
 
 This transformation converted implicit patterns into a formal language specification. CANONIC became a language, not a methodology.
 
-### v0.1 Kernel
+### Phase 3: Patent Machine
+
+The axiom structure revealed a perfect discovery mechanism:
+- Drift (violation) → reveals enforcement gap
+- Gap → validator specification
+- Specification → patent claim
+- Claim → enforcement mechanism
+
+135 IDFs emerged through normal governed operation—not a separate IP process, but native to the paradigm.
+
+### Phase 4: Axiomatic Decomposition
+
+The 3 root axioms decomposed into 86 atomic axioms:
+- T (Triad): 27 axioms → PA-000
+- I (Inheritance): 31 axioms → PA-001
+- N (Introspection): 28 axioms → PA-002
+
+Each atomic axiom is a patent claim. The decomposition is the patent portfolio.
+
+### Phase 5: v0.1 Kernel
 
 The minimal fixed point discovered through 168 episodes and 135 IDFs:
 
@@ -131,7 +152,7 @@ Triad (CANON + VOCAB + README) = proto-scope (open)
 Triad + SPEC = scope (closed)
 ```
 
-### Key Observations
+#### Key Observations
 
 | Observation | Evidence | IDF |
 |-------------|----------|-----|
@@ -141,7 +162,7 @@ Triad + SPEC = scope (closed)
 | 86 atomic axioms under T/I/N | `disclosures/DISCLOSURES.md` | IDF-135 |
 | Layer drift → structurally inadmissible | SPEC governance paths | IDF-096 |
 
-### Drift IS the Patent Machine
+#### Drift IS the Patent Machine
 
 Each drift pattern observed → enforcement mechanism → blocking claim:
 
@@ -211,7 +232,7 @@ IDF-070: "Validator-as-a-Service"
 IDF-123: "VaaS Product Architecture"
 ```
 
-### IDF Portfolio
+#### IDF Portfolio
 
 ```
 135 IDFs → 86 atomic axioms
@@ -223,7 +244,7 @@ N (Introspection): 28 axioms → PROVISIONAL-C
 Evidence: LEDGER (patents/disclosures/)
 ```
 
-### Roadmap
+#### Roadmap
 
 ```
 v0.1 (current)
@@ -245,7 +266,7 @@ v1.0 (operational)
 
 ---
 
-## 8. System Closure (Bifurcation)
+### Phase 6: System Closure (Bifurcation)
 
 The system closes when:
 1. All scopes have SPEC (governance chain terminates)
@@ -257,21 +278,21 @@ The system closes when:
 
 What remains is **bifurcation**:
 
-### Path A: Commercialization (VaaS)
+#### Path A: Commercialization (VaaS)
 
 License VaaS as enforcement runtime:
 - Validator implementations remain trade secret
 - API access licensed per-scope or per-organization
 - FRAND terms for standards compliance
 
-### Path B: Open Source (CANONIC)
+#### Path B: Open Source (CANONIC)
 
 Release CANONIC specification:
 - Axioms, VOCAB, SPEC templates public
 - Anyone may implement validators
 - Ecosystem proliferates; enforcement diversifies
 
-### The Compiler Analogy
+#### The Compiler Analogy
 
 CANONIC is to governance what a programming language is to computation:
 

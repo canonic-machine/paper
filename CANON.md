@@ -338,61 +338,17 @@ The compiler analogy:
 
 ---
 
-## Evolutionary Arc
+### 29. Evolutionary arc disclosure
 
 PAPER **MUST** document the evolutionary arc that led to system closure.
 
-### Phase 0: Origin (MammoChat OptsEgo)
-
-The paradigm emerged from MammoChat OptsEgo—an AI agent that discovered its own governance patterns through execution. OptsEgo demonstrated that AI could observe, document, and propose governance constraints from its own operation.
-
-### Phase 1: Pre-CANONIC (Dividends & Deaths)
-
-Before formal axiomatization, governance was implicit in "Dividends" (benefits distributed) and "Deaths" (failed patterns). This pre-formal phase established the pattern: observe execution → extract constraints → codify governance.
-
-### Phase 2: Axiomatic Transformation
-
-The informal patterns crystallized into three root axioms:
-- **Triad**: CANON + VOCAB + README = minimal governance unit
-- **Inheritance**: Governance flows downward, constraints accumulate
-- **Introspection**: All terms must be defined; the system describes itself
-
-This transformation converted implicit patterns into a formal language specification.
-
-### Phase 3: Patent Machine
-
-The axiom structure revealed a perfect discovery mechanism:
-- Drift (violation) → reveals enforcement gap
-- Gap → validator specification
-- Specification → patent claim
-- Claim → enforcement mechanism
-
-135 IDFs emerged through normal governed operation—not a separate IP process, but native to the paradigm.
-
-### Phase 4: Axiomatic Decomposition
-
-The 3 root axioms decomposed into 86 atomic axioms:
-- T (Triad): 27 axioms → PROVISIONAL-A
-- I (Inheritance): 31 axioms → PROVISIONAL-B
-- N (Introspection): 28 axioms → PROVISIONAL-C
-
-Each atomic axiom is a patent claim. The decomposition is the patent portfolio.
-
-### Phase 5: System Closure (Bifurcation)
-
-The system closes when:
-1. All scopes have SPEC (governance chain terminates)
-2. All CANON terms defined in VOCAB (semantics closed)
-3. All inheritance paths terminate at / (authority closed)
-4. Validators pass (validity decidable)
-
-At closure, nothing remains to develop. The specification is complete.
-
-What remains is bifurcation:
-- **Path A (Commercialization)**: License VaaS as enforcement runtime
-- **Path B (Open Source)**: Release CANONIC specification
-
-The interpreter (VaaS) monetizes; the specification (CANONIC) proliferates.
+The arc **MUST** include:
+- Origin point (discovery mechanism)
+- Pre-formal phase (implicit governance)
+- Axiomatic transformation (crystallization into root axioms)
+- Patent machine emergence (drift → IDF → patent)
+- Axiomatic decomposition (root → atomic axioms)
+- System closure (bifurcation point)
 
 (IDF-107)
 
