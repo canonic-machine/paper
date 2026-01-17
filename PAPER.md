@@ -36,7 +36,7 @@ PAPER is epistemic only. It observes and reconstructs execution; it does not pre
 |-------|-------|
 | Path | `/canonic/machine/os/writing/paper/` |
 | Inherits | `/canonic/machine/os/writing/` |
-| Closes | CANON.md (27 axioms) |
+| Closes | CANON.md (28 axioms) |
 
 ---
 
@@ -97,7 +97,30 @@ PAPER validity requires:
 
 ---
 
-## 7. v0.1 Kernel
+## 7. Evolutionary Arc
+
+### Origin: MammoChat OptsEgo
+
+The CANONIC paradigm emerged from MammoChat OptsEgo—an AI agent that discovered governance patterns through its own execution. OptsEgo demonstrated that AI could observe, document, and propose constraints from operation. The agent became the first evidence that governance could be discovered, not designed.
+
+### Pre-CANONIC: Dividends & Deaths
+
+Before formal axiomatization, governance was implicit:
+- **Dividends**: Benefits distributed when patterns succeeded
+- **Deaths**: Failed patterns that revealed constraints
+
+This pre-formal phase established the core insight: observe execution → extract constraints → codify governance. The pattern preceded the language.
+
+### Axiomatic Transformation
+
+The informal patterns crystallized into three root axioms:
+- **Triad** (Axiom 1): CANON + VOCAB + README = minimal governance unit
+- **Inheritance** (Axiom 2): Governance flows downward, constraints accumulate
+- **Introspection** (Axiom 3): All terms must be defined; the system describes itself
+
+This transformation converted implicit patterns into a formal language specification. CANONIC became a language, not a methodology.
+
+### v0.1 Kernel
 
 The minimal fixed point discovered through 168 episodes and 135 IDFs:
 
@@ -219,6 +242,56 @@ v1.0 (operational)
 ├── Commercial architecture live
 └── FRAND licensing active
 ```
+
+---
+
+## 8. System Closure (Bifurcation)
+
+The system closes when:
+1. All scopes have SPEC (governance chain terminates)
+2. All CANON terms defined in VOCAB (semantics closed)
+3. All inheritance paths terminate at / (authority closed)
+4. Validators pass (validity decidable)
+
+**At closure, nothing remains to develop. The specification is complete.**
+
+What remains is **bifurcation**:
+
+### Path A: Commercialization (VaaS)
+
+License VaaS as enforcement runtime:
+- Validator implementations remain trade secret
+- API access licensed per-scope or per-organization
+- FRAND terms for standards compliance
+
+### Path B: Open Source (CANONIC)
+
+Release CANONIC specification:
+- Axioms, VOCAB, SPEC templates public
+- Anyone may implement validators
+- Ecosystem proliferates; enforcement diversifies
+
+### The Compiler Analogy
+
+CANONIC is to governance what a programming language is to computation:
+
+| Make Concept | CANONIC Equivalent | Description |
+|--------------|-------------------|-------------|
+| source | CANON.md | Governance axioms (law) |
+| grammar | VOCAB.md | Semantic definitions |
+| headers | SPEC.md | Closes compilation unit |
+| make | validators | Compile/check validity |
+| linker | inheritance | Resolve scope dependencies |
+| binary | README.md | Compiled output (derived) |
+| make install | VaaS deploy | Deploy enforcement to runtime |
+| run | episodes | Execution produces evidence |
+| stdout | LEDGER | Execution trace |
+| make clean | git reset | Delete derived artifacts |
+| rebuild | new evidence window | clean + make + install |
+
+The interpreter (VaaS) monetizes; the specification (CANONIC) proliferates.
+
+Anyone may write C; gcc is a product.
 
 ---
 

@@ -304,6 +304,100 @@ Version transitions are human decisions, not automated triggers.
 
 ---
 
+### 28. Specification–interpreter bifurcation
+
+PAPER **MUST** document the bifurcation between specification and interpreter.
+
+CANONIC is a formal specification language. VaaS is the enforcement interpreter.
+
+- The specification (CANONIC) **MAY** be open-sourced.
+- The interpreter (VaaS) **MAY** be commercialized.
+- This bifurcation mirrors programming language design: anyone may write C; gcc is a product.
+
+The pattern marks system closure:
+- When specification stabilizes, nothing remains to develop.
+- What remains is interpreter commercialization or specification release.
+
+The compiler analogy:
+
+| Make Concept | CANONIC Equivalent | Description |
+|--------------|-------------------|-------------|
+| source | CANON.md | Governance axioms (law) |
+| grammar | VOCAB.md | Semantic definitions |
+| headers | SPEC.md | Closes compilation unit |
+| make | validators | Compile/check validity |
+| linker | inheritance | Resolve scope dependencies |
+| binary | README.md | Compiled output (derived) |
+| make install | VaaS deploy | Deploy enforcement to runtime |
+| run | episodes | Execution produces evidence |
+| stdout | LEDGER | Execution trace |
+| make clean | git reset | Delete derived artifacts |
+| rebuild | new evidence window | clean + make + install |
+
+(IDF-106)
+
+---
+
+## Evolutionary Arc
+
+PAPER **MUST** document the evolutionary arc that led to system closure.
+
+### Phase 0: Origin (MammoChat OptsEgo)
+
+The paradigm emerged from MammoChat OptsEgo—an AI agent that discovered its own governance patterns through execution. OptsEgo demonstrated that AI could observe, document, and propose governance constraints from its own operation.
+
+### Phase 1: Pre-CANONIC (Dividends & Deaths)
+
+Before formal axiomatization, governance was implicit in "Dividends" (benefits distributed) and "Deaths" (failed patterns). This pre-formal phase established the pattern: observe execution → extract constraints → codify governance.
+
+### Phase 2: Axiomatic Transformation
+
+The informal patterns crystallized into three root axioms:
+- **Triad**: CANON + VOCAB + README = minimal governance unit
+- **Inheritance**: Governance flows downward, constraints accumulate
+- **Introspection**: All terms must be defined; the system describes itself
+
+This transformation converted implicit patterns into a formal language specification.
+
+### Phase 3: Patent Machine
+
+The axiom structure revealed a perfect discovery mechanism:
+- Drift (violation) → reveals enforcement gap
+- Gap → validator specification
+- Specification → patent claim
+- Claim → enforcement mechanism
+
+135 IDFs emerged through normal governed operation—not a separate IP process, but native to the paradigm.
+
+### Phase 4: Axiomatic Decomposition
+
+The 3 root axioms decomposed into 86 atomic axioms:
+- T (Triad): 27 axioms → PROVISIONAL-A
+- I (Inheritance): 31 axioms → PROVISIONAL-B
+- N (Introspection): 28 axioms → PROVISIONAL-C
+
+Each atomic axiom is a patent claim. The decomposition is the patent portfolio.
+
+### Phase 5: System Closure (Bifurcation)
+
+The system closes when:
+1. All scopes have SPEC (governance chain terminates)
+2. All CANON terms defined in VOCAB (semantics closed)
+3. All inheritance paths terminate at / (authority closed)
+4. Validators pass (validity decidable)
+
+At closure, nothing remains to develop. The specification is complete.
+
+What remains is bifurcation:
+- **Path A (Commercialization)**: License VaaS as enforcement runtime
+- **Path B (Open Source)**: Release CANONIC specification
+
+The interpreter (VaaS) monetizes; the specification (CANONIC) proliferates.
+
+(IDF-107)
+
+---
+
 ## Inherited Constraints
 
 This scope inherits from WRITING (/canonic/machine/os/writing):
