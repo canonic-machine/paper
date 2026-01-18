@@ -10,13 +10,13 @@ What if an AI could not bullshit its way through scientific prose—not because 
 
 CANONIC is the governance framework we built to make AI slop structurally inadmissible. Claims must trace to a ledger; every term used in rules must be defined; the AI cannot promote its own ideas to law.
 
-This paper spans two evidence windows. At v0.1 freeze, we observed 129 episodes and 33 violations across 9 repositories. Post-freeze (v0.2), the system evolved to 164 episodes, 104 IDFs, and 16 deployed validators across 54 governed scopes.
+This paper spans two evidence windows. At v0.1 freeze, we observed 129 episodes and 33 violations across 9 repositories. Post-freeze (v0.2), the system evolved to 168+ episodes, 136 IDFs, and 89 deployed validators across 55 governed scopes.
 
 The result is this paper. It does not describe an experiment. It is the experiment. Every claim cites evidence so you can verify it yourself.
 
 **The deeper insight:** This paper is an evolutionary analysis of law and prose. Under constitutional constraint, governance axioms (law) and scientific claims (prose) co-evolve—each drift in one domain reveals structure in the other. The violations are not bugs; they are the fossil record of this co-evolution.
 
-**The v0.1 canon:** CANONIC IS closure. A scope is not a directory with governance files—it is a directory that is *closed* by its SPEC. The triad (CANON, VOCAB, README) makes a proto-scope. SPEC closes it into a scope. This insight emerged through 168 episodes and 135 IDFs. The paper proves itself by demonstrating closure.
+**The v0.1 canon:** CANONIC IS closure. A scope is not a directory with governance files—it is a directory that is *closed* by its SPEC. The triad (CANON, VOCAB, README) makes a proto-scope. SPEC closes it into a scope. This insight emerged through 168+ episodes and 136 IDFs. The paper proves itself by demonstrating closure.
 
 ---
 

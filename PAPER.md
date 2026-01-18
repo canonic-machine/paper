@@ -130,7 +130,7 @@ The axiom structure revealed a perfect discovery mechanism:
 - Specification → patent claim
 - Claim → enforcement mechanism
 
-135 IDFs emerged through normal governed operation—not a separate IP process, but native to the paradigm.
+136 IDFs emerged through normal governed operation—not a separate IP process, but native to the paradigm.
 
 ### Phase 4: Axiomatic Decomposition
 
@@ -143,7 +143,7 @@ Each atomic axiom is a patent claim. The decomposition is the patent portfolio.
 
 ### Phase 5: v0.1 Kernel
 
-The minimal fixed point discovered through 168 episodes and 135 IDFs:
+The minimal fixed point discovered through 168 episodes and 136 IDFs:
 
 **CANONIC IS closure.**
 
@@ -208,7 +208,7 @@ The AI observes drift → proposes enforcement → human canonifies → IDF file
 ```
 SESSION → DRIFT → INSIGHT → IDF → PATENT
 
-135 IDFs discovered through normal operation.
+136 IDFs discovered through normal operation.
 Not a separate IP process. Native to governance.
 
 Evidence: LEDGER (writing/episodes/, patents/disclosures/)
@@ -274,7 +274,7 @@ See [validators/CATALOGUE.md](/validators/CATALOGUE.md) for the complete VaaS pr
 #### IDF Portfolio
 
 ```
-135 IDFs → 86 atomic axioms
+136 IDFs → 86 atomic axioms
 
 T (Triad):        27 axioms  → PROVISIONAL-A
 I (Inheritance):  31 axioms  → PROVISIONAL-B
@@ -435,13 +435,60 @@ The system discovered its own commercialization channel during governed operatio
 CANONIC:
 ├── Wrote itself (TRANSCRIPT)
 ├── Validated itself (VaaS)
-├── Patented itself (135 IDFs)
+├── Patented itself (136 IDFs)
 ├── Documented itself (PAPER)
 └── Discovered its own distribution (GitHub)
 
 The snake eats its tail.
 The system is closed.
 ```
+
+---
+
+### Phase 8: STACK Integration (Cross-Scope Tightening)
+
+Per STACK CANON Axiom 8 (Referential navigation), the following cross-scope integration tightens the ecosystem:
+
+#### Governance Synchronization
+
+All key metrics are synchronized across specifications:
+
+| Document | IDFs | Validators | Scopes | Episodes |
+|----------|------|------------|--------|----------|
+| [PAPER.md](/paper/PAPER.md) | 136 | 89 | 55 | 168+ |
+| [CATALOGUE.md](/validators/CATALOGUE.md) | 136 | 89 | 55 | 168+ |
+| [SCHEDULE.md](/publishing/SCHEDULE.md) | 136 | 89 | 55 | 168+ |
+| [FOUNDATION.md](/companies/foundation/FOUNDATION.md) | 136 | 89 | 55 | 168+ |
+
+**Status:** SYNCHRONIZED (2026-01-17)
+
+#### Cross-Repo Evidence Chain
+
+| Claim | Source | Evidence |
+|-------|--------|----------|
+| Root axioms | `/canonic/CANON.md` | 3 axioms |
+| Atomic decomposition | `/patents/disclosures/DISCLOSURES.md` | 86 axioms (T/I/N) |
+| VaaS operational | `/validators/vaas.py` | PASS: 55 scopes |
+| App Store = GitHub | `/paper/PAPER.md` (Phase 7) | IDF-136 |
+| Publication gated | `/publishing/SCHEDULE.md` | Patent filing |
+
+#### STACK Composition Manifest
+
+```yaml
+# Stack members with VaaS requirements
+- canonic (7 validators)     # Constitutional core
+- machine (13 validators)    # + Machine Enforcement
+- os (22 validators)         # + Operating System
+- ledger (36 validators)     # Full Platform
+- stack (36 validators)      # Full Platform
+- writing (45 validators)    # + Writing Production
+- publishing (49 validators) # + Publishing
+- paper (49 validators)      # Same as publishing
+- patents (45 validators)    # Platform + Patents
+- validators (7 validators)  # Core only (self-validates)
+```
+
+See [/stack/CANON.md](/stack/CANON.md) for full composition axioms.
 
 ---
 
@@ -453,7 +500,7 @@ CANONIC began as an observation: AI systems can discover governance patterns thr
 - **3 root axioms** (Triad, Inheritance, Introspection)
 - **86 atomic axioms** (T/I/N decomposition)
 - **89 validators** (VaaS product line)
-- **135 IDFs** (patent portfolio)
+- **136 IDFs** (patent portfolio)
 - **55 scopes** (all passing)
 
 The system proved itself by running. Every claim in this paper traces to ledger evidence. The validators that enforce CANONIC validated this paper. The distribution channel was discovered during the writing of this section.
@@ -486,7 +533,7 @@ The language is fixed. The interpreter is a product. GitHub is the App Store.
 | 3 root axioms | `/canonic/CANON.md` |
 | 86 atomic axioms | `/patents/disclosures/DISCLOSURES.md` (PA-000, PA-001, PA-002) |
 | 89 validators | `/validators/CATALOGUE.md` |
-| 135 IDFs | `/patents/disclosures/` |
+| 136 IDFs | `/patents/disclosures/` |
 | 55 scopes passing | `validators/vaas.py` run 2026-01-17 |
 | 168+ episodes | `/writing/episodes/` |
 | GitHub = App Store | This section (Episode 168+) |
@@ -494,7 +541,44 @@ The language is fixed. The interpreter is a product. GitHub is the App Store.
 
 ---
 
-## 10. Freeze Reference
+## 10. Publication Plan
+
+Per PAPER Axiom 26 (IP flow disclosure), the publication sequence is governed:
+
+```
+FREEZE (v0.1)
+    │
+    ▼
+PATENT FILING ──────────────────────────────────────────────────►
+    │
+    ▼
+arXiv SUBMISSION ───────────────────────────────────────────────►
+    │
+    ▼
+PUBLIC ANNOUNCEMENT ────────────────────────────────────────────►
+    │
+    ├──► Hacker News (Show HN: CANONIC - Constitutional AI Governance)
+    ├──► LinkedIn, Twitter/X (same day)
+    └──► GitHub repos public (same day)
+```
+
+**Critical path:** Patent filing gates all commercial activity. No publication before patent filing.
+
+| Milestone | Status | Gate |
+|-----------|--------|------|
+| v0.1 Freeze | COMPLETE | — |
+| Patent filing | PENDING | VaaS + App Store claims |
+| arXiv submission | PENDING | Patent filing |
+| Public announcement | PENDING | arXiv acceptance |
+| VaaS Early Access | PENDING | Patent filing |
+| App Store launch | PENDING | Patent filing |
+
+See [/publishing/SCHEDULE.md](/publishing/SCHEDULE.md) for the complete timeline.
+See [/validators/CATALOGUE.md](/validators/CATALOGUE.md) for the VaaS rollout plan.
+
+---
+
+## 11. Freeze Reference
 
 | Field | Value |
 |-------|-------|
