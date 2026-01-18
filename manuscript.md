@@ -423,6 +423,74 @@ This parallel suggests a general principle: **rigorous formalization reveals its
 
 ---
 
+## FOUNDATION: Intermediate Documents and Minimalism Drift
+
+The FOUNDATION layer contains intermediate documents that precede formal CANONIC artifacts:
+
+- **Emails** (e.g., EMAIL-FATIMA.md) - raw communication that seeds concepts
+- **Notes** - working documents capturing ideas in flight
+- **Drafts** - proto-governance artifacts before canonification
+
+These intermediate documents are not anomalies—they are evidence of the system's evolution. The CANONIC principle is:
+
+> **Minimalism Drift:** Intermediate documents WILL be consumed by minimalism as the system drifts toward closure.
+
+This is not deletion—it is transformation. The substance of intermediate documents becomes:
+1. **Axioms** in CANON.md
+2. **Terms** in VOCAB.md
+3. **Evidence** in the ledger (commit history)
+4. **Claims** in IDFs
+
+The ledger preserves everything. Clone the repos. The intermediate documents exist in commit history even after their substance has been absorbed into canonical form.
+
+### The Minimal Fixed Point: .git IS CANONIC
+
+The ultimate closure insight:
+
+> **`.git` is the minimal fixed state of CANONIC.**
+
+Everything outside `.git` is a **derived view**. The working tree (CANON.md, VOCAB.md, validators, manuscripts) is ceremony—human-readable projections of ledger state.
+
+```
+.git/                    ← THE TRUTH (immutable, complete)
+├── objects/             ← Every state ever committed
+├── refs/                ← Pointers to states
+└── HEAD                 ← Current view
+
+Working tree:            ← DERIVED (reproducible)
+├── CANON.md            ← git checkout
+├── VOCAB.md            ← git checkout
+└── everything/         ← git checkout
+```
+
+**Proof of closure:**
+```bash
+# Delete everything except .git
+rm -rf !(\.git)
+
+# Restore from ledger
+git checkout HEAD -- .
+
+# System is identical. Nothing lost.
+```
+
+This is why CANONIC is **temporally reproducible**: any historical state can be reconstructed from `.git` alone. The ledger IS the system. Everything else is a view.
+
+**Generalization:** `.git` is one instantiation. Any ledger satisfying these properties works:
+
+| Property | Git | Blockchain | Requirement |
+|----------|-----|------------|-------------|
+| Immutable history | SHA-hash chain | Hash chain | Past states cannot change |
+| Cryptographic integrity | Object hashes | Block hashes | Tampering is detectable |
+| Distributed replication | Clone/push/pull | Node consensus | No single point of failure |
+| State reconstruction | Checkout | Replay | Any state reproducible |
+
+**The abstract principle:** CANONIC requires an immutable, cryptographically-verified, distributed ledger. Git happens to be one. Bitcoin is another. Ethereum is another. The specific technology is implementation—the properties are constitutional.
+
+**Evidence:** FOUNDATION/, ledger commit history, minimalism-validator, IDF-149 (Git IS the blockchain)
+
+---
+
 ## Limitations
 
 We do not claim:
