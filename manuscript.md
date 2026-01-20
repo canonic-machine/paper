@@ -1157,16 +1157,18 @@ v0.0 (frozen 2026-01-19) ──────────────────�
   VaaS validation operational
   Paper demonstrates closure
   MCP Server (AI agent interface)
+  → see v0.1
 
-v0.1 (current) ─────────────────────────────────────────────
+v0.1 (frozen 2026-01-19) ───────────────────────────────────
   Patent applications filed
-  arXiv publication
-  Public announcement
   VaaS early access program
   CANONIC COIN token economics
+  → see v1.0
 
-v1.0 (general availability) ────────────────────────────────
+v1.0 (current - publication ready) ─────────────────────────
   All specification gaps closed
+  arXiv publication
+  Public announcement
   VaaS general availability
   GitHub App Store integration
   MCP Server on App Store
