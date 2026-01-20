@@ -1150,19 +1150,20 @@ The model separates what (public specification) from how (private implementation
 # Supplement S3: Roadmap
 
 ```
-v0.1 (current) ─────────────────────────────────────────────
+v0.0 (frozen 2026-01-19) ───────────────────────────────────
   LANGUAGE.md v0.1 complete
   3 root axioms crystallized
   121 scopes governed
   VaaS validation operational
   Paper demonstrates closure
+  MCP Server (AI agent interface)
 
-v0.2 (post-filing) ─────────────────────────────────────────
+v0.1 (current) ─────────────────────────────────────────────
   Patent applications filed
   arXiv publication
   Public announcement
   VaaS early access program
-  MCP Server (AI agent interface)
+  CANONIC COIN token economics
 
 v1.0 (general availability) ────────────────────────────────
   All specification gaps closed
