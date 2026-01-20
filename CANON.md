@@ -35,3 +35,15 @@ PAPER follows a three-phase freeze sequence:
 PAPER is mutable until publish. Invariant after.
 
 ---
+
+### 5. Supplemental separation
+
+Main PAPER MUST NOT contain supplemental material.
+
+Supplemental material resides on GitHub (the OS):
+- **Appendix** — math proofs, formal derivations
+- **Supplemental** — full v0 closure (drift episodes, IDFs, validators)
+
+GitHub IS the supplemental archive. The OS proves the PAPER.
+
+---

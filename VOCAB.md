@@ -1,17 +1,29 @@
 # VOCAB
 
-## PAPER
+inherits: /canonic/
 
-Epistemic reconstruction scope.
+---
 
-## Epistemic-only
+### PAPER
 
-PAPER is epistemic only, does not govern.
+Epistemic reconstruction scope. The published document that makes claims bounded by evidence.
 
-## Ledger authority
+### Epistemic
 
-Claims trace to LEDGER evidence.
+Knowledge-bearing. PAPER is epistemic only - it does not govern, it describes.
 
-## Evidence-bounded
+### Ledger
 
-Claims bounded by declared evidence window.
+The append-only record (git). Claims trace to LEDGER evidence.
+
+### Evidence Window
+
+Declared time bounds for claims. Evidence outside the window is out of scope.
+
+### Manuscript
+
+The source document (manuscript.md) from which PAPER (PDF) is generated.
+
+### Supplemental
+
+Material that proves the paper. GitHub IS the supplemental. The OS proves the paper.

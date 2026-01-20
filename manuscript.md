@@ -8,158 +8,146 @@ Dexter Hadley, MD/PhD
 
 founder@canonic.org
 
-v0.0 — January 2026
+v0.1 — January 2026
 
 ---
 
 ## Abstract
 
-**We cured AI slop in 21 days by recognizing that the cure is 50 years old.**
+We cured AI slop in 21 days by recognizing that the cure is 50 years old.
 
-In 2025, Oxford declared "AI slop" the word of the year [1]: low-quality, machine-generated content that sounds authoritative but means nothing [2,3,4]. The problem seems new. The solution is not. Compiler theory solved this problem in the 1960s [5,6,7]. Invalid programs don't compile. We applied the same principle to governance: invalid content doesn't pass validation.
+In 2025, Oxford declared "AI slop" the word of the year—low-quality, machine-generated content that sounds authoritative but means nothing. The problem seems new. The solution is not.
 
-We present CANONIC, a constitutional governance framework where AI slop is structurally inadmissible. Three axioms—Triad, Inheritance, Introspection—correspond directly to compiler theory: syntax [6,8], scope resolution [10,11,12], and type systems [13,14,15]. Every governed unit must contain specific artifacts (structure). Every unit must declare its authority source (inheritance). Every term must be defined (introspection). Content violating these properties is malformed—not filtered after production, but rejected before entry.
+Compiler theory solved this in the 1960s. Invalid programs don't compile. We applied the same principle: invalid content doesn't pass validation.
 
-This paper documents a 21-day development window (December 29, 2025 through January 19, 2026). Working with AI assistants [29,30,31] under the governance framework, we produced 21 repositories containing 121 governed scopes, 332 recorded collaboration sessions, and 73 invention disclosures. The framework compiled itself: governance axioms generated an operating system, an immutability layer [21,22,23,24], an application distribution system, and a token economy—recapitulating five decades of computing infrastructure in three weeks.
+We present CANONIC, a constitutional governance framework where AI slop is structurally inadmissible. Three axioms—Triad, Inheritance, Introspection—map directly to compiler theory: syntax, scope resolution, and type systems. Content violating these properties is malformed. Not filtered after production. Rejected before entry.
 
-**This paper is its own proof.** We did not invent; we recognized. Clone the repositories; verify any assertion. The LANGUAGE specification defines coverage requirements [36]; this paper demonstrates COVERAGE. The specification is complete when nothing remains to develop.
+This paper documents 21 days (December 29, 2025 through January 19, 2026). Working with AI assistants under governance, we produced 21 repositories, 121 governed scopes, 332 collaboration sessions, and 163 invention disclosures. The framework compiled itself: three axioms generated an operating system, an immutability layer, an application distribution system, and a token economy—recapitulating five decades of computing infrastructure in three weeks.
+
+This paper is its own proof. Clone the repositories. Verify any assertion. GitHub is the supplemental material. The OS proves the paper.
 
 ---
 
-## 1. The Problem: AI Content Without Evidence
+## 1. The Trust Problem
 
 Artificial intelligence writes convincingly. It also fabricates.
 
-When a physician uses AI to summarize research, accuracy matters. When a scientist uses AI to draft findings, the claims must be real. When policy emerges from AI-assisted analysis, the evidence must exist. Currently, readers must trust: trust the author verified, trust the AI didn't hallucinate, trust reviewers caught errors.
+This is not a bug. It is a feature of how language models work—they predict plausible continuations, not true ones. When the training data contains truth, the outputs tend toward truth. When it doesn't, the outputs tend toward plausibility. Plausibility and truth are not the same thing.
 
-This trust model fails at scale. AI generates content faster than humans can verify it. The result is "slop"—text that reads as authoritative while lacking substance. The term emerged organically online before Oxford formalized it, capturing a specific failure mode: content optimized for the appearance of knowledge rather than knowledge itself.
+The consequences scale with the stakes.
 
-**Figure 1** illustrates the problem structure. AI agents generate content. That content sounds authoritative. Without verification, it enters circulation. Three failure modes emerge: undefined terms (vocabulary drift), unverifiable assertions (evidence gaps), and invented authority (governance creep).
+When a student uses AI to draft an essay, the worst outcome is a bad grade. When a physician uses AI to summarize research, the worst outcome is a dead patient. When policy emerges from AI-assisted analysis, the worst outcome is systemic harm to millions.
 
-```mermaid
-flowchart LR
-    subgraph Generation["Content Generation"]
-        Agent[/"AI Agent"/] -->|produces| Content["Authoritative-Sounding<br/>Content"]
-    end
+Currently, readers must trust. Trust the author verified. Trust the AI didn't hallucinate. Trust reviewers caught errors. Trust the institution publishing the work.
 
-    subgraph Verification["Verification Gap"]
-        Content -->|no structural check| Trust{"Trust the<br/>Author?"}
-        Trust -->|no| Reject["Rejected"]
-        Trust -->|yes| Accept["Accepted"]
-    end
+This trust model worked when content was scarce and verification was possible. Neither condition holds anymore.
 
-    subgraph Failures["Failure Modes"]
-        Accept --> F1["Vocabulary Drift<br/><i>undefined terms</i>"]
-        Accept --> F2["Evidence Gap<br/><i>unverifiable claims</i>"]
-        Accept --> F3["Governance Creep<br/><i>invented authority</i>"]
-    end
+AI generates content faster than humans can verify it. The bottleneck has inverted. We used to struggle to produce enough; now we struggle to validate what's produced. The result is a new category of information pollution—text that reads as authoritative while lacking substance.
 
-    style F1 fill:#ffa94d,stroke:#e8590c
-    style F2 fill:#ffa94d,stroke:#e8590c
-    style F3 fill:#ffa94d,stroke:#e8590c
-```
+Oxford captured this with a single word: slop.
 
-The diagram encodes a causal chain: generation without verification enables failures. Each failure mode represents a distinct structural problem—not a style issue, not a quality issue, but a missing constraint that would prevent the failure if present.
+The term emerged organically before Oxford formalized it, spreading through forums where people first encountered the failure mode at scale. Slop is not merely wrong. Misinformation is wrong. Slop is *structurally deficient*—content optimized for the appearance of knowledge rather than knowledge itself.
 
-Current defenses address symptoms rather than causes:
+The distinction matters. Wrong content can be corrected with better information. Structurally deficient content cannot be corrected because there is nothing to correct. It was never about the truth. It was about sounding true.
 
-| Defense | Mechanism | Failure Mode |
+Current defenses address symptoms:
+
+| Defense | Mechanism | Why It Fails |
 |---------|-----------|--------------|
-| Detection tools | Statistical patterns | Unreliable; easily fooled by paraphrasing |
-| Disclosure policies | Author attestation | Unverifiable; "I used AI responsibly" proves nothing |
-| Human review | Manual inspection | Catches slop but doesn't prevent production |
+| Detection tools | Statistical patterns | Easily fooled by paraphrasing |
+| Disclosure policies | Author attestation | "I used AI responsibly" proves nothing |
+| Human review | Manual inspection | Catches slop but doesn't prevent it |
 | Style guidelines | Surface formatting | Cosmetic; doesn't address evidence |
 
-Each defense operates post-hoc—after content exists. None prevents structurally deficient content from being created. We built something different: a system where deficient content is malformed, not merely low-quality.
+Every defense operates post-hoc—after content exists. None prevents structurally deficient content from being created. We are fighting an exponential production system with linear verification resources.
+
+The question became: what would prevention look like?
 
 ---
 
-## 2. The Solution: Constitutional Governance
+## 2. The Compiler Insight
 
-CANONIC is a governance framework. "Governance" here means formal rules that determine validity. "Constitutional" means those rules are hierarchical, inheritable, and cannot be overridden by lower authorities. The framework treats AI-generated content the way a compiler treats source code: structurally invalid content doesn't compile.
+The answer came from an unexpected direction.
 
-### 2.1 The Triad: Minimal Governance Unit
+In the 1960s, computer scientists faced a similar problem. Programmers wrote code. Some code worked. Some crashed. Some did worse—it appeared to work while silently corrupting data. The solution was not better debugging. The solution was to prevent invalid programs from existing in the first place.
 
-Every governed unit—called a "scope"—requires three files:
+Compilers check structure before execution. A program missing a semicolon doesn't run. A program referencing an undefined variable doesn't run. A program with type mismatches doesn't run. Invalid structure is caught at compilation, not at runtime.
 
-| File | Role | Content |
-|------|------|---------|
+The insight: governance is compilation.
+
+If we define structural requirements for valid content, and build validators that check those requirements, then structurally deficient content becomes impossible—not discouraged, not penalized, but *malformed*. It fails compilation. It cannot enter the system.
+
+This reframes the AI slop problem entirely. We don't need better AI. We don't need better reviewers. We need better compilers.
+
+CANONIC is that compiler.
+
+---
+
+## 3. The Three Axioms
+
+The entire framework derives from three rules. We call them axioms because they cannot be derived from other rules—they must be asserted as foundation.
+
+**Axiom 0 — Triad.** A governed unit MUST contain three files: `CANON.md` (governance), `VOCAB.md` (semantics), and `README.md` (description).
+
+**Axiom 1 — Inheritance.** Every `CANON.md` MUST declare its parent scope. Inheritance chains MUST terminate at root. Inherited rules are final.
+
+**Axiom 2 — Introspection.** `VOCAB.md` MUST define every concept used in `CANON.md` and in `VOCAB.md` itself.
+
+That's it. Three axioms. Everything else derives from these.
+
+The axioms are orthogonal—no axiom derives from another. They are minimal—removing any breaks the system. They are complete—all governance constraints can be expressed through these three.
+
+Let us unpack each.
+
+### The Triad
+
+A governed unit is called a scope. A scope is simply a directory in a filesystem. The triad is the minimal set of files that make governance possible:
+
+| File | Role | Contains |
+|------|------|----------|
 | **CANON.md** | Governance | Axioms: what MUST be true |
 | **VOCAB.md** | Semantics | Definitions: what terms mean |
 | **README.md** | Description | Documentation: what this is |
 
-A scope is a directory in a filesystem. The triad is the minimal set of files that make governance possible. CANON declares rules. VOCAB defines the terms those rules use. README describes the scope for human readers. Missing any file renders the scope invalid—not deprecated, not incomplete, but structurally malformed.
+Why three files? Because governance requires separation of concerns.
 
-This separation matters. CANON is normative (prescriptive law). README is descriptive (explanatory prose). Mixing them invites "authority creep"—documentation that accidentally governs, or governance that accidentally describes. The triad enforces separation.
+CANON is normative—it prescribes law. README is descriptive—it explains purpose. VOCAB bridges them—it ensures the law uses defined terms. Mixing these concerns invites failure modes: documentation that accidentally governs, governance that accidentally describes, terms that mean different things in different contexts.
 
-**Figure 2** shows the complete system architecture. Three layers interact: a constitutional layer (the triad), an enforcement layer (validators and ledger), and a production layer (human and AI collaboration).
+The triad enforces separation. Missing any file renders the scope invalid. Not deprecated. Not incomplete. Structurally malformed. It cannot compile.
 
-```mermaid
-flowchart TB
-    subgraph Constitution["Constitutional Layer"]
-        direction LR
-        CANON["CANON.md<br/><i>Axioms</i>"]
-        VOCAB["VOCAB.md<br/><i>Definitions</i>"]
-        README["README.md<br/><i>Documentation</i>"]
-    end
+### Inheritance
 
-    subgraph Enforcement["Enforcement Layer"]
-        direction LR
-        VALIDATORS["Validators<br/><i>Check validity</i>"]
-        LEDGER["Ledger<br/><i>Immutable record</i>"]
-    end
+Scopes exist in hierarchies. A scope at `/services/writing/` inherits from `/services/` which inherits from `/` (root). The inheritance chain defines authority flow—child scopes cannot override parent axioms.
 
-    subgraph Production["Production Layer"]
-        Human["Human"] -->|"writes"| Artifacts["Artifacts"]
-        AI["AI Agent"] -->|"drafts"| Artifacts
-        Artifacts -->|"submitted to"| VALIDATORS
-    end
+This is not a design choice. It is a constitutional necessity.
 
-    CANON -->|"defines rules for"| VALIDATORS
-    VOCAB -->|"defines terms for"| CANON
-    VALIDATORS -->|"valid/invalid"| LEDGER
+If child scopes could override parent axioms, authority would fragment. Different branches of the hierarchy could establish contradictory rules. The system would lose coherence. Inheritance with override is not governance; it is anarchy with extra steps.
 
-    Human -.->|"exclusive write access"| CANON
-    AI -.->|"read-only access"| CANON
+Inherited axioms are final. A child scope can *extend* governance with new axioms, but it cannot *modify* governance from ancestors. The constitution binds all descendants.
 
-    style CANON fill:#228be6,stroke:#1864ab,color:white
-    style VOCAB fill:#40c057,stroke:#2b8a3e,color:white
-    style README fill:#fab005,stroke:#e67700
-    style VALIDATORS fill:#7950f2,stroke:#5f3dc4,color:white
-    style LEDGER fill:#fa5252,stroke:#c92a2a,color:white
-```
+### Introspection
 
-The critical constraint appears in the dotted lines: humans have exclusive write access to CANON; AI has read-only access. AI can produce content, propose rules, and draft documentation. But AI cannot change governance. This asymmetry is constitutional—built into the system's foundation, not a policy choice that could be reversed.
+The vocabulary must define itself. If CANON uses the term "scope," VOCAB must contain a definition of "scope." If VOCAB uses the term "axiom" in a definition, VOCAB must also define "axiom."
 
-### 2.2 Three Axioms
+This creates closure. No undefined terms. No jargon drift. No borrowed authority from concepts that mean different things to different readers.
 
-The entire framework derives from three axioms. An axiom here means a foundational rule that cannot be derived from other rules—it must be asserted.
+Introspection is how slop becomes inadmissible. Slop relies on undefined terms—words that sound meaningful but mean nothing specific. Under introspection, every term must have a definition. If you can't define it, you can't use it. The validator checks and rejects undefined references.
 
-**Axiom 0 — Triad:** A scope MUST contain CANON.md, VOCAB.md, and README.md.
+---
 
-**Axiom 1 — Inheritance:** Every CANON.md MUST declare its parent scope. Inheritance chains MUST terminate at root. Inherited axioms are final and cannot be overridden.
+## 4. The Validation Gates
 
-**Axiom 2 — Introspection:** VOCAB.md MUST define every concept used in CANON.md and VOCAB.md itself.
-
-These axioms are orthogonal (no axiom derives from another), minimal (removing any breaks the system), and complete (all governance constraints derive from these three). The technical terms:
-
-- **Scope**: A directory containing the triad. The unit of governance.
-- **Inheritance**: Child scopes derive authority from parent scopes. A scope at `/services/writing/` inherits from `/services/` which inherits from `/` (root).
-- **Introspection**: The vocabulary must define itself. If VOCAB uses a term, that term must appear as a definition in VOCAB.
-
-### 2.3 Why Slop Becomes Inadmissible
-
-Slop fails structurally—not aesthetically. **Figure 3** traces how a claim moves through validation gates.
+Claims move through three gates. Failure at any gate renders the content invalid.
 
 ```mermaid
 flowchart LR
     Claim["Claim"] --> G1{"Term in<br/>VOCAB?"}
-    G1 -->|No| R1["INVALID<br/><i>Undefined term</i>"]
+    G1 -->|No| R1["REJECT<br/><i>Undefined term</i>"]
     G1 -->|Yes| G2{"Evidence in<br/>LEDGER?"}
-    G2 -->|No| R2["INVALID<br/><i>No evidence</i>"]
-    G2 -->|Yes| G3{"Within declared<br/>window?"}
-    G3 -->|No| R3["INVALID<br/><i>Out of scope</i>"]
-    G3 -->|Yes| Valid["VALID"]
+    G2 -->|No| R2["REJECT<br/><i>No evidence</i>"]
+    G2 -->|Yes| G3{"Within<br/>window?"}
+    G3 -->|No| R3["REJECT<br/><i>Out of scope</i>"]
+    G3 -->|Yes| Valid["ACCEPT"]
 
     style R1 fill:#ff6b6b,stroke:#c92a2a,color:white
     style R2 fill:#ff6b6b,stroke:#c92a2a,color:white
@@ -167,27 +155,31 @@ flowchart LR
     style Valid fill:#40c057,stroke:#2b8a3e,color:white
 ```
 
-Three gates, three failure modes:
+**Gate 1: Vocabulary.** Does the claim use terms defined in VOCAB? Undefined jargon fails here. The AI cannot introduce terminology that humans haven't sanctioned.
 
-1. **Vocabulary gate**: Does the claim use terms defined in VOCAB? Undefined jargon fails here. The AI cannot introduce terminology that humans haven't sanctioned.
+**Gate 2: Evidence.** Does the claim cite something in the ledger? A ledger is an append-only record—in this implementation, a git repository. Assertions without commits have no evidence. They fail.
 
-2. **Evidence gate**: Does the claim cite something in the ledger? A ledger is an append-only record—in this implementation, a git repository. Assertions without commits have no evidence.
-
-3. **Scope gate**: Is the evidence within the declared window? Every paper declares its evidence bounds (e.g., "commits from December 29 through January 19"). Claims about evidence outside that window are inadmissible.
+**Gate 3: Scope.** Is the evidence within the declared window? Every paper declares its evidence bounds. Claims about evidence outside that window are inadmissible. You cannot cite what you haven't committed.
 
 The gates are structural, not evaluative. Validators don't assess quality—they check presence. Either a term is defined or it isn't. Either evidence exists or it doesn't. Binary validity eliminates judgment calls.
 
+This is the key insight: **we don't filter slop. We make it malformed.**
+
+A compiler doesn't evaluate whether your code is "good enough." It checks whether your code is structurally valid. CANONIC applies the same principle to governance. Content isn't rated on a quality scale. It either compiles or it doesn't.
+
 ---
 
-## 3. Origin: From CANNON to CANONIC
+## 5. Origin Story
 
-The framework emerged from practice, not theory. On December 29, 2025, while writing a book about healthcare economics, we created a file called `CANNON.md`. The double-N was a typo. The insight was not.
+The framework emerged from practice, not theory.
 
-### 3.1 The Proto-Governance Moment
+On December 29, 2025, we were writing a book about healthcare economics called *Dividends & Deaths*. The project tracked assets across chapters: characters, concepts, references, scenes. Managing these assets required rules. Which files were authoritative? How did they relate? What could change?
 
-The book project—*Dividends & Deaths*—tracked assets across chapters: characters, concepts, references, scenes. Managing these assets required rules. Which files were authoritative? How did they relate? What could change?
+We created a file called `CANNON.md`. The double-N was a typo.
 
-The first CANNON.md declared:
+The insight was not.
+
+That first file declared three rules:
 
 ```markdown
 # Dividends & Deaths — CANNON
@@ -198,237 +190,60 @@ The first CANNON.md declared:
 - Prose is canonical only if traceable to assets.
 ```
 
-Three rules. The first separates law from narrative. The second establishes naming conventions. The third requires traceability. These patterns—separation, convention, traceability—became the axioms.
+Separation. Convention. Traceability. These patterns—discovered while managing a book project—became the axioms. The typo was corrected. CANNON became CANON. The single-N stuck.
 
-**Figure 4** traces the timeline from proto-governance through formal specification. The horizontal axis spans 21 days. Each section marks a phase transition.
+Over the next 21 days, something unexpected happened. The patterns generalized. What began as file management for a book became governance for any structured content. And as we applied the patterns more rigorously, they began generating their own infrastructure.
 
-```mermaid
-timeline
-    title From CANNON to CANONIC (21 Days)
-    section Proto-Governance
-        2025-12-29 : First CANNON.md created
-                   : Book project "Dividends & Deaths"
-                   : Governance/description separation
-    section Crystallization
-        2026-01-02 : CANNON pattern formalized
-                   : Uppercase = governance convention
-        2026-01-05 : CANON.md (single N) adopted
-                   : canonic/ repository created
-                   : Three axioms identified
-    section Expansion
-        2026-01-06 : machine/ scope separated
-        2026-01-10 : os/, ledger/ scopes added
-        2026-01-12 : 9 repositories, 12 scopes
-                   : v0.1 freeze declared
-    section Compilation
-        2026-01-15 : Validators deployed
-        2026-01-17 : 89 validators operational
-        2026-01-19 : LANGUAGE.md v0.1 complete
-                   : 21 repositories, 121 scopes
-```
+The axioms needed validators. Validators needed specifications. Specifications needed a language. The language needed semantics. Semantics needed closure verification. Each layer demanded the next.
 
-The progression reveals an empirical discovery process. We didn't design axioms from first principles—we extracted them from working practices. The CANNON typo became CANON when we formalized: one N, cleaner namespace, same meaning.
+By January 19, 2026, we had:
 
-### 3.2 Evidence Chain
+- 21 repositories
+- 121 governed scopes
+- 332 collaboration sessions
+- 163 invention disclosures
+- A formal language specification
+- An operating system
+- An immutability layer
+- A distribution channel
+- A token economy
 
-Every claim about the timeline traces to git commits. Git is a version control system that creates immutable snapshots of file states. Each snapshot has a unique identifier (a hash) and a timestamp. The combination provides verifiable evidence.
+Three axioms. 21 days. 50 years of computing infrastructure.
 
-| Date | Event | Repository | Commit |
-|------|-------|------------|--------|
-| 2025-12-29 | Proto-governance begins | dividends | `07a5834` |
-| 2026-01-02 | CANNON.md formalized | dividends | `3259f35` |
-| 2026-01-05 | First CANON.md | canonic | `11affab` |
-| 2026-01-05 | Three axioms crystallize | writing | `bca9ec0` |
-| 2026-01-19 | LANGUAGE.md v0.1 | canonic | `81bb6d5` |
-
-The format `repository:hash` uniquely identifies evidence. Anyone with repository access can verify: `git show 3259f35` displays the exact content at that moment. The ledger is the evidence; the paper interprets it.
-
----
-
-## 4. The Governance Loop
-
-Production under CANONIC follows a loop: humans govern, AI produces, validators check, ledger records. **Figure 5** makes the loop explicit.
-
-```mermaid
-flowchart TB
-    subgraph Authority["Human Authority (Exclusive)"]
-        H["Human"] -->|"declares"| CANON["CANON<br/><i>Constitution</i>"]
-        H -->|"freezes"| LEDGER["LEDGER<br/><i>Immutable Record</i>"]
-    end
-
-    subgraph Production["AI Production (Governed)"]
-        AI["AI Agent"] -->|"produces"| ARTIFACTS["Artifacts"]
-        ARTIFACTS -->|"validated by"| VALIDATORS["VALIDATORS"]
-    end
-
-    CANON -->|"rules"| VALIDATORS
-    VALIDATORS -->|"accept/reject"| LEDGER
-    LEDGER -->|"evidence for"| PAPER["PAPER<br/><i>This Document</i>"]
-
-    AI -.->|"observes<br/>(read-only)"| CANON
-
-    style CANON fill:#228be6,stroke:#1864ab,color:white
-    style VALIDATORS fill:#7950f2,stroke:#5f3dc4,color:white
-    style LEDGER fill:#fa5252,stroke:#c92a2a,color:white
-    style PAPER fill:#40c057,stroke:#2b8a3e,color:white
-```
-
-The loop has two halves. The upper half (Human Authority) shows exclusive human control: only humans declare governance, only humans freeze ledger state. The lower half (AI Production) shows governed production: AI creates artifacts, validators check them, results enter the ledger.
-
-The dotted line marks the critical asymmetry. AI observes CANON but cannot modify it. This isn't a permission setting—it's architectural. The governance files live in human-controlled repositories. AI operates in sessions that read those repositories but write only to governed workspaces.
-
-### 4.1 Insight-Law Separation
-
-AI systems discover patterns. During governed sessions, Claude (the AI assistant used throughout this project) frequently observed: "This pattern might be worth formalizing." These observations are valuable—but they have zero governance force until a human explicitly adds them to CANON.
-
-We call this "insight-law separation." AI generates insights. Humans make law. The separation allows aggressive AI utilization without surrendering authority. Use AI to draft, propose, analyze, critique. Reserve canonification (adding to CANON) for human judgment.
-
-The term "canonification" describes the human act of elevating a pattern to governance status. Before canonification, a pattern is a suggestion. After canonification, it's law. The AI cannot canonify; only humans can.
-
----
-
-## 5. Evidence Window: v0.1
-
-This paper declares an evidence window: December 29, 2025 through January 19, 2026. Claims pertain only to evidence within this window. The declaration bounds scope—readers know exactly what the paper covers and can verify coverage.
-
-### 5.1 Ecosystem Metrics
-
-**Figure 6** visualizes the ecosystem composition. The pie chart shows scope distribution across three categories: core governance (the canonic repository), domain scopes (specialized repositories), and archive scopes (historical/reference material).
-
-```mermaid
-pie showData
-    title CANONIC Ecosystem (v0.1)
-    "Core Governance" : 21
-    "Domain Scopes" : 28
-    "Archive Scopes" : 72
-```
-
-The distribution reflects system structure. Core governance (21 scopes) defines the framework itself. Domain scopes (28) apply the framework to specific purposes—writing, patents, publishing. Archive scopes (72) preserve history and reference states.
-
-Aggregate metrics:
-
-| Metric | Count | Evidence Method |
-|--------|-------|-----------------|
-| Repositories | 21 | Directories containing `.git/` |
-| Governed Scopes | 121 | Directories containing `CANON.md` |
-| Episodes | 332 | Files matching `ep*.md` |
-| Invention Disclosures | 73 | Files in `patents/disclosures/` |
-| Validators | 10+ | Validator modules deployed |
-| Root Axioms | 3 | Triad, Inheritance, Introspection |
-| Development Days | 21 | Calendar days in window |
-
-Each metric has a verification method. Scopes are directories with CANON.md—count them with `find . -name "CANON.md"`. Episodes are collaboration session records—count them with `find . -name "ep*.md"`. The methods are reproducible; the counts are verifiable.
-
-### 5.2 Repository Evolution
-
-**Figure 7** shows repository creation as a git graph. The main branch represents the constitutional core. Branches represent derived repositories. Tags mark significant milestones.
-
-```mermaid
-gitGraph
-    commit id: "dividends:07a5834" tag: "Proto-CANONIC"
-    commit id: "canonic:11affab" tag: "First CANON"
-    branch machine
-    commit id: "machine:42531a1"
-    branch os
-    commit id: "os:79bc277"
-    branch ledger
-    commit id: "ledger:d578676"
-    checkout main
-    branch writing
-    commit id: "writing:bca9ec0"
-    branch paper
-    commit id: "paper:6e2a70b"
-    checkout main
-    branch validators
-    commit id: "validators:e772048"
-    checkout main
-    commit id: "canonic:81bb6d5" tag: "LANGUAGE v0.1"
-```
-
-The branching pattern reveals architectural decisions. Machine, OS, and Ledger form a stack (layered abstractions). Writing and Paper form a production chain (content creation). Validators stand separate (enforcement). Each branch inherits from main; governance flows downward.
-
-Repository details:
-
-| Repository | First Commit | Total Commits | Purpose |
-|------------|--------------|---------------|---------|
-| dividends | 2025-12-29 | — | Proto-CANONIC origin |
-| canonic | 2026-01-05 | 199 | Constitutional core |
-| writing | 2026-01-05 | 99 | Episode production |
-| machine | 2026-01-06 | 94 | Execution semantics |
-| paper | 2026-01-06 | 238 | This document |
-| patents | 2026-01-07 | 125 | IP portfolio |
-| os | 2026-01-10 | 40 | Authority bounds |
-| ledger | 2026-01-10 | 37 | Immutability rules |
-| validators | 2026-01-12 | 28 | Enforcement runtime |
-| stack | 2026-01-12 | 26 | Multi-repo composition |
-| publishing | 2026-01-13 | 13 | Distribution governance |
-| companies | 2026-01-14 | 46 | Entity governance |
-| coin | 2026-01-18 | — | Token economics |
-
-Commit counts indicate activity intensity. Paper (238 commits) and canonic (199 commits) saw the most revision—expected for a document and its governing specification. Lower counts indicate stable scopes.
-
-### 5.3 Validation State
-
-The validator system (VaaS—Validators as a Service) checks governance compliance. Running `python3 validators/vaas.py` produces:
-
-```
-=== VaaS - CANONIC Language Enforcement ===
-
-Repository: canonic
-Scopes found: 21
-
-Validation Results:
-  . (root)                          PASS
-  .github                           PASS
-  language                          PASS
-  publishing                        PASS
-  services                          PASS
-  services/distribution             PASS
-  services/distribution/appstore    PASS
-  services/distribution/publishing  PASS
-  services/economics                PASS
-  services/economics/coin           PASS
-  services/economics/token          PASS
-  services/products                 PASS
-  services/products/books           PASS
-  services/products/grants          PASS
-  services/products/paper           PASS
-  services/protection               PASS
-  services/protection/companies     PASS
-  services/protection/patents       PASS
-  services/writing                  PASS
-  templates                         PASS
-  validators                        PASS
-
-Summary:
-  PASS: 21
-  FAIL: 0
-
-VALIDITY: PASS
-```
-
-Every scope passes. PASS means the scope satisfies all three axioms: triad present, inheritance declared, vocabulary closed. VALIDITY: PASS means the entire repository is structurally valid.
+We didn't build this. It compiled itself.
 
 ---
 
 ## 6. The Compiler Correspondence
 
-During development, a pattern emerged: the three governance axioms correspond to compiler theory constructs. This was not designed—it was discovered through iterating on the specification.
+The parallel to compiler theory is not metaphor. It is structural identity.
 
-**Figure 8** shows the correspondence. The left side traces empirical discovery: invention disclosures decompose into atomic axioms, which collapse to three root axioms. The center maps each axiom to a compiler concept. The right shows what the axioms generate.
+| CANONIC Axiom | Compiler Concept | Function |
+|---------------|------------------|----------|
+| **Triad** | Syntax | What structures must exist in valid programs |
+| **Inheritance** | Scope Resolution | Where names resolve; binding rules |
+| **Introspection** | Type System | What terms must be defined; semantic constraints |
+
+Chomsky formalized syntax in 1956. Johnston formalized scope resolution in 1971. Milner formalized type inference in 1978. The concepts are classical—textbook material for fifty years.
+
+We didn't invent. We recognized.
+
+The three axioms *are* compiler theory, discovered through governance constraints rather than through programming language research. A language specification defines what programs are valid. CANONIC defines what governance structures are valid. The parallel is structural, not metaphorical.
+
+This correspondence has a corollary: **governance axioms can generate computing infrastructure.**
 
 ```mermaid
 flowchart TB
     subgraph Discovery["Empirical Discovery"]
-        IDFs["73 IDFs<br/><i>Invention disclosures</i>"]
-        IDFs -->|decompose to| Atomic["86 Atomic Axioms"]
-        Atomic -->|collapse to| Root["3 Root Axioms"]
+        IDFs["163 Disclosures"]
+        IDFs -->|decompose| Atomic["86 Atomic Axioms"]
+        Atomic -->|collapse| Root["3 Root Axioms"]
     end
 
     subgraph Correspondence["Compiler Correspondence"]
-        Root --> T["TRIAD<br/>= Syntax"]
-        Root --> I["INHERITANCE<br/>= Scope Resolution"]
-        Root --> N["INTROSPECTION<br/>= Type System"]
+        Root --> T["TRIAD = Syntax"]
+        Root --> I["INHERITANCE = Scope"]
+        Root --> N["INTROSPECTION = Types"]
     end
 
     subgraph Generated["Generated Infrastructure"]
@@ -444,68 +259,130 @@ flowchart TB
     style N fill:#7950f2,stroke:#5f3dc4,color:white
 ```
 
-The correspondence:
-
-| CANONIC Axiom | Compiler Concept | Function |
-|---------------|------------------|----------|
-| **Triad** | Syntax | What structures must exist in valid programs |
-| **Inheritance** | Scope Resolution | Where names resolve; binding rules |
-| **Introspection** | Type System | What terms must be defined; semantic constraints |
-
-This is not analogy. The axioms ARE compiler theory, discovered through governance constraints rather than through formal language research. A programming language specification defines what programs are valid. CANONIC defines what governance structures are valid. The parallel is structural, not metaphorical.
-
-### 6.1 Recapitulating Computing History
-
-The compiler correspondence has a corollary: governance axioms can generate computing infrastructure. **Figure 9** compares historical development timelines with CANONIC development.
-
-```mermaid
-flowchart LR
-    subgraph Historical["Historical Development"]
-        H1["Hardware<br/><i>1940s</i>"] --> H2["Kernel<br/><i>1969</i>"]
-        H2 --> H3["OS Standards<br/><i>1988</i>"]
-        H3 --> H4["Networks<br/><i>1990s</i>"]
-        H4 --> H5["App Stores<br/><i>2008</i>"]
-        H5 --> H6["Cryptocurrencies<br/><i>2009</i>"]
-    end
-
-    subgraph CANONIC["CANONIC (21 Days)"]
-        C1["3 Axioms"] --> C2["Machine<br/>OS<br/>Ledger<br/>AppStore<br/>Coin"]
-    end
-
-    style C1 fill:#228be6,stroke:#1864ab,color:white
-    style C2 fill:#40c057,stroke:#2b8a3e,color:white
-```
-
-Historical computing infrastructure developed over decades: kernels (Unix, 1969), operating system standards (POSIX, 1988), application distribution (iOS App Store, 2008), immutable ledgers (Bitcoin, 2009). Each layer required years of development, standardization, and adoption.
+Historical computing infrastructure developed over decades. Kernels (Unix, 1969). Operating system standards (POSIX, 1988). Application distribution (iOS App Store, 2008). Immutable ledgers (Bitcoin, 2009). Each layer required years of development, standardization, and adoption.
 
 CANONIC derived analogous structures in weeks:
 
-| Infrastructure | Historical | CANONIC | Derivation |
-|----------------|------------|---------|------------|
-| Kernel | Years | Days | machine/ scope |
-| OS | Decades | Week 1 | os/ scope |
-| Immutability | Years | Week 2 | ledger/ scope |
-| Distribution | Years | Week 2 | appstore/ scope |
-| Token Economy | Years | Week 3 | coin/ scope |
+| Infrastructure | Historical | CANONIC |
+|----------------|------------|---------|
+| Kernel | Years | Days |
+| Operating System | Decades | Week 1 |
+| Immutability Layer | Years | Week 2 |
+| Distribution System | Years | Week 2 |
+| Token Economy | Years | Week 3 |
 
 The speed difference reflects a key insight: we didn't build five systems. We derived five views from one kernel. The three axioms, applied recursively, generate all necessary structure. Each "infrastructure layer" is a governed scope inheriting from its parent.
 
+Fifty years of computer science in three weeks.
+
 ---
 
-## 7. The Language Specification
+## 7. The Governance Loop
 
-CANONIC v0.1 includes a formal language specification: LANGUAGE.md. The document follows conventions from established language specifications (Go, Python, Rust, C) while introducing governance-specific constructs.
+Production under CANONIC follows a closed loop.
 
-**Figure 10** shows the specification structure. Five sections build on each other: lexical grammar (tokens), syntactic grammar (structure), semantic rules (meaning), composition rules (combining units), and workflows (operational procedures).
+Humans govern. AI produces. Validators check. The ledger records. Nothing enters without validation. Nothing validates without evidence. Nothing constitutes evidence without human-authored governance.
 
 ```mermaid
 flowchart TB
-    subgraph Specification["LANGUAGE.md Structure"]
-        L1["Lexical Grammar<br/><i>Tokens, Identifiers, Keywords</i>"]
-        L2["Syntactic Grammar<br/><i>CANON, VOCAB structure</i>"]
-        L3["Semantic Rules<br/><i>Inheritance, Closure</i>"]
-        L4["Composition Rules<br/><i>Namespaces, Stacks</i>"]
-        L5["Workflows<br/><i>Archive, Canonification</i>"]
+    subgraph Authority["Human Authority"]
+        H["Human"] -->|"declares"| CANON["CANON"]
+        H -->|"freezes"| LEDGER["LEDGER"]
+    end
+
+    subgraph Production["AI Production"]
+        AI["AI Agent"] -->|"produces"| ARTIFACTS["Artifacts"]
+        ARTIFACTS -->|"validated"| VALIDATORS["VALIDATORS"]
+    end
+
+    CANON -->|"rules"| VALIDATORS
+    VALIDATORS -->|"record"| LEDGER
+    LEDGER -->|"evidence"| PAPER["PAPER"]
+
+    AI -.->|"observes"| CANON
+
+    style CANON fill:#228be6,stroke:#1864ab,color:white
+    style VALIDATORS fill:#7950f2,stroke:#5f3dc4,color:white
+    style LEDGER fill:#fa5252,stroke:#c92a2a,color:white
+    style PAPER fill:#40c057,stroke:#2b8a3e,color:white
+```
+
+The dotted line marks the critical asymmetry.
+
+AI observes CANON but cannot modify it. This is not a permission setting. It is architectural. The governance files live in human-controlled repositories. AI operates in sessions that read those repositories but write only to governed workspaces.
+
+Humans have exclusive write access to CANON. AI has read-only access. This asymmetry is constitutional—built into the system's foundation, not a policy choice that could be reversed.
+
+We call this **AI-First, Human-Governed.**
+
+AI generates insights. During every session, Claude observed patterns worth formalizing. These observations are valuable. They also have zero governance force until a human explicitly adds them to CANON.
+
+Use AI aggressively. Draft with AI. Propose with AI. Analyze with AI. Critique with AI. But reserve *canonification*—the act of elevating a pattern to law—for human judgment.
+
+Before canonification, a pattern is a suggestion. After canonification, it's law. The AI cannot canonify. Only humans can.
+
+---
+
+## 8. Evidence Window
+
+This paper declares an evidence window: December 29, 2025 through January 19, 2026.
+
+Claims pertain only to evidence within this window. The declaration bounds scope—readers know exactly what the paper covers and can verify coverage.
+
+### Metrics
+
+| Metric | Count | Verification |
+|--------|-------|--------------|
+| Repositories | 21 | `ls -d */` |
+| Governed Scopes | 121 | `find . -name "CANON.md"` |
+| Collaboration Sessions | 332 | `find . -name "ep*.md"` |
+| Invention Disclosures | 163 | `ls patents/disclosures/` |
+| Root Axioms | 3 | Triad, Inheritance, Introspection |
+| Development Days | 21 | Calendar |
+| Validation Status | PASS | `python3 validators/vaas.py` |
+
+Each metric has a verification method. Scopes are directories with CANON.md—count them. Sessions are episode files—count them. The methods are reproducible. The counts are verifiable.
+
+### Ecosystem Composition
+
+```mermaid
+pie showData
+    title CANONIC Ecosystem (v0.1)
+    "Core Governance" : 21
+    "Domain Scopes" : 28
+    "Archive Scopes" : 72
+```
+
+Core governance (21 scopes) defines the framework itself. Domain scopes (28) apply the framework to specific purposes—writing, patents, publishing. Archive scopes (72) preserve history and reference states.
+
+### Validation State
+
+Running the validator:
+
+```
+=== VaaS - CANONIC Language Enforcement ===
+Repository: canonic
+Scopes found: 21
+...
+VALIDITY: PASS
+```
+
+Every scope passes. PASS means the scope satisfies all three axioms: triad present, inheritance declared, vocabulary closed.
+
+---
+
+## 9. The Language Specification
+
+CANONIC v0.1 includes a formal language specification.
+
+```mermaid
+flowchart TB
+    subgraph Specification["LANGUAGE.md"]
+        L1["Lexical Grammar"]
+        L2["Syntactic Grammar"]
+        L3["Semantic Rules"]
+        L4["Composition Rules"]
+        L5["Workflows"]
     end
 
     L1 --> L2 --> L3 --> L4 --> L5
@@ -517,144 +394,131 @@ flowchart TB
     style L5 fill:#fa5252,stroke:#c92a2a,color:white
 ```
 
-The specification defines semantic primitives—terms with fixed meanings across all CANONIC implementations:
+The specification follows conventions from established language specifications (Go, Python, Rust) while introducing governance-specific constructs.
 
-| Primitive | Role | Typical Instantiation |
-|-----------|------|----------------------|
-| **LEDGER** | Foundation layer | Git repository, blockchain |
-| **CANON** | Governance layer | Axiom declarations |
-| **VOCAB** | Semantic layer | Term definitions |
-| **README** | Description layer | Human documentation |
-| **COVERAGE** | Closure tracking | Gap identification |
-| **APPSTORE** | Distribution layer | GitHub, package registry |
+### The {SCOPE} Pattern
 
-These six primitives (the "hexad") provide a vocabulary for discussing governance across implementations. A LEDGER might be git or a blockchain; the primitive abstracts the specifics. A CANON might be YAML or Markdown; the primitive defines the role.
-
-### 7.1 The {SCOPE} Pattern
-
-A critical insight emerged during this writing session: the {SCOPE} pattern is unprecedented in language specification.
+Every governed directory follows a template:
 
 ```
 {SCOPE}/
-├── CANON.md      → what MUST be (LAW)
-├── VOCAB.md      → what words mean
-├── README.md     → what this is
-├── COVERAGE.md   → what's missing
-└── {SCOPE}.md    → SPECialized SCOPE (STORY)
+    CANON.md      -- what MUST be (LAW)
+    VOCAB.md      -- what words mean
+    README.md     -- what this is
+    COVERAGE.md   -- what's missing
+    {SCOPE}.md    -- SPECialized SCOPE (STORY)
 ```
 
-The filename `{SCOPE}.md` is a **template variable**: the directory name becomes the SPEC filename. For directory `paper/`, the SPEC is `PAPER.md`. For directory `validators/`, the SPEC is `VALIDATORS.md`. This binding is automatic—SPEC ties the directory name to the specification.
+The filename `{SCOPE}.md` is a template variable: the directory name becomes the SPEC filename. For directory `paper/`, the SPEC is `PAPER.md`. For directory `validators/`, the SPEC is `VALIDATORS.md`.
 
-**Self-referential closure:** The root directory is `canonic/`. Its SPEC is `CANONIC.md`. CANONIC is a CANONIC SPECialized SCOPE—the framework names itself, the specification specifies itself. This is not wordplay; it's structural closure. The framework that governs governance must be governable by itself.
+This creates self-referential closure.
 
-**Git closure:** The LEDGER primitive requires immutable evidence. Git provides this. Every commit hash is cryptographic proof. Every `inherits:` path resolves to a directory with a triad. Every axiom traces to a commit. Git closes the evidence loop—not because we designed it that way, but because git already is an immutable ledger.
+The root directory is `canonic/`. Its SPEC is `CANONIC.md`. CANONIC is a CANONIC SPECialized SCOPE—the framework that governs governance must be governable by itself. This is not wordplay. It is structural closure.
 
-**CANON is law; {SCOPE}.md is story.**
+**CANON is law. {SCOPE}.md is story.**
 
-CANON.md contains axioms—normative rules that govern. It says what MUST be true. CANON cannot contain lifecycle, history, or rationale. Those belong elsewhere.
+CANON.md contains axioms—normative rules that govern. It says what MUST be true. It cannot contain lifecycle, history, or rationale.
 
-`{SCOPE}.md` (SPECialized SCOPE) closes CANON—it provides the context that makes CANON reproducible:
+`{SCOPE}.md` closes CANON—it provides the context that makes CANON reproducible: purpose, lifecycle, evidence window, validation instructions.
 
-| Document | Content | Role |
-|----------|---------|------|
-| CANON.md | Axioms only | LAW (normative) |
-| {SCOPE}.md | Purpose, lifecycle, evidence window, validation | STORY (descriptive) |
-
-The bundle `{CANON.md, {SCOPE}.md}` is the minimal reproducible governance unit. CANON declares what; SPEC explains why and how to verify. Neither is complete without the other.
-
-This separation prevents a common failure mode: governance documents that mix rules with rationale, becoming neither enforceable nor understandable. CANON stays pure. SPEC carries context.
-
-**Evidence of discovery:** This insight crystallized during manuscript preparation (ep332, January 19, 2026). The `paper/` scope now contains `CANON.md` (three axioms: epistemic-only, ledger authority, evidence-bounded) and `PAPER.md` (lifecycle, evidence window, validation instructions). The manuscript you are reading is governed by the bundle it describes.
-
-**Evolution of SPEC:** The term SPEC evolved through use. Initially understood as "specification," it crystallized to mean **SPEC**ialized **SCOPE**—the file that closes a scope by binding its name to its specification. For the `paper/` directory, `PAPER.md` is the CANONIC PAPER SPECialized SCOPE—precisely a paper specification governed by CANONIC. The filename template `{SCOPE}.md` captures this: directory name becomes specification name.
-
-The distinction between SPEC-as-variable and `SPEC.md`-as-file is subtle and drift is constant. During this paper's development, the AI assistant repeatedly created `SPEC.md` files before being corrected. Git history records four rename operations (commits `cf637bf`, `471956f`, `894d2c5`) as the naming convention evolved. This drift is now formally documented as IDF-163: Specification Drift Prevention Pattern. The rule is simple: `{SCOPE}.md` where `{SCOPE}` = directory name in uppercase. The file `SPEC.md` never exists.
-
-Key language features:
-
-| Feature | Rule | Rationale |
-|---------|------|-----------|
-| Single-word identifiers | No hyphens, no underscores | Filesystem compatibility |
-| Case semantics | UPPERCASE = governance | Visual distinction |
-| Inheritance termination | All chains end at `/` | Authority must ground |
-| Singular/plural bijection | `service` template, `services` instances | Type/instance clarity |
-
-The specification is normative—it defines what implementations MUST do. This paper is descriptive—it explains what we did. The distinction matters: changing this paper doesn't change the rules.
+The bundle `{CANON.md, {SCOPE}.md}` is the minimal reproducible governance unit. Neither is complete without the other.
 
 ---
 
-## 8. Distribution: GitHub as App Store
+## 10. The CANONIC Foundation
 
-During session 168 (sessions are numbered episodes of human-AI collaboration), while documenting the system architecture, we discovered something unexpected: GitHub already provides everything an application distribution system needs.
+```
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠿⠿⠿⠿⠿⠻⠿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠋⢉⡀⠠⢤⠀⡶⠀⣤⡀⠐⢷⣦⠀⠙⢿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⠟⢁⣄⠘⠓⠀⠀⠀⠀⠀⢠⣶⠟⠁⠀⣀⣀⣀⡀⠀⠙⣿⣿⣿
+⣿⣿⣿⣿⠟⠁⢴⠄⠁⠀⠀⠀⣀⣠⣤⣤⣤⣿⡄⠀⢸⡿⠋⢉⢻⣷⣤⣿⣿⣿
+⣿⣿⣿⠇⠀⠶⠀⠀⠀⢀⣴⣿⣿⣿⣿⣿⣿⣿⣷⡀⠸⣷⡀⠛⢀⠙⣿⣿⣿⣿
+⣿⣿⡏⠀⠶⠀⠀⠀⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣙⣿⡄⠙⣁⠹⣿⣿⣿
+⣿⣿⠁⠰⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠀⢉⡁⢿⣿⣿
+⣿⣿⠀⣶⠀⠀⠀⢸⣿⣿⣿  CANONIC  ⣿⣿⣿⠀⠘⠃⢸⣿⣿
+⣿⣿⠀⢤⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠀⠘⠃⢸⣿⣿
+⣿⣿⣇⢀⡄⠀⠀⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠀⠚⠂⣾⣿⣿
+⣿⣿⣿⡄⢠⡦⠀⠀⠀⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠘⠇⢰⣿⣿⣿
+⣿⣿⣿⣿⣄⠀⢴⠄⠀⠀⠀⠙⠛⠿⠿⠿⠿⠿⠟⠋⠀⠀⡀⠚⠃⣠⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣷⣄⠐⠛⠀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⠈⠋⢀⣴⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣷⣦⣤⣁⠘⠃⠠⠶⠀⠶⠄⠘⢀⣠⣴⣾⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+```
 
-**Figure 11** contrasts the expected approach (build an app store) with the discovered approach (use GitHub).
+*The Ouroboros—the serpent eating its own tail.*
+
+The CANONIC Foundation stewards this framework at **canonic.org**.
+
+The symbol is the Ouroboros because the system is self-proving: the paper that describes CANONIC is governed by CANONIC, validated by CANONIC validators, and distributed through channels CANONIC discovered.
+
+This is not circular reasoning. It is closure.
+
+The transcript that proves the paper becomes evidence. The evidence becomes an episode. The episode generates invention disclosures. The disclosures establish intellectual property. The IP funds further development.
+
+```
+TRANSCRIPT ──→ EPISODE ──→ IDF ──→ COIN
+     ↑                              │
+     └──────────────────────────────┘
+```
+
+The serpent eats its tail. The system feeds itself. The paper proves itself by running.
+
+---
+
+## 11. Distribution: GitHub IS the Operating System
+
+During session 168, while documenting the system architecture, we discovered something unexpected.
+
+GitHub already provides everything an application distribution system needs.
 
 ```mermaid
 flowchart TB
-    subgraph Expected["Expected: Build Infrastructure"]
-        E1["Build app store platform"]
-        E2["Build user management"]
-        E3["Build billing system"]
-        E4["Build CI/CD pipeline"]
-        E5["Build discovery/search"]
+    subgraph Expected["Expected"]
+        E1["Build platform"]
+        E2["Build users"]
+        E3["Build billing"]
+        E4["Build CI/CD"]
+        E5["Build discovery"]
     end
 
-    subgraph Discovered["Discovered: GitHub Already Exists"]
-        D1["GitHub Marketplace<br/><i>Billing exists</i>"]
-        D2["GitHub Users<br/><i>100M+ developers</i>"]
-        D3["GitHub Actions<br/><i>CI/CD exists</i>"]
-        D4["GitHub Search + Topics<br/><i>Discovery exists</i>"]
-        D5["GitHub Badges<br/><i>Certification exists</i>"]
+    subgraph Discovered["Discovered"]
+        D1["GitHub Marketplace"]
+        D2["100M+ developers"]
+        D3["GitHub Actions"]
+        D4["Search + Topics"]
+        D5["Badges"]
     end
 
-    Expected -->|"We would build"| Build["Everything"]
-    Discovered -->|"We build only"| VaaS["Validators"]
+    Expected -->|"Build"| Build["Everything"]
+    Discovered -->|"Build"| VaaS["Validators only"]
 
     style VaaS fill:#228be6,stroke:#1864ab,color:white
     style Build fill:#868e96
 ```
 
-The insight: validation is the only missing piece. GitHub provides hosting, users, billing, CI/CD, discovery, and certification (badges). CANONIC provides validators. The integration is a GitHub Action—a configuration file that runs validators on each push:
+GitHub provides hosting, users, billing, CI/CD, discovery, and certification (badges). The only missing piece is validation. CANONIC provides validators. The integration is a configuration file:
 
 ```yaml
-# .github/workflows/canonic.yml
 name: CANONIC Validation
 on: [push]
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
       - uses: canonic-machine/vaas-action@v1
-      # Output: VALIDITY: PASS
-      # Badge: CANONIC VERIFIED
 ```
 
-Repositories passing validation display a badge. The badge links to validation results. Users can verify compliance without running validators locally. Distribution becomes: publish to GitHub, pass validation, display badge.
+Repositories passing validation display a badge. The badge links to results. Users verify compliance without running validators locally.
 
-This discovery exemplifies the Ouroboros pattern—the system discovering its own distribution channel. The session documenting the architecture became evidence of the architecture working. The paper describing CANONIC was written under CANONIC governance, validated by CANONIC validators, and will be distributed through the channel CANONIC discovered.
+This is the Ouroboros pattern—the system discovering its own distribution channel. The session documenting the architecture became evidence of the architecture working. This paper was written under CANONIC governance, validated by CANONIC validators, and will be distributed through the channel CANONIC discovered.
 
----
+GitHub is the operating system.
 
-## 9. Methods
-
-CANONIC papers do not include a traditional methods section. The methods ARE the PAPER CANON—the SPECialized SCOPE that governs this document.
-
-**Where to find methods:** `paper/PAPER.md` contains:
-- **Purpose** — what this paper reconstructs
-- **Governance path** — inheritance from `/canonic/machine/os/writing/`
-- **Principles** — epistemic reconstruction, ledger authority, describe-then-demonstrate
-- **Lifecycle** — how the paper evolves through phases
-- **Evidence window** — December 29, 2025 through January 19, 2026
-- **Validation instructions** — how to verify claims
-
-The bundle `{CANON.md, PAPER.md}` is the complete methodological specification. CANON declares constraints (epistemic-only, ledger authority, evidence-bounded). PAPER provides context (why, when, how to verify). Together they constitute reproducible methodology.
-
-**To reproduce this paper:** Clone the repository. Read `PAPER.md`. Verify each claim against the ledger. The specification is the method.
+The supplemental material lives there. The evidence lives there. The validators live there. GitHub IS the OS. The OS proves the paper.
 
 ---
 
-## 10. Limitations
+## 12. Limitations
 
 We do not claim:
 
@@ -664,52 +528,46 @@ We do not claim:
 
 **Scalability.** The evidence window covers 21 repositories and 121 scopes. Enterprise-scale deployment (thousands of repositories, millions of scopes) is unproven.
 
-**Completeness.** LANGUAGE.md is version 0.1. Known gaps exist; the roadmap addresses them. The specification will evolve.
+**Completeness.** LANGUAGE.md is version 0.1. Known gaps exist. The specification will evolve.
 
-The study bounds itself: proto-CANONIC (December 29, 2025) through LANGUAGE v0.1 (January 19, 2026). Claims about evidence outside this window are out of scope.
+The study bounds itself: December 29, 2025 through January 19, 2026. Claims about evidence outside this window are out of scope.
 
 ---
 
-## 10. Conclusion
+## 13. Conclusion
 
-We asked: can a governed human-AI collaboration produce a verifiable paper while making AI slop structurally inadmissible?
+We asked: can governed human-AI collaboration produce verifiable content while making AI slop structurally inadmissible?
 
 Within this evidence window, yes.
 
-**Figure 12** summarizes what v0.1 achieved. Five metrics (axioms, scopes, episodes, disclosures, specification) converge on a single property: closure. Closure means nothing structural remains to add—the system is complete relative to its specification.
+The system grew through recorded iteration. Every failure was caught by validators, documented in sessions, and corrected. The failures prove the governance works—invalid states were detected and rejected.
 
 ```mermaid
 flowchart LR
-    subgraph Achieved["v0.1 Achieved"]
-        A1["3 Root Axioms"]
-        A2["121 Governed Scopes"]
-        A3["332 Episodes"]
-        A4["73 Invention Disclosures"]
-        A5["LANGUAGE.md v0.1"]
+    subgraph Achieved["v0.1"]
+        A1["3 Axioms"]
+        A2["121 Scopes"]
+        A3["332 Sessions"]
+        A4["163 Disclosures"]
+        A5["LANGUAGE v0.1"]
     end
 
     A1 & A2 & A3 & A4 & A5 --> Closure["Closure"]
-    Closure --> Proof["Paper proves itself<br/>by running"]
+    Closure --> Proof["Self-proving"]
 
     style Closure fill:#228be6,stroke:#1864ab,color:white
     style Proof fill:#40c057,stroke:#2b8a3e,color:white
 ```
 
-Summary metrics:
+Constitutional governance makes verifiability structural.
 
-| Metric | v0.1 Count |
-|--------|------------|
-| Repositories | 21 |
-| Governed Scopes | 121 |
-| Collaboration Episodes | 332 |
-| Invention Disclosures | 73 |
-| Root Axioms | 3 |
-| Development Days | 21 |
-| Validation Status | PASS |
+Traditional papers describe work that happened elsewhere. This paper *is* the work. The repositories are the evidence. Clone them. Run validators. Trace any claim to its commit.
 
-The system grew through recorded iteration. Every failure was caught by validators, documented in episodes, and corrected. The failures prove the governance works—invalid states were detected and rejected.
+The paper proves itself by running.
 
-**Constitutional governance makes verifiability structural.** Traditional papers describe work that happened elsewhere. This paper is the work. The repositories are the evidence. Clone them. Run validators. Trace any claim to its commit. The paper proves itself by running.
+We didn't invent. We recognized. The cure for AI slop is 50 years old. Compiler theory solved it. We applied it.
+
+Three axioms. 21 days. Closure.
 
 ---
 
@@ -719,40 +577,22 @@ This work emerges from two decades of research in precision medicine, data annot
 
 Deep learning models for clinical diagnosis [46,47] highlighted a paradox: more powerful models require more rigorous validation. A model that predicts Alzheimer's disease from PET scans [47] or estimates delirium risk [46] must trace every claim to evidence. CANONIC makes this traceability structural—not a best practice, but a compilation requirement.
 
-The MammoChat project [43,45] pioneered patient-centered AI for breast cancer imaging. Blockchain-based provenance ensured patients owned their data [43]. CANONIC extends this insight: all governed content has cryptographic provenance via git. The LEDGER is the immutable record [21–24]. The framework emerged from practice—from the constraints of handling real patient data where every claim has consequences.
-
-### Domain Verticals
-
-CANONIC is domain-agnostic by design. The three axioms apply wherever governance matters. We anticipate vertical specializations:
-
-| Vertical | Domain | Application |
-|----------|--------|-------------|
-| **LAW** | Legal | Contract governance, compliance verification |
-| **MED** | Healthcare | Clinical AI governance, patient data provenance |
-| **FIN** | Finance | Audit trails, regulatory compliance |
-| **SCI** | Research | Reproducibility, data lineage |
-| **GOV** | Public Sector | Policy governance, transparency |
-
-**MED** is the proving ground. Healthcare demands the highest standards: HIPAA compliance, FDA validation, clinical evidence. Every claim about a patient must trace to source. Every AI recommendation must be auditable. The governance patterns forged in MammoChat [43,51] and clinical AI [46,47] now generalize through CANONIC.
-
-The vertical model: CANONIC provides the constitutional layer; domain verticals inherit and specialize. MED.CANONIC inherits from CANONIC and adds healthcare-specific axioms. LAW.CANONIC adds legal-specific constraints. Each vertical is a governed scope—validated by the same framework it extends.
-
-**Roadmap Note:** v1.0 will introduce OncoNex—a patient-centered precision oncology platform built on MED.CANONIC. OncoNex transforms real-world clinical data into shared evidence and medical dividends, evolving from MammoChat's open-source foundation with interoperable standards, governed AI, and cryptographically verifiable ledger.
+The MammoChat project [43,45,51] pioneered patient-centered AI for breast cancer imaging. Blockchain-based provenance ensured patients owned their data [43]. CANONIC extends this insight: all governed content has cryptographic provenance via git. The LEDGER is the immutable record. The framework emerged from practice—from the constraints of handling real patient data where every claim has consequences.
 
 ---
 
 ## Acknowledgments
 
-The AI assistants Claude Opus 4 and Claude Sonnet 4 (Anthropic, 2025) contributed production under governance throughout this project. Their contributions are recorded in the ledger with model identity disclosure per CANONIC governance requirements.
+The AI assistants Claude Opus 4.5 and Claude Sonnet 4.5 (Anthropic, 2025) contributed production under governance throughout this project. Their contributions are recorded in the ledger with model identity disclosure per CANONIC governance requirements.
 
 The framework name honors the insight from *Dividends & Deaths* where the governance/description separation first emerged—originally as CANNON (with a typo), now as CANON.
 
-### Funding and Support
+### Funding
 
 This work builds on over $5M in NIH-funded research spanning two decades:
 
 **BD2K (Big Data to Knowledge) Awards:**
-- NIH U01-LM012675: "Crowd-Assisted Deep Learning (CrADLe): Digital Curation to Translate Big Data into Precision Medicine" ($1.6M direct)
+- NIH U01-LM012675: "Crowd-Assisted Deep Learning (CrADLe): Digital Curation to Translate Big Data into Precision Medicine"
 - NIH BD2K Crowdsourcing Award, NCI (2016)
 - STARGEO.org: Search Tag Analyze Resource for Gene Expression Omnibus
 
@@ -773,62 +613,6 @@ The governance patterns crystallized here were forged in the constraints of clin
 
 ---
 
-## The CANONIC Foundation
-
-This paper is the first publication of the CANONIC Foundation.
-
-The Foundation was established to steward the CANONIC governance framework as a public good. Its mission: ensure that AI governance infrastructure remains open, verifiable, and accountable. The Foundation operates under its own governance—CANONIC governing CANONIC.
-
-**Role and Responsibilities:**
-
-1. **Specification Stewardship**: Maintain LANGUAGE.md and related specifications. Ensure backward compatibility. Publish versioned releases.
-
-2. **Validator Distribution**: Provide VaaS (Validators as a Service) as both open-source reference implementation and commercial service.
-
-3. **Certification**: Issue CANONIC VERIFIED badges for repositories passing validation. Maintain certification registry.
-
-4. **Research**: Fund and publish research on governance, formal verification, and human-AI collaboration.
-
-5. **Education**: Train practitioners in CANONIC governance. Develop curriculum for constitutional AI.
-
-**Governance Model:**
-
-The Foundation is governed by its own CANON—the same framework it publishes. Board decisions require consensus documented in the ledger. Constitutional changes require supermajority approval with mandatory waiting periods. AI assistants may propose but never ratify.
-
-**Open-Source Strategy:**
-
-CANONIC follows a layered open-source model:
-
-| Layer | License | Rationale |
-|-------|---------|-----------|
-| Specification | CC-BY-4.0 | Maximum adoption; anyone can implement |
-| Reference Validators | MIT | Enterprise-friendly; fork and customize |
-| VaaS Runtime | Proprietary | Sustains development; commercial licensing |
-| Certification Data | Public Ledger | Verifiable; trust requires transparency |
-
-This model mirrors successful open standards: the specification is free, implementations compete, commercial services sustain development. The Foundation writes its own grants—proposals governed by CANON, validated before submission, ledgered upon award.
-
-**Sustainability:**
-
-The Foundation sustains itself through:
-1. **VaaS Subscriptions**: Enterprise validation services
-2. **Certification Fees**: CANONIC VERIFIED badge licensing
-3. **Training Programs**: Professional certification courses
-4. **Research Grants**: NIH, NSF, and foundation funding
-5. **Consulting**: Custom governance implementations
-
-A commercialization platform operationalizes CANONIC for enterprise deployment. Details are available to qualified partners under NDA.
-
-Revenue streams are governed by CANON. Financial records are ledgered. The model is transparent by construction.
-
-**The Recursive Vision:**
-
-The Foundation governs governance infrastructure. Its own operations demonstrate the framework. Grant proposals are CANONIC artifacts. Board minutes are ledger entries. This paper is its own evidence. The Foundation proves the framework by running it.
-
-This paper announces the Foundation's existence and intent. The work is open. The ledger is public. The future is governed.
-
----
-
 ## Disclosure
 
 This manuscript was produced under CANONIC governance.
@@ -838,6 +622,8 @@ This manuscript was produced under CANONIC governance.
 **Evidence window:** December 29, 2025 through January 19, 2026
 
 **Validation status:** PASS
+
+**Supplemental material:** github.com/canonic-machine
 
 ---
 
@@ -899,7 +685,7 @@ This manuscript was produced under CANONIC governance.
 
 [22] Merkle, R.C. (1988). A Digital Signature Based on a Conventional Encryption Function. *CRYPTO '87*, 369–378.
 
-[23] Nakamoto, S. (2008). Bitcoin: A Peer-to-Peer Electronic Cash System. bitcoin.org.
+[23] Nakamoto, S. (2008). Bitcoin: A Peer-to-Peer Electronic Cash System.
 
 [24] Torvalds, L., & Hamano, J. (2005). Git: Fast Version Control System. git-scm.com.
 
@@ -933,15 +719,15 @@ This manuscript was produced under CANONIC governance.
 
 ### CANONIC Specifications (This Work)
 
-[36] Hadley, D. (2026). CANONIC LANGUAGE Specification v0.1. `canonic:81bb6d5`. github.com/canonic-machine/canonic.
+[36] Hadley, D. (2026). CANONIC LANGUAGE Specification v0.1. github.com/canonic-machine/canonic.
 
-[37] Hadley, D. (2026). CANONIC COVERAGE Specification. `canonic:COVERAGE.md`. github.com/canonic-machine/canonic.
+[37] Hadley, D. (2026). CANONIC COVERAGE Specification. github.com/canonic-machine/canonic.
 
-[38] Hadley, D. (2026). CANONIC VOCAB Definitions. `canonic:VOCAB.md`. github.com/canonic-machine/canonic.
+[38] Hadley, D. (2026). CANONIC VOCAB Definitions. github.com/canonic-machine/canonic.
 
-[39] Hadley, D. (2026). VaaS: Validators as a Service. `validators:e772048`. github.com/canonic-machine/validators.
+[39] Hadley, D. (2026). VaaS: Validators as a Service. github.com/canonic-machine/validators.
 
-[40] Hadley, D. (2026). CANONIC CANON (Root Axioms). `canonic:CANON.md`. github.com/canonic-machine/canonic.
+[40] Hadley, D. (2026). CANONIC CANON (Root Axioms). github.com/canonic-machine/canonic.
 
 ### Prior Work by the Author
 
@@ -965,7 +751,7 @@ This manuscript was produced under CANONIC governance.
 
 [50] Gianfrancesco, M., et al. (2019). Tracing diagnosis trajectories over millions of patients reveal an unexpected risk in schizophrenia. *Scientific Data*, 6, 210. PMID: 31615985.
 
-### CANONIC Ecosystem Assets (Open Source)
+### CANONIC Ecosystem (Open Source)
 
 [51] MammoChat. (2025). Empowering Women with Empathic AI. github.com/canonic-machine/mammochat.
 
@@ -995,185 +781,232 @@ Verbatim from `canonic/CANON.md`:
 
 ---
 
-# Appendix B: Reproducibility Protocol
+# Appendix B: Formal Foundations
 
-This paper is CANONIC: every claim traces to immutable evidence. Follow this protocol to verify.
+## B.1 Definitions
 
-## Step 1: Clone the Evidence
+**Definition 1 (Scope).** A scope S is a tuple (P, T, A, V) where:
+- P is a filesystem path
+- T = {CANON.md, VOCAB.md, README.md} is the triad
+- A is a set of axioms declared in CANON.md
+- V is a set of definitions declared in VOCAB.md
 
-```bash
-# Clone the constitutional core
-git clone https://github.com/canonic-machine/canonic.git
-cd canonic
+**Definition 2 (Inheritance Chain).** For scope S with path P, the inheritance chain I(S) is the sequence:
 
-# Verify you have the correct repository
-git log --oneline -1
-# Expected: 81bb6d5 LANGUAGE: add data state dimensions...
-```
+    I(S) = [S, parent(S), parent(parent(S)), ..., root]
 
-## Step 2: Run Validators
+where parent(S) is the scope at the parent directory of P, and root is the scope at path "/".
 
-```bash
-# Install dependencies
-pip install -r requirements.txt
+**Definition 3 (Vocabulary Closure).** A scope S is vocabulary-closed iff:
 
-# Run VaaS validators
-python3 validators/vaas.py
+    ∀ t ∈ terms(CANON_S) ∪ terms(VOCAB_S) : t ∈ definitions(VOCAB_S) ∪ definitions(I(S))
 
-# Expected output:
-# === VaaS - CANONIC Language Enforcement ===
-# Repository: canonic
-# Scopes found: 21
-# ...
-# VALIDITY: PASS
-```
+That is, every term used in CANON or VOCAB must be defined either locally or in an ancestor scope.
 
-## Step 3: Verify Metrics
-
-```bash
-# Count governed scopes
-find . -name "CANON.md" | wc -l
-# Expected: 21
-
-# Verify inheritance chains terminate at root
-grep -r "inherits:" */CANON.md | head -5
-
-# Check vocabulary closure
-python3 validators/vocab_closure.py
-# Expected: All terms defined
-```
-
-## Step 4: Trace Specific Claims
-
-| Claim in Paper | Verification Command | Expected |
-|----------------|---------------------|----------|
-| "First CANON.md" | `git show 11affab` | CANON.md content |
-| "CANNON typo origin" | `git show 3259f35` | CANNON.md in dividends |
-| "LANGUAGE v0.1" | `git show 81bb6d5` | LANGUAGE.md update |
-| "21 repositories" | `ls -d */` | 21 directories |
-| "332 episodes" | `find ../writing -name "ep*.md" \| wc -l` | 332 files |
-
-## Step 5: Verify This Paper
-
-This paper itself is governed:
-
-```bash
-# The paper source is in the paper/ repository
-cd ../paper
-cat CANON.md
-# Shows: Paper governance rules
-
-# Verify paper validates
-python3 ../canonic/validators/vaas.py .
-# Expected: VALIDITY: PASS
-```
-
-## Cryptographic Verification
-
-Git commits are SHA-1 hashes of content. Changing any byte changes the hash. To verify evidence integrity:
-
-```bash
-# Verify commit 11affab exists and matches
-git cat-file -p 11affab
-# Shows raw commit object
-
-# Verify the tree hash
-git ls-tree 11affab
-# Shows file hashes at that commit
-```
-
-**If any verification fails, the paper's claims are falsified.** This is the test.
-
-All evidence is immutable in git. Commits cannot be altered without changing their hashes. Hash verification confirms evidence integrity.
+**Definition 4 (Validity).** A scope S is valid iff:
+1. T ⊆ files(P) — the triad exists
+2. I(S) terminates at root — inheritance is grounded
+3. S is vocabulary-closed — introspection holds
 
 ---
 
-# Appendix C: Evidence Index
+## B.2 Compiler Correspondence
+
+**Theorem 1 (Syntactic Correspondence).** The Triad axiom is isomorphic to context-free grammar syntax requirements.
+
+*Proof.* A context-free grammar G = (V, Σ, R, S) requires:
+- V: set of non-terminal symbols
+- Σ: set of terminal symbols
+- R: set of production rules
+- S: start symbol
+
+We construct a mapping φ: CANONIC → CFG:
+- φ(scope identifiers) = V
+- φ({CANON.md, VOCAB.md, README.md}) = Σ
+- φ(triad requirement) = R, specifically: Scope → CANON VOCAB README
+- φ(root) = S
+
+The Triad axiom mandates that for all valid scopes:
+
+    files(S) ⊇ {CANON.md, VOCAB.md, README.md}
+
+This is precisely a syntactic well-formedness constraint in the grammar sense: a scope is syntactically valid iff it contains the required terminal symbols. The mapping φ is structure-preserving.
+
+Therefore, TRIAD ≅ SYNTAX. □
+
+**Theorem 2 (Scope Resolution Correspondence).** The Inheritance axiom implements static scope resolution equivalent to the contour model.
+
+*Proof.* The contour model [Johnston 1971] defines name resolution in block-structured languages:
+
+    resolve(name, block) =
+        if name ∈ declarations(block) then lookup(name, block)
+        else resolve(name, enclosing(block))
+
+The Inheritance axiom defines concept resolution:
+
+    resolve(term, scope) =
+        if term ∈ definitions(VOCAB_scope) then definition(term, scope)
+        else resolve(term, parent(scope))
+
+The structural identity is evident:
+- block ↔ scope
+- declarations ↔ definitions(VOCAB)
+- enclosing ↔ parent
+- name ↔ term
+
+Both terminate: the contour model at the outermost block, CANONIC at root. Root termination is guaranteed by Axiom 1: inheritance chains MUST terminate at "/".
+
+Therefore, INHERITANCE ≅ SCOPE_RESOLUTION. □
+
+**Theorem 3 (Type System Correspondence).** The Introspection axiom implements a closed type system equivalent to Hindley-Milner completeness.
+
+*Proof.* The Hindley-Milner type system [Hindley 1969, Milner 1978] has the principal type property: every well-typed expression has a most general type that can be inferred without annotations.
+
+The key property is *closure*: all type references resolve to type definitions within the system.
+
+Introspection requires:
+
+    ∀ t ∈ terms(CANON) ∪ terms(VOCAB) : t ∈ definitions(VOCAB*)
+
+where VOCAB* denotes the transitive closure of VOCAB through inheritance.
+
+This is vocabulary closure—no undefined terms can appear. The correspondence:
+- type reference ↔ term usage
+- type definition ↔ vocabulary definition
+- type inference ↔ definition lookup through inheritance chain
+- principal types ↔ canonical definitions (inherited definitions are final)
+
+A CANONIC scope is well-typed iff every term resolves to exactly one definition (the closest in the inheritance chain). This parallels how Hindley-Milner infers the principal type.
+
+Therefore, INTROSPECTION ≅ TYPE_SYSTEM. □
+
+---
+
+## B.3 Completeness
+
+**Theorem 4 (Axiom Independence).** The three axioms are mutually independent.
+
+*Proof.* We construct counterexamples showing each axiom can fail while others hold:
+
+1. *Triad fails, others hold:* A directory with only CANON.md and VOCAB.md, where CANON declares inheritance to root and VOCAB defines all its terms. The triad is incomplete, but inheritance and introspection are satisfied.
+
+2. *Inheritance fails, others hold:* A scope with complete triad and closed vocabulary, but CANON declares `inherits: /nonexistent/path/`. The chain doesn't terminate at root.
+
+3. *Introspection fails, others hold:* A scope with complete triad and valid inheritance, but CANON uses term "foobar" which appears in no VOCAB in the inheritance chain.
+
+Since each axiom can fail independently, no axiom is derivable from the others. □
+
+**Theorem 5 (Axiom Minimality).** Removing any axiom breaks the governance system.
+
+*Proof.*
+
+1. *Remove Triad:* Without mandatory files, there is no structure to validate. A directory with arbitrary files could claim validity. Governance becomes undefined.
+
+2. *Remove Inheritance:* Without grounded authority chains, scopes can claim arbitrary parents or form cycles. Authority becomes unverifiable.
+
+3. *Remove Introspection:* Without vocabulary closure, terms can mean anything. Slop becomes admissible—undefined jargon passes validation.
+
+Each removal admits a class of invalid content that the full system rejects. □
+
+**Corollary (Compiler Correspondence Completeness).** The three axioms provide complete coverage of the three fundamental compiler concepts.
+
+*Proof.* By Theorems 1-3:
+- TRIAD ≅ SYNTAX (structure)
+- INHERITANCE ≅ SCOPE_RESOLUTION (binding)
+- INTROSPECTION ≅ TYPE_SYSTEM (semantics)
+
+By Theorems 4-5, the axioms are independent and minimal.
+
+Syntax, scope resolution, and type systems are the three pillars of compiler theory [Aho et al. 2006]. CANONIC provides governance analogs for each, and only these three.
+
+The correspondence is complete. □
+
+---
+
+## B.4 Decidability
+
+**Theorem 6 (Validation Decidability).** Scope validity is decidable in O(n) where n is the total size of all files in the inheritance chain.
+
+*Proof.* The validation algorithm:
+
+```
+validate(scope):
+    // Triad check: O(1)
+    if not exists(CANON.md) or not exists(VOCAB.md) or not exists(README.md):
+        return INVALID
+
+    // Inheritance check: O(d) where d = chain depth
+    chain = []
+    current = scope
+    while current != root:
+        if current in chain:  // cycle detection
+            return INVALID
+        chain.append(current)
+        current = parent(current)
+
+    // Introspection check: O(n)
+    all_definitions = union(definitions(v) for v in chain)
+    all_terms = union(terms(c) for c in chain) ∪ union(terms(v) for v in chain)
+    if not all_terms ⊆ all_definitions:
+        return INVALID
+
+    return VALID
+```
+
+Each step is decidable:
+- File existence: decidable (filesystem operation)
+- Parent traversal: decidable (terminates by finite depth or cycle detection)
+- Set operations: decidable (finite sets)
+
+Total complexity: O(d) + O(n) = O(n) since d ≤ n.
+
+Therefore, validation halts for all inputs. □
+
+---
+
+# Appendix C: Reproducibility Protocol
+
+```bash
+# Clone the evidence
+git clone https://github.com/canonic-machine/canonic.git
+cd canonic
+
+# Run validators
+python3 validators/vaas.py
+# Expected: VALIDITY: PASS
+
+# Count scopes
+find . -name "CANON.md" | wc -l
+# Expected: 21
+
+# Verify specific claim
+git show 11affab
+# Expected: First CANON.md content
+```
+
+**If any verification fails, the paper's claims are falsified.**
+
+---
+
+# Appendix D: Evidence Index
 
 | Claim | Evidence | Verification |
 |-------|----------|--------------|
 | Proto-CANONIC origin | `dividends:07a5834` | `git show 07a5834` |
-| CANNON.md formalized | `dividends:3259f35` | `git show 3259f35` |
 | First CANON.md | `canonic:11affab` | `git show 11affab` |
 | LANGUAGE.md v0.1 | `canonic:81bb6d5` | `git show 81bb6d5` |
 | 21 repositories | Directory listing | `ls -d */` |
 | 121 scopes | CANON.md count | `find . -name "CANON.md"` |
-| 332 episodes | Episode file count | `find . -name "ep*.md"` |
-| 73 IDFs | Disclosure directory | `ls patents/disclosures/` |
-| VaaS PASS | Validator output | `python3 validators/vaas.py` |
+| 332 sessions | Episode count | `find . -name "ep*.md"` |
+| 163 disclosures | Disclosure count | `ls patents/disclosures/` |
 
 ---
 
-# Supplement S1: IP Portfolio
+**Supplemental Material:** github.com/canonic-machine
 
-Invention disclosures filed during the evidence window:
+166 drift episodes. 163 invention disclosures. Full validator source. Complete git history.
 
-| Category | Count | Coverage |
-|----------|-------|----------|
-| Constitutional Core | 4 | Framework axioms |
-| Machine Layer | 6 | Execution semantics |
-| Ledger Layer | 7 | Immutability mechanisms |
-| Paper Production | 3 | Epistemic reconstruction |
-| Registry Services | 15 | Namespace management |
-| Domain Services | 12 | Applied governance |
-| **Total** | **73** | Complete portfolio |
-
-Details available upon request. Patent applications pending.
-
----
-
-# Supplement S2: Product Architecture
-
-CANONIC intellectual property follows a three-layer model:
-
-```
-LAYER 1: PUBLIC
-  Specification documents (CANONIC.md, LANGUAGE.md)
-  Academic publications
-  Open-source reference implementations
-
-LAYER 2: DISCLOSED
-  Patent portfolio (73 IDFs)
-  Architectural documentation
-  Product specifications
-
-LAYER 3: PRIVATE
-  Validator implementations
-  VaaS runtime systems
-  Operational tooling
-```
-
-The model separates what (public specification) from how (private implementation). Anyone may implement CANONIC from the specification. VaaS provides a commercial implementation.
-
----
-
-# Supplement S3: Roadmap
-
-```
-v0.0 (frozen 2026-01-19) ───────────────────────────────────
-  LANGUAGE.md v0.1 complete
-  3 root axioms crystallized
-  121 scopes governed
-  VaaS validation operational
-  Paper demonstrates closure
-  MCP Server (AI agent interface)
-  → see v0.1
-
-v0.1 (frozen 2026-01-19) ───────────────────────────────────
-  Patent applications filed
-  VaaS early access program
-  CANONIC COIN token economics
-  → see v1.0
-
-v1.0 (current - publication ready) ─────────────────────────
-  All specification gaps closed
-  arXiv publication
-  Public announcement
-  VaaS general availability
-  GitHub App Store integration
-  MCP Server on App Store
-  FRAND licensing terms published
-```
+GitHub IS the OS. The supplemental proves the paper.
 
 ---
 
