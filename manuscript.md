@@ -10,6 +10,26 @@ founder@canonic.org
 
 v0.1 — January 2026
 
+```
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠿⠿⠿⠿⠿⠻⠿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠋⢉⡀⠠⢤⠀⡶⠀⣤⡀⠐⢷⣦⠀⠙⢿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⠟⢁⣄⠘⠓⠀⠀⠀⠀⠀⢠⣶⠟⠁⠀⣀⣀⣀⡀⠀⠙⣿⣿⣿
+⣿⣿⣿⣿⠟⠁⢴⠄⠁⠀⠀⠀⣀⣠⣤⣤⣤⣿⡄⠀⢸⡿⠋⢉⢻⣷⣤⣿⣿⣿
+⣿⣿⣿⠇⠀⠶⠀⠀⠀⢀⣴⣿⣿⣿⣿⣿⣿⣿⣷⡀⠸⣷⡀⠛⢀⠙⣿⣿⣿⣿
+⣿⣿⡏⠀⠶⠀⠀⠀⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣙⣿⡄⠙⣁⠹⣿⣿⣿
+⣿⣿⠁⠰⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠀⢉⡁⢿⣿⣿
+⣿⣿⠀⣶⠀⠀⠀⢸⣿⣿⣿  CANONIC  ⣿⣿⣿⠀⠘⠃⢸⣿⣿
+⣿⣿⠀⢤⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠀⠘⠃⢸⣿⣿
+⣿⣿⣇⢀⡄⠀⠀⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠀⠚⠂⣾⣿⣿
+⣿⣿⣿⡄⢠⡦⠀⠀⠀⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠘⠇⢰⣿⣿⣿
+⣿⣿⣿⣿⣄⠀⢴⠄⠀⠀⠀⠙⠛⠿⠿⠿⠿⠿⠟⠋⠀⠀⡀⠚⠃⣠⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣷⣄⠐⠛⠀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⠈⠋⢀⣴⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣷⣦⣤⣁⠘⠃⠠⠶⠀⠶⠄⠘⢀⣠⣴⣾⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+```
+
+*The Ouroboros. The paper proves itself by running.*
+
 ---
 
 ## Abstract
@@ -339,7 +359,7 @@ Claims pertain only to evidence within this window. The declaration bounds scope
 | Invention Disclosures | 163 | `ls patents/disclosures/` |
 | Root Axioms | 3 | Triad, Inheritance, Introspection |
 | Development Days | 21 | Calendar |
-| Validation Status | PASS | `python3 validators/vaas.py` |
+| Validation Status | PASS | `python3 validators/validator_as_a_service.py` |
 
 Each metric has a verification method. Scopes are directories with CANON.md—count them. Sessions are episode files—count them. The methods are reproducible. The counts are verifiable.
 
@@ -972,7 +992,7 @@ git clone https://github.com/canonic-machine/canonic.git
 cd canonic
 
 # Run validators
-python3 validators/vaas.py
+python3 validators/validator_as_a_service.py
 # Expected: VALIDITY: PASS
 
 # Count scopes

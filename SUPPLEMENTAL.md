@@ -92,7 +92,7 @@ validate_scope_name()   # Names are nouns or verbs
 validate_identifier()   # No hyphens/underscores/spaces
 ```
 
-**Validator source:** github.com/canonic-machine/validators/vaas.py
+**Validator source:** github.com/canonic-machine/validators/validator_as_a_service.py
 
 ---
 
@@ -149,7 +149,7 @@ ls patents/disclosures/*.md | wc -l
 # Expected: 163
 
 # Run validators
-python3 canonic/validators/vaas.py canonic/
+python3 canonic/validators/validator_as_a_service.py canonic/
 # Expected: VALIDITY: PASS
 ```
 
