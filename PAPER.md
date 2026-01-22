@@ -4,7 +4,7 @@
 
 ## 1. Purpose
 
-Define the PAPER scope, its lifecycle, and the IP boundary.
+Define the PAPER scope: the CANONIC academic paper governing epistemic claims bounded by LEDGER evidence.
 
 ---
 
@@ -12,7 +12,7 @@ Define the PAPER scope, its lifecycle, and the IP boundary.
 
 ```
 / (ROOT)
-└── /canonic/machine/os/ledger/writing/ (PAPER CANON)
+└── /canonic/machine/os/ledger/writing/ (WRITING CANON)
     └── /paper/ (THIS SCOPE)
 ```
 
@@ -31,26 +31,101 @@ to be interpreted as described in RFC 2119.
 
 ---
 
-## 4. Lifecycle
+## 4. Manuscript Structure
 
-- [ ] **v0 freeze**: Declare the original paper freeze as the IP boundary (LEDGER tag)
-- [ ] **v0 open-source**: Open-source CANONIC up to the v0 freeze (public scope)
-- [x] **v0 draft**: CANONIC PAPER v0 drafted in `paper/`
-- [ ] **v0 publish**: Publish CANONIC MAMMOCHAT (PUBLISHING LEDGER)
-- [ ] **v0 patents**: File PATENTS (private) for v0 claims
-- [ ] **v0 public paper**: Publish CANONIC PAPER v0 (advertises v1 features)
-- [ ] **v0 comments**: Collect post-publication comments/errata
-- [ ] **v1 build**: Develop + deploy the features advertised in v0
-- [ ] **v1 publish**: Publish CANONIC PAPER v1 (includes comments + new features)
+| Order | Section | Description |
+| --- | --- | --- |
+| 00 | Abstract | Problem, solution, contribution |
+| 01 | Introduction | CANONIC paradigm motivation |
+| 02 | Background | Related work, prior art |
+| 03 | CANONIC LANGUAGE | Formal specification |
+| 04 | Implementation | VALIDATORS, MACHINE, OS, LEDGER |
+| 05 | Evaluation | Empirical validation |
+| 06 | Discussion | Implications, limitations |
+| 07 | Conclusion | Summary, future work |
+| 08 | Supplemental | GitHub as proof archive |
 
 ---
 
-## 5. Validation
+## 5. Lifecycle
+
+| Phase | Status | Description |
+|-------|--------|-------------|
+| v0 draft | Complete | CANONIC PAPER drafted |
+| v0 freeze | Pending | IP boundary declaration (LEDGER tag) |
+| v0 open-source | Pending | Public scope up to freeze |
+| v0 patents | Pending | File PATENTS for v0 claims |
+| v0 publish | Pending | arXiv publication |
+| v0 comments | Pending | Post-publication errata |
+| v1 build | Pending | Implement advertised features |
+| v1 publish | Pending | Full paper with comments + features |
+
+---
+
+## 6. Freeze Sequence
+
+Per CANON Axiom 4:
+
+```
+IP freeze → Publish freeze → Ledger freeze
+```
+
+| Freeze | Effect | Reversible |
+|--------|--------|------------|
+| IP freeze | Public/private boundary marked | Yes (content editable) |
+| Publish freeze | Submitted to external archive | No (content locked) |
+| Ledger freeze | Versioned on chain | No (immutable) |
+
+---
+
+## 7. Supplemental Separation
+
+Per CANON Axiom 5:
+
+Main PAPER **MUST NOT** contain supplemental material.
+
+| Type | Location | Content |
+|------|----------|---------|
+| Appendix | GitHub | Math proofs, formal derivations |
+| Supplemental | GitHub | Full v0 closure (drift episodes, IDFs, validators) |
+
+**GitHub IS the supplemental archive. The OS proves the PAPER.**
+
+---
+
+## 8. Publication Targets
+
+| Target | Priority | Status |
+|--------|----------|--------|
+| arXiv | P0 | Planned Q1 2026 |
+| ACL/EMNLP | P1 | Planned 2026 |
+| Nature Machine Intelligence | P2 | Planned 2027 |
+
+---
+
+## 9. Core Assets
+
+| File | Purpose |
+|------|---------|
+| manuscript.md | Source manuscript |
+| manuscript.pdf | Generated PDF |
+| SUPPLEMENTAL.md | Supplemental material index |
+
+---
+
+## 10. Validation
 
 ```
 VALIDITY = triad(scope) ∧ inheritance(scope) ∧ introspection(scope)
 ```
 
+PAPER validity requires:
+- CANON.md, VOCAB.md, README.md present
+- Inherits from /canonic/machine/os/ledger/writing/
+- All CANON concepts defined in VOCAB
+
 ---
 
 This SPEC closes CANON. Governance is defined exclusively by CANON.
+
+---
