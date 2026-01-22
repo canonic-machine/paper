@@ -1,4 +1,4 @@
-# PAPER (/paper/)
+# PAPER (/canonic/machine/os/ledger/writing/paper/)
 
 inherits: /canonic/machine/os/ledger/writing/
 
