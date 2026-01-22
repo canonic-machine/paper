@@ -8,10 +8,13 @@ Define the versioned PAPER publication series, each preceded by USPTO provisiona
 
 | Version | Topic | Provisional | Status |
 |---------|-------|-------------|--------|
-| v1 | CANONIC (Governance Axioms) | HADLEY-PROV-001 | Ready |
-| v2 | LANGUAGE (Formal Spec) | HADLEY-PROV-002 | Planned |
-| v3 | APPSTORE (Distribution) | HADLEY-PROV-003 | Planned |
-| v4 | BLOCKCHAIN (Transcript Anchoring) | HADLEY-PROV-004 | Planned |
+| v0 | MAMMOCHAT (Medical AI) | HADLEY-PROV-001/002 | PUBLIC |
+| v0 | CANONIC (Governance Axioms) | HADLEY-PROV-001/002 | PUBLIC |
+| v1 | LANGUAGE (Formal Spec) | HADLEY-PROV-003 | Planned |
+| v2 | APPSTORE (Distribution) | HADLEY-PROV-004 | Planned |
+| v3 | BLOCKCHAIN (Transcript Anchoring) | HADLEY-PROV-005 | Planned |
+
+**Note:** MAMMOCHAT and CANONIC are both v0 - they share HADLEY-PROV-001. MAMMOCHAT is the medical domain instance; CANONIC is the framework that emerged from building it.
 
 ---
 
@@ -20,14 +23,66 @@ Define the versioned PAPER publication series, each preceded by USPTO provisiona
 Each version follows the same pattern:
 
 ```
-Draft claims → File Provisional → Advertise Paper → Non-Provisional (12mo)
+PAPER vN → OPEN → PATENT → PUBLISH vN (advertises v(N+1)) → PAPER v(N+1) → ...
 ```
 
-The provisional establishes priority. The paper advertises the claims publicly.
+- **PAPER vN**: Write the paper
+- **OPEN**: Make publicly accessible (scope goes PUBLIC)
+- **PATENT**: File provisional (within 1-year grace)
+- **PUBLISH vN**: Formal venue (medRxiv/arXiv), teases v(N+1)
+- **PAPER v(N+1)**: Start next iteration
+
+Each PUBLISH advertises the next version without leaking IP. Patent filed before next iteration goes OPEN.
+
+**Key Insight:** v0 advertises v1 CAPABILITIES while v1 CODE is IP-safe in its own repo.
+
+```
+v0 PUBLISH: "Built with CANONIC framework (forthcoming)"
+    ↓
+Teases v1 CAPABILITY (marketing)
+    ↓
+v1 CODE stays private in its own repo (IP-safe)
+    ↓
+v1 PATENT filed
+    ↓
+Then v1 goes OPEN
+```
+
+Each scope = own repo = own ledger = own grace period. Tease capabilities without exposing implementation.
 
 ---
 
-## Paper v1: CANONIC (Governance Axioms)
+## Paper v0: MAMMOCHAT (Medical AI)
+
+### Scope
+Patient-centered AI for women's health:
+- OPTS consensus algorithm
+- EGO ledger architecture
+- Multi-stakeholder AI governance
+- Domain: CANONIC.MED.ONCO.MAMMO
+
+### Patent Coverage
+**HADLEY-PROV-001:** Constitutional Governance (42 claims)
+**HADLEY-PROV-002:** Platform Business (12 claims)
+
+### Status
+- Draft: ✓ Complete
+- OPEN: ✓ PUBLIC at mammochat.com
+- Provisional: ← NEXT
+- PUBLISH: After patent → medRxiv
+
+### Lifecycle
+```
+[x] PAPER v0 written
+[x] OPEN at mammochat.com
+[ ] PATENT v1 (HADLEY-PROV-001, 002) ← NEXT
+[ ] PUBLISH v0 → medRxiv
+    *Advertises: "Built with CANONIC framework (forthcoming)"*
+```
+
+---
+
+## Paper v0: CANONIC (Governance Axioms)
 
 ### Scope
 Core constitutional governance paradigm:
@@ -40,18 +95,23 @@ Core constitutional governance paradigm:
 **HADLEY-PROV-001:** Constitutional Governance (42 claims)
 
 ### Status
-- Draft: Complete
-- Provisional: Ready to file
-- Paper: Ready to publish
+- Draft: ✓ Complete
+- OPEN: ✓ PUBLIC on GitHub (canonic-machine org)
+- Provisional: Shares HADLEY-PROV-001 with MAMMOCHAT
+- PUBLISH: After patent → arXiv
 
-### Tasks
-1. [ ] File HADLEY-PROV-001 → USPTO
-2. [ ] Publish Paper v1 → arXiv
-3. [ ] Advertise → .github/, publishing/
+### Lifecycle
+```
+[x] PAPER v0 written
+[x] OPEN on GitHub
+[ ] PATENT v1 (covered by MAMMOCHAT filing)
+[ ] PUBLISH v0 → arXiv
+    *Advertises: "LANGUAGE formal spec in development"*
+```
 
 ---
 
-## Paper v2: LANGUAGE (Formal Spec)
+## Paper v1: LANGUAGE (Formal Spec)
 
 ### Scope
 Formal specification language:
@@ -61,23 +121,26 @@ Formal specification language:
 - Domain sublanguages (MED, LAW, FIN)
 
 ### Patent Coverage
-**HADLEY-PROV-002:** Specification Language (TBD claims)
+**HADLEY-PROV-003:** Specification Language (TBD claims)
 
 ### Status
 - Draft: In progress (language/LANGUAGE.md)
+- OPEN: Planned
 - Provisional: Planned
-- Paper: Planned
+- PUBLISH: Planned
 
-### Tasks
-1. [ ] Complete LANGUAGE patent claims
-2. [ ] File HADLEY-PROV-002 → USPTO
-3. [ ] Write Paper v2 manuscript
-4. [ ] Publish Paper v2 → arXiv
-5. [ ] Advertise → .github/, publishing/
+### Lifecycle
+```
+[ ] PAPER v1 written
+[ ] OPEN
+[ ] PATENT (HADLEY-PROV-003)
+[ ] PUBLISH v1 → arXiv
+    *Advertises: "APPSTORE distribution in development"*
+```
 
 ---
 
-## Paper v3: APPSTORE (Distribution)
+## Paper v2: APPSTORE (Distribution)
 
 ### Scope
 Zero-infrastructure distribution model:
@@ -87,23 +150,26 @@ Zero-infrastructure distribution model:
 - Marketplace economics
 
 ### Patent Coverage
-**HADLEY-PROV-003:** Platform Distribution (TBD claims)
+**HADLEY-PROV-004:** Platform Distribution (TBD claims)
 
 ### Status
 - Draft: Planned
+- OPEN: Planned
 - Provisional: Planned
-- Paper: Planned
+- PUBLISH: Planned
 
-### Tasks
-1. [ ] Complete APPSTORE patent claims
-2. [ ] File HADLEY-PROV-003 → USPTO
-3. [ ] Write Paper v3 manuscript
-4. [ ] Publish Paper v3 → arXiv
-5. [ ] Advertise → .github/, publishing/
+### Lifecycle
+```
+[ ] PAPER v2 written
+[ ] OPEN
+[ ] PATENT (HADLEY-PROV-004)
+[ ] PUBLISH v2 → venue TBD
+    *Advertises: "BLOCKCHAIN anchoring in development"*
+```
 
 ---
 
-## Paper v4: BLOCKCHAIN (Transcript Anchoring)
+## Paper v3: BLOCKCHAIN (Transcript Anchoring)
 
 ### Scope
 Distributed evidence layer:
@@ -113,30 +179,33 @@ Distributed evidence layer:
 - Sellable sessions
 
 ### Patent Coverage
-**HADLEY-PROV-004:** Evidence Anchoring (TBD claims)
+**HADLEY-PROV-005:** Evidence Anchoring (TBD claims)
 
 ### Status
 - Draft: Research
+- OPEN: Future
 - Provisional: Future
-- Paper: Future
+- PUBLISH: Future
 
-### Tasks
-1. [ ] Complete BLOCKCHAIN patent claims
-2. [ ] File HADLEY-PROV-004 → USPTO
-3. [ ] Write Paper v4 manuscript
-4. [ ] Publish Paper v4 → arXiv
-5. [ ] Advertise → .github/, publishing/
+### Lifecycle
+```
+[ ] PAPER v3 written
+[ ] OPEN
+[ ] PATENT (HADLEY-PROV-005)
+[ ] PUBLISH v3 → venue TBD
+    *Advertises: next domain...*
+```
 
 ---
 
 ## Timeline
 
-| Version | Provisional | Paper | Target |
-|---------|-------------|-------|--------|
-| v1 | Q1 2026 | Q1 2026 | Immediate |
-| v2 | Q2 2026 | Q2-Q3 2026 | After v1 |
-| v3 | Q3 2026 | Q3-Q4 2026 | After v2 |
-| v4 | 2027 | 2027 | After v3 |
+| Version | Provisional | PUBLISH | Target |
+|---------|-------------|---------|--------|
+| v0 | PROV-001/002 Q1 2026 | medRxiv + arXiv Q1 2026 | ← NEXT |
+| v1 | PROV-003 Q2 2026 | arXiv Q2-Q3 2026 | After v0 |
+| v2 | PROV-004 Q3 2026 | venue TBD Q3-Q4 2026 | After v1 |
+| v3 | PROV-005 2027 | venue TBD 2027 | After v2 |
 
 ---
 
@@ -146,21 +215,22 @@ Each provisional has 12-month window:
 
 | Provisional | Filed | Non-Provisional Due |
 |-------------|-------|---------------------|
-| PROV-001 | Q1 2026 | Q1 2027 |
-| PROV-002 | Q2 2026 | Q2 2027 |
-| PROV-003 | Q3 2026 | Q3 2027 |
-| PROV-004 | 2027 | 2028 |
+| PROV-001/002 | Q1 2026 | Q1 2027 |
+| PROV-003 | Q2 2026 | Q2 2027 |
+| PROV-004 | Q3 2026 | Q3 2027 |
+| PROV-005 | 2027 | 2028 |
 
 ---
 
 ## Current Priority
 
-**Immediate:** Paper v1
-1. File HADLEY-PROV-001
-2. Publish Paper v1
-3. Advertise
+**Immediate:** Paper v0
+1. File HADLEY-PROV-001 + PROV-002
+2. PUBLISH MAMMOCHAT v0 → medRxiv
+3. PUBLISH CANONIC v0 → arXiv
+4. Each v0 advertises v1
 
-**Next:** Paper v2 after v1 published
+**Next:** Paper v1 (LANGUAGE) after v0 PUBLISHED
 
 ---
 
