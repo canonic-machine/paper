@@ -1,0 +1,107 @@
+% CANONIC Paper - Two Column LaTeX Header
+% Images flow with prose, not as floating figures
+
+% === Font and Encoding ===
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% === Page Geometry ===
+\setlength{\columnsep}{0.8cm}
+
+% === Colors ===
+\usepackage{xcolor}
+\definecolor{slate}{HTML}{4B5563}
+\definecolor{linkblue}{HTML}{1B4F72}
+
+% === Graphics - Inline with prose ===
+\usepackage{graphicx}
+\usepackage{float}
+
+% === Tables ===
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+
+% === Layout ===
+\usepackage{ragged2e}
+\usepackage{titlesec}
+
+% === Hyperlinks ===
+\usepackage{hyperref}
+\hypersetup{
+    unicode=true,
+    colorlinks=true,
+    linkcolor=linkblue,
+    citecolor=linkblue,
+    urlcolor=linkblue,
+    pdftitle={CANONIC: Constitutional AI Governance},
+    pdfauthor={Dexter Hadley, MD/PhD}
+}
+
+% === Spacing ===
+\renewcommand{\baselinestretch}{1.15}
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0pt}
+
+% === Line breaking ===
+\setlength{\emergencystretch}{2em}
+\tolerance=800
+
+% === Section Styling ===
+\titleformat{\section}
+  {\color{slate}\Large\bfseries}
+  {\thesection.}{0.5em}{}
+\titleformat{\subsection}
+  {\color{slate}\large\bfseries}
+  {\thesubsection}{0.5em}{}
+
+% === Section spacing ===
+\titlespacing*{\section}{0pt}{12pt plus 2pt minus 2pt}{6pt plus 1pt minus 1pt}
+\titlespacing*{\subsection}{0pt}{10pt plus 2pt minus 2pt}{4pt plus 1pt minus 1pt}
+
+% === Lists ===
+\usepackage{enumitem}
+\setlist[itemize]{itemsep=1pt, topsep=3pt, parsep=1pt, partopsep=0pt, leftmargin=*}
+\setlist[enumerate]{itemsep=1pt, topsep=3pt, parsep=1pt, partopsep=0pt, leftmargin=*}
+
+% === Orphans and widows ===
+\widowpenalty=8000
+\clubpenalty=8000
+
+% === Raggedbottom ===
+\raggedbottom
+
+% === Justify text ===
+\AtBeginDocument{\justifying}
+
+% === Images scale to column width, inline with prose ===
+\makeatletter
+\def\maxwidth{\columnwidth}
+\def\maxheight{0.4\textheight}
+\makeatother
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+% === Disable floating for figures - inline with prose ===
+\usepackage{float}
+\floatplacement{figure}{H}
+\renewenvironment{figure}[1][H]{\begin{center}}{\end{center}}
+
+% === Longtable for two-column ===
+\makeatletter
+\if@twocolumn
+  \renewenvironment{longtable}[2][c]{%
+    \par\vspace{6pt}%
+    \begin{center}\footnotesize%
+    \begin{tabular}{#2}%
+  }{%
+    \end{tabular}%
+    \end{center}%
+    \par\vspace{6pt}%
+  }
+  \renewcommand{\endhead}{}
+  \renewcommand{\endlastfoot}{}
+  \renewcommand{\endfirsthead}{}
+  \renewcommand{\endfoot}{}
+\fi
+\makeatother
