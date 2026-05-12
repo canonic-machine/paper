@@ -1,22 +1,66 @@
-% CANONIC Paper - Two Column LaTeX Header
-% Images flow with prose, not as floating figures
+% CANONIC Paper — NeurIPS-style single-column LaTeX header
+% Target: arXiv cs.SE / cs.AI / cs.CY / cs.PL preprint house style
+% (Vaswani 2017 / Brown 2020 / Bai 2022 lineage), with grafted
+% Hadley-house mandatory § Disclosures and § Code/Data Availability.
 
-% === Font and Encoding ===
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
+% === Font and Encoding (xelatex: unicode fonts + math glyphs) ===
+\usepackage{fontspec}
+\setmainfont[
+  Extension      = .otf,
+  UprightFont    = *10-regular,
+  ItalicFont     = *10-italic,
+  BoldFont       = *10-bold,
+  BoldItalicFont = *10-bolditalic,
+]{lmroman}
+\setsansfont[
+  Extension      = .otf,
+  UprightFont    = *10-regular,
+  ItalicFont     = *10-oblique,
+  BoldFont       = *10-bold,
+  BoldItalicFont = *10-boldoblique,
+]{lmsans}
+\setmonofont[
+  Scale          = 0.92,
+  UprightFont    = DejaVuSansMono.ttf,
+  ItalicFont     = DejaVuSansMono-Oblique.ttf,
+  BoldFont       = DejaVuSansMono-Bold.ttf,
+  BoldItalicFont = DejaVuSansMono-BoldOblique.ttf,
+]{DejaVuSansMono.ttf}
+\usepackage{unicode-math}
+\setmathfont{latinmodern-math.otf}
+% Remap inline-prose math/symbol glyphs lmroman lacks → math-mode equivalents.
+\usepackage{newunicodechar}
+\newunicodechar{φ}{$\varphi$}
+\newunicodechar{≅}{$\cong$}
+\newunicodechar{□}{$\square$}
+\newunicodechar{↔}{$\leftrightarrow$}
+\newunicodechar{⊆}{$\subseteq$}
+\newunicodechar{∈}{$\in$}
+\newunicodechar{∀}{$\forall$}
+\newunicodechar{∪}{$\cup$}
+\newunicodechar{≤}{$\leq$}
+\newunicodechar{≥}{$\geq$}
+\newunicodechar{≠}{$\neq$}
+\newunicodechar{≈}{$\approx$}
 \usepackage{microtype}
-
-% === Page Geometry ===
-\setlength{\columnsep}{0.8cm}
 
 % === Colors ===
 \usepackage{xcolor}
-\definecolor{slate}{HTML}{4B5563}
+\definecolor{slate}{HTML}{222222}     % NeurIPS-style near-black for headings
 \definecolor{linkblue}{HTML}{1B4F72}
 
-% === Graphics - Inline with prose ===
+% === Graphics — floats top-of-page, NeurIPS-style ===
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{wrapfig}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+\setlength{\columnsep}{16pt}
+% Prevent figure floats from crossing section boundaries (so F4 can't
+% drift past §7 → §8 and appear after F5). `[section]` adds a
+% \FloatBarrier before every \section, keeping in-section figures
+% rendered before the next section begins.
+\usepackage[section]{placeins}
+% (do NOT force [H] placement — let floats float as NeurIPS-style top-of-page)
 
 % === Tables ===
 \usepackage{array}
@@ -39,26 +83,46 @@
     pdfauthor={Dexter Hadley, MD/PhD}
 }
 
-% === Spacing ===
-\renewcommand{\baselinestretch}{1.15}
-\setlength{\parskip}{0.5em}
+% === Spacing — NeurIPS uses ~1.0 (single) line spacing ===
+\renewcommand{\baselinestretch}{1.05}
+\setlength{\parskip}{0.4em}
 \setlength{\parindent}{0pt}
 
 % === Line breaking ===
 \setlength{\emergencystretch}{2em}
 \tolerance=800
 
-% === Section Styling ===
+% === Section numbering — NeurIPS style `N Title` (no period after number) ===
+\titlelabel{\thetitle\hspace{0.6em}}
 \titleformat{\section}
   {\color{slate}\Large\bfseries}
-  {\thesection.}{0.5em}{}
+  {\thesection}{0.6em}{}
 \titleformat{\subsection}
   {\color{slate}\large\bfseries}
-  {\thesubsection}{0.5em}{}
+  {\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}
+  {\color{slate}\normalsize\bfseries}
+  {\thesubsubsection}{0.6em}{}
 
 % === Section spacing ===
-\titlespacing*{\section}{0pt}{12pt plus 2pt minus 2pt}{6pt plus 1pt minus 1pt}
+\titlespacing*{\section}{0pt}{14pt plus 2pt minus 2pt}{6pt plus 1pt minus 1pt}
 \titlespacing*{\subsection}{0pt}{10pt plus 2pt minus 2pt}{4pt plus 1pt minus 1pt}
+\titlespacing*{\subsubsection}{0pt}{8pt plus 2pt minus 2pt}{3pt plus 1pt minus 1pt}
+
+% === Abstract — NeurIPS style: centered bold heading, narrower text measure ===
+\renewenvironment{abstract}
+  {\begin{center}\bfseries\large Abstract\end{center}%
+   \begin{quote}\small}
+  {\end{quote}\par\vspace{0.5em}}
+
+% === Page numbers — centered bottom, NeurIPS style ===
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\thepage}\renewcommand{\headrulewidth}{0pt}}
 
 % === Lists ===
 \usepackage{enumitem}
@@ -75,33 +139,52 @@
 % === Justify text ===
 \AtBeginDocument{\justifying}
 
-% === Images scale to column width, inline with prose ===
+% === Figures — let them float; NeurIPS uses [t!] (top of page) by default ===
 \makeatletter
-\def\maxwidth{\columnwidth}
-\def\maxheight{0.4\textheight}
+\def\maxwidth{\linewidth}
+\def\maxheight{0.55\textheight}
 \makeatother
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 
-% === Disable floating for figures - inline with prose ===
-\usepackage{float}
-\floatplacement{figure}{H}
-\renewenvironment{figure}[1][H]{\begin{center}}{\end{center}}
+% === Title block — NeurIPS-style centered, with subtitle, affiliation, email, ORCID ===
+\usepackage{titling}
+\pretitle{\begin{center}\LARGE\bfseries}
+\posttitle{\par\vspace{0.3em}{\large\normalfont A Framework for Structurally Inadmissible AI Slop\par}\end{center}\vspace{0.5em}}
+\preauthor{\begin{center}\large}
+\postauthor{\par\end{center}\vspace{0.1em}}
+\predate{\begin{center}\small}
+\postdate{\par\end{center}\vspace{0.8em}}
+% Override pandoc's empty \author/\date AT \begin{document} time (runs after preamble, before \maketitle).
+\AtBeginDocument{%
+  \author{%
+    Dexter Hadley, MD/PhD\thanks{Corresponding author: \texttt{founder@canonic.org}. ORCID 0000-0003-0990-4674.}\\[0.25em]
+    \normalsize\itshape CANONIC Foundation \quad American Board of Precision Medicine\\[0.25em]
+    \normalsize\rmfamily\texttt{founder@canonic.org} \quad ORCID \href{https://orcid.org/0000-0003-0990-4674}{0000-0003-0990-4674}%
+  }%
+  \date{v0.2 --- May 12, 2026}%
+}
 
-% === Longtable for two-column ===
+% === Caption style — NeurIPS: bold "Figure N:" prefix, body-size, centered if single-line ===
+\usepackage[font=small,labelfont=bf,labelsep=colon,justification=justified,singlelinecheck=true]{caption}
+
+% === Figure + table centering (NeurIPS polish) ===
+% Force every figure and table environment to center its content.
 \makeatletter
-\if@twocolumn
-  \renewenvironment{longtable}[2][c]{%
-    \par\vspace{6pt}%
-    \begin{center}\footnotesize%
-    \begin{tabular}{#2}%
-  }{%
-    \end{tabular}%
-    \end{center}%
-    \par\vspace{6pt}%
-  }
-  \renewcommand{\endhead}{}
-  \renewcommand{\endlastfoot}{}
-  \renewcommand{\endfirsthead}{}
-  \renewcommand{\endfoot}{}
-\fi
+\g@addto@macro\@floatboxreset\centering
 \makeatother
+
+% Mermaid-filter emits images as paragraph-level images. By default pandoc
+% renders Para[Image] as a centered figure float — but when the image lacks
+% a `fig:` caption attribute, pandoc renders it inline (left-aligned).
+% Patch the implicit figure rendering to always center the image.
+\usepackage{etoolbox}
+
+% Tighten figure spacing
+\setlength{\textfloatsep}{14pt plus 2pt minus 4pt}
+\setlength{\floatsep}{12pt plus 2pt minus 4pt}
+\setlength{\intextsep}{12pt plus 2pt minus 4pt}
+
+% Center tabular environments by default
+\let\oldtabular\tabular
+\let\endoldtabular\endtabular
+\renewenvironment{tabular}{\begin{center}\oldtabular}{\endoldtabular\end{center}}

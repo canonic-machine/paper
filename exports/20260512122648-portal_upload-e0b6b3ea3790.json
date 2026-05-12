@@ -1,0 +1,14 @@
+{
+  "canonical_in_git_history": false,
+  "canonical_path": "manuscript.md",
+  "canonical_sha256_at_export": "2c44d5801344a952c03137cb2b69a9c528acdba7ea5de97ecf25bbc0c547ed7a",
+  "channel": "portal_upload",
+  "drift_reason": "uncommitted_working_copy",
+  "exported_at_utc": "2026-05-12T12:26:48.424932+00:00",
+  "manuscript_path": "/private/tmp/canonic-paper-repo",
+  "output_format": "pdf",
+  "output_path": "manuscript.pdf",
+  "output_sha256": "e0b6b3ea379026c6d50c5d4828dda54caa799b93844887a2b1b5863f2e2a7ab2",
+  "recipient": "https://arxiv.org/submit",
+  "session_id": "S69-arxiv-canonic-paper"
+}

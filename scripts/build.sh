@@ -40,8 +40,10 @@ pandoc "$MANUSCRIPT" \
   $MERMAID_FILTER \
   -H "$HEADER" \
   -V documentclass=article \
-  -V classoption=twocolumn \
   -V fontsize=10pt \
-  -V geometry:margin=0.75in
+  -V geometry:margin=1.25in \
+  -V linkcolor=linkblue \
+  -V citecolor=linkblue \
+  -V urlcolor=linkblue
 
 echo "Built: $OUT_PDF"
